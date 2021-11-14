@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Welcome to Center for Computational Mathematics at the University of Colorado Denver
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
