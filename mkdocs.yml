@@ -1,5 +1,5 @@
 site_name: CCM CU Denver
-site_url: https://example.com/
+site_url: https://ccm-docs.readthedocs.io/en/latest/ 
 nav:
     - Home: index.md
     - About: about.md
