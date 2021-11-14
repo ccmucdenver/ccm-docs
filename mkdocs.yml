@@ -3,5 +3,6 @@ site_url: https://ccm-docs.readthedocs.io/en/latest/
 nav:
     - Home: index.md
     - About: about.md
+    - Clusters guide: clusters_guide.md
     - Alderaan: alderaan.md
 theme: readthedocs
