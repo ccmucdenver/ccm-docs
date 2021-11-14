@@ -27,13 +27,11 @@ This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science a
 ### Fall semester 2021
 * Finalize networking, access, and security
 * Open to early users
-* Install user web interface - JupyterHub, FastX
+* Install user web interface - Remote desktop, JupyterHub
 * Install OSG - run OSG jobs and submit jobs to OSG
-* AY 2021/2022
-* Install user web interface - JupyterHub, FastX
 * Set up governance and allocation processes
 ### Spring semester 2022
-* Scaling up the user base
+* Scaling up availability and user base
 
 ## User training (after the configuration is complete)
 * ssh command line usage
