@@ -4,12 +4,12 @@
 This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science and Education by Campus and Grid Computing](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089)  under the [NSF CC* program](https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf20507). The cluster will be integrated with the [Open_Science_Grid (OSG)](https://opensciencegrid.org). At least 20% of capacity will be contributed to the OSG as required by the program.
 
 ## Hardware
-* 2048 AMD EPYC 2 cores and 4TB DDR4 memory in 8 compute nodes
-* 256 AMD EPYC 2 cores, 2 NVIDIA Tesla A100 and 4TB DDR4 memory in 2 high-memory GPU nodes
-* 128 AMD EPYC 2 cores in a head node
+* 2048 AMD EPYC 2 cores and 4TB DDR4 memory in 32 compute nodes. Each node has 2 32-core CPUs for a total of 64 cores, and 512GB memory.
+* 128 AMD EPYC 2 cores, 2 NVIDIA Tesla A100 and 4TB DDR4 memory in 2 high-memory GPU nodes, each with 2TB memory, 64 cores, and one GPU.
+* Head node with 64 AMD EPYC 2 cores and 512GB memory.
 * 1PB storage (raw)
 * HDR100 Infiniband interconnect
-* 10Gb/s connectivity path from each node to Internet 2
+* 10Gb/s ethernet connectivity path from each node to Internet 2
 
 ## Software
 * scheduler, cluster tools, GNU compiler stack with MPI over Infiniband
