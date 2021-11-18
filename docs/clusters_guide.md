@@ -1,29 +1,4 @@
-# Guide to CCM clusters
-## General Use Information
-###Logging In
-
-The clas-compute system uses (mostly) CentOS 7 and 8 operating system. At this time, the main way of using the system is to use an SSH client to login to a terminal session on clas-compute or math-alderaan. You will need to be on the CU Denver network (wired or CU Denver wireless, not CU Denver Guest), or using the university's VPN client.
-
-This system uses your normal portal/email username and password.
-
-On Windows, you will need an SSH client. There are several out there, but generally most people use PuTTY which is available for download [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). You can use either 32 or 64 bit versions - computers that require the 32 bit version are rather rare (early Windows 7/Vista/XP). The Host Name is clas-compute.ucdenver.pvt. 
-
-<!---
-(image is from the old system, but same difference)
-[[File:Puttywindows.png|center|PuTTY Windows]]
--->
-
-You can also use the [Windows 10 subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), where you install a Linux distribution as an app and can use it to ssh out like from a terminal window like on any Linux machine. This is often more stable than Putty, which tends to get stuck on some computers.
-
-On Macintosh, you can use simply the Terminal app, which is built into the operating system.
-It is in Applications -> Utilities folder. You may want to drag it to your dock so that it is available 
-more conveniently next time. imultaneously. 
-
-Either way, from a terminal window, at the command line prompt type in:
-
-    ssh awesomeperson@clas-compute.ucdenver.pvt
-
-Whereas awesomeperson would be your CU Denver username. After connecting, it should ask for your CU Denver password and enter it at this point.
+d you enter it at this point.
 
 Science will then occur and you should be at the clas-compute prompt and in your home directory.
 
@@ -32,7 +7,7 @@ Science will then occur and you should be at the clas-compute prompt and in your
 Using a server ‘interactively’ (aka not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into math-compute, you can type <code>ssh math-colibri-i01</code> or whatever server you want to go directly to the server. **Please do not run anything directly on compute nodes, which are reserved for jobs under the control of the scheduler, even if you may be able to ssh there.  These are nodes with names like math-colibri-c01 with the "c" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.**
 
 
-Using 'screen' is generally a good idea both math-compute or the interactive nodes. Basically was screen does is starts a virtual terminal inside your terminal. Sound confusing? It is. The plus of this virtual terminal is if you get disconnected, whatever you were running is still going.
+Using 'screen' is generally a good idea both a head node or the interactive nodes. Basically was screen does is starts a virtual terminal inside your terminal. Sound confusing? It is. The plus of this virtual terminal is if you get disconnected, whatever you were running is still going.
 
 'screen –S bananaphone' (make the name whatever you want) creates a new terminal with that name
 
