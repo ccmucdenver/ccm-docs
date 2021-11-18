@@ -13,13 +13,17 @@ On Windows, you will need an SSH client. There are several out there, but genera
 [[File:Puttywindows.png|center|PuTTY Windows]]
 -->
 
-You can also use the [Windows 10 subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)Windows 10 subsystem for Linux], where you install a Linux distribution as an app and can use it to ssh out like from a terminal window on any Linux machine. This is often more stable than Putty, which tends to get stuck on some computers.
+You can also use the [Windows 10 subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), where you install a Linux distribution as an app and can use it to ssh out like from a terminal window like on any Linux machine. This is often more stable than Putty, which tends to get stuck on some computers.
 
-On Macintosh, you can either use a specialized SSH client or Terminal which is built into the operating system. While in Finder on your Mac, press the Option, Shift, and U keys simultaneously. The Utilities folder should appear and the Terminal is within this folder. Open terminal and at the prompt type in:
+On Macintosh, you can use simply the Terminal app, which is built into the operating system.
+It is in Applications -> Utilities folder. You may want to drag it to your dock so that it is available 
+more conveniently next time. imultaneously. 
+
+Either way, from a terminal window, at the command line prompt type in:
 
     ssh awesomeperson@clas-compute.ucdenver.pvt
 
-Whereas awesomeperson would be your UCD username. After connecting, it should ask for your UCD password and enter it at this point.
+Whereas awesomeperson would be your CU Denver username. After connecting, it should ask for your CU Denver password and enter it at this point.
 
 Science will then occur and you should be at the clas-compute prompt and in your home directory.
 
