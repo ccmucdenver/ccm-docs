@@ -5,4 +5,5 @@ nav:
     - About: about.md
     - Clusters guide: clusters_guide.md
     - Alderaan: alderaan.md
+    - Colibri: colibri.md
 theme: readthedocs
