@@ -8,3 +8,6 @@ This site is hosted from [git repository](https://github.com/ccmucdenver/ccm-doc
 ## About the CCM
 
 Coming soon.
+
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
