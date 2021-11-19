@@ -6,4 +6,5 @@ nav:
     - Clusters guide: clusters_guide.md
     - Alderaan: alderaan.md
     - Colibri: colibri.md
+    - Score: score.md
 theme: readthedocs
