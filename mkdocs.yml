@@ -7,4 +7,5 @@ nav:
     - Alderaan: alderaan.md
     - Colibri: colibri.md
     - Score: score.md
+    - Local network: local.md
 theme: readthedocs
