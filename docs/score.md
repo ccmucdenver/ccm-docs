@@ -6,7 +6,7 @@ This cluster was purchased from CCM internal funds.
 The Score cluster is suitable for long-running single-core jobs.
 ## Hardware
 
-coming soon
+Coming soon.
 
 ## Software
 Jobs on the Score cluster nodes can be submitted using the [scheduler on clas-compute](../clusters_guide).
