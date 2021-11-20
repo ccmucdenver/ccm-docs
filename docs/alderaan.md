@@ -7,12 +7,14 @@ This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science a
 The Alderaan cluser is a shared cluster running multi-core jobs with multiple nodes using MPI and the high-speed interconnect (High-Performace Computing, HPC), as well as multiple single-core jobs (High-Throughput Computing, HTC). All jobs need to be limited in duration. Work consisting of a very large number of single-core jobs should be submitted on the [Open Science Grid (OSG)](https://opensciencegrid.org). Long-running single-core jobs should be submitted to [Score cluster](../score/) nodes.
 
 ## Hardware
-* 2048 AMD EPYC 2 cores and 4TB DDR4 memory in 32 compute nodes. Each node has 2 32-core CPUs for a total of 64 cores, and 512GB memory. The compute nodes are in 8 1U rack-mount drawers, with 4 nodes in each drawer.
+* 2048 AMD cores and 4TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, and 512GB DDR4 memory. The compute nodes are in 8 1U rack-mount drawers, with 4 nodes in each drawer.
 * 128 AMD EPYC 2 cores, 2 NVIDIA Tesla A100 and 4TB DDR4 memory in 2 high-memory GPU nodes, each with 2TB memory, 64 cores, and one GPU.
-* Head node with 64 AMD EPYC 2 cores and 512GB memory.
+* Head node with 64 AMD EPYC 2 cores and 256GB memory.
 * 1PB storage (raw)
 * HDR100 Infiniband interconnect
 * 10Gb/s ethernet connectivity path from each node to Internet 2
+
+The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 
 ## Software
 * scheduler, cluster tools, GNU compiler stack with MPI over Infiniband
