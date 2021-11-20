@@ -1,4 +1,4 @@
-# External Resources
+# Facilities and Equipment for Proposals
 
 Coming soon.
 
