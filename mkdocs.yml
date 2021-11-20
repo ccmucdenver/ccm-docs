@@ -10,4 +10,6 @@ nav:
     - Research Storage: storage.md
     - Jupyterhub server: jupyterhub.md
     - Local network: local.md
+    - External Resources: external.md
+    - Summary for Proposal: for_proposals.md
 theme: readthedocs
