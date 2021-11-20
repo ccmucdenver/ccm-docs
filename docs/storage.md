@@ -3,7 +3,7 @@
 ## Funding
 This equipment was purchased in 2021 from CCM budget.
 ## Purpose
-Storage facility for the [clusters](../clusters_guide).
+A storage facility for the [research clusters](../clusters_guide), including home directories. [Alderaan](../alderaan) has also its own storage disk arrays.
 ## Hardware
 Research storage (clas-rcstor-01) is a Dell PowerEdge R730 24 cores/48 threads and 512GB of DDR4 memory which acts as both system RAM (minimal) and (mostly) high speed file system cache.
  
@@ -15,9 +15,8 @@ The array has currently two Dell md3060e 60 Disk storage shelves attached to it:
 * Each dataset can then be carved out of one of these arrays and set a quota and separate compression level as desired.
 
 ## Software
-FreeBSD TrueNAS
+TrueNAS by iXsystems on FreeBSD
 
-The datasets are mounted on the cluster nodes by NFS. 
-## Notes
-[Alderaan](../alderaan) has also its own storage disk arrays.
+## How to use
+The storage is mounted on cluster nodes as NFS filesystems. Users cannot access the storage server directly.
 

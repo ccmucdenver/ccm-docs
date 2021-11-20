@@ -1,4 +1,4 @@
-# Jupyterhub server
+# Jupyterhub Server
 
 Coming soon.
 
@@ -10,7 +10,7 @@ Coming soon.
 
 ## Software
 
-## How to use
+## How to Use
 
 
 

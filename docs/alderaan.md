@@ -1,7 +1,10 @@
-# Alderaan cluster
+# Alderaan Cluster
 
 ## Funding
 This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science and Education by Campus and Grid Computing](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089)  under the [NSF CC* program](https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf20507). The cluster will be integrated with the [Open_Science_Grid (OSG)](https://opensciencegrid.org). At least 20% of capacity will be contributed to the OSG as required by the program.
+
+## Purpose
+The Alderaan cluser is a shared cluster running multi-core jobs with multiple nodes using MPI and the high-speed interconnect (High-Performace Computing, HPC), as well as multiple single-core jobs (High-Throughput Computing, HTC). All jobs need to be limited in duration. Work consisting of a very large number of single-core jobs should be submitted on the [Open Science Grid (OSG)](https://opensciencegrid.org). Long-running single-core jobs should be submitted to [Score cluster](../score/) nodes.
 
 ## Hardware
 * 2048 AMD EPYC 2 cores and 4TB DDR4 memory in 32 compute nodes. Each node has 2 32-core CPUs for a total of 64 cores, and 512GB memory. The compute nodes are in 8 1U rack-mount drawers, with 4 nodes in each drawer.
@@ -33,10 +36,19 @@ This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science a
 ### Spring semester 2022
 * Scaling up availability and user base
 
-## User training (after the configuration is complete)
+## User Training (after the configuration is finalized)
 * ssh command line usage
 * submission of OSG jobs
 * web access to the cluster
 
-Contact: jan.mandel@ucdenver.edu
+## How to Use
+
+Authorized users can submit jobs on the Alderaan cluster on the head node or the [common cluster scheduler](../clusters_guide). The head node is accessed by ssh to math-alderaan.ucdenver.pvt. The head node is for compilation and small tests only. Please do not run any intensive or long jobs on the head node.
+
+An allocation system is set up and will be activated when warranted by the cluster load.
+
+Graphical desktop and Jupyterhub front end interfaces are coming soon.
+
+## Contact
+jan.mandel@ucdenver.edu
 

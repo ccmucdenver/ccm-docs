@@ -1,4 +1,4 @@
-# Guide to CCM clusters
+# Guide to CCM Clusters
 ## General Use Information
 ###Logging In
 
@@ -54,7 +54,7 @@ df –h will show you the storage arrays and how much space is available. There 
 
 The system uses your normal UCD portal/email logon username and password. Users must be approved before using the system, so if your login is not working, you probably are not on the approved/initialized list yet.
 
-##Requesting information about the environment
+##Requesting Information about the Environment
 
 ###Queues
 
@@ -157,7 +157,7 @@ It looks confusing but there is a method to the madness in the naming convention
 
 The <code>sbatch</code> command is used to submit a job into a queue. Your job should be a script that is accessible to the compute nodes. You can add switches to the <code>sbatch</code> command, but it is recommended to make them a part of your batch script. Here is a sample SLURM batch script: COMING SOON
 
-##Viewing queues and job status
+##Viewing Queues and Job Status
 
 The <code>squeue</code> command is used to gather information from the scheduler. Some of the most common switches are: COMING SOON
 

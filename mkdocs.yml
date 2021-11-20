@@ -1,16 +1,16 @@
-site_name: CCM CU Denver
+site_name: Center for Computational Mathematics         
+ University of Colorado Denver
 site_url: https://ccm-docs.readthedocs.io/en/latest/ 
 nav:
     - Home: index.md
     - About: about.md
-    - Clusters guide: clusters_guide.md
-    - Alderaan: alderaan.md
-    - Colibri: colibri.md
-    - Score: score.md
+    - Clusters Guide: clusters_guide.md
+    - Alderaan Cluster: alderaan.md
+    - Colibri Cluster: colibri.md
+    - Score Cluster: score.md
     - Research Storage: storage.md
     - Jupyterhub server: jupyterhub.md
     - Local network: local.md
-    - External Resources: external.md
     - For Proposals: for_proposals.md
-    - How to edit: pull_request.md
+    - External Resources: external.md
 theme: readthedocs

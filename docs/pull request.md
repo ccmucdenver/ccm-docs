@@ -7,7 +7,7 @@ Please submit a pull request to CCM:
 3. Make a new branch off the main branch, 
 4. [open a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) on github asking to merge your new branch into main. 
 5. Make your changes following the MkDocs [Getting Started](https://www.mkdocs.org/getting-started) instructions how to build and preview the site on your computer, and [Writing your docs](https://www.mkdocs.org/user-guide/writing-your-docs) how to edit the pages.
-6. Commit and push your changes grequently.
+6. Commit and push your changes frequently.
 7. When you are done, 
     * merge the current main branch from this [git repository](https://github.com/ccmucdenver/ccm-docs) into your pull request branch,
     * resolve any merge conflicts and commit,
