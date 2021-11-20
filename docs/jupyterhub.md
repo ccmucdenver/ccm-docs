@@ -14,7 +14,7 @@ Ubuntu Linux 18.04
 
 ## How to Use
 Connect by ssh or web to math-hub.ucdenver.pvt.
-Authorized administrators can set up JupyterHub instances following the  [instructions](https://www.michaelpilosov.com/openscience/hubsetup) and make user accounts.
+Authorized administrators can deploy JupyterHub instances following the  [instructions](https://www.michaelpilosov.com/openscience/hubsetup) and make user accounts.
 
 ## Contact
 Troy.Butler@ucdenver.edu
