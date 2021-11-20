@@ -11,5 +11,6 @@ nav:
     - Jupyterhub server: jupyterhub.md
     - Local network: local.md
     - External Resources: external.md
-    - Summary for Proposal: for_proposals.md
+    - Summary for Proposals: for_proposals.md
+    - How to edit: pull_request.md
 theme: readthedocs
