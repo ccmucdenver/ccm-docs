@@ -8,7 +8,7 @@ This site is hosted from a [git repository](https://github.com/ccmucdenver/ccm-d
 
 If you would like to make a suggestion, please [open an issue](https://github.com/ccmucdenver/ccm-docs/issues/new/choose).
 
-If you would like to add or change something, please [make a pull request](../pull_request/).
+If you would like to add or change something, please [make a pull request](pull_request/).
 
 ## About the CCM
 
