@@ -9,7 +9,7 @@ nav:
     - Colibri Cluster: colibri.md
     - Score Cluster: score.md
     - Research Storage: storage.md
-    - Jupyterhub server: jupyterhub.md
+    - JupyterHub Server: jupyterhub.md
     - Local network: local.md
     - For Proposals: for_proposals.md
     - External Resources: external.md
