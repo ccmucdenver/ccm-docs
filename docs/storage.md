@@ -15,6 +15,8 @@ The array has currently two Dell md3060e 60 Disk storage shelves attached to it:
 * Each dataset can then be carved out of one of these arrays and set a quota and separate compression level as desired.
 
 ## Software
+FreeBSD TrueNAS
+
 The datasets are mounted on the cluster nodes by NFS. 
 ## Notes
 [Alderaan](../alderaan) has also its own storage disk arrays.
