@@ -10,8 +10,8 @@ Please submit a pull request to CCM:
 6. Commit and push your changes grequently.
 7. When you are done, 
     * merge the current main branch from this [git repository](https://github.com/ccmucdenver/ccm-docs) into your pull request branch,
-    * resolve any merge conflicts,
-    * preview any places you changed,
+    * resolve any merge conflicts and commit,
+    * preview and check around all places you changed that nothing went wrong, 
     * repeat as needed until all looks to your satisfaction.
-8. Just in case: commit and push one last time.
+8. Commit and push one last time.
 9. Let @janmandel know by a pull request comment that your pull request is ready to be merged. 
