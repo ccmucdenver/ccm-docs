@@ -11,6 +11,6 @@ nav:
     - Research Storage: storage.md
     - JupyterHub Server: jupyterhub.md
     - Local network: local.md
-    - For Proposals: facilities.md
     - External Resources: external.md
+    - Facilitites for Proposals: facilities.md
 theme: readthedocs
