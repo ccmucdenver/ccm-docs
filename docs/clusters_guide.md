@@ -150,7 +150,7 @@ To see a list of all nodes, use:
 
 It looks confusing but there is a method to the madness in the naming convention. Obviously, math-colibri and math-score are the identifiers for what cluster/building the servers are in, but the –c## and –i## stand for compute and interactive. the c## servers are usually part of the queuing system and the i## ones are for interactive use. Again, never ssh to compute nodes directly.
 
-## Scheduler Instructions
+## Submitting Jobs to the Scheduler
 
 ### Submitting a job
 
@@ -198,7 +198,7 @@ You can request the number of nodes. The scheduler will then split the tasks ove
      mpirun -np 10 examples/mpi_hello_world.exe # replace by your own executable and number of processors
      # do not use more MPI processes than nodes*ntasks
 
-## Viewing Queues and Job Status
+## Viewing Job Queues and Job Status
 
 The <code>squeue</code> command is used to gather information from the scheduler. Just <code>squeue</code> will show one line for each
 job running on the system.
