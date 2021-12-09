@@ -158,11 +158,11 @@ The <code>sbatch job_script</code> command is used to submit a job into a queue.
 
 ### Template batch job scripts
 
-The templates batch scripts and simple examples to run are in <code>/storage/templates</code>. You can copy them from there, or clone the directory from https://github.com/ccmucdenver/templates.git. Type <code>make</code> in the <code>examples</code> directory to build the executables. 
+The templates batch scripts and simple examples to run are in <code>/storage/templates</code>. You can copy the scripts from there, or git clone your own from [https://github.com/ccmucdenver/templates.git](https://github.com/ccmucdenver/templates.git) and build also the examples: Type <code>make</code> in the <code>examples</code> directory. 
 
-#### A simple single-core job template alderaan_single.sh
+#### Single-core job
 
-This script will be suffient for most jobs, which do not use multiprocessing.
+This script will be sufficient for most jobs, such as those you code yourself which do not use multiprocessing.
 
      #!/bin/bash
      # A simple single core job template
@@ -171,8 +171,12 @@ This script will be suffient for most jobs, which do not use multiprocessing.
      #SBATCH --time=1:00:00                    # Max wall-clock time
      #SBATCH --ntasks=1                        # number of cores, leave at 1
      examples/hello_world_fortran.exe          # replace by your own executable
+     
+If you run an application that can use more cores, you can requests the number of cores in <code>--ntask</code> parameter instead of 1. Your allocation will be charged for the time of all cores, regardless if you use them or not.
 
-#### A simple MPI job template alderaan_mpi.sh
+If you expect that your application will use more memory than 8GB (our nodes have 512GB memory and 64 cores each), you should request more tasks, about the expected memory usage in GB divided by 8. Otherwise the node memory may get overloaded when the machine gets busy with many jobs, and everyone's jobs may stall or crash. Note: this may change once we start allocating memory use, but at the moment we do not.
+ 
+#### A simple MPI job template
 
      #!/bin/bash
      # alderaan_mpi.sh
@@ -183,7 +187,7 @@ This script will be suffient for most jobs, which do not use multiprocessing.
      #SBATCH --ntasks=360                      # Total number of MPI processes, no need for --nodes
      mpirun examples/mpi_hello_world.exe       # replace by your own executable, no need for -np
 
-#### A more general MPI job template alderaan_mpi_general.sh
+#### A more general MPI job template
 
 You can request the number of nodes. The scheduler will then split the tasks over the nodes.
 
@@ -203,3 +207,6 @@ You can request the number of nodes. The scheduler will then split the tasks ove
 The <code>squeue</code> command is used to gather information from the scheduler. Just <code>squeue</code> will show one line for each
 job running on the system.
 
+## Using Singularity Containers
+
+Coming soon.
