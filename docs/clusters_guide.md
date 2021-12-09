@@ -154,9 +154,56 @@ It looks confusing but there is a method to the madness in the naming convention
 
 ###Submitting a job
 
-The <code>sbatch</code> command is used to submit a job into a queue. Your job should be a script that is accessible to the compute nodes. You can add switches to the <code>sbatch</code> command, but it is recommended to make them a part of your batch script. Here is a sample SLURM batch script: COMING SOON
+The <code>sbatch job_script</code> command is used to submit a job into a queue. Your job starts executing in the directory where it was submitted, so submit it from a directory accessible to all compute nodes, such as a subdirectory of your home directory. You can add switches to the <code>sbatch</code> command, but it is recommended to make them a part of your batch script so that you do not have to do that every time. Please do not use more cores than the number of tasks specified in your script.
+
+### Template batch job scripts
+
+The templates batch scripts and simple examples to run are in <code>/storage/templates</code>. You can copy them from there, or clone the directory from https://github.com/ccmucdenver/templates.git. Type <code>make</code> in the <code>examples</code> directory to build the executables. 
+
+#### A simple single-core job template alderaan_single.sh
+
+This script will be suffient for most jobs, which do not use multiprocessing.
+<code>
+#!/bin/bash
+# A simple single core job template
+#SBATCH --job-name=mpi_hello_single
+#SBATCH --partition=math-alderaan
+#SBATCH --time=1:00:00                    # Max wall-clock time
+#SBATCH --ntasks=1                        # number of cores, leave at 1
+examples/hello_world_fortran.exe          # replace by your own executable
+</code>
+
+#### A simple MPI job template alderaan_mpi.sh
+
+<code>
+#!/bin/bash
+# alderaan_mpi.sh
+# A simple MPI job template
+#SBATCH --job-name=mpi_hello
+#SBATCH --partition=math-alderaan
+#SBATCH --time=1:00:00                    # Max wall-clock time
+#SBATCH --ntasks=360                      # Total number of MPI processes, no need for --nodes
+mpirun examples/mpi_hello_world.exe       # replace by your own executable, no need for -np
+</code>
+
+#### A more general MPI job template alderaan_mpi_general.sh
+
+You can request the number of nodes you want. The schedule will then split the jobs over the nodes.
+<code>
+#!/bin/bash
+# alderaan_mpi_general.sh
+# A a more general MPI job template
+#SBATCH --job-name=mpi_hello
+#SBATCH --partition=math-alderaan
+#SBATCH --nodes=2                   # Number of requested nodes
+#SBATCH --time=1:00:00              # Max wall-clock time
+#SBATCH --ntasks=5                  # Total number of tasks over all nodes, max 64*nodes
+mpirun -np 10 examples/mpi_hello_world.exe # replace by your own executable and number of processors
+# do not use more MPI processes than nodes*ntasks
+</code>
 
 ##Viewing Queues and Job Status
 
-The <code>squeue</code> command is used to gather information from the scheduler. Some of the most common switches are: COMING SOON
+The <code>squeue</code> command is used to gather information from the scheduler. Just <code>squeue</code> will show one line for each
+job running on the system.
 
