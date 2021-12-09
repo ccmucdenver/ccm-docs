@@ -164,40 +164,39 @@ The templates batch scripts and simple examples to run are in <code>/storage/tem
 
 This script will be suffient for most jobs, which do not use multiprocessing.
 
- #!/bin/bash
- # A simple single core job template
- #SBATCH --job-name=mpi_hello_single
- #SBATCH --partition=math-alderaan
- #SBATCH --time=1:00:00                    # Max wall-clock time
- #SBATCH --ntasks=1                        # number of cores, leave at 1
- examples/hello_world_fortran.exe          # replace by your own executable
+     #!/bin/bash
+     # A simple single core job template
+     #SBATCH --job-name=mpi_hello_single
+     #SBATCH --partition=math-alderaan
+     #SBATCH --time=1:00:00                    # Max wall-clock time
+     #SBATCH --ntasks=1                        # number of cores, leave at 1
+     examples/hello_world_fortran.exe          # replace by your own executable
 
 #### A simple MPI job template alderaan_mpi.sh
 
-
- #!/bin/bash
- # alderaan_mpi.sh
- # A simple MPI job template
- #SBATCH --job-name=mpi_hello
- #SBATCH --partition=math-alderaan
- #SBATCH --time=1:00:00                    # Max wall-clock time
- #SBATCH --ntasks=360                      # Total number of MPI processes, no need for --nodes
- mpirun examples/mpi_hello_world.exe       # replace by your own executable, no need for -np
+     #!/bin/bash
+     # alderaan_mpi.sh
+     # A simple MPI job template
+     #SBATCH --job-name=mpi_hello
+     #SBATCH --partition=math-alderaan
+     #SBATCH --time=1:00:00                    # Max wall-clock time
+     #SBATCH --ntasks=360                      # Total number of MPI processes, no need for --nodes
+     mpirun examples/mpi_hello_world.exe       # replace by your own executable, no need for -np
 
 #### A more general MPI job template alderaan_mpi_general.sh
 
 You can request the number of nodes. The scheduler will then split the tasks over the nodes.
 
- #!/bin/bash
- # alderaan_mpi_general.sh
- # A a more general MPI job template
- #SBATCH --job-name=mpi_hello
- #SBATCH --partition=math-alderaan
- #SBATCH --nodes=2                   # Number of requested nodes
- #SBATCH --time=1:00:00              # Max wall-clock time
- #SBATCH --ntasks=5                  # Total number of tasks over all nodes, max 64*nodes
- mpirun -np 10 examples/mpi_hello_world.exe # replace by your own executable and number of processors
- # do not use more MPI processes than nodes*ntasks
+     #!/bin/bash
+     # alderaan_mpi_general.sh
+     # A a more general MPI job template
+     #SBATCH --job-name=mpi_hello
+     #SBATCH --partition=math-alderaan    
+     #SBATCH --nodes=2                   # Number of requested nodes
+     #SBATCH --time=1:00:00              # Max wall-clock time
+     #SBATCH --ntasks=5                  # Total number of tasks over all nodes, max 64*nodes
+     mpirun -np 10 examples/mpi_hello_world.exe # replace by your own executable and number of processors
+     # do not use more MPI processes than nodes*ntasks
 
 ## Viewing Queues and Job Status
 
