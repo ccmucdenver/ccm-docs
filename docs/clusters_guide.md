@@ -1,6 +1,6 @@
 # Guide to CCM Clusters
 ## General Use Information
-###Logging In
+### Logging In
 
 The clas-compute system uses (mostly) CentOS 7 and 8 operating system. At this time, the main way of using the system is to use an SSH client to login to a terminal session on clas-compute or math-alderaan. You will need to be on the CU Denver network (wired or CU Denver wireless, not CU Denver Guest), or using the university's VPN client.
 
@@ -39,7 +39,7 @@ If you want to disconnect from the screen but leave it running, hit the combinat
 
 When you want to reconnect to the screen later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll complain and tell you the screens you have available to reconnect to. <code>screen –r ‘bananaphone’</code> to reconnect to that screen. Sometimes there is a number in front of the screen so <code>screen –r 3128.bananaphone</code>. It’ll tell you the number in the <code>screen –r</code> info screen.
 
-###File Storage
+### File Storage
 
 Math home directories are on a shared server with 40TB total (right now). Projects are found in /storage/department/projects (where department may be one of many departments who use this system).
 
@@ -49,13 +49,13 @@ If you need a lot of data storage, please contact Joe before filling everything 
 
 df –h will show you the storage arrays and how much space is available. There are different types of "empty" space in linux so it may say there is plenty of space in df –h yet the array is full.
 
-###Passwords
+### Passwords
 
 The system uses your normal UCD portal/email logon username and password. Users must be approved before using the system, so if your login is not working, you probably are not on the approved/initialized list yet.
 
-##Requesting Information about the Environment
+## Requesting Information about the Environment
 
-###Queues
+### Queues
 
 There are queues for different departments on math-compute because it points to a central scheduler for all of CLAS. To see these queues type 
 
@@ -70,7 +70,7 @@ There are queues for different departments on math-compute because it points to 
     math-score           up   infinite      5   unk* math-score-c[01-05]
     chem-xenon           up   infinite      6   unk* chem-xenon-c[01-06]
 
-###Nodes
+### Nodes
 To see a list of all nodes, use:
 
      $ sinfo -N
@@ -150,9 +150,9 @@ To see a list of all nodes, use:
 
 It looks confusing but there is a method to the madness in the naming convention. Obviously, math-colibri and math-score are the identifiers for what cluster/building the servers are in, but the –c## and –i## stand for compute and interactive. the c## servers are usually part of the queuing system and the i## ones are for interactive use. Again, never ssh to compute nodes directly.
 
-##Scheduler Instructions
+## Scheduler Instructions
 
-###Submitting a job
+### Submitting a job
 
 The <code>sbatch job_script</code> command is used to submit a job into a queue. Your job starts executing in the directory where it was submitted, so submit it from a directory accessible to all compute nodes, such as a subdirectory of your home directory. You can add switches to the <code>sbatch</code> command, but it is recommended to make them a part of your batch script so that you do not have to do that every time. Please do not use more cores than the number of tasks specified in your script.
 
@@ -163,46 +163,43 @@ The templates batch scripts and simple examples to run are in <code>/storage/tem
 #### A simple single-core job template alderaan_single.sh
 
 This script will be suffient for most jobs, which do not use multiprocessing.
-<code>
-#!/bin/bash
-# A simple single core job template
-#SBATCH --job-name=mpi_hello_single
-#SBATCH --partition=math-alderaan
-#SBATCH --time=1:00:00                    # Max wall-clock time
-#SBATCH --ntasks=1                        # number of cores, leave at 1
-examples/hello_world_fortran.exe          # replace by your own executable
-</code>
+
+ #!/bin/bash
+ # A simple single core job template
+ #SBATCH --job-name=mpi_hello_single
+ #SBATCH --partition=math-alderaan
+ #SBATCH --time=1:00:00                    # Max wall-clock time
+ #SBATCH --ntasks=1                        # number of cores, leave at 1
+ examples/hello_world_fortran.exe          # replace by your own executable
 
 #### A simple MPI job template alderaan_mpi.sh
 
-<code>
-#!/bin/bash
-# alderaan_mpi.sh
-# A simple MPI job template
-#SBATCH --job-name=mpi_hello
-#SBATCH --partition=math-alderaan
-#SBATCH --time=1:00:00                    # Max wall-clock time
-#SBATCH --ntasks=360                      # Total number of MPI processes, no need for --nodes
-mpirun examples/mpi_hello_world.exe       # replace by your own executable, no need for -np
-</code>
+
+ #!/bin/bash
+ # alderaan_mpi.sh
+ # A simple MPI job template
+ #SBATCH --job-name=mpi_hello
+ #SBATCH --partition=math-alderaan
+ #SBATCH --time=1:00:00                    # Max wall-clock time
+ #SBATCH --ntasks=360                      # Total number of MPI processes, no need for --nodes
+ mpirun examples/mpi_hello_world.exe       # replace by your own executable, no need for -np
 
 #### A more general MPI job template alderaan_mpi_general.sh
 
-You can request the number of nodes you want. The schedule will then split the jobs over the nodes.
-<code>
-#!/bin/bash
-# alderaan_mpi_general.sh
-# A a more general MPI job template
-#SBATCH --job-name=mpi_hello
-#SBATCH --partition=math-alderaan
-#SBATCH --nodes=2                   # Number of requested nodes
-#SBATCH --time=1:00:00              # Max wall-clock time
-#SBATCH --ntasks=5                  # Total number of tasks over all nodes, max 64*nodes
-mpirun -np 10 examples/mpi_hello_world.exe # replace by your own executable and number of processors
-# do not use more MPI processes than nodes*ntasks
-</code>
+You can request the number of nodes. The scheduler will then split the tasks over the nodes.
 
-##Viewing Queues and Job Status
+ #!/bin/bash
+ # alderaan_mpi_general.sh
+ # A a more general MPI job template
+ #SBATCH --job-name=mpi_hello
+ #SBATCH --partition=math-alderaan
+ #SBATCH --nodes=2                   # Number of requested nodes
+ #SBATCH --time=1:00:00              # Max wall-clock time
+ #SBATCH --ntasks=5                  # Total number of tasks over all nodes, max 64*nodes
+ mpirun -np 10 examples/mpi_hello_world.exe # replace by your own executable and number of processors
+ # do not use more MPI processes than nodes*ntasks
+
+## Viewing Queues and Job Status
 
 The <code>squeue</code> command is used to gather information from the scheduler. Just <code>squeue</code> will show one line for each
 job running on the system.
