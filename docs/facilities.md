@@ -11,8 +11,8 @@ The Center for Computational Mathematics (CCM) and the Department of Mathematica
 *   Network of workstations and servers, connected by 1Gbs Ethernet, with 10Gbs uplink to the campus backbone.
 
 ## Software
-*   The network uses a common SLURM batch scheduler, integrated with clusters from other department (chemistry, biology).
-*   Installed software on the computing network includes MATLAB, R, and Gnu compilers. 
+*   The network uses a common SLURM batch scheduler, integrated with clusters from other department in the College of Liberal Arts and Sciences (chemistry, biology).
+*   Installed software on the computing network includes MATLAB, R, and GNU compilers. Additional software can be installed on request. 
 *   A large collection of software is available to CU Denver students and faculty through the Office of Information for free or at reduced costs, including a MATLAB site license.
 
 ## Personnel Resources
