@@ -12,5 +12,5 @@ nav:
     - JupyterHub Server: jupyterhub.md
     - Local network: local.md
     - External Resources: external.md
-    - Facilitites Summary: facilities.md
+    - Facilities, Equipment, and Other Resources: facilities.md
 theme: readthedocs
