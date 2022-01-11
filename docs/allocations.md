@@ -6,6 +6,7 @@ Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If yo
 * a brief description of the project (few sentences),
 * funding source, if any, with an agency, grant number, and title 
 * a brief justification of the resources requested, with an aticipated number of runs, the number of cores per run, the total size files generated per run, and the total size of external data the user will bring in.
+
 ## Alderaan Core Time
 * **Small** - up to 30,000 core hours, max 128 concurrent cores per user, automatic with an account.
 * **Medium** - up to 150,000 core hours, max 640 concurrent cores, requests reviewed monthly
