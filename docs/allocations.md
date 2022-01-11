@@ -3,16 +3,22 @@
 Faculty and students with cudenver.edu or cuanschutz.edu login credentials. Please request an account or allocation first, because your directory needs to be created before you can log in successfully.
 ## Process
 Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If you need more than the default number of core hours or storage, your allocation request should include:
+
 * a brief description of the project (few sentences),
 * funding source, if any, with an agency, grant number, and title 
 * a brief justification of the resources requested, with an aticipated number of runs, the number of cores per run, the total size files generated per run, and the total size of external data the user will bring in.
 
-## Alderaan Core Time
+## Core Time
+### Alderaan
 * **Small** - up to 30,000 core hours, max 128 concurrent cores per user, automatic with an account.
 * **Medium** - up to 150,000 core hours, max 640 concurrent cores, requests reviewed monthly
 * **Large** - larger than medium, requests reviewed quarterly. 
-Jobs are charged for the number of reserved cores time, whether used or not.
-Core time use on other clusters than Alderaan and on GPU nodes is currently not limited.
+
+Jobs are charged for the total reserved core time, whether used or not. 
+Jobs on GPU nodes are charged for all 64 cores on the node. 
+
+### Other clusters
+Core time use on other clusters than Alderaan is currently not limited.
 
 ## Storage 
 ** NOTE: Files can be lost, even with backups. Users are responsible for maintaining copies of their important files elsewhere.** 
