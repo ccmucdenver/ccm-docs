@@ -8,32 +8,26 @@ Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If yo
 * funding source, if any, with an agency, grant number, and title 
 * a brief justification of the resources requested, with an aticipated number of runs, the number of cores per run, the total size files generated per run, and the total size of external data the user will bring in.
 
-## Core Time
-### Alderaan
-* **Small** - up to 30,000 core hours, max 128 concurrent cores per user, automatic with an account.
-* **Medium** - up to 150,000 core hours, max 640 concurrent cores, requests reviewed monthly
+## Limits
+**To encourage early use, storage and core time limits below are currently soft and may be extended as needed - we want you to work here**! The limits will be activated in future when needed to keep the resources available fairly for everyone.
+
+### Core Time
+* **Small** - up to 30,000 Alderaan core hours, max 128 concurrent cores per user, automatic with an account.
+* **Medium** - up to 150,000 Alderaan core hours, max 640 concurrent cores, requests reviewed monthly
 * **Large** - larger than medium, requests reviewed quarterly. 
 
 Jobs are charged for the total reserved core time, whether used or not. 
 Jobs on GPU nodes are charged for all 64 cores on the node. 
 
-### Other clusters
-Core time use on other clusters than Alderaan is currently not limited.
+Core time use on other clusters than Alderaan is not limited.
 
-## Storage 
-** NOTE: Files can be lost, even with backups. Users are responsible for maintaining copies of their important files elsewhere.** 
+### Storage 
+**Users are responsible for maintaining copies of their important files elsewhere. Files can be lost, even with backups.** 
  
-* **Home directories** – 25GB max, more can be requested with an allocation request. Backed up weekly, keeping 4 backups from various times. Home directories are `/home/user`, usually implemented as soft links.
-* **Project storage** -  250GB max, more and group project storage can be requested with an allocation request. **Not backed up.** Project directories are in  `/storage/department/projects/name`, often implemented as soft links.
-* **Scratch** - no maximum, not backed up. Files with oldest access date will be purged automatically when usage is over 80%. Users should make their own subdirectories in `/scratch`.
+* **Home directories** – 25GB, more on request. Backed up weekly, keeping 4 backups from various times. Home directories are `/home/user`, usually implemented as soft links. Existing home directories under 25GB are being migrated to backed-up space. **Existing home directories larger than 25GB will not be backed up**. Users should bring their home directories under the limit so that they can be migrated to backed-up space. 
+* **Project storage** -  250GB, more on request. **Not backed up.** Project directories are in  `/storage/department/projects/name`, often implemented as soft links. Existing projects get initial storage allocation equal to the current use + 10% + the standard project quota. 
+* **Scratch** - no limit, not backed up. Files with oldest access date will be purged automatically when the scratch space usage is over 80%. Please make your own subdirectories in `/scratch`.
 
-## Transitional Rules
-
-Existing home directories under 25GB are being migrated to backed-up space. **Existing home directories larger than 25GB will not be backed up**. Users should bring their home directories under the limit so that they can be migrated to backed-up space.
- 
-Existing projects get initial storage allocation equal to the current use + 10% + the standard project quota. 
- 
-The storage limits apply now. The clusters will transition to enforced quotas over time. 
  
 ## Old files
  
