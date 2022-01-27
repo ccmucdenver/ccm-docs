@@ -24,11 +24,16 @@ Core time on other clusters than Alderaan is not limited.
 ### Storage 
 **Users are responsible for maintaining copies of their important files elsewhere. Files can be lost, even with backups.** 
  
-* **Home directories** – 25GB, more on request. Backed up weekly, keeping 4 backups from various times. Home directories are `/home/user`, usually implemented as soft links. Existing home directories under 25GB are being migrated to backed-up space. **Existing home directories larger than 25GB will not be backed up**. Users should bring their home directories under the limit so that they can be migrated to backed-up space. 
-* **Project storage** -  250GB, more on request. **Not backed up.** Project directories are in  `/storage/department/projects/name`, often implemented as soft links. Existing projects get initial storage allocation equal to the current use + 10% + the standard project quota. 
+* **Home directories** – 25GB, more on request. Backed up weekly, keeping 4 backups from various times. Home directories are `/home/user`, usually implemented as soft links. 
+* **Project storage** -  250GB, more on request. **Not backed up.** Project directories are in  `/storage/department/projects/name`, often implemented as soft links. 
 * **Scratch** - no limit, not backed up. Files with oldest access date will be purged automatically when the scratch space usage is over 80%. Please make your own subdirectories in `/scratch`.
 
- 
+### Transitional
+
+Existing home directories under 25GB are being migrated to backed-up space. **Existing home directories larger than 25GB are not backed up**. Users should bring their home directories under the limit so that they can be migrated to backed-up space. 
+
+Existing projects get initial storage allocation equal to the current use + 10% + the standard project quota. 
+
 ## Old files
  
 Upon project or user inactivation, the files will be deleted after a notification (if the user's university email still works) and a grace period. 
