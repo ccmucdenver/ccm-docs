@@ -1,25 +1,25 @@
 # Accounts and Allocations
 ## Eligibility
-Faculty and students with cudenver.edu or cuanschutz.edu login credentials. Please request an account or allocation first, because your directory needs to be created before you can log in successfully.
+Faculty and students with cudenver.edu or cuanschutz.edu login. Please request an account first, your directory needs to be created before you can log in successfully.
 ## Process
-Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If you need more than the default number of core hours or storage, your allocation request should include:
+Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If you need more than the default core or storage resources below, your allocation request should include:
 
 * a brief description of the project (few sentences),
 * funding source, if any, with an agency, grant number, and title 
 * a brief justification of the resources requested, with an aticipated number of runs, the number of cores per run, the total size files generated per run, and the total size of external data the user will bring in.
 
-## Limits
+## Resources
 **To encourage early use, storage and core time limits below are currently soft and may be extended as needed - we want you to work here**! The limits will be activated in future when needed to keep the resources available fairly for everyone.
 
-### Core Time
+### Cores
 * **Small** - up to 30,000 Alderaan core hours, max 128 concurrent cores per user, automatic with an account.
 * **Medium** - up to 150,000 Alderaan core hours, max 640 concurrent cores, requests reviewed monthly
 * **Large** - larger than medium, requests reviewed quarterly. 
 
 Jobs are charged for the total reserved core time, whether used or not. 
-Jobs on GPU nodes are charged for all 64 cores on the node. 
+Jobs on Alderaan GPU/high memory nodes are charged for all 64 cores on the node. 
 
-Core time use on other clusters than Alderaan is not limited.
+Core time on other clusters than Alderaan is not limited.
 
 ### Storage 
 **Users are responsible for maintaining copies of their important files elsewhere. Files can be lost, even with backups.** 
