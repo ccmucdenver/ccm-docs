@@ -1,6 +1,6 @@
 # Accounts and Allocations
 ## Eligibility
-Faculty and students with cudenver.edu or cuanschutz.edu login. Please request an account first, your directory needs to be created before you can log in successfully.
+Faculty and students with `ucdenver.edu` or `cuanschutz.edu` login. Please request an account first, your directory needs to be created before you can log in successfully.
 ## Process
 Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If you need more than the default core or storage resources below, your allocation request should include:
 
