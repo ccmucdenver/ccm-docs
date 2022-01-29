@@ -9,12 +9,12 @@ Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If yo
 * a brief justification of the resources requested, with an aticipated number of runs, the number of cores per run, the total size files generated per run, and the total size of external data the user will bring in.
 
 ## Resources
-**To encourage early use, storage and core time limits below are currently soft and may be extended as needed - we want you to work here**! The limits will be activated in future when needed to keep the resources available fairly for everyone.
+**To encourage early use, storage and core time limits below are currently soft and may be extended as needed - we want you to work here**! They will firm up in future as needed to keep the resources available fairly for everyone.
 
 ### Cores
 * **Small** - up to 30,000 Alderaan core hours, max 128 concurrent cores per user, automatic with an account.
-* **Medium** - up to 150,000 Alderaan core hours, max 640 concurrent cores, requests reviewed monthly
-* **Large** - larger than medium, requests reviewed quarterly. 
+* **Medium** - up to 150,000 Alderaan core hours, max 640 concurrent cores, reviewed monthly
+* **Large** - more than medium, reviewed quarterly. 
 
 Jobs are charged for the total reserved core time, whether used or not. 
 Jobs on Alderaan GPU/high memory nodes are charged for all 64 cores on the node. 
