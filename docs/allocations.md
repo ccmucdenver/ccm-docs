@@ -5,7 +5,8 @@ Faculty and students with `ucdenver.edu` or `cuanschutz.edu` login. Please reque
 Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If you need more than the default core or storage resources below, your allocation request should include:
 
 * a brief description of the project (title and few sentences),
-* funding source, if any, with an agency, grant number, and title 
+* funding source, if any, with an agency, grant number, and title,
+* list of users who participate in the project and share the project storage,
 * a brief justification of the resources requested, such as the aticipated number of runs, the number of cores and time per run, the total size of files generated per run, and the total size of external data the user will bring in.
 
 ## Resources and Allocations
@@ -15,7 +16,7 @@ Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If yo
 **Users are responsible for maintaining copies of their important files elsewhere. Files can be lost, even with backups.** 
  
 * **Home directories** – 25GB, more with an allocation request. Backed up weekly, keeping 4 backups from various times. Home directories are `/home/user`, usually implemented as soft links. 
-* **Project storage** -  250GB, more with an allocation request. **Not backed up.** Project directories are in  `/storage/department/projects/name`, often implemented as soft links. 
+* **Project storage** -  250GB, more with an allocation request. **Not backed up.** Project directories are in  `/storage/department/projects/name`, often implemented as soft links. A project directory can be shared between a group of users.
 * **Scratch** - no limit, not backed up. Files with oldest access date will be purged automatically when the scratch space usage is over 80%. Please make your own subdirectories in `/scratch`.
 
 ### Cores
