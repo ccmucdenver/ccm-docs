@@ -10,7 +10,7 @@ Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If yo
 * a brief justification of the resources requested, such as the aticipated number of runs, the number of cores and time per run, the total size of files generated per run, and the total size of external data the user will bring in.
 
 ## Resources and Allocations
-**To encourage early use, storage and core time limits below are currently soft and may be extended as needed - we want you to work here**! They will firm up in future as needed to keep the resources available fairly for everyone.
+**To encourage early use, storage and core time limits below are not enforced for an initial period - we want you to work here**! They will firm up in future as needed to keep the resources available fairly for everyone.
 
 ### Storage 
 **Users are responsible for maintaining copies of their important files elsewhere. Files can be lost, even with backups.** 
