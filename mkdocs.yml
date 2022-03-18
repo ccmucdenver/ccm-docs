@@ -10,6 +10,7 @@ nav:
     - Colibri Cluster: colibri.md
     - Score Cluster: score.md
     - Research Storage: storage.md
+    - Singularity Containers: singularity.md
     - JupyterHub Server: jupyterhub.md
     - Local network: local.md
     - External Resources: external.md
