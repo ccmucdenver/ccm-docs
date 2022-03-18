@@ -21,14 +21,14 @@ Then start a shell in the container as above, and you can do whatever you would 
 Note: building a container will pick up current version of software, so the versions below will change when containers are rebuilt.
 ### tensorflow.sif
 
-python3.8.20 (gcc 9.3.9) as python 3, with numpy 1.22.2 and tensorflow 2.8.0 with sklearn matplotlib keras keras-tuner tensorflow_datasets pandas opencv-python-headless
-
-CUDA 11.4
-jupyter 1.0.0, jupyterhub 2.1.1
+python3.8.20 (gcc 9.3.9) as python 3, with numpy 1.22.2 and tensorflow 2.8.0 with sklearn matplotlib keras keras-tuner tensorflow_datasets pandas opencv-python-headless,
+CUDA 11.4, jupyter 1.0.0, jupyterhub 2.1.1
 
 Note: tensorflow will run with or withough GPU, but it will crash python on most colibri nodes because their CPUs and GPUs are too old.
 
-Also, tensorflow-v1.2.sif and tensorflow-v1.3.sif, which will run on older CPUs.
+### tensorflow-v1.2.sif and tensorflow-v1.3.sif
+
+Older versions of tensorflow 1, which can run on older CPUs.
 
 ### mixtures.sif
 
