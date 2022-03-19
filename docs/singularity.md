@@ -2,7 +2,7 @@
 
 A singularity container provides a custom environment to run an application with all of its dependencies. It avoids conflicts when different applications require different versions of libraries or other dependences, and it makes yoiur comutations reproducible. You can even copy a container to another machine with different versions of software (with some limitations of course) with singularity installed, and all will look for your application the same. 
 
-Software with complicated dependencies is often distributed as containtes, with their own runtime environment. Singularity containers are large files, many GB. If you have any containters, please put them in yout project directory. *Please do not store singularity containers in your home directory.*
+Software with complicated dependencies is often distributed as containtes, with their own runtime environment. Singularity containers are large files, many GB. If you have any containters, please put them in yout project directory. **Please do not store singularity containers in your home directory.**
 
 We often install software requested by users in singularity containers rather than on the system itself to provide the required versions of dependencies and to avoid software conflicts.
 
