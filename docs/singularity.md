@@ -18,7 +18,7 @@ for example
 
 ## What containers we have
 Containers we have built are in `/storage/singularity`.
-To what is in a container, start with a short description which should be provided by every container, 
+To see what is in a container, start with a short description which should be provided by every container:
 
      singularity run-help containerpath.sif
       
