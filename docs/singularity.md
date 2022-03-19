@@ -1,5 +1,11 @@
 # Singularity Containers
 
+A singularity container provides a custom environment to run an application with all of its dependencies. It avoids conflicts when different applications require different versions of libraries or other dependences, and it makes yoiur comutations reproducible. You can even copy a container to another machine with different versions of software (with some limitations of course) with singularity installed, and all will look for your application the same. 
+
+Software with complicated dependencies is often distributed as containtes, with their own runtime environment. Singularity containers are large files (several GB). If you download containters, please put them in yout project directory, do not keep them in your home directory.
+
+We often install software requested by users in singularity containers rather than on the system itself to provide the required versions of dependencies and to avoid software conflicts.
+
 ## How to Use
 
 To start a shell in a container,
@@ -12,7 +18,11 @@ for example
 
 ## What containers we have
 Containers we have built are in `/storage/singularity`.
-To see the contents of a container, start by reviewing the definition file, which the scriptthat was used to build the container, by something like
+To what is in a container, start with a short description which should be provided by every container, 
+
+     singularity run-help containerpath.sif
+      
+For more details you can look how the software in the container was built. This is was done by a script, called definition file, which you can see by
 
      singularity inspect --deffile containerpath.sif
 
