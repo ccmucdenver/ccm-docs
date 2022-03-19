@@ -26,7 +26,7 @@ For more details you can look how the software in the container was built. This 
 
      singularity inspect --deffile containerpath.sif
 
-Then start a shell in the container as above, and you can do whatever you would  on a regular machine to examine softwares and their versions.
+Then start a shell in the container as above, and you can do whatever you normally do to examine softwares and their versions.
 
 Note: building a container will pick up current version of software, so the versions below will change when containers are rebuilt.
 ### tensorflow.sif
