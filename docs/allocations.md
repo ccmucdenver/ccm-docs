@@ -1,13 +1,14 @@
 # Accounts and Allocations
 ## Eligibility
-Faculty and students with `ucdenver.edu` or `cuanschutz.edu` login. Please request an account first, your directory needs to be created before you can log in successfully.
+Employees and students with `ucdenver.edu` or `cuanschutz.edu` login credentials.
 ## Process
-Account and allocation requests should be sent to jan.mandel@ucdenver.edu. If you need more than the default core or storage resources below, your allocation request should include:
+Please use [this form](https://forms.office.com/r/GQ9ef7ei4i) for account and allocation requests, and alert jan.mandel@ucdenver.edu that the form was submitted. Requests should include:
 
-* a brief description of the project (title and few sentences),
+* a brief description of the project (title and a sentence or few),
 * funding source, if any, with an agency, grant number, and title,
-* list of users who participate in the project and share the project storage,
-* a brief justification of the resources requested, such as the aticipated number of runs, the number of cores and time per run, the total size of files generated per run, and the total size of external data the user will bring in.
+* the usernames of users who participate in the project.
+
+If you need more than the default core or storage resources below, your request should contain a brief justification of the resources requested, such as the aticipated number of runs, the number of cores and time per run, the total size of files generated per run, and the total size of external data you will bring in.
 
 ## Resources and Allocations
 **To encourage early use, storage and core time limits below are not enforced for an initial period - we want you to work here**! They will firm up in future as needed to keep the resources available fairly for everyone.
