@@ -11,7 +11,7 @@ Please use [this form](https://forms.office.com/r/GQ9ef7ei4i) for account and al
 If you need more than the default core or storage resources below, your request should contain a brief justification of the resources requested, such as the aticipated number of runs, the number of cores and time per run, the total size of files generated per run, and the total size of external data you will bring in.
 
 ## Resources and Allocations
-**To encourage early use, storage and core time limits below are not enforced for an initial period - we want you to work here**! They will firm up in future as needed to keep the resources available fairly for everyone.
+**To encourage early use, storage and core time limits are not enforced for an initial period - we want you to work here**! They will be activated in future as needed to keep the resources available fairly for everyone.
 
 ### Storage 
 **Users are responsible for maintaining copies of their important files elsewhere. Files can be lost, even with backups.** 
