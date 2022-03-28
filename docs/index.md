@@ -1,6 +1,6 @@
 # Center for Computational Mathematics (CCM) University of Colorado Denver
 
-Please see the navigation links on the left for contents. Go to [Allocations](../allocations/) to request an account.
+Please see the navigation links on the left for contents. Go to [Allocations](./allocations/) to request an account.
 
 ## Acknowledging CCM
 
