@@ -4,9 +4,9 @@ Please see the navigation links on the left for contents.
 
 ## Acknowledging CCM
 
-Use of CCM resources must be acknowledged in all publications. Any work using Alderaan must include the NSF grant number. 
+Use of the resources must be acknowledged in all publications and other work as follows. Any work using Alderaan must include the NSF grant number. Please send copies of all publications or links to jan.mandel@ucdenver.edu.
 
-**Acknowledging Alderaan**: This work used the computing resources at the Center for Computational Mathematics, Unversity of Colorado Denver, in particular the Alderaan cluster, supported by the National Science Foundation award [OAC-2019089](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089). 
+**This work used the computing resources at the Center for Computational Mathematics, University of Colorado Denver, in particular the Alderaan cluster, supported by the National Science Foundation award [OAC-2019089](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089).**
 
 ## How to contribute
 
