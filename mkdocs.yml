@@ -5,6 +5,7 @@ nav:
     - Home: index.md
     - About: about.md
     - Clusters Guide: clusters_guide.md
+    - Examples: examples.md
     - Accounts and Allocations: allocations.md
     - Alderaan Cluster: alderaan.md
     - Colibri Cluster: colibri.md
