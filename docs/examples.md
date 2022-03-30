@@ -1,6 +1,4 @@
-# Examples 
-
-## Interactive job with Tensorflow on GPU
+# Interactive job with Tensorflow on GPU
 
 Look which host you are on. You should be on the head node.
 
