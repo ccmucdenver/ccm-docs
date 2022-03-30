@@ -1,19 +1,15 @@
 # Examples 
 
-## long interactive job with Tensorflow on GPU
-
-Start a sceen virtual terminal (screen) sessiom:
-
-     > screen -S gpu 
+## Interactive job with Tensorflow on GPU
 
 Look which host you are on. You should be on the head node.
 
      > hostname
      math-alderaan
 
-Start a 2-day interactive job on a GPU node
+Start an interactive job on a GPU node
 
-     > srun -p math-alderaan-gpu --time=2-00:00:0 -N 1 -n 1 --pty bash -i 
+     > srun -p math-alderaan-gpu --time=02:00:0 -N 1 -n 1 --pty bash -i 
 
 Check where you are. You shouild be on a high memory/gpu node.
 
@@ -31,22 +27,10 @@ Do your python:
      [GCC 9.3.0] on linux
      Type "help", "copyright", "credits" or "license" for more information.
      >>> from tensorflow.python.client import device_lib
-     >>> import mycode
+     >>> 
 
-Your code is running. Disconnect from the virtual terminal
+When you are done, exit so that someone else can use the gpu node
 
-     ctrl-A D 
-
-or just disconnect. When you log in next 
-
-     > hostname
-     math-alderaan
-     > screen -r gpu
-
-and you are back in your session
-
-     >>> from tensorflow.python.client import device_lib
-     >>> import mycode
-     (your output here)
-
+     >>> exit()
+     exit
 
