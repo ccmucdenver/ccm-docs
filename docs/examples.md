@@ -23,10 +23,10 @@ Start a shell in a container
 ```
 > singularity shell /storage/singularity/tensorflow.sif 
 ```
-Do your python
+Do your python:
 ```
 Singularity> python3
-Python 3.8.10 (default, Nov 26 2021, 20:14:08) 
+Python 3.8.10 (default, Nov 26 2021, 20:14:08)
 [GCC 9.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> from tensorflow.python.client import device_lib
