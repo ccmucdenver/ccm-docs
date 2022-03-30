@@ -25,11 +25,11 @@ Example python code `gpucode.py`:
      print(device_lib.list_local_devices())
      print("done") 
 
-and submit by
+Submit your batch job by:
 
      sbatch alderaan_single_gpu.sh
      
-You can file the files above in the repository https://github.com/ccmucdenver/templates
+You can find the files above in the repository https://github.com/ccmucdenver/templates
 
 ## Interactive job with Tensorflow on GPU
 
