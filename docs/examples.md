@@ -42,7 +42,11 @@ or just disconnect. When you log in next
      > hostname
      math-alderaan
      > screen -r gpu
-     >>>
 
-and you are back in your session.
+and you are back in your session
+
+     >>> from tensorflow.python.client import device_lib
+     >>> import mycode
+     (your output here)
+
 
