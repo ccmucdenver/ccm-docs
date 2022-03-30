@@ -42,7 +42,7 @@ Start an interactive job on a GPU node
 
      > srun -p math-alderaan-gpu --time=02:00:0 -N 1 -n 1 --pty bash -i 
 
-Check where you are. You shouild be on a high memory/gpu node.
+Check where you are. You should be on a high memory/gpu node.
 
      > hostname
      math-alderaan-h01
