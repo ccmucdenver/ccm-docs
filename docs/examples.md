@@ -1,5 +1,36 @@
 # Examples
 
+## Batch job with Tensorflow on GPU
+
+Prepare two files like
+
+Example batch script file alderaan_single_gpu.sh 
+
+     #!/bin/bash
+     #SBATCH --job-name=gpu
+     #SBATCH --partition=math-alderaan-gpu
+     #SBATCH --time=1-1:00:00                  # Max wall-clock time 1 day 1 hour
+     #SBATCH --ntasks=1                        # number of cores 
+
+     # run tensorflow in singularity container
+     # redirect output to a file so that it can be inspected before the end of the job
+     singularity exec /storage/singularity/tensorflow.sif python3 gpucode.py >& gpucode.log 
+     # copy the output to the job output for reference
+     cat gpucode.log
+
+Example python code gpucode.py
+
+     print('gpus available to tensorflow:')
+     from tensorflow.python.client import device_lib    
+     print(device_lib.list_local_devices())
+     print("done") 
+
+and submit by
+
+     sbatch alderaan_single_gpu.sh
+     
+You can file the files above in the repository https://github.com/ccmucdenver/templates
+
 ## Interactive job with Tensorflow on GPU
 
 Look which host you are on. You should be on the head node.
