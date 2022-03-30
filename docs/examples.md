@@ -2,9 +2,9 @@
 
 ## Batch job with Tensorflow on GPU
 
-Prepare two files like
+Prepare two files as follows.
 
-Example batch script file alderaan_single_gpu.sh 
+Example batch script `alderaan_single_gpu.sh`:
 
      #!/bin/bash
      #SBATCH --job-name=gpu
@@ -18,7 +18,7 @@ Example batch script file alderaan_single_gpu.sh
      # copy the output to the job output for reference
      cat gpucode.log
 
-Example python code gpucode.py
+Example python code `gpucode.py`:
 
      print('gpus available to tensorflow:')
      from tensorflow.python.client import device_lib    
