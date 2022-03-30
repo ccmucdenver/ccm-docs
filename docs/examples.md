@@ -6,7 +6,7 @@ Start a sceen virtual terminal (screen) sessiom:
 ```
 > screen -S gpu 
 ```
-Look which host you are on:
+Look which host you are on. You should be on the head node.
 ```
 > hostname
 math-alderaan
@@ -15,7 +15,7 @@ Start a 2-day interactive job on a GPU node
 ```
 > srun -p math-alderaan-gpu --time=2-00:00:0 -N 1 -n 1 --pty bash -i 
 ```
-Check where you are
+Check where you are. You shouild be on a high memory/gpu node.
 ```
 > hostname
 math-alderaan-h01
