@@ -201,6 +201,12 @@ You can request the number of nodes. The scheduler will then split the tasks ove
      #SBATCH --ntasks=5                  # Total number of tasks over all nodes, max 64*nodes
      mpirun -np 10 examples/mpi_hello_world.exe # replace by your own executable and number of processors
      # do not use more MPI processes than nodes*ntasks
+     
+## Interactive jobs through the scheduler
+
+```
+srun -p PARTITION --time=2:00:0 -N 1 -n 1 --pty bash -i
+```
 
 ## Viewing Job Queues and Job Status
 

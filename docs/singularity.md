@@ -1,5 +1,11 @@
 # Singularity Containers
 
+A singularity container provides a custom environment to run an application with all of its dependencies. It avoids conflicts when different applications require different versions of libraries or other dependences, and it can mak your results reproducible. You can even copy a container to another machine with different versions of system software (with some limitations of course) with singularity installed, and all will look to your application the same. 
+
+Software with complicated dependencies is often distributed as singularity containters, with their own runtime environment. Singularity containers are large files, many GB. If you have any containters, put them in yout project directory. **Please do not store singularity containers in your home directory.**
+
+We often install software requested by users in singularity containers rather than on the system itself to provide the required versions of dependencies and to avoid software conflicts.
+
 ## How to Use
 
 To start a shell in a container,
@@ -12,11 +18,15 @@ for example
 
 ## What containers we have
 Containers we have built are in `/storage/singularity`.
-To see the contents of a container, start by reviewing the definition file, which the scriptthat was used to build the container, by something like
+To see what is in a container, start with a short description which should be provided by every container:
+
+     singularity run-help containerpath.sif
+      
+For more details you can look how the software in the container was built. This is was done by a script, called definition file, which you can see by
 
      singularity inspect --deffile containerpath.sif
 
-Then start a shell in the container as above, and you can do whatever you would  on a regular machine to examine softwares and their versions.
+Then start a shell in the container as above, and you can do whatever you normally do to examine softwares and their versions.
 
 Note: building a container will pick up current version of software, so the versions below will change when containers are rebuilt.
 ### tensorflow.sif
