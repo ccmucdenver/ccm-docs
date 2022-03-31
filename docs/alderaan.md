@@ -8,7 +8,7 @@ The Alderaan cluser is a shared cluster running multi-core jobs with multiple no
 
 ## Hardware
 * 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 1U rack-mount drawers, with 4 nodes in each drawer.
-* 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors, NVIDIA Tesla A100, and 4TB DDR4 memory.
+* 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors, NVIDIA Tesla A100, and 2TB DDR4 memory.
 * Head node with 2 AMD EPYC 7502 32 core processors and 256GB memory.
 * 816TB storage (1PB raw), in 2 storage nodes, each with 2 Intel Xeon( Gold 5215 CPUs  2.50GHz, 196GB memory, and XFS filesystems shared by NFS over Infiniband.
 * HDR100 Infiniband interconnect
