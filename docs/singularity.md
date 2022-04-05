@@ -6,7 +6,7 @@ Software with complicated dependencies is often distributed as singularity conta
 
 We often install software requested by users in singularity containers rather than on the system itself to provide the required versions of dependencies and to avoid software conflicts.
 
-## How to Use Singularity Ineractively
+## How to use Singularity interactively
 
 To start a shell in a container,
 
@@ -20,7 +20,7 @@ You will have access to your files as usual, but the operating system and applic
 
 **Please do not run computationally intensive jobs on the front end. Use either an interactive batch job, or, submit a batch job as described in the next section.**
 
-## How to Run Singularity in a Single-Node Batch Job
+## How to run Singularity in a single-node batch job
 
 Write a batch job script file, say `singularity_alderaan_shell.slurm`, like this:
 
@@ -36,15 +36,18 @@ Write a batch job script file, say `singularity_alderaan_shell.slurm`, like this
      hostname
      EOF
      
-and submit to the schedule as usual: `sbatch singularity_alderaan_shell.slurm`
+and submit the job as usual: 
+
+     sbatch singularity_alderaan_shell.slurm
+     
 If the commands you invoke inside the singularity container can take advantage of
 more than one core, you can increase the job parameter --ntasks to reserve and use 
 more core. **If your singularity job uses large memory, please increase --ntasks to 
-about memory GB / 8 even if you may not use the cores. Otherwise node memory may get
+about 8 GB per core even if you may not use the cores. Otherwise, node memory may get
 overloaded with unfortunate consequences such as jobs stuck and 
-nodes down until someone resents them.**
+nodes down until someone resets them.**
 
-## How to run Singularity with MPI and jobs on multiple nodes
+## How to run Singularity with MPI and on multiple nodes
 
 Coming soon.
                                                                                                                           
