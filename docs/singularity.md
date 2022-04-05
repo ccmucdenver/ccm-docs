@@ -6,7 +6,7 @@ Software with complicated dependencies is often distributed as singularity conta
 
 We often install software requested by users in singularity containers rather than on the system itself to provide the required versions of dependencies and to avoid software conflicts.
 
-## How to Use
+## How to Use Singularity Ineractively
 
 To start a shell in a container,
 
@@ -18,6 +18,36 @@ for example
      
 You will have access to your files as usual, but the operating system and applications are replaced by those in the container.
 
+**Please do not run computationally intensive jobs on the front end. Use either an interactive batch job, or, submit a batch job as described in the next section.**
+
+## How to Run Singularity in a Single-Node Batch Job
+
+Write a batch job script file, say `singularity_alderaan_shell.slurm`, like this:
+
+     #!/bin/bash
+     #SBATCH --job-name=singularity
+     #SBATCH --partition=math-alderaan
+     #SBATCH --nodes=1                   # Number of requested nodes
+     #SBATCH --time=1:00:00              # Max wall-clock time
+     #SBATCH --ntasks=1                  # Total number of tasks over all nodes, max 64*nodes
+
+     singularity shell /storage/singularity/go.sif << EOF
+     echo The shell commands here get executed in the singularity container
+     hostname
+     EOF
+     
+and submit to the schedule as usual: `sbatch singularity_alderaan_shell.slurm`
+If the commands you invoke inside the singularity container can take advantage of
+more than one core, you can increase the job parameter --ntasks to reserve and use 
+more core. **If your singularity job uses large memory, please increase --ntasks to 
+about memory GB / 8 even if you may not use the cores. Otherwise node memory may get
+overloaded with unfortunate consequences such as jobs stuck and 
+nodes down until someone resents them.**
+
+## How to run Singularity with MPI and jobs on multiple nodes
+
+Coming soon.
+                                                                                                                          
 ## What containers we have
 
 Containers we have built are in `/storage/singularity`.
