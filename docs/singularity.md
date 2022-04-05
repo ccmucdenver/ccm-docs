@@ -34,6 +34,10 @@ Note: building a container will pick up current version of software, so the vers
 
 CentOS Linux 8.4.2105, gcc 8.4.1 and standard Development Tools from Centos.
 
+### go.sif
+
+The Go language with gcc/gfortran 9 and development tools, based on Ubuntu.
+
 ### mixtures.sif
 
 R 4.1.2 with numerous standard and custom packages and datasets, see the definition file.
