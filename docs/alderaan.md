@@ -6,7 +6,7 @@ This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science a
 ## Purpose
 The Alderaan cluster is a resource for both campuses of the University of Colorado Denver. It is shared cluster running multi-core jobs with multiple nodes using MPI and the high-speed interconnect (High-Performace Computing, HPC), as well as multiple single-core jobs (High-Throughput Computing, HTC). All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](../score/) nodes. 
 
-Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://osgconnect.net with your CU Denver credentials, make an account, and contact jan.mandel@ucdenver.edu for help.
+Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials, make an account, and contact jan.mandel@ucdenver.edu for help.
 
 ## Hardware
 * 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 1U rack-mount drawers, with 4 nodes in each drawer.
