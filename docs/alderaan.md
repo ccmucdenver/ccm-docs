@@ -4,7 +4,11 @@
 This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science and Education by Campus and Grid Computing](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089)  under the [NSF CC* program](https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf20507). The cluster will be integrated with the [Open_Science_Grid (OSG)](https://opensciencegrid.org). At least 20% of capacity will be contributed to the OSG as required by the program.
 
 ## Purpose
-The Alderaan cluster is a resource for both campuses of the University of Colorado Denver. It is shared cluster running multi-core jobs with multiple nodes using MPI and the high-speed interconnect (High-Performace Computing, HPC), as well as multiple single-core jobs (High-Throughput Computing, HTC). All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](../score/) nodes. 
+The Alderaan cluster is a resource for both campuses of the University of Colorado Denver. 
+
+Alderaan is a shared cluster running multi-core jobs with multiple nodes using MPI and the high-speed interconnect (High-Performace Computing, HPC), as well as multiple single-core jobs (High-Throughput Computing, HTC). Alderaan head node is an alternative login node for the joint scheduler along with clas-compute.
+
+All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](../score/) nodes. 
 
 Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials, make an account, and contact jan.mandel@ucdenver.edu for help.
 
@@ -37,7 +41,7 @@ The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 * Install OSG - run OSG jobs and submit jobs to OSG
 * Set up governance and allocation processes
 ### Spring semester 2022
-* Scaling up availability and user base
+* Scaling up availability and user base, installing custom software on request.
 
 ## User Training (after the configuration is finalized)
 * ssh command line usage
