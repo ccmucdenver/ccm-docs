@@ -21,17 +21,20 @@ It is in Applications -> Utilities folder. You may want to drag it to your dock 
 Either way, from a terminal window, at the command line prompt type in:
 
     ssh awesomeperson@clas-compute.ucdenver.pvt
+    
+or
+
+    ssh awesomeperson@math-alderaan.ucdenver.pvt
 
 Whereas awesomeperson would be your CU Denver username. After connecting, it should ask for your CU Denver password and enter it at this point.
 
-Science will then occur and you should be at the clas-compute prompt and in your home directory.
+Science will then occur and you should be at the clas-compute prompt or math-alderaan and in your home directory. The following applies to both.
 
 ###Interactive Use
 
 Using a server ‘interactively’ (aka not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into math-compute, you can type <code>ssh math-colibri-i01</code> or whatever server you want to go directly to the server. **Please do not run anything directly on compute nodes, which are reserved for jobs under the control of the scheduler, even if you may be able to ssh there.  These are nodes with names like math-colibri-c01 with the "c" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.**
 
-
-Using 'screen' is generally a good idea both math-compute or the interactive nodes. Basically was screen does is starts a virtual terminal inside your terminal. Sound confusing? It is. The plus of this virtual terminal is if you get disconnected, whatever you were running is still going.
+Using 'screen' is generally a good idea both math-compute, math-alderaan, or the interactive nodes. Basically was screen does is starts a virtual terminal inside your terminal. Sound confusing? It is. The plus of this virtual terminal is if you get disconnected, whatever you were running is still going.
 
 'screen –S bananaphone' (make the name whatever you want) creates a new terminal with that name
 
@@ -57,18 +60,25 @@ The system uses your normal UCD portal/email logon username and password. Users 
 
 ### Queues
 
-There are queues for different departments on math-compute because it points to a central scheduler for all of CLAS. To see these queues type 
+There are queues for different departments on math-compute because it points to a central scheduler for all of CLAS. To see these queues (called "partitions"), type 
 
     $ sinfo
     PARTITION         AVAIL  TIMELIMIT  NODES  STATE NODELIST
-    math-alderaan        up 4-00:00:00     32  down* math-alderaan-c[01-32]
-    math-alderaan-gpu    up 4-00:00:00      1  down* math-alderaan-h01
-    math-alderaan-gpu    up 4-00:00:00      1   unk* math-alderaan-h02
-    math-colibri-gpu     up   infinite     12   unk*
-    math-colibri-c[01-02,04-12,23]
-    math-colibri-gpu     up   infinite     12   idle math-colibri-c[03,13-22,24]
-    math-score           up   infinite      5   unk* math-score-c[01-05]
+    math-alderaan        up 7-00:00:00      1 drain* math-alderaan-c28
+    math-alderaan        up 7-00:00:00      4    mix math-alderaan-c[01,08-10]
+    math-alderaan        up 7-00:00:00     25  alloc math-alderaan-c[04-07,11-27,29-32]
+    math-alderaan        up 7-00:00:00      2   idle math-alderaan-c[02-03]
+    math-alderaan-gpu    up 7-00:00:00      1    mix math-alderaan-h01
+    math-alderaan-gpu    up 7-00:00:00      1  alloc math-alderaan-h02
+    math-colibri-gpu     up   infinite     24   idle math-colibri-c[01-24]
+    math-score           up   infinite      5   idle math-score-c[01-05]
     chem-xenon           up   infinite      6   unk* chem-xenon-c[01-06]
+    clas-interactive     up   infinite      1   idle math-colibri-i02
+    math-alderaan-osg    up 1-00:00:00      1 drain* math-alderaan-c28
+    math-alderaan-osg    up 1-00:00:00      4    mix math-alderaan-c[01,08-10]
+    math-alderaan-osg    up 1-00:00:00     25  alloc math-alderaan-c[04-07,11-27,29-32]
+    math-alderaan-osg    up 1-00:00:00      2   idle math-alderaan-c[02-03]
+    clas-dev             up   infinite      1   idle clas-devnode-c01
 
 ### Nodes
 To see a list of all nodes, use:
@@ -148,7 +158,7 @@ To see a list of all nodes, use:
 
 
 
-It looks confusing but there is a method to the madness in the naming convention. Obviously, math-colibri and math-score are the identifiers for what cluster/building the servers are in, but the –c## and –i## stand for compute and interactive. the c## servers are usually part of the queuing system and the i## ones are for interactive use. Again, never ssh to compute nodes directly.
+It looks confusing but there is a method to the madness in the naming convention. Obviously, math-colibri and math-score are the identifiers for what cluster/building the servers are in, but the –c## and –i## stand for compute and interactive. The c## servers are usually part of the queuing system and the i## ones are for interactive use. Again, never ssh to compute nodes directly.
 
 ## Submitting Jobs to the Scheduler
 
@@ -213,6 +223,12 @@ srun -p PARTITION --time=2:00:0 -N 1 -n 1 --pty bash -i
 The <code>squeue</code> command is used to gather information from the scheduler. Just <code>squeue</code> will show one line for each
 job running on the system.
 
-## Using Singularity Containers
+## Custom application software
 
-Coming soon.
+We install software enviroments in containters, which provide a complete enviroment, avoid software conflicts, and can execute anywhere on the cluster.
+Using singulariry is easy. Type, for example,
+
+    singularity shell /storage/singularity/tensorflow
+    python3
+    
+and you can use many Python packages for machine learning. We have containers with statistics software, optimization, molecular chemistry, and mode. **We will be happy to add more, do not hesitate to ask!** See [Singularity](../singularity/) in this documentation for further details. 
