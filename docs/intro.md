@@ -56,13 +56,13 @@ and make sure your code is not trying to use more cores than you asked for.
 
 Finally, where clusters really shine is using many nodes at once as a single large computer. This is called 
 **High Performsnc Computing (HPC)** and it is the reason why many clusters have an additional expensive
-very high-speed network, called **interconnect** for the nodes to communicate with each other.  The 
-[fastest supercomputers in the world](https://top500.com) are built like that. A common use of HPC is to for
+very high-speed network, called **interconnect**.  The 
+[fastest supercomputers in the world](https://top500.org) are built this way. A common use of HPC is to for
 engineering and scientific simulation, such as in solid or fluid mechanics, plasma physics, or weather
-forecasting. The problem is discretized on a grid, which is partitioned into many pieces, much more than the 
-number of cores on a node. Each piece of the grid is assigned to one core, and the cores communicate
-the values on their boundaries between each other using a library, usually the 
-[Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface).
+forecasting. The problem is discretized on a grid, which is partitioned into a large number of pieces. 
+Each piece of the grid is assigned to one core, and the cores communicate
+the values on their boundaries between each other through the high speed interconnect using a library such as
+the [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface).
 
 ## Software environment
 
