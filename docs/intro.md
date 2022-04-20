@@ -82,6 +82,6 @@ as different **queues** on the same scheduler, called **SLURM**. The cluster has
 math-alderaan and clas-compute and you can submit jobs from either.
 
 We provide singularity containers for many uses and we can build more on request. The containers can run in any
-of the queues, with exceptions noted when the software in the container requires hardware a particular quueue
+of the queues, with exceptions noted when the software in the container requires hardware a particular queue
 does not provide. Aderaan has also software which comes as modules. Specific modules need to be loaded
 before the software they provide can be used.
