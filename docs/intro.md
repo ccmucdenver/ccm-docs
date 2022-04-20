@@ -50,7 +50,7 @@ multiple cores to run faster, sometimes without you even knowing. You should the
 documentation or by experiments) how many cores your job needs and specify in your job enough
 cores on a single node. Your code will run faster and everyone will be happier.
 
-You can also run codes with multitasking, e.g. in Python or in C/C++/Fortran, using a library like 
+You can also write your own codes with multitasking, e.g. in Python, or in C/C++/Fortran using a library like 
 OpenMP. Again, you should ask in your batch job script for the number of cores you will need, 
 specify a single node, and make sure your code is not trying to use more cores than you asked for.
 
