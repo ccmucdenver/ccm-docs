@@ -40,19 +40,19 @@ much memory and CPU they are using.
 ## What can I do with this?  
 
 The simplest way to use a cluster is to run a code using a **single core job** from a batch script. 
-A program you write, e.g., in Python of C. will be like that unless you do something special. Some users run
+A program you write, e.g., in Python of C, will be like that unless you do something special. Some users run
 a large number of single code jobs to do many independent computations quickly, such as explore
 different parametets of a problem or process many datatsets. This way of using clusters is called 
 **High Thoughut Computing (HTC)**.
 
 When you write your code as a script in a package like MATLAB or R, the package will often try to use
-severa cores to run faster, sometimes without you even knowing. You should then find out (e.g. from
+multiple cores to run faster, sometimes without you even knowing. You should then find out (e.g. from
 documentation or by experiments) how many cores your job needs and specify in your job enough
 cores on a single node. Your code will run faster and everyone will be happier.
 
-You can also run codes with multitasking, e.g. in Python or in C/C++/Fortran using a library like 
-OpenMP. Again you should put in your batch job script the number of cores you need, specify a single node,
-and make sure your code is not trying to use more cores than you asked for.
+You can also run codes with multitasking, e.g. in Python or in C/C++/Fortran, using a library like 
+OpenMP. Again, you should ask in your batch job script for the number of cores you will need, 
+specify a single node, and make sure your code is not trying to use more cores than you asked for.
 
 Finally, where clusters really shine is using many nodes at once as a single large computer. This is called 
 **High Performsnc Computing (HPC)** and it is the reason why many clusters have an additional expensive
