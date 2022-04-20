@@ -66,8 +66,8 @@ the [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Pass
 
 ## Software environment
 
-The jobs can be assigned anywhere on the cluser, therefore the software environment presented to jobs on the
-nodes needs to be identical so that the jobs to work properly. The software environment on the head node
+Jobs can be assigned anywhere on the cluser, therefore the software environment presented to jobs on the
+nodes needs to be identical. The software environment on the head node
 should be also the same. In addition, different uses require different softwares installed, which may conflict
 with each other. This is achieved in two ways: runing jobs in singulariy containers, which 
 carry a complete software environment inside; and by keeping the nodes identical and selecting software versions 
