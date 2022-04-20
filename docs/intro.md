@@ -42,8 +42,8 @@ much memory and CPU they are using.
 The simplest way to use a cluster is to run a code using a **single core job** from a batch script. 
 A program you write, e.g., in Python of C, will be like that unless you do something special. Some users run
 a large number of single code jobs to do many independent computations quickly, such as explore
-different parametets of a problem or process many datatsets. This way of using clusters is called 
-**High Thoughut Computing (HTC)**.
+different parameters of a model or process many datatsets in parallel. This way of using clusters is called 
+**High Throughput Computing (HTC)**.
 
 When you write your code as a script in a package like MATLAB or R, the package will often try to use
 multiple cores to run faster, sometimes without you even knowing. You should then find out (e.g. from
