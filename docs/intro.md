@@ -55,7 +55,7 @@ OpenMP. Again, you should ask in your batch job script for the number of cores y
 specify a single node, and make sure your code is not trying to use more cores than you asked for.
 
 Finally, where clusters really shine is using many nodes at once as a single large computer. This is called 
-**High Performsnc Computing (HPC)** and it is the reason why many clusters have an additional expensive
+**High Performance Computing (HPC)** and it is the reason why many clusters have an additional expensive
 very high-speed network, called **interconnect**.  The 
 [fastest supercomputers in the world](https://top500.org) are built this way. A common use of HPC is to for
 engineering and scientific simulation, such as in solid or fluid mechanics, plasma physics, or weather
