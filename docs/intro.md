@@ -28,8 +28,8 @@ The head node is not as poweful as the compute nodes, and it is often used by ma
 same time. To keep the head node usable for everyone, you should use it only for light work, such as 
 editing files, compilation of code, and small tests. 
 You should do computationally intensive interactive work only on compute nodes in an **interactive batch job**. 
-You use a special command to have the scheduler transfer you into a new command line session which runs 
-as a job on a compute node. When youi exit the session on the compute node, the job will end and you are
+Here is how: use a special command to have the scheduler transfer you into a new command line session which runs 
+as a job on a compute node. When you exit the session on the compute node, the job will end and you are
 back in your session on the head node.
 
 You should not work on compute nodes directly, because you would use resources the scheduler has not
