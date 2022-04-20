@@ -39,6 +39,49 @@ much memory and CPU they are using.
 
 ## What can I do with this?  
 
+The simplest way to use a cluster is to run a code using a **single core job** from a batch script. 
+A program you write, e.g., in Python of C. will be like that unless you do something special. Some users run
+a large number of single code jobs to do many independent computations quickly, such as explore
+different parametets of a problem or process many datatsets. This way of using clusters is called 
+**High Thoughut Computing (HTC)**.
 
+When you write your code as a script in a package like MATLAB or R, the package will often try to use
+severa cores to run faster, sometimes without you even knowing. You should then find out (e.g. from
+documentation or by experiments) how many cores your job needs and specify in your job enough
+cores on a single node. Your code will run faster and everyone will be happier.
+
+You can also run codes with multitasking, e.g. in Python or in C/C++/Fortran using a library like 
+OpenMP. Again you should put in your batch job script the number of cores you need, specify a single node,
+and make sure your code is not trying to use more cores than you asked for.
+
+Finally, where clusters really shine is using many nodes at once as a single large computer. This is called 
+**High Performsnc Computing (HPC)** and it is the reason why many clusters have an additional expensive
+very high-speed network, called **interconnect** for the nodes to communicate with each other.  The 
+[fastest supercomputers in the world](https://top500.com) are built like that. A common use of HPC is to for
+engineering and scientific simulation, such as in solid or fluid mechanics, plasma physics, or weather
+forecasting. The problem is discretized on a grid, which is partitioned into many pieces, much more than the 
+number of cores on a node. Each piece of the grid is assigned to one core, and the cores communicate
+the values on their boundaries between each other using a library, usually the 
+[Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface).
+
+## Software environment
+
+The jobs can be assigned anywhere on the cluser, therefore the software environment presented to jobs on the
+nodes needs to be identical so that the jobs to work properly. The software environment on the head node
+should be also the same. In addition, different uses require different softwares installed, which may conflict
+with each other. This is achieved in two ways: runing jobs in singulariy containers, which 
+carry a complete software environment inside; and by keeping the nodes identical and selecting software versions 
+to activate by manipulating the environment through *modules*.
 
 ## What is the configuration of our cluster?
+
+Our cluster is actually a collection of three clusters: Alderaan, a new cluster with over 2000 cores, 
+2 high-end GPUs, and a high-speed InfiniBand interconnect; Score, a smaller cluster built specifically for
+long-running single-core jobs; and Colibri, an older cluster with GPUs. The three clusters are accessed
+as different **queues** on the same scheduler, called **SLURM**. The cluster has two head nodes,
+math-alderaan and clas-compute and you can submit jobs from either.
+
+We provide singularity containers for many uses and we can build more on request. The containers can run in any
+of the queues, with exceptions noted when the software in the container requires hardware a particular quueue
+does not provide. Aderaan has also software which comes as modules. Specific modules need to be loaded
+before the software they provide can be used.
