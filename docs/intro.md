@@ -71,7 +71,7 @@ nodes needs to be identical. The software environment on the head node
 should be also the same. In addition, different uses require different softwares installed, which may conflict
 with each other. This is achieved in two ways: runing jobs in singulariy containers, which 
 carry a complete software environment inside; and by keeping the nodes identical and selecting software versions 
-to activate by manipulating the environment through *modules*.
+to activate by manipulating the environment through **modules**.
 
 ## What is the configuration of our cluster?
 
