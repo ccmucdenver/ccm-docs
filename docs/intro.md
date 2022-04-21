@@ -7,7 +7,7 @@ Only a designated computer, the **head node**, is accessible from the outside.
 Other nodes, called **compute nodes** are connected to
 the outside through the head node. You do not work on the compute nodes directly, but submit your work through a **batch scheduler**,
 which is a program that distributes the work between the compute nodes. 
-Cluster can have also **storage nodes**, which are computers that specialize in storing files. Normally you see 
+Cluster can have also **storage nodes**, which specialize in storing files. Normally you see 
 the same files on all nodes.
 
 ## How do I work on a cluster?
@@ -66,12 +66,14 @@ the [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Pass
 
 ## Software environment
 
-Jobs can be assigned anywhere on the cluser, therefore the software environment presented to jobs on the
-nodes needs to be identical. The software environment on the head node
-should be also the same. In addition, different uses require different softwares installed, which may conflict
-with each other. This is achieved in two ways: runing jobs in singulariy containers, which 
-carry a complete software environment inside; and by keeping the nodes identical and selecting software versions 
-to activate by manipulating the environment through **modules**.
+Jobs can be assigned anywhere on the cluser, therefore the software presented to jobs on the
+nodes should be identical. The software on the head node
+should be also the same. But different uses require different software packages installed, and it is not
+possible to just install everything because software packages and their dependencies 
+often conflict with each other. 
+This issue is resolved in two ways: runing jobs in Singulariy containers, which 
+carry inside a complete software environment (including a version of the operating system) for a particular
+application, and by selecting software to become accessible to a user through **environment modules**.
 
 ## What is the configuration of our cluster?
 
@@ -79,7 +81,7 @@ Our cluster is actually a collection of three clusters: Alderaan, a new cluster 
 2 high-end GPUs, and a high-speed InfiniBand interconnect; Score, a smaller cluster built specifically for
 long-running single-core jobs; and Colibri, an older cluster with GPUs. The three clusters are accessed
 as different **queues** on the same scheduler, called **SLURM**. The cluster has two head nodes,
-math-alderaan and clas-compute and you can submit jobs from either.
+**math-alderaan** and **clas-compute**. You can submit jobs from either.
 
 We provide singularity containers for many uses and we can build more on request. The containers can run in any
 of the queues, with exceptions noted when the software in the container requires hardware a particular queue
