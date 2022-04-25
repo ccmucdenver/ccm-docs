@@ -8,6 +8,8 @@ nav:
     - Clusters Guide: clusters_guide.md
     - Examples: examples.md
     - Accounts and Allocations: allocations.md
+    - Python: python.md
+    - Environment modules: modules.md
     - Alderaan Cluster: alderaan.md
     - Colibri Cluster: colibri.md
     - Score Cluster: score.md
