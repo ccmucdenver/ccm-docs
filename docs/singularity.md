@@ -22,7 +22,12 @@ You will have access to your files as usual, but the operating system and applic
 
 ## How to run Singularity in a single-node batch job
 
-Write a batch job script file, say `singularity_alderaan_shell.slurm`, like this:
+Prepare the commands you want to execute inside the container as a file, say `mycode.sh`, make it executable
+     
+     chmod +x mycode.sh
+     
+and write a batch job script file that executes your code inside the container,
+say `singularity_alderaan_shell.slurm`, like this:
 
      #!/bin/bash
      #SBATCH --job-name=singularity
@@ -31,18 +36,30 @@ Write a batch job script file, say `singularity_alderaan_shell.slurm`, like this
      #SBATCH --time=1:00:00              # Max wall-clock time
      #SBATCH --ntasks=1                  # Total number of tasks over all nodes, max 64*nodes
 
-     singularity shell /storage/singularity/go.sif << EOF
+     singularity exec /storage/singularity/container.sif mycode.sh
+     
+where `container` is the container name. Instead of a shell script, you can use an executable binary such as compiled C code, or a python command like `python3 mycode.py`, etc. You can also copy your shell script inside the batch script and deal with only one file, like this:
+
+     #!/bin/bash
+     #SBATCH --job-name=singularity
+     #SBATCH --partition=math-alderaan
+     #SBATCH --nodes=1                   # Number of requested nodes
+     #SBATCH --time=1:00:00              # Max wall-clock time
+     #SBATCH --ntasks=1                  # Total number of tasks over all nodes, max 64*nodes
+
+     singularity shell /storage/container.sif << EOF
      echo The shell commands here get executed in the singularity container
      hostname
      EOF
      
-and submit the job as usual: 
+Finally, submit the job as usual: 
 
      sbatch singularity_alderaan_shell.slurm
-     
+
+
 If the commands you invoke inside the singularity container can take advantage of
 more than one core, you can increase the job parameter --ntasks to reserve and use 
-more core. **If your singularity job uses large memory, please increase --ntasks to 
+more cores. **If your singularity job uses lot of memory, please increase --ntasks to 
 about 8 GB per core even if you may not use the cores. Otherwise, node memory may get
 overloaded with unfortunate consequences such as jobs stuck and 
 nodes down until someone resets them.**
