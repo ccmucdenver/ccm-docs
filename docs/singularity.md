@@ -58,7 +58,7 @@ Finally, submit the job as usual:
 
 
 If the commands you invoke inside the singularity container can take advantage of
-more than one core, you can increase the job parameter --ntasks to reserve and use 
+more than one core, you can increase the job parameter `--ntasks` to reserve and use 
 more cores. **If your singularity job uses lot of memory, please increase --ntasks to 
 about 8 GB per core even if you may not use the cores. Otherwise, node memory may get
 overloaded with unfortunate consequences such as jobs stuck and 
