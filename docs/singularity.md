@@ -84,6 +84,10 @@ Then start a shell in the container as above, and you can do whatever you normal
 
 Note: building a container will pick up current version of software, so the versions below will change when containers are rebuilt.
 
+### bfctools.sif
+
+Bioinformatics sofware bfctools 1.15.1 for processing and analyzing sequencing data.
+
 ### CentOS8-DevelopmentTools.sif
 
 CentOS Linux 8.4.2105, gcc 8.4.1 and standard Development Tools from Centos.
