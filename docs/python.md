@@ -12,8 +12,8 @@ The currently preferred solution is to encourage users to install their own Pyth
 library with one or more separate collections of packages for their various needs. Conda from the 
 Anaconda distribution is perhaps the most popular package manager, and it maintains such collections called **environments**.
 
-Do not use the `pip` to install packages unless there is no other way. Pip does not check for version conflicts and you can 
-end up with a broken installation. 
+Do not use `pip` to install packages unless there is no other way. It will install dependences but it does not check for
+version conflicts and you can end up with a broken installation. 
  
 
 ## Install Anaconda
