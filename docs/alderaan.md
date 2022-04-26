@@ -10,7 +10,7 @@ Alderaan is a shared cluster running multi-core jobs with multiple nodes using M
 
 All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](../score/) nodes. 
 
-Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials, make an account, and contact jan.mandel@ucdenver.edu for help.
+Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials and follow the instructions to be contacted by OSG staff for an onboarding meeting.
 
 ## Hardware
 * 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 1U rack-mount drawers, with 4 nodes in each drawer.
@@ -23,8 +23,10 @@ Work consisting of a very large number of single-core jobs can be also submitted
 The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 
 ## Software
-* SLURM cheduler, cluster tools, GNU compiler stack with MPI over Infiniband
-* CUDA for GPUs
+* SLURM cheduler, cluster tools, GNU compiler stack with MPI.
+* Intel compilers, MPI, and MKL.
+* CUDA
+* Singularity containers
 
 ## Progress
 ### Fall semester 2020
@@ -43,18 +45,18 @@ The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 ### Spring semester 2022
 * Scaling up availability and user base, installing custom software on request.
 
-## User Training (after the configuration is finalized)
+## User Training
 * ssh command line usage
-* submission of OSG jobs
-* web access to the cluster
+* software
+* web access to the cluster (when web access is available)
 
 ## How to Use
 
-Authorized users can submit jobs on the Alderaan cluster on the head node or the [common cluster scheduler](../clusters_guide). The head node is accessed by ssh to math-alderaan.ucdenver.pvt. The head node is for compilation and small tests only. Please do not run any intensive or long jobs on the head node.
+Authorized users can submit jobs on the Alderaan cluster on the head node by ssh to math-alderaan.ucdenver.pvt. The head node is for compilation and small tests only. Please do not run any intensive or long jobs on the head node.
 
 An allocation system is set up and will be activated when warranted by the cluster load.
 
-Graphical desktop and Jupyterhub front end interfaces are coming soon.
+Web access including Jupyterhub, remote desktop, and R Studio is in development.
 
 ## Contact
 jan.mandel@ucdenver.edu
