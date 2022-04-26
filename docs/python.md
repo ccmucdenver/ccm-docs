@@ -47,12 +47,12 @@ You should see your prompt change to start with `(base)`. Create your first envi
     
      conda create --name myenv python=3.6 paramiko gdal matplotlib tensorflow pandas
 
-Of course, these are just examples,  use names of the packages that **you** need. Note that you can request specific versions of everything, even Python itself.
+Of course, these are just examples,  use names of the packages and their versions that **you** need. Note that you can request specific versions of everything, even Python itself.
 
  Conda will search for a combination of the versions of dependencies that allows it
-to install what you asked for. It is best to install all packages at once to minimize the chances of a version conflicts. If Conda says that some packages cannot be found, leave installing them for later. 
+to install what you asked for. It is best to install all packages at once to minimize the chances of a version conflict. If Conda says that some packages cannot be found, leave installing them for the next step. 
 
-Now use the conda-forge repository to add into the environment the packages that could not be found in the previous step:
+Now, use the conda-forge repository to add into the environment the packages that could not be found in the previous step:
 
     conda activate myenv
     conda  install -c conda-forge netCDF4 PyGrib
