@@ -58,11 +58,6 @@ Finally, use pip to install packages that cannot be found even on conda-forge:
 
     pip install MesoPy
 
-And test, for example
-    python
-    import netCDF4 as nc4
-    print(nc4.__version__)
-    
 You may want to deactivate Conda when you are not using the environment:
 
     conda deactivate
