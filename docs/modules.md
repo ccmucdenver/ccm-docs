@@ -8,14 +8,7 @@ Environment variables, such `PATH`, allow to select software to become available
 Modules manage the environment automatically, without the user having to set the 
 environment variables by hand, which is tedious and error prone. 
 
-Alderaan modules include compilers (GNU, AMD, and Intel), and MPI libraries.
-
-## Modules and containers
-
-The use of modules to manage the environment is standard in HPC. They fulfil a
-similar function as containers, but the software is installed on the system rather
-that being carried in a container. 
-
+Alderaan modules include compilers (GNU, AMD, and Intel) and MPI.
 
 ## Basic module commands
 
@@ -36,6 +29,11 @@ the same modules before you run the resulting executable. Otherwise you may get
 runtime errors when the executable cannot find runtime libraries or it gets
 mismatched libraries, such as MPI.
 
-In particular, batch scripts should start with module load commands, the same
-were used before buiding the software.  
+In particular, batch scripts should start with loading the same modules that
+were loaded before buiding the software.  
 
+## Modules and containers
+
+The use of modules to manage the environment is standard in HPC. They fulfil a
+similar function as containers, but the software is installed on the system rather
+that being carried in a container. 
