@@ -3,11 +3,10 @@ site_name: Center for Computational Mathematics
 site_url: https://ccm-docs.readthedocs.io/en/latest/ 
 nav:
     - Home: index.md
-    - About: about.md
     - Introduction: intro.md
     - Clusters Guide: clusters_guide.md
     - Examples: examples.md
-    - Accounts and Allocations: allocations.md
+    - Accounts and Allocations: accounts.md
     - Python: python.md
     - Environment modules: modules.md
     - Alderaan Cluster: alderaan.md
