@@ -25,7 +25,7 @@ accept the license, and follow through with the installation. You should see
     
     Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no]
     
-Answer yes. Then, to stop Conda from activating if you do not use it,
+Answer yes. Then, stop Conda from activating if you do not use it,
 
     conda config --set auto_activate_base false
 
@@ -40,8 +40,9 @@ Activate the base environment:
 You should see your prompt change to starting with `(base)`. Create your first environment, for example:
     
      conda create --name myenv python=3.6 paramiko gdal matplotlib tensorflow pandas
-     
-The best practice is to install all packagesonce to minimize potential version conflicts. If some packages cannot be found, leave them for later.
+
+Of course, use names of the packages that you need. Conda will search for a combination of the versions of dependencies that allows it
+to install what you asked for. It is best to install all packages at once to minimize the chances of a version conflicts. If Conda says that some packages cannot be found, leave them for later.
 
 Now use the conda-forge repository to add into environment the packages that could not be found in the previous step:
 
