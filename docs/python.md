@@ -54,7 +54,7 @@ Now use the conda-forge repository to add into the environment the packages that
     conda activate myenv
     conda  install -c conda-forge netCDF4 PyGrib
     
-Finally, use pip to install packages that cannot be found even on on conda-forge:
+Finally, use pip to install packages that cannot be found even on conda-forge:
 
     pip install MesoPy
 
