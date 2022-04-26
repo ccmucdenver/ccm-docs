@@ -1,6 +1,6 @@
 # Python
 
-## Version hell 
+## Managing Python packages
 Python packages are evolving fast, and many depend on specific versions of other packages. Package managers have been created to 
 install the packages user requires with their dependences automatically, but sometimes a combination of versions that would 
 satisfy all dependences simply does not exist. 
