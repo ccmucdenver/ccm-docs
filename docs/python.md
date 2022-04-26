@@ -12,8 +12,8 @@ Anaconda distribution is perhaps the most popular package manager, and it mainta
 
 ## Install Anaconda
 Go to [https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distributio),
- right click on 64-Bit (x86) Installer and copy the link.
-Open an ssh window an alderaan, type `wget` and paste the link to get a command line like
+ right click on 64-Bit (x86) Installer, and copy the link.
+Open an ssh window an alderaan, type `wget` and paste the link to create a command line like
 
     wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
     
