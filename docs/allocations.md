@@ -1,14 +1,18 @@
 # Accounts and Allocations
 ## Eligibility
-Employees and students with `ucdenver.edu` or `cuanschutz.edu` login credentials.
-## Process
-Please use [this form](https://forms.office.com/r/GQ9ef7ei4i) for account and allocation requests. Requests should include:
+Employees and students with `ucdenver.edu` or `cuanschutz.edu` login credentials. 
+External collaborators with VPN access on a faculty member's project 
+upon approval.
+
+## How to get an account
+
+Please use [this form](https://forms.office.com/r/GQ9ef7ei4i) for account and allocation requests. **Only one form per project is needed.** The form asks for
 
 * a brief description of the project (title and a sentence or few),
 * funding source, if any, with an agency, grant number, and title,
-* the usernames of users who participate in the project.
+* the CU Denver usernames of users who participate in the project. 
 
-If you need more than the default core or storage resources below, your request should contain a brief justification of the resources needed, such as the aticipated number of runs, the number of cores and time per run, the total size of files generated per run, and the total size of external data you will bring in.
+If you need more than the default core or storage resources below, your request should contain a statement and brief justification of the resources needed.
 
 ## Resources and Allocations
 **To encourage early use, storage and core time limits are not enforced for an initial period - we want you to work here**! They will be activated in future as needed to keep the resources available fairly for everyone.
