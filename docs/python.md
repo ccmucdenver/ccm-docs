@@ -6,8 +6,8 @@ install the packages user requires with their dependences automatically, but som
 satisfy all dependences simply does not exist. Consequently, no fixed collection of Python packages can satisfy everyone.
 
 The currently preferred solution is to encourage users to install their own Python
-library with one or more separate collections of packages for their various needs. The package manager Conda from the 
-Anaconda distribution is perhaps the most popular one, and it maintains such collections called **environments**.
+library with one or more separate collections of packages for their various needs. Conda from the 
+Anaconda distribution is perhaps the most popular package manager, and it maintains such collections called **environments**.
  
 
 ## Install Anaconda
