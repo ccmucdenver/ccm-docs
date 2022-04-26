@@ -87,6 +87,22 @@ Make a batch script like this:
     
 and submit to the scheduler using sbatch as usual.
 
+## Uninstalling Anaconda
+
+Sometimes you may need to uninstall Anaconda, e.g. to save space, or if something goes wrong and you need to start over.
+Delete the Anaconda install directory
+
+    rm -rf ~/anaconda3
+    
+Then, find the startup file where the Anaconda installer made its changes, usually `~/.bashrc`, and delete the lines from
+
+    # >>> conda initialize >>>
+    
+to 
+
+    # <<< conda initialize <<<
+    
+
 
     
     
