@@ -17,8 +17,8 @@ can end up with a broken installation.
  
 
 ## Install Anaconda
-Go to [https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distributio),
- right click on 64-Bit (x86) Installer, and copy the link.
+Go to [www.anaconda.org](https://www.anaconda.org), click Download Anaconda, Linux installers,
+ right click on the 64-Bit (x86) Installer, and copy the link.
 Open an ssh window an alderaan, type `wget` and paste the link to create a command line like
 
     wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
