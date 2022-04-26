@@ -3,7 +3,7 @@
 ## Managing Python packages
 Python packages are evolving fast, and many depend on specific versions of other packages. Package managers have been created to 
 install the packages user requires with their dependences automatically, but sometimes a combination of versions that would 
-satisfy all dependence does not exist. 
+satisfy all dependences does not exist. 
 
 You can use the system-provided Python, or our tensorflow.sif singularity container, each with their collection
  of packages. But no fixed collection of Python packages can satisfy everyone's needs.
