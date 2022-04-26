@@ -49,7 +49,7 @@ Of course, these are just examples,  use names of the packages that **you** need
  Conda will search for a combination of the versions of dependencies that allows it
 to install what you asked for. It is best to install all packages at once to minimize the chances of a version conflicts. If Conda says that some packages cannot be found, leave installing them for later. 
 
-Now use the conda-forge repository to add into environment the packages that could not be found in the previous step:
+Now use the conda-forge repository to add into the environment the packages that could not be found in the previous step:
 
     conda activate myenv
     conda  install -c conda-forge netCDF4 PyGrib
@@ -58,7 +58,7 @@ Finally, use pip to install packages that cannot be found even on on conda-forge
 
     pip install MesoPy
 
-And test:
+And test, for example
     python
     import netCDF4 as nc4
     print(nc4.__version__)
@@ -68,11 +68,11 @@ You may want to deactivate Conda when you are not using the environment:
     conda deactivate
     conda deactivate
     
-To make more environments, it is best practice to start again from the base environment like above.
+To make more environments, it is best to start again from the base environment like above.
     
-## Using a Conda environment in a batch script
+## Using Conda environments in a batch script
 
-Make a batch script like this
+Make a batch script like this:
 
     #!/bin/bash
     #SBATCH --partition=math-alderaan
