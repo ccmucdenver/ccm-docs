@@ -17,8 +17,8 @@ can end up with a broken installation.
  
 
 ## Install Anaconda
-Go to [https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distributio),
- right click on 64-Bit (x86) Installer, and copy the link.
+Go to [www.anaconda.org](https://www.anaconda.org), click Download Anaconda, Linux installers,
+ right click on the 64-Bit (x86) Installer, and copy the link.
 Open an ssh window an alderaan, type `wget` and paste the link to create a command line like
 
     wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
@@ -47,12 +47,12 @@ You should see your prompt change to start with `(base)`. Create your first envi
     
      conda create --name myenv python=3.6 paramiko gdal matplotlib tensorflow pandas
 
-Of course, these are just examples,  use names of the packages that **you** need. Note that you can request specific versions of everything, even Python itself.
+Of course, these are just examples,  use names of the packages and their versions that **you** need. Note that you can request specific versions of everything, even Python itself.
 
  Conda will search for a combination of the versions of dependencies that allows it
-to install what you asked for. It is best to install all packages at once to minimize the chances of a version conflicts. If Conda says that some packages cannot be found, leave installing them for later. 
+to install what you asked for. It is best to install all packages at once to minimize the chances of a version conflict. If Conda says that some packages cannot be found, leave installing them for the next step. 
 
-Now use the conda-forge repository to add into the environment the packages that could not be found in the previous step:
+Now, use the conda-forge repository to add into the environment the packages that could not be found in the previous step:
 
     conda activate myenv
     conda  install -c conda-forge netCDF4 PyGrib
