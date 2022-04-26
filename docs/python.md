@@ -43,7 +43,7 @@ Activate the base environment:
     
     conda activate
     
-You should see your prompt change to starting with `(base)`. Create your first environment, for example:
+You should see your prompt change to start with `(base)`. Create your first environment, for example:
     
      conda create --name myenv python=3.6 paramiko gdal matplotlib tensorflow pandas
 
