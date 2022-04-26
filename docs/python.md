@@ -1,5 +1,12 @@
 # Python
-Python is a large open source projects. 
+
+## Version hell 
+Python packages are evolving fast, and many depend on specific versions of other packages. Package managers have been created to 
+install the packages user requires with their dependences automatically, but sometimes a combination of versions that would 
+satisfy all dependences simply does not exist. The currently preferred solution is to encourage users to install their own Python
+library with one or more separate collections of packages for their various needs. The package manager Conda from the 
+Anaconda distribution is perhaps the most popular one, and it maintains such collections called **environments**.
+ 
 
 ## Install Anaconda
 Go to https://www.anaconda.com/products/distribution right click on 64-Bit (x86) Installer and copy the link
