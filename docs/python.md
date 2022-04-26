@@ -8,6 +8,9 @@ satisfy all dependences simply does not exist. Consequently, no fixed collection
 The currently preferred solution is to encourage users to install their own Python
 library with one or more separate collections of packages for their various needs. Conda from the 
 Anaconda distribution is perhaps the most popular package manager, and it maintains such collections called **environments**.
+
+Do not use the `pip` to install packages unless there is no other way. Pip does not check for version conflicts and you can 
+end up with a broken installation. 
  
 
 ## Install Anaconda
