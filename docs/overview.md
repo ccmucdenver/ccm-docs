@@ -1,8 +1,13 @@
 # Clusters Overview
 ![cluster](img/cluster.png)
-
-* Connect by command line ssh to one of the head nodes, math-alderaan.ucdenver.pvt or clas-compute.ucdenver.pvt, using your university username and password. 
-* Write a job script, say `myjob`, with the commands to execute and special comments how many cores and which kind of node it needs (partition name)
+## Quick basics
+* Connect by command line ssh to one of the head nodes, 
+    
+    ssh math-alderaan.ucdenver.pvt
+or     
+    clas-compute.ucdenver.pvt
+using your university username and password. 
+* Write a job script, say `myjob`, with the commands to execute and special comments how many cores and which kind of node it needs (partition name). See [examples](../examples).
 * Submit the script to the SLURM scheduler by `sbatch myjob`  
 * The scheduler finds a compute node with enough free cores, marks the cores as allocated, and starts executing the job script on the node.
 
@@ -18,5 +23,5 @@ That's all in the simple case!  Now let's get more sophisticated.
     srun --pty -N 1 -n 1 -t 1:00:00 -p math-alderaan /bin/bash -l 
     
     on math-alderaan. This will start an interactive shell job on one alderaan core for one hour max and transfer you to that shell session.
-
+* Sorry graphical web access to run Jupyterhub, Rstudio, or remote desktop does not work yet.
 
