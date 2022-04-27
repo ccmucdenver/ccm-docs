@@ -2,9 +2,8 @@
 ![cluster](img/cluster.png)
 ## Quick basics how to use
 
-* Connect by command line ssh to one of the head nodes,   `
-    ssh math-alderaan.ucdenver.pvt 
-    ssh clas-compute.ucdenver.pvt   
+* Connect by command line ssh to one of the head nodes,  
+`ssh math-alderaan.ucdenver.pvt` or `ssh clas-compute.ucdenver.pvt`   
 using your university username and password. 
 
 * Write a job script, say `myjob`, with the commands to execute and special
