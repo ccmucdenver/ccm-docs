@@ -1,14 +1,11 @@
 # Clusters Overview
 ![cluster](img/cluster.png)
 ## Quick basics how to use
+
 * Connect by command line ssh to one of the head nodes, 
-    
-    ssh math-alderaan.ucdenver.pvt
-    
+    ssh math-alderaan.ucdenver.pvt       
 or  
-   
-    clas-compute.ucdenver.pvt
-    
+    clas-compute.ucdenver.pvt  
 using your university username and password. 
 
 * Write a job script, say `myjob`, with the commands to execute and special comments how many cores and which kind of node it needs (partition name). See [examples](../examples) for details.
