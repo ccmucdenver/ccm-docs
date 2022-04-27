@@ -28,11 +28,14 @@ That's all in this simple case!
 
 * You have MPI code to use multiple cores and nodes as a single large computer: Ask for enough cores and run your executable as argument to `mpirun` command. Make sure you use the same MPI version (GNU or Intel) to build and run the code. **On alderaan only**
 
-* You need to run interactively, not a script: ssh from clas-compute.ucdenver.pvt to one of the interactive nodes, math-colibri-i01 or math-colibri-i02. Or run interactively on a more powerful alderaan node by entering the magic line 
+* You need to run interactively, not a script: ssh from `clas-compute.ucdenver.pvt`
+to one of the interactive nodes, `math-colibri-i01` or `math-colibri-i02`. Or run
+interactively on a more powerful alderaan node by entering the magic line 
 
     srun --pty -N 1 -n 1 -t 1:00:00 -p math-alderaan /bin/bash -l 
     
-    on math-alderaan. This will start an interactive shell job on one alderaan core for one hour max and transfer you to that shell session.
+on math-alderaan. This line will start an interactive shell job on one alderaan
+core for one hour max and transfer you to that shell session.
     
 * You need to run in [Python](../python) with custom environments.
 
