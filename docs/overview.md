@@ -11,13 +11,13 @@ or
     
 using your university username and password. 
 
-* Write a job script, say `myjob`, with the commands to execute and special comments how many cores and which kind of node it needs (partition name). See [examples](../examples).
+* Write a job script, say `myjob`, with the commands to execute and special comments how many cores and which kind of node it needs (partition name). See [examples](../examples) for details.
 
 * Submit the script to the SLURM scheduler by `sbatch myjob` 
  
 * The scheduler finds a compute node with enough free cores, marks the cores as allocated, and starts executing the job script on the node.
 
-That's all in the simple case!  
+That's all in this simple case!  
 
 ## Now let's get more sophisticated.
 
