@@ -1,6 +1,28 @@
 # Examples
 
-## Batch job with Tensorflow on GPU
+##  A simple example batch job with Python on Alderaan 
+
+Prepare your python code, say `hello.py` with the line
+
+    print('hello')
+    
+and your batch script, say `hello.sh` in the same directory
+
+     #!/bin/bash
+     #SBATCH --job-name=hello
+     #SBATCH --partition=math-alderaan
+     #SBATCH --time=1:00:00            # Max wall-clock time 1 hour
+     #SBATCH --ntasks=1                # number of cores 
+     python hello.py
+     
+Then submit it
+
+    sbatch hello.sh
+    
+    
+
+
+## Batch job with Tensorflow on GPU using Singularity
 
 Prepare two files as follows.
 
