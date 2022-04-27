@@ -1,6 +1,6 @@
 # Clusters Overview
 ![cluster](img/cluster.png)
-## Quick basics how to use
+## Quick basics 
 
 * Connect by command line ssh to one of the head nodes,  
 `ssh math-alderaan.ucdenver.pvt` or `ssh clas-compute.ucdenver.pvt`   
@@ -14,7 +14,7 @@ using your university username and password.
  
 * The scheduler finds a compute node with enough free cores, marks the cores as allocated, and starts executing the job script on the node.
 
-## Now let's get more sophisticated.
+## More advanced use
 
 * If you need special software that is not installed on the compute nodes, have the job execute your code in a [singularity container](../singularity), which can carry the complete software environment with it.
 
