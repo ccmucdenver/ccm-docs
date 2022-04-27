@@ -13,7 +13,7 @@ and your batch script, say `hello.sh` in the same directory
      #SBATCH --partition=math-alderaan
      #SBATCH --time=1:00:00            # Max wall-clock time 1 hour
      #SBATCH --ntasks=1                # number of cores 
-     python hello.py
+     python3 hello.py
      
 Then submit it
 
