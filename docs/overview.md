@@ -1,2 +1,2 @@
 # Clusters Overview
-![clusters](img/clusters.png)
+![cluster](img/cluster.png)
