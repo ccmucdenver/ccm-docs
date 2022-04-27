@@ -87,3 +87,10 @@ When you are done, exit so that someone else can use the gpu node
      >>> exit()
      exit
 
+## MPI examples
+
+MPI examples are available at [https://github.com/ccmucdenver/templates.git](https://github.com/ccmucdenver/templates.git) To get your own copy,
+
+    git clone https://github.com/ccmucdenver/templates.git
+    
+**MPI is on alderaan only**
