@@ -47,14 +47,13 @@ where `container` is the container name. Instead of a shell script, you can use 
      #SBATCH --time=1:00:00              # Max wall-clock time
      #SBATCH --ntasks=1                  # Total number of tasks over all nodes, max 64*nodes
 
-     singularity shell /storage/container.sif << EOF
+     singularity shell /storage/singularity/container.sif << EOF
      echo This is a shell command which gets executed in the singularity container
      EOF
      
 Finally, submit the job as usual: 
 
      sbatch singularity_alderaan_shell.slurm
-
 
 If the commands you invoke inside the singularity container can take advantage of
 more than one core, you can increase the job parameter `--ntasks` to reserve and use 
@@ -63,9 +62,11 @@ about 8 GB per core even if you may not use the cores. Otherwise, node memory ma
 overloaded with unfortunate consequences such as jobs stuck and 
 nodes down until someone resets them.**
 
+See [Examples](../examples) for more.
+
 ## How to run Singularity with MPI and on multiple nodes
 
-Coming soon.
+Not so easy for MPI over the fast interconnect InfiniBand. Coming soon.
                                                                                                                           
 ## What containers we have
 
