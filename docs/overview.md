@@ -7,7 +7,7 @@
 using your university username and password. 
 
 * Write a job script, say `myjob`, with the commands to execute and special
- comments how many cores and which kind of node it needs (partition name). See
+ comments how many cores and which kind of node it needs (=partition name). See
   [examples](../examples) for details.
 
 * Submit the script to the SLURM scheduler by `sbatch myjob` 
@@ -16,27 +16,27 @@ using your university username and password.
 
 ## Now let's get more sophisticated.
 
-* You need special software that is not installed on the compute nodes: have the job execute your code in a [singularity container](../singularity), which can carry the complete software environment with it.
+* If you need special software that is not installed on the compute nodes, have the job execute your code in a [singularity container](../singularity), which can carry the complete software environment with it.
 
 * Request estimated number of cores your code needs if you do not know exactly how many (e.g., some codes in R)
 
-* You want your job to run for a long time (weeks and more): use the math-score partition 
+* If you want your job to run for a long time (weeks and more): use the math-score partition 
 
-* You run sofware that needs [modules](../modules) loaded first: load the modules in your job script. **On alderaan only**
+* If you run sofware that needs [modules](../modules) loaded first: load the modules in your job script. **On alderaan only**
 
-* You have MPI code to use multiple cores and nodes as a single large computer: Ask
+* If you have MPI code to use multiple cores and nodes as a single large computer, ask
  for enough cores and run your executable as argument to `mpirun` command. Make
  sure you use the same MPI version (GNU or Intel) to build and run the code. 
  See `/home/jmandel/templates` for examples. **On alderaan only**
 
-* You need to run interactively, not a script: ssh from `clas-compute.ucdenver.pvt`
-to one of the interactive nodes, `math-colibri-i01` or `math-colibri-i02`. Or run
+* If you need to run interactively, not a script, ssh from `clas-compute.ucdenver.pvt`
+to one of the interactive nodes, `math-colibri-i01` or `math-colibri-i02`. Or, run
 interactively on a more powerful alderaan node by entering the magic line   
-    srun --pty -N 1 -n 1 -t 1:00:00 -p math-alderaan /bin/bash -l   
-on math-alderaan. This line will start an interactive shell job on one alderaan
+    `srun --pty -N 1 -n 1 -t 1:00:00 -p math-alderaan /bin/bash -l`  
+on math-alderaan. This command will start an interactive shell job on one alderaan
 core for one hour max and transfer you to that shell session.
     
-* You need to run in [Python](../python) with custom environments.
+* If you need to run in [Python](../python) with custom environments.
 
 * Sorry the graphical web access for Jupyterhub, Rstudio, remote desktop, etc., does not work yet.
 
