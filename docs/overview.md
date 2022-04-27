@@ -4,8 +4,11 @@
 * Connect by command line ssh to one of the head nodes, 
     
     ssh math-alderaan.ucdenver.pvt
-or     
+    
+or  
+   
     clas-compute.ucdenver.pvt
+    
 using your university username and password. 
 * Write a job script, say `myjob`, with the commands to execute and special comments how many cores and which kind of node it needs (partition name). See [examples](../examples).
 * Submit the script to the SLURM scheduler by `sbatch myjob`  
