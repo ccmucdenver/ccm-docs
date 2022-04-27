@@ -2,8 +2,9 @@
 ![cluster](img/cluster.png)
 ## Quick basics how to use
 
-* Connect by command line ssh to one of the head nodes,  `
-ssh math-alderaan.ucdenver.pvt` or  `ssh clas-compute.ucdenver.pvt` 
+* Connect by command line ssh to one of the head nodes,   `
+    ssh math-alderaan.ucdenver.pvt 
+    ssh clas-compute.ucdenver.pvt   
 using your university username and password. 
 
 * Write a job script, say `myjob`, with the commands to execute and special
@@ -31,10 +32,8 @@ using your university username and password.
 
 * You need to run interactively, not a script: ssh from `clas-compute.ucdenver.pvt`
 to one of the interactive nodes, `math-colibri-i01` or `math-colibri-i02`. Or run
-interactively on a more powerful alderaan node by entering the magic line 
-
-    srun --pty -N 1 -n 1 -t 1:00:00 -p math-alderaan /bin/bash -l 
-    
+interactively on a more powerful alderaan node by entering the magic line   
+    srun --pty -N 1 -n 1 -t 1:00:00 -p math-alderaan /bin/bash -l   
 on math-alderaan. This line will start an interactive shell job on one alderaan
 core for one hour max and transfer you to that shell session.
     
