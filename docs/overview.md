@@ -2,23 +2,17 @@
 ![cluster](img/cluster.png)
 ## Quick basics how to use
 
-* Connect by command line ssh to one of the head nodes,  
-
-    ssh math-alderaan.ucdenver.pvt       
-    
-or  
-
-    clas-compute.ucdenver.pvt  
-
+* Connect by command line ssh to one of the head nodes,  `
+ssh math-alderaan.ucdenver.pvt` or  `ssh clas-compute.ucdenver.pvt` 
 using your university username and password. 
 
-* Write a job script, say `myjob`, with the commands to execute and special comments how many cores and which kind of node it needs (partition name). See [examples](../examples) for details.
+* Write a job script, say `myjob`, with the commands to execute and special
+ comments how many cores and which kind of node it needs (partition name). See
+  [examples](../examples) for details.
 
 * Submit the script to the SLURM scheduler by `sbatch myjob` 
  
 * The scheduler finds a compute node with enough free cores, marks the cores as allocated, and starts executing the job script on the node.
-
-That's all in this simple case!  
 
 ## Now let's get more sophisticated.
 
@@ -30,7 +24,10 @@ That's all in this simple case!
 
 * You run sofware that needs [modules](../modules) loaded first: load the modules in your job script. **On alderaan only**
 
-* You have MPI code to use multiple cores and nodes as a single large computer: Ask for enough cores and run your executable as argument to `mpirun` command. Make sure you use the same MPI version (GNU or Intel) to build and run the code. **On alderaan only**
+* You have MPI code to use multiple cores and nodes as a single large computer: Ask
+ for enough cores and run your executable as argument to `mpirun` command. Make
+ sure you use the same MPI version (GNU or Intel) to build and run the code. 
+ See `/home/jmandel/templates` for examples. **On alderaan only**
 
 * You need to run interactively, not a script: ssh from `clas-compute.ucdenver.pvt`
 to one of the interactive nodes, `math-colibri-i01` or `math-colibri-i02`. Or run
