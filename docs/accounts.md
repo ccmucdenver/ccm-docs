@@ -1,12 +1,12 @@
 # Accounts and Allocations
 ## Eligibility
 Employees and students with `ucdenver.edu` or `cuanschutz.edu` login credentials. 
-External collaborators with VPN access on a faculty member's project 
+External collaborators with VPN access, sponsoered by a faculty member, 
 upon approval.
 
 ## How to get an account
 
-Please use [this form](https://forms.office.com/r/GQ9ef7ei4i) for account and allocation requests. **Only one form per project is needed.** The form asks for
+Please use [this form](https://forms.office.com/r/GQ9ef7ei4i) to request accounts and allocations requests. **The form should be filled by a faculty member and it can list other users the faculty member wants to sponsor, such as students or external collaborators.** 
 
 * a brief description of the project (title and a sentence or few),
 * funding source, if any, with an agency, grant number, and title,
