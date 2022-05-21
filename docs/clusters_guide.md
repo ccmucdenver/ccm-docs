@@ -13,6 +13,10 @@ On Linux or a Mac, you can use simply the Terminal app, which is built into the 
 
 On Windows, you will need an SSH client. There are several out there, but generally most people use PuTTY which is available for download [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). You can use either 32 or 64 bit versions - computers that require the 32 bit version are rather rare (early Windows 7/Vista/XP). 
 
+<!---
+(image is from the old system, but same difference)
+[[File:Puttywindows.png|center|PuTTY Windows]]
+-->
 
 You can also use the [Windows 10 subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), where you install a Linux distribution as an app and can use it to ssh out like from a terminal window like on any Linux machine. This is often more stable than Putty, which tends to get stuck on some computers.
 
@@ -35,7 +39,7 @@ Using a server ‘interactively’ (aka not scheduling a job) is often needed fo
 **Please do not run anything directly on compute nodes, which are reserved for jobs under the control of the scheduler, even if you may be able to ssh there.  These are nodes with names like math-colibri-c01 with something else than "i" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.**. It is OK to ssh to a compute node to check on your job, but just don't run anything there.
 
 
-## Screen virtual terminal
+### Screen virtual terminal
 
 If you use `screen`, if you get disconnected, whatever you were running is still going and you can connect to it later. This is called a virtual terminal session. This is generally a good idea both math-compute, math-alderaan, or on the interactive nodes.  
 
@@ -45,6 +49,10 @@ If you want to disconnect from the session but leave it running, hit the combina
 
 When you want to reconnect to your screen session later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll complain and tell you the screens you have available to reconnect to. Type <code>screen –r 'name’</code> to reconnect to that screen. 
 
+### Passwords
+
+The system uses your normal UCD portal/email login username and password, but users must be added before using the system. Please go to [accounts](./accounts/) to request to be added to the system.
+
 ### File Storage
 
 The home directories are on a shared file server and linked as `/home/username` . Projects are found in `/storage/department/projects` (where department may be one of many departments who use this system).
@@ -53,11 +61,9 @@ For example, the mixtures project is in <code>/storage/math/projects/mixtures</c
 
 If you need a lot of data storage, please contact us before filling everything you can find.
 
+<!---
 `df –h` will show you the storage arrays and how much space is available. There are different types of "empty" space in linux so it may say there is plenty of space in `df –h` yet the array is full.
-
-### Passwords
-
-The system uses your normal UCD portal/email login username and password, but users must be added before using the system. Please go to [accounts](./accounts/) to request to be added to the system.
+-->
 
 ## Requesting Information about the Environment
 
