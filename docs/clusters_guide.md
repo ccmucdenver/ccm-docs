@@ -228,11 +228,16 @@ job running on the system.
 
 ## Custom application software
 
-We install software enviroments in containters, which provide a complete enviroment, avoid software conflicts, and can execute anywhere on the cluster.
-Using singularity is easy. Type, for example,
+Additional software can be installed as modules. Software in a module is on the system all the time, "loading" a module just changes your environment to make it available to you. Software modules need to be compatible with the operating system, and the modules on our different clusers are generally different. See [modules](../modules) for more information.
+
+We also use Singularity containters, which provide a complete enviroment, avoid software conflicts, and can execute anywhere on the clusters. The disadvantage, however, is that you can use the system software installed in the container; the system you are on is not visible inside a container
+.
+Using singularity is easy. Type, for example, 
 
     singularity shell /storage/singularity/tensorflow
     python3
     
 and you can use many Python packages for machine learning. We have containers with statistics software, optimization, molecular chemistry, optimization,
-and more. **We will be happy to install software fir you, do not hesitate to ask!** See [Singularity](../singularity/) in this documentation for further details. 
+and more. See [Singularity](../singularity/) for more details. 
+
+**We will be happy to install software and build containers for you, do not hesitate to ask!** 
