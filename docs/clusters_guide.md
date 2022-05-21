@@ -9,7 +9,6 @@ The clas-compute system uses (mostly) CentOS 7 and 8 operating system. At this t
 
 This system uses your normal portal/email username and password. You can use host hame either `clas-compute.ucdenver.pvt` or `math-aderaan.cudenver.pvt`. These are the front ends to the cluster system.
 
-
 On Linux or a Mac, you can use simply the Terminal app, which is built into the operating system. It is hidden away in Applications -> Utilities folder on a Mac and in similar places on various Linux desktops. On a Mac, you may want to drag it to your dock that it is available more conveniently next time.
 
 On Windows, you will need an SSH client. There are several out there, but generally most people use PuTTY which is available for download [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). You can use either 32 or 64 bit versions - computers that require the 32 bit version are rather rare (early Windows 7/Vista/XP). 
@@ -31,19 +30,20 @@ Science will then occur and you should be at the clas-compute prompt or math-ald
 
 ###Interactive Use
 
-Using a server ‘interactively’ (aka not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into math-compute, you can type <code>ssh math-colibri-i01</code> or whatever server you want to go directly to the server. **Please do not run anything directly on compute nodes, which are reserved for jobs under the control of the scheduler, even if you may be able to ssh there.  These are nodes with names like math-colibri-c01 with the "c" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.**
+Using a server ‘interactively’ (aka not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, you can type <code>ssh math-colibri-i01</code> or whatever server you want to go to directly. 
 
+**Please do not run anything directly on compute nodes, which are reserved for jobs under the control of the scheduler, even if you may be able to ssh there.  These are nodes with names like math-colibri-c01 with something else than "i" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.**. It is OK to ssh to a compute node to check on your job, but just don't run anything there.
 
 
 ## Screen virtual terminal
 
 If you use `screen`, if you get disconnected, whatever you were running is still going and you can connect to it later. This is called a virtual terminal session. This is generally a good idea both math-compute, math-alderaan, or on the interactive nodes.  
 
-Typing `screen` creates a new terminal session. You can give it a name you want to juggle more sessions, by 'screen -S bname'  (make the name whatever you want). 
+Typing `screen` creates a new terminal session. You can give it a name you want to juggle more sessions, by `screen -S 'name'`  (make the name whatever you want). 
 
 If you want to disconnect from the session but leave it running, hit the combination of Control-A and press the D key to disconnect. Control-A is the combo to let screen know you want to do an action.
 
-When you want to reconnect to the screen later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll tell you the screens you have available to reconnect to. Type <code>screen –r ‘name’</code> to reconnect to that screen. 
+When you want to reconnect to your screen session later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll complain and tell you the screens you have available to reconnect to. Type <code>screen –r 'name’</code> to reconnect to that screen. 
 
 ### File Storage
 
