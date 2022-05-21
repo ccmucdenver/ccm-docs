@@ -1,25 +1,21 @@
 # Guide to CCM Clusters
 
-** This page needs to be updated.**
+** This page is being updated.**
 
 ## General Use Information
 ### Logging In
 
 The clas-compute system uses (mostly) CentOS 7 and 8 operating system. At this time, the main way of using the system is to use an SSH client to login to a terminal session on clas-compute or math-alderaan. You will need to be on the CU Denver network (wired or CU Denver wireless, not CU Denver Guest), or using the university's VPN client.
 
-This system uses your normal portal/email username and password.
+This system uses your normal portal/email username and password. You can use host hame either `clas-compute.ucdenver.pvt` or `math-aderaan.cudenver.pvt`. These are the front ends to the cluster system.
 
-On Windows, you will need an SSH client. There are several out there, but generally most people use PuTTY which is available for download [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). You can use either 32 or 64 bit versions - computers that require the 32 bit version are rather rare (early Windows 7/Vista/XP). The Host Name is clas-compute.ucdenver.pvt. 
 
-<!---
-(image is from the old system, but same difference)
-[[File:Puttywindows.png|center|PuTTY Windows]]
--->
+On Linux or a Mac, you can use simply the Terminal app, which is built into the operating system. It is hidden away in Applications -> Utilities folder on a Mac and in similar places on various Linux desktops. On a Mac, you may want to drag it to your dock that it is available more conveniently next time.
+
+On Windows, you will need an SSH client. There are several out there, but generally most people use PuTTY which is available for download [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). You can use either 32 or 64 bit versions - computers that require the 32 bit version are rather rare (early Windows 7/Vista/XP). 
+
 
 You can also use the [Windows 10 subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), where you install a Linux distribution as an app and can use it to ssh out like from a terminal window like on any Linux machine. This is often more stable than Putty, which tends to get stuck on some computers.
-
-On Macintosh, you can use simply the Terminal app, which is built into the operating system.
-It is in Applications -> Utilities folder. You may want to drag it to your dock so that it is available more conveniently next time.
 
 Either way, from a terminal window, at the command line prompt type in:
 
@@ -37,27 +33,31 @@ Science will then occur and you should be at the clas-compute prompt or math-ald
 
 Using a server ‘interactively’ (aka not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into math-compute, you can type <code>ssh math-colibri-i01</code> or whatever server you want to go directly to the server. **Please do not run anything directly on compute nodes, which are reserved for jobs under the control of the scheduler, even if you may be able to ssh there.  These are nodes with names like math-colibri-c01 with the "c" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.**
 
-Using 'screen' is generally a good idea both math-compute, math-alderaan, or the interactive nodes. Basically was screen does is starts a virtual terminal inside your terminal. Sound confusing? It is. The plus of this virtual terminal is if you get disconnected, whatever you were running is still going.
 
-'screen –S bananaphone' (make the name whatever you want) creates a new terminal with that name
 
-If you want to disconnect from the screen but leave it running, hit the combination of Control-A and press the D key to disconnect. Control-A is the combo to let screen know you want to do an action.
+## Screen virtual terminal
 
-When you want to reconnect to the screen later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll complain and tell you the screens you have available to reconnect to. <code>screen –r ‘bananaphone’</code> to reconnect to that screen. Sometimes there is a number in front of the screen so <code>screen –r 3128.bananaphone</code>. It’ll tell you the number in the <code>screen –r</code> info screen.
+If you use `screen`, if you get disconnected, whatever you were running is still going and you can connect to it later. This is called a virtual terminal session. This is generally a good idea both math-compute, math-alderaan, or on the interactive nodes.  
+
+Typing `screen` creates a new terminal session. You can give it a name you want to juggle more sessions, by 'screen -S bname'  (make the name whatever you want). 
+
+If you want to disconnect from the session but leave it running, hit the combination of Control-A and press the D key to disconnect. Control-A is the combo to let screen know you want to do an action.
+
+When you want to reconnect to the screen later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll tell you the screens you have available to reconnect to. Type <code>screen –r ‘name’</code> to reconnect to that screen. 
 
 ### File Storage
 
-Math home directories are on a shared server with 40TB total (right now). Projects are found in /storage/department/projects (where department may be one of many departments who use this system).
+The home directories are on a shared file server and linked as `/home/username` . Projects are found in `/storage/department/projects` (where department may be one of many departments who use this system).
 
-For example, the mixtures project is in <code>/storage/math/projects/mixtures</code>.
+For example, the mixtures project is in <code>/storage/math/projects/mixtures</code>. You can have also a project directory `/storage/department/projects` just for yourself. Please keep home directories small so that we can back them up. Large files belong in project directories.
 
-If you need a lot of data storage, please contact Joe before filling everything you can find.
+If you need a lot of data storage, please contact us before filling everything you can find.
 
-df –h will show you the storage arrays and how much space is available. There are different types of "empty" space in linux so it may say there is plenty of space in df –h yet the array is full.
+`df –h` will show you the storage arrays and how much space is available. There are different types of "empty" space in linux so it may say there is plenty of space in `df –h` yet the array is full.
 
 ### Passwords
 
-The system uses your normal UCD portal/email logon username and password. Users must be approved before using the system, so if your login is not working, you probably are not on the approved/initialized list yet.
+The system uses your normal UCD portal/email login username and password, but users must be added before using the system. Please go to [accounts](./accounts/) to request to be added to the system.
 
 ## Requesting Information about the Environment
 
