@@ -1,13 +1,14 @@
 # Guide to CCM Clusters
 
-** This page is being updated.**
-
 ## General Use Information
-### Logging In
 
-The clas-compute system uses (mostly) CentOS 7 and 8 operating system. At this time, the main way of using the system is to use an SSH client to login to a terminal session on clas-compute or math-alderaan. You will need to be on the CU Denver network (wired or CU Denver wireless, not CU Denver Guest), or using the university's VPN client.
+### How to log in
 
-This system uses your normal portal/email username and password. You can use host hame either `clas-compute.ucdenver.pvt` or `math-aderaan.cudenver.pvt`. These are the front ends to the cluster system.
+The clas-compute system uses (mostly) CentOS 7 and 8 operating system. At this time, the main way of using the system is to use an SSH client to login to a terminal session on clas-compute or math-alderaan. You will need to be on the CU Denver network (wired or CU Denver wireless, not CU Denver Guest), or using the university's VPN.
+
+This system uses your normal portal/email username and password. You can use host hame either `clas-compute.ucdenver.pvt` or `math-aderaan.cudenver.pvt`. These are the two front ends to the cluster system. 
+
+Users must be added before using the system. Please go to [accounts](./accounts/) to request an account.
 
 On Linux or a Mac, you can use simply the Terminal app, which is built into the operating system. It is hidden away in Applications -> Utilities folder on a Mac and in similar places on various Linux desktops. On a Mac, you may want to drag it to your dock that it is available more conveniently next time.
 
@@ -32,7 +33,7 @@ Whereas awesomeperson would be your CU Denver username. After connecting, it sho
 
 Science will then occur and you should be at the clas-compute prompt or math-alderaan and in your home directory. The following applies to both.
 
-###Interactive Use
+### Interactive use
 
 Using a server ‘interactively’ (aka not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, you can type <code>ssh math-colibri-i01</code> or whatever server you want to go to directly. 
 
@@ -49,15 +50,11 @@ If you want to disconnect from the session but leave it running, hit the combina
 
 When you want to reconnect to your screen session later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll complain and tell you the screens you have available to reconnect to. Type <code>screen –r 'name’</code> to reconnect to that screen. 
 
-### Passwords
-
-The system uses your normal UCD portal/email login username and password, but users must be added before using the system. Please go to [accounts](./accounts/) to request to be added to the system.
-
-### File Storage
+## File Storage
 
 The home directories are on a shared file server and linked as `/home/username` . Projects are found in `/storage/department/projects` (where department may be one of many departments who use this system).
 
-For example, the mixtures project is in <code>/storage/math/projects/mixtures</code>. You can have also a project directory `/storage/department/projects` just for yourself. Please keep home directories small so that we can back them up. Large files belong in project directories.
+For example, the mixtures project is in <code>/storage/math/projects/mixtures</code>. You can have also a project directory `/storage/department/projects` just for yourself. Please keep home directories small so that we can back them up. Large files belong in project directories. See [Accounts](../accounts) for limits ons storage.
 
 If you need a lot of data storage, please contact us before filling everything you can find.
 
