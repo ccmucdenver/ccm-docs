@@ -4,7 +4,7 @@ Please contact jan.mandel@ucdenver.edu with any questions.
 
 ## 2022/05/27 
 
-* Work on power distribution was completed about 1pm. 1/4 compute nodes are offline to prevent overload. The rest operates normally.
+* Work on power distribution was completed about 1pm. 1/4 of compute nodes are offline to prevent overload. The rest operates normally.
 
 * Node math-alderaan-c18 was repaired, a failed memory board was replaced. Node math-alderaan-h02 was shipped to the vendor. 
 
