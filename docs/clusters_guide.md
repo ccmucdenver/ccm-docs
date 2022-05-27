@@ -1,15 +1,16 @@
 # Guide to CCM Clusters
 
-** This page is being updated.**
+## Logging in
 
-## General Use Information
-### Logging In
+### How to log in
 
-The clas-compute system uses (mostly) CentOS 7 and 8 operating system. At this time, the main way of using the system is to use an SSH client to login to a terminal session on clas-compute or math-alderaan. You will need to be on the CU Denver network (wired or CU Denver wireless, not CU Denver Guest), or using the university's VPN client.
+The system uses CentOS 7 and 8 operating system. There are two head nodes (entry points) to the system, `math-alderaan.ucdenver.pvt` and `clas-compute.ucdenver.pvt`. You can use either. Alderann cluster runs Centos 8 while the other clusters and `clas-compute` run Centos 7.
 
-This system uses your normal portal/email username and password. You can use host hame either `clas-compute.ucdenver.pvt` or `math-aderaan.cudenver.pvt`. These are the front ends to the cluster system.
+At this time, the main way of using the system is to use an SSH client to login to a terminal session on clas-compute or math-alderaan. You will need to be on the CU Denver network (wired or CU Denver wireless, not CU Denver Guest), or using the university's VPN.
 
-On Linux or a Mac, you can use simply the Terminal app, which is built into the operating system. It is hidden away in Applications -> Utilities folder on a Mac and in similar places on various Linux desktops. On a Mac, you may want to drag it to your dock that it is available more conveniently next time.
+This system uses your normal portal/email username and password, but user account must be set up before using the system. Please go to [accounts](./accounts/) to request an account.
+
+On Linux or a Mac, you can use simply the Terminal app, which is built into the operating system. It is hidden away in Applications -> Utilities folder on a Mac and in similar places on various Linux desktops. You may want to drag it to your dock (on a Mac) or the desktop (on Linux) so that it is available more conveniently next time.
 
 On Windows, you will need an SSH client. There are several out there, but generally most people use PuTTY which is available for download [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). You can use either 32 or 64 bit versions - computers that require the 32 bit version are rather rare (early Windows 7/Vista/XP). 
 
@@ -22,17 +23,15 @@ You can also use the [Windows 10 subsystem for Linux](https://docs.microsoft.com
 
 Either way, from a terminal window, at the command line prompt type in:
 
-    ssh awesomeperson@clas-compute.ucdenver.pvt
+    ssh username@clas-compute.ucdenver.pvt
     
 or
 
-    ssh awesomeperson@math-alderaan.ucdenver.pvt
+    ssh username@math-alderaan.ucdenver.pvt
 
-Whereas awesomeperson would be your CU Denver username. After connecting, it should ask for your CU Denver password and enter it at this point.
+After connecting, it should ask for your CU Denver password and you enter it at this point. You should be then at the `clas-compute` prompt or `math-alderaan` prompt and in your home directory. These are the two front ends to the cluster system. 
 
-Science will then occur and you should be at the clas-compute prompt or math-alderaan and in your home directory. The following applies to both.
-
-###Interactive Use
+### Interactive use
 
 Using a server ‘interactively’ (aka not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, you can type <code>ssh math-colibri-i01</code> or whatever server you want to go to directly. 
 
@@ -49,15 +48,11 @@ If you want to disconnect from the session but leave it running, hit the combina
 
 When you want to reconnect to your screen session later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll complain and tell you the screens you have available to reconnect to. Type <code>screen –r 'name’</code> to reconnect to that screen. 
 
-### Passwords
-
-The system uses your normal UCD portal/email login username and password, but users must be added before using the system. Please go to [accounts](./accounts/) to request to be added to the system.
-
-### File Storage
+## File Storage
 
 The home directories are on a shared file server and linked as `/home/username` . Projects are found in `/storage/department/projects` (where department may be one of many departments who use this system).
 
-For example, the mixtures project is in <code>/storage/math/projects/mixtures</code>. You can have also a project directory `/storage/department/projects` just for yourself. Please keep home directories small so that we can back them up. Large files belong in project directories.
+For example, the mixtures project is in <code>/storage/math/projects/mixtures</code>. You can have also a project directory `/storage/department/projects` just for yourself. Please keep home directories small so that we can back them up. Large files belong in project directories. See [Accounts](../accounts) for limits ons storage.
 
 If you need a lot of data storage, please contact us before filling everything you can find.
 
@@ -69,7 +64,7 @@ If you need a lot of data storage, please contact us before filling everything y
 
 ### Queues
 
-There are queues for different departments on math-compute because it points to a central scheduler for all of CLAS. To see these queues (called "partitions"), type 
+Jobs are submitted to compute nodes through the scheduler.  To see the queues (called "partitions") on the scheduler, type 
 
     $ sinfo
     PARTITION         AVAIL  TIMELIMIT  NODES  STATE NODELIST
@@ -181,7 +176,7 @@ The templates batch scripts and simple examples to run are in <code>/storage/tem
 
 #### Single-core job
 
-This script will be sufficient for most jobs, such as those you code yourself which do not use multiprocessing.
+This script will be sufficient for many jobs, such as those you code yourself which do not use multiprocessing.
 
      #!/bin/bash
      # A simple single core job template
@@ -223,9 +218,12 @@ You can request the number of nodes. The scheduler will then split the tasks ove
      
 ## Interactive jobs through the scheduler
 
+Remember you should not directly ssh to a node to run your job. For interactive access to a compute node, do instead
+
 ```
-srun -p PARTITION --time=2:00:0 -N 1 -n 1 --pty bash -i
+srun -p math-alderaan --time=2:00:0 -N 1 -n 1 --pty bash -i
 ```
+This will request a session for you as a job in a single core slot on a compute node in the math-alderaan partition for up to 2 hours. After the job starts, your session is transfered to the node. The job will end when you exit or the time runs out.
 
 ## Viewing Job Queues and Job Status
 
