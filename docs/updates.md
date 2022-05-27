@@ -6,7 +6,7 @@ Please contact jan.mandel@ucdenver.edu with any questions.
 
 * Work on power distribution was completed about 1pm. 1/4 compute nodes are offline to prevent overload. The rest operates normally.
 
-* Node math-alderaan-c18 was repaired and ia back. Node math-alderaan-c02 was shipped to the vendor. 
+* Node math-alderaan-c18 was repaired and is back. Node math-alderaan-c02 was shipped to the vendor. 
 
 
 
