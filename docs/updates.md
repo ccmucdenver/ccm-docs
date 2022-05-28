@@ -6,9 +6,9 @@ Please contact jan.mandel@ucdenver.edu with any questions.
 
 All clusters operate normally.
 
-Nodes math-alderaan-c[01,05,09,13,17,21,25,29] and math-alderaan-h02 are offline.
+All nodes showing as available can be used at full load. 
 
-All nodes showis as available can be used at full load. 
+Nodes math-alderaan-c[01,05,09,13,17,21,25,29] and math-alderaan-h02 are offline.
 
 ## 2022/05/27 
 
