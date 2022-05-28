@@ -2,6 +2,14 @@
 
 Please contact jan.mandel@ucdenver.edu with any questions.
 
+## 2022/05/28
+
+All clusters operate normally.
+
+Nodes math-alderaan-c[01,05,09,13,17,21,25,29] and math-alderaan-h02 are offline.
+
+All nodes showis as available can be used at full load. 
+
 ## 2022/05/27 
 
 * Work on power distribution was completed for the day about 1pm. No jobs were cancelled. 1/4 of compute nodes are temporarily offline to prevent overload. The rest operates normally.
