@@ -2,6 +2,8 @@
 
 Please contact jan.mandel@ucdenver.edu with any questions.
 
+Please be sure reload this page to see the latest information.
+
 ## 2022/05/28
 
 * All clusters operate normally. All nodes showing as available can be used at full load. 
