@@ -6,7 +6,7 @@ Please be sure reload this page to see the latest information.
 
 ## 2022/06/02
 
-* All nodes are draining from 11am. Maintenance and power testing are scheduled to start at 1pm. Existing jobs should be able to continue unless a power test trips circuit breakers.
+* All nodes are draining from 11am. Power reconfiguration and testing are scheduled to start at 1pm. Existing jobs should be able to continue unless a power load test trips circuit breakers.
 
 ## 2022/05/28
 
