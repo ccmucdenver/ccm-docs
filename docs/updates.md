@@ -12,15 +12,11 @@ Please be sure reload this page to see the latest information.
 
 * All clusters operate normally. All nodes showing as available can be used at full load. 
 
-* Nodes math-alderaan-c[01,05,09,13,17,21,25,29] are offline to reduce the maximum load and avoid potential shutdown over the weekend. Node math-alderaan-h02 is out for maintenance.
-
 ## 2022/05/27 
 
-* Work on power distribution was completed for the day about 1pm. No jobs were cancelled. 1/4 of compute nodes are temporarily offline to prevent overload. The rest operates normally.
+* Work on power distribution was completed for the day about 1pm. No jobs were cancelled. Nodes math-alderaan-c[01,05,09,13,17,21,25,29] are offline to reduce the maximum load and avoid potential shutdown over the weekend.  The rest operates normally.
 
-* Node math-alderaan-c18 was repaired, a failed memory board was replaced. Node math-alderaan-h02 was shipped to the vendor. 
-
-
+* Node math-alderaan-c18 was repaired and is back. Node math-alderaan-h02 is out for maintenance until further notice. 
 
 ## 2022/05/26
 * Work on power distribun and stress testing was completed about 2pm for today and all clusters are available.
