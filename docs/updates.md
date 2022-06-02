@@ -2,7 +2,7 @@
 
 Please contact jan.mandel@ucdenver.edu with any questions.
 
-Please be sure reload this page to see the latest information.
+Please be sure reload this page to see the latest information, your browser may be caching an old version.
 
 ## 2022/06/02
 
