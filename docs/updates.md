@@ -4,11 +4,15 @@ Please contact jan.mandel@ucdenver.edu with any questions.
 
 Please be sure reload this page to see the latest information, your browser may be caching an old version.
 
-NEW! Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
+Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; [Memory use](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
+
+## 2022/06/03
+
+* NEW: Real-time system status added to this updates page, check out the links above.
 
 ## 2022/06/02
 
-* 2pm: Power work has been completed without tripping any breakers, operations resumed. All existing jobs continue normally.
+* 2pm: Power redistribution and testing completed without tripping any breakers. Normal operations resumed. All existing jobs continued normally. All nodes available except math-alderaan-h02 out for maintenance.
 
 * 11am: All nodes draining. Power reconfiguration and testing are scheduled to start at 1pm. Existing jobs should be able to continue unless a power load test trips circuit breakers.
 
