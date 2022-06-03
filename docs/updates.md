@@ -4,9 +4,10 @@ Please contact jan.mandel@ucdenver.edu with any questions.
 
 Please be sure reload this page to see the latest information, your browser may be caching an old version.
 
-[Temperature log](https://demo.openwfm.org/web/alderaan/temp.txt)
-[CPU load](https://demo.openwfm.org/web/alderaan/temp.txt)
-[Partitions state](https://demo.openwfm.org/web/alderaan/sinfo.txt)
+NEW! Real-time   
+&nbsp; [Temperature log](https://demo.openwfm.org/web/alderaan/temp.txt)
+&nbsp;[CPU load](https://demo.openwfm.org/web/alderaan/temp.txt)
+&nbsp;[Partitions state](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
 ## 2022/06/02
 
