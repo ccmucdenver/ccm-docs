@@ -4,7 +4,7 @@ Please contact jan.mandel@ucdenver.edu with any questions.
 
 Reload the page to see the latest information. Your browser may be caching an old version.
 
-Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; [Memory use](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Memory+swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
+Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory use](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Memory+swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
 ## 2022/06/03
 
