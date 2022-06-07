@@ -4,7 +4,6 @@ site_url: https://ccm-docs.readthedocs.io/en/latest/
 nav:
     - Home: index.md
     - News and status updates: updates.md
-    - Introduction: intro.md
     - Overview: overview.md
     - Clusters Guide: clusters_guide.md
     - Examples: examples.md
