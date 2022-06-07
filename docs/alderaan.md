@@ -13,7 +13,7 @@ All jobs need to be limited in duration. Long-running single-core jobs should be
 Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials and follow the instructions to be contacted by OSG staff for an onboarding meeting.
 
 ## Hardware
-* 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 1U rack-mount drawers, with 4 nodes in each drawer.
+* 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 2U rack-mount drawers, with 4 nodes in each drawer.
 * 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors, NVIDIA Tesla A100, and 2TB DDR4 memory.
 * Head node with 2 AMD EPYC 7502 32 core processors and 256GB memory.
 * 816TB storage (1PB raw), in 2 storage nodes, each with 2 Intel Xeon( Gold 5215 CPUs  2.50GHz, 196GB memory, and XFS filesystems shared by NFS over Infiniband.
@@ -23,9 +23,11 @@ Work consisting of a very large number of single-core jobs can be also submitted
 The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 
 ## Software
-* SLURM cheduler, cluster tools, GNU compiler stack with MPI.
-* Intel compilers, MPI, and MKL.
+* SLURM cheduler, cluster tools
+* GNU compiler stack with MPI
+* Intel compilers, MPI, and MKL
 * CUDA
+* Modules
 * Singularity containers
 
 ## Progress
@@ -39,7 +41,6 @@ The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 ### Fall semester 2021
 * Finalize networking, access, and security
 * Open to early users
-* Install user web interface - Remote desktop, JupyterHub
 * Install OSG - run OSG jobs and submit jobs to OSG
 * Set up governance and allocation processes
 ### Spring semester 2022
@@ -54,9 +55,11 @@ The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 
 Authorized users can submit jobs on the Alderaan cluster on the head node by ssh to math-alderaan.ucdenver.pvt. The head node is for compilation and small tests only. Please do not run any intensive or long jobs on the head node.
 
+Another head node clas-compute.ucdenver.pvt is also available. SLURM jobs can be submitted and user and files accessed from either head node, but the software on clas-compute is not the same as on alderaan cluster.
+
 An allocation system is set up and will be activated when warranted by the cluster load.
 
-Web access including Jupyterhub, remote desktop, and R Studio is in development.
+Web access including Jupyterhub, remote desktop, and R Studio is pending.
 
 ## Contact
 jan.mandel@ucdenver.edu
