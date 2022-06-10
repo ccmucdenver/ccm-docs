@@ -8,7 +8,13 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/06/13
 
-Node math-alderaan-h01 will be powered off Monday afternoon for an upgrade. Node math-alderann-h02 will be put back. Other nodes should not be affected.
+Node math-alderaan-h01 will be powered off Monday afternoon to add a second GPU.
+All running jobs will be killed. The node will be put in draining state in 
+advance so that no new jobs can start. Node math-alderann-h02 will be put 
+back, upgraded to two GPUs. Other nodes should not be affected.
+
+SLURM reconfiguration to allocate also GPUs and memory at least in the math-aldreraan-gpu partition is coming soon.
+
 
 ### 2022/06/03
 
