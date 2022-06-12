@@ -8,7 +8,9 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/06/11
 
-* 5pm Datacenter temperature 30C. All alderaan jobs suspended and no new jobs can start to help prevent overheating.
+* 9:40pm Temperature back to normal 25C, all jobs resumed, normal operations resumed. 
+
+* 5pm Datacenter temperature 30C. All alderaan jobs suspended an no new jobs can start to help prevent overheating.
 
 ### 2022/06/10
 
