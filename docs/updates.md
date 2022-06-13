@@ -12,7 +12,7 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/06/12
 
-* All jobs will be now suspended automatically when alderaan inlet temperature reaches 29 C. 
+* All jobs will be now suspended automatically when alderaan inlet temperature reaches 29 C to help prevent a data center overheating emergency.
 Normal operations will resume when the temperature returns to at most 25 C. Please check the temperature log above if your jobs are suspended or submitted jobs do not start.
 
 ### 2022/06/11
