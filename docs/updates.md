@@ -6,6 +6,15 @@ Reload the page to see the latest information. Your browser may be caching an ol
 
 Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
+### 2022/06/13
+
+* The maintenance on math-alderaan-h01 and the return of math-alderaan-h02 are postponed to tomorrow 6/14.
+
+### 2022/06/12
+
+* All jobs will be now suspended automatically when alderaan inlet temperature reaches 29 C. 
+Normal operations will resume when the temperature returns to at most 25 C. Please check the temperature log above if your jobs are suspended or submitted jobs do not start.
+
 ### 2022/06/11
 
 * 9:40pm Temperature back to normal 25C, all jobs resumed, normal operations resumed. 
@@ -14,7 +23,7 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/06/10
 
-* Node math-alderaan-h01 will be powered off Monday 6/13afternoon to add a second GPU. All running jobs will be killed. The node will be put in draining state in 
+* Node math-alderaan-h01 will be powered off Monday 6/13 afternoon to add a second GPU. All running jobs will be killed. The node will be put in draining state in 
 advance so that no new jobs can start. Node math-alderann-h02 will be put  back, upgraded to two GPUs. Other nodes should not be affected.
 
 * SLURM reconfiguration to allocate also GPUs and memory at least in the math-alderaan-gpu partition is coming soon.
