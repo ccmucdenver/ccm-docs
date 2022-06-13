@@ -8,7 +8,7 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/06/13
 
-* The maintenance on math-alderaan-h01 and the return of math-alderaan-h02 are postponed to tomorrow 6/14.
+* The maintenance on math-alderaan-h01 and the return of math-alderaan-h02 are postponed to tomorrow 6/14 11am.
 
 ### 2022/06/12
 
