@@ -9,7 +9,7 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/06/14 
 
-* Maintenence completed at 1pm. Nodes math-alderaan-h01 and math-alderaan-h02 have two GPUS now each. 
+* Maintenance completed at 1pm. Nodes math-alderaan-h01 and math-alderaan-h02 have two GPUS each now. 
 
 * Slurm configuration with GPUs and memory as controlled resources is coming soon. In the meantime, **please do not request an entire high memory/GPU node if you do not need all the resources, request only the cores you need**.
 

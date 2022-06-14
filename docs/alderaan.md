@@ -12,14 +12,6 @@ All jobs need to be limited in duration. Long-running single-core jobs should be
 
 Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials and follow the instructions to be contacted by OSG staff for an onboarding meeting.
 
-## Hardware
-* 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 2U rack-mount drawers, with 4 nodes in each drawer.
-* 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors, 2 NVIDIA Tesla A100 GPUs, and 2TB DDR4 memory.
-* Head node with 2 AMD EPYC 7502 32 core processors and 256GB memory.
-* 816TB storage (1PB raw), in 2 storage nodes, each with 2 Intel Xeon( Gold 5215 CPUs  2.50GHz, 196GB memory, and XFS filesystems shared by NFS over Infiniband.
-* HDR100 Infiniband interconnect
-* 10Gb/s ethernet connectivity path from each node to Internet 2
-
 The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 
 ## Software
@@ -60,6 +52,14 @@ Another head node clas-compute.ucdenver.pvt is also available. SLURM jobs can be
 An allocation system is set up and will be activated when warranted by the cluster load.
 
 Web access including Jupyterhub, remote desktop, and R Studio is pending.
+
+## Hardware
+* 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 2U rack-mount drawers, with 4 nodes in each drawer.
+* 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors, 2 NVIDIA Tesla A100 GPUs, and 2TB DDR4 memory.
+* Head node with 2 AMD EPYC 7502 32 core processors and 256GB memory.
+* 816TB storage (1PB raw), in 2 storage nodes, each with 2 Intel Xeon( Gold 5215 CPUs  2.50GHz, 196GB memory, and XFS filesystems shared by NFS over Infiniband.
+* HDR100 Infiniband interconnect
+* 10Gb/s ethernet connectivity path from each node to Internet 2
 
 ## Contact
 jan.mandel@ucdenver.edu
