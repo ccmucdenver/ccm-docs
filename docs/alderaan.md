@@ -1,7 +1,7 @@
 # Alderaan Cluster
 
 ## Funding
-This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science and Education by Campus and Grid Computing](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089)  under the [NSF CC* program](https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf20507). The cluster will be integrated with the [Open_Science_Grid (OSG)](https://opensciencegrid.org). At least 20% of capacity will be contributed to the OSG as required by the program.
+This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science and Education by Campus and Grid Computing](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089)  under the [NSF CC* program](https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf20507). Two additional GPUS were purchased by the Department of Mathematical and Statistical Sciences and by the Center for Computational Mathematics. The cluster is being integrated with the [Open_Science_Grid (OSG)](https://opensciencegrid.org). At least 20% of core time will be contributed to the OSG as required by the NSF funding. 
 
 ## Purpose
 The Alderaan cluster is a resource for both campuses of the University of Colorado Denver. 
@@ -14,7 +14,7 @@ Work consisting of a very large number of single-core jobs can be also submitted
 
 ## Hardware
 * 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 2U rack-mount drawers, with 4 nodes in each drawer.
-* 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors, NVIDIA Tesla A100, and 2TB DDR4 memory.
+* 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors, 2 NVIDIA Tesla A100 GPUs, and 2TB DDR4 memory.
 * Head node with 2 AMD EPYC 7502 32 core processors and 256GB memory.
 * 816TB storage (1PB raw), in 2 storage nodes, each with 2 Intel Xeon( Gold 5215 CPUs  2.50GHz, 196GB memory, and XFS filesystems shared by NFS over Infiniband.
 * HDR100 Infiniband interconnect
