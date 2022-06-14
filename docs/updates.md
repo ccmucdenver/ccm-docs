@@ -6,6 +6,13 @@ Reload the page to see the latest information. Your browser may be caching an ol
 
 Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
+
+### 2022/06/14 
+
+* Maintenence completed at 1pm. Nodes math-alderaan-h01 and math-alderaan-h02 have two GPUS now each. 
+
+* Slurm configuration with GPUs and memory as controlled resources is coming soon. In the meantime, **please do not request an entire high memory/GPU node if you do not need all the resources, request only the cores you need**.
+
 ### 2022/06/13
 
 * The maintenance on math-alderaan-h01 and the return of math-alderaan-h02 are postponed to tomorrow 6/14 11am.
