@@ -6,9 +6,9 @@ This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science a
 ## Purpose
 The Alderaan cluster is a resource for both campuses of the University of Colorado Denver. 
 
-Alderaan is a shared cluster running multi-core jobs with multiple nodes using MPI and the high-speed interconnect (High-Performace Computing, HPC), as well as multiple single-core jobs (High-Throughput Computing, HTC). Alderaan head node is an alternative login node for the joint scheduler along with clas-compute.
+Alderaan is a shared cluster running multi-core jobs using MPI and the high-speed interconnect (High-Performace Computing, HPC), as well as multiple single-core jobs (High-Throughput Computing, HTC). Alderaan head node, `math-alderaan`, is an alternative login node for the joint scheduler along with `clas-compute`.
 
-All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](../score/) nodes. 
+All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](../score/) or [Colibri cluster](../colibri/)  partitions instead. 
 
 Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials and follow the instructions to be contacted by OSG staff for an onboarding meeting.
 
@@ -17,10 +17,11 @@ The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 ## Software
 * SLURM cheduler, cluster tools
 * GNU compiler stack with MPI
-* Intel compilers, MPI, and MKL
+* Intel OneAPI compilers, development tools, MPI, and MKL
 * CUDA
+* MATLAB, R, Python, Tensorflow
 * Modules
-* Singularity containers
+* Singularity containers for custom software environments
 
 ## Progress
 ### Fall semester 2020
@@ -33,15 +34,17 @@ The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 ### Fall semester 2021
 * Finalize networking, access, and security
 * Open to early users
-* Install OSG - run OSG jobs and submit jobs to OSG
 * Set up governance and allocation processes
 ### Spring semester 2022
 * Scaling up availability and user base, installing custom software on request.
+* Added 2 GPUs
+* Running OSG jobs to satisfy the 20% core time funding requirement in progress
+* OnDemand web access to the cluster for Jupyterhub and remote desktop in progress
+
 
 ## User Training
 * ssh command line usage
 * software
-* web access to the cluster (when web access is available)
 
 ## How to Use
 
@@ -55,11 +58,11 @@ Web access including Jupyterhub, remote desktop, and R Studio is pending.
 
 ## Hardware
 * 2048 AMD cores and 16TB memory in 32 compute nodes. Each node has 2 AMD EPYC 7502 32 core processors for a total of 64 cores, 512GB DDR4 memory, and dual 960GB SSD. The compute nodes are in 8 2U rack-mount drawers, with 4 nodes in each drawer.
-* 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors, 2 NVIDIA Tesla A100 GPUs, and 2TB DDR4 memory.
+* 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors for total 64 cores, 2 NVIDIA Tesla A100 GPUs, and 2TB DDR4 memory.
 * Head node with 2 AMD EPYC 7502 32 core processors and 256GB memory.
 * 816TB storage (1PB raw), in 2 storage nodes, each with 2 Intel Xeon( Gold 5215 CPUs  2.50GHz, 196GB memory, and XFS filesystems shared by NFS over Infiniband.
 * HDR100 Infiniband interconnect
-* 10Gb/s ethernet connectivity path from each node to Internet 2
+* Full 10Gb/s ethernet connectivity path from every node to Internet 2
 
 ## Contact
 jan.mandel@ucdenver.edu
