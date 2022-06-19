@@ -1,7 +1,5 @@
 # Alderaan Cluster
 
-## Funding
-This cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science and Education by Campus and Grid Computing](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089)  under the [NSF CC* program](https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf20507). Two additional GPUS were purchased by the Department of Mathematical and Statistical Sciences and by the Center for Computational Mathematics. The cluster is being integrated with the [Open_Science_Grid (OSG)](https://opensciencegrid.org). At least 20% of core time will be contributed to the OSG as required by the NSF funding. 
 
 ## Purpose
 The Alderaan cluster is a resource for both campuses of the University of Colorado Denver. 
@@ -11,6 +9,8 @@ Alderaan is a shared cluster running multi-core jobs using MPI and the high-spee
 All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](../score/) or [Colibri cluster](../colibri/)  partitions instead. 
 
 Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials and follow the instructions to be contacted by OSG staff for an onboarding meeting.
+
+The Alddraan cluster is funded by [NSF grant 2019089 CC* Compute: Accelerating Science and Education by Campus and Grid Computing](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089)  under the [NSF CC* program](https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf20507). Two additional GPUS were purchased by the Department of Mathematical and Statistical Sciences and by the Center for Computational Mathematics. The cluster is being integrated with the [Open_Science_Grid (OSG)](https://opensciencegrid.org). At least 20% of core time will be contributed to the OSG as required by the NSF funding. 
 
 The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 
@@ -38,8 +38,9 @@ The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 ### Spring semester 2022
 * Scaling up availability and user base, installing custom software on request.
 * Added 2 GPUs
-* Running OSG jobs to satisfy the 20% core time funding requirement in progress
+* Running OSG jobs to satisfy the 20% core time funding requirement coming soon.
 * OnDemand web access to the cluster for Jupyterhub and remote desktop in progress
+* Allocation limits and storage quotas not in effect yet
 
 
 ## User Training
