@@ -32,16 +32,18 @@ The cluster was built by [Atipa](https://www.atipa.com) in 2021.
 * Delivery and installation 
 * Testing with the vendor's software configuration
 ### Fall semester 2021
-* Finalize networking, access, and security
+* Finalizing networking, access, and security
 * Open to early users
 * Set up governance and allocation processes
 ### Spring semester 2022
-* Scaling up availability and user base, installing custom software on request.
-* Added 2 GPUs
-* Running OSG jobs to satisfy the 20% core time funding requirement coming soon.
-* OnDemand web access to the cluster for Jupyterhub and remote desktop in progress
+* Open to all users
+* Scaling up user base, installing custom software on request.
+* Installing 2 additional GPUs
+* Running OSG jobs to satisfy the 20% core time funding requirement
 * Allocation limits and storage quotas not in effect yet
 
+### Coming soon
+* OnDemand web access to the cluster for Jupyterhub and remote desktop
 
 ## User Training
 * ssh command line usage
