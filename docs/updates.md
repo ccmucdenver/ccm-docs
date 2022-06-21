@@ -9,7 +9,7 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 ### 2022/06/21
 * Thanks to all who submitted their contributions for the annual report for the [NSF grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089) Alderaan is funded from!
 
-* New modules available on Alderaan: module load intel will set up the intel compiters and MPI; module load netcdf will point environment variable NETCDF to both C and Fortran NetCDF as expected by many software packages. Separate modules netcdf-c and netcdf-fortran are also available. All NetCDF modules are built with the Intel compilers.
+* New modules available on Alderaan: module load intel will set up the Intel compiters and MPI; module load netcdf will point environment variable NETCDF to both C and Fortran NetCDF as expected by many software packages. Separate modules netcdf-c and netcdf-fortran are also available. All NetCDF modules are built with the Intel compilers.
 
 ### 2022/06/14 
 
