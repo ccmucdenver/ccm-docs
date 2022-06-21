@@ -7,9 +7,9 @@ Reload the page to see the latest information. Your browser may be caching an ol
 Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
 ### 2022/06/21
-* Thanks to all who submitted their contributions for the annual report for the [NSF grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089) which funding Alderaan!
+* Thanks to all who submitted their contributions for the annual report for the [NSF grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089) Alderaan is funded from!
 
-* New modules available on Alderaan: module load intel will set up the intel compiters and mmpi; module load netcdf will point environment variable NETCDF to both C and Fortran NetCDF as expected by many software packages. Separate modules netcdf-c and netcdf-fortran are also available. All NetCDF modules are built with the Intel compilers.
+* New modules available on Alderaan: module load intel will set up the intel compiters and MPI; module load netcdf will point environment variable NETCDF to both C and Fortran NetCDF as expected by many software packages. Separate modules netcdf-c and netcdf-fortran are also available. All NetCDF modules are built with the Intel compilers.
 
 ### 2022/06/14 
 
