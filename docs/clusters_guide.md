@@ -53,7 +53,7 @@ Press Control-A and then Esc and scrolling up and down will work temporarily the
 
 ## File Storage
 
-**You are responsible for keeping copies of your important files elsewhere. Files and entire filesystems can be lost.*** 
+**You are responsible for keeping copies of your important files elsewhere. Files and entire filesystems can be lost.** 
 
 The home directories are on a shared file server and linked as `/home/username`. Everyone can have also 
 a project directory `/storage/department/projects/username` 
