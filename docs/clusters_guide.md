@@ -48,30 +48,34 @@ If you want to disconnect from the session but leave it running, hit the combina
 
 When you want to reconnect to your screen session later, log back onto wherever you started the screen and type <code>screen –r</code>. If you have more than one screen, it’ll complain and tell you the screens you have available to reconnect to. Type <code>screen –r 'name’</code> to reconnect to that screen. 
  
-
-You can't just scroll in `screen` in `screen` to see your terminal history as you normally would.
+You can't just scroll in `screen` to see your terminal history as you normally would.
 Press Control-A and then Esc and scrolling up and down will work temporarily the usual way. When you type anything, `screen` will leave the scrolling model.
 
 ## File Storage
 
-The home directories are on a shared file server and linked as `/home/username` . Projects are found in `/storage/department/projects` (where department may be one of many departments who use this system).
+**You are responsible for keeping copies of your important files elsewhere. Files and entire filesystems can be lost.*** 
 
-For example, the mixtures project is in <code>/storage/math/projects/mixtures</code>. You can have also a project directory `/storage/department/projects` just for yourself. Please keep home directories small so that we can back them up. Large files belong in project directories. See [Accounts](../accounts) for limits ons storage.
+The home directories are on a shared file server and linked as `/home/username`. Everyone can have also 
+a project directory `/storage/department/projects/username` 
+(where department may be one of many departments who use this system).
+The difference is that home directories are backed up occasionally 
+while project directories are not. Please keep your home directory small to make the backups possible.
+
+In addition, groups can have shared project directories also in `/storage/department/projects`.
 
 If you need a lot of data storage, please contact us before filling everything you can find.
 
-On Alderaan only, you can make your own directory in /scratch, which is on a large fast filesystem.
+On Alderaan only, you can make your own directory in `/scratch`, which is on a large fast filesystem.
+When `/scratch` starts filling up, oldest files will be purged automatically. 
 
-**You are responsible for keeping copies of your important files elsewhere. Files can be lost.*** 
-
-We will back up home directories occasionally, if they are not too large, but not project or scratch directories. When /scratch starts filling up, oldest files will be purged automatically. 
-
-**Do not keep anything confidential or sensitive on this system.** We are not equipped for the level of security this would take. 
-In particular, no proprietary data, health records, grades, social security numbers, and like. If you use ssh keys to connect elsewhere from this system 
+**Do not keep any confidential or sensitive files on this system.** We are not equipped for the level of security this would take. 
+In particular, no proprietary data, health records, grades, social security numbers, and like are allowed. 
+If you use ssh keys to connect elsewhere from this system 
 (such as github or another computer account), it is highly recommended to make an ssh key with a passcode for that. Otherwise,
  the security of the account you are connecting to is only as good as the read protection of your files here.
 
-Files and directories including your home directory are created with permissions which allow anyone to read them but not write. This is Linux default to encourage collaboration. If you want to keep a file or directory private, you need to change the permissions yourself. 
+Files and directories including your home directory are created with permissions which allow anyone to read them but not 
+write. This is Linux default to encourage collaboration. If you want to keep a file or directory private, you need to change the permissions yourself. 
 Type <code>chmod og-rwx file_or_directory_name</code> to make the file or directory not accessible by others (except system administrators, of course).
 
 
