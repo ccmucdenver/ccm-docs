@@ -6,6 +6,10 @@ Reload the page to see the latest information. Your browser may be caching an ol
 
 Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
+### 2022/07/03
+
+* math-alderaan-c01 failed this morning and won't power on.
+
 ### 2022/06/21
 * Thanks to all who submitted their contributions for the annual report for the [NSF grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089) Alderaan is funded from!
 
