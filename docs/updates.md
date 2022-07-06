@@ -6,6 +6,10 @@ Reload the page to see the latest information. Your browser may be caching an ol
 
 Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
+### 2022/07/11
+
+* Nodes 01, 03, 07, 11, 19, 20, 23, 24, 27 were put in drain state and any jobs on tthem killed because of overheating 
+
 ### 2022/07/03
 
 * math-alderaan-c01 failed this morning and won't power on.
