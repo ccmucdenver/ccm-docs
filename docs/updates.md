@@ -8,7 +8,9 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/07/08
 
-* Data center temperature successfully lowered. Nodes math-alderaan-c[01-32] resumed. Please do go ahead and submit your jobs and use all  nodes at 100% again.
+* 12:30pm: A/C offline, operations suspended.
+
+* 11:00am: Data center temperature successfully lowered. Nodes math-alderaan-c[01-32] resumed. Please do go ahead and submit your jobs and use all  nodes at 100% again.
 
 ### 2022/07/07
 
