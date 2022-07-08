@@ -8,6 +8,8 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/07/08
 
+* 1:15pm: Normal operations resumed. 
+
 * 12:30pm: A/C offline, operations suspended.
 
 * 11:00am: Data center temperature successfully lowered. Nodes math-alderaan-c[01-32] resumed. Please do go ahead and submit your jobs and use all  nodes at 100% again.
@@ -17,11 +19,11 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 * Because of CPU overhearing, no new jobs can start on nodes math-alderaan-c[01-32] and existing jobs on nodes loaded more than 80% were killed or suspended.
 Arrangements to use the nodes at reduced load are possible while the heat situation is being resolved, please contact jan.mandel@ucdenver.edu.
 
-* Node math-alderaan-c01 was reset and returned to operations.
+* Node math-alderaan-c01 reset and returned to operations. 
 
 ### 2022/07/03
 
-* math-alderaan-c01 failed this morning and won't power on.
+* Node math-alderaan-c01 failed and won't power on.
 
 ### 2022/06/21
 * Thanks to all who submitted their contributions for the annual report for the [NSF grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089) Alderaan is funded from!
