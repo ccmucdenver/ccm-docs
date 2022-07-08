@@ -8,7 +8,8 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/07/07
 
-* Because of CPU overhearing, nodes math-aldrann-c[01-32] are draining = no new jobs can start, and jobs on nodes loaded more than 80% were killed or suspended.
+* Because of CPU overhearing, no new jobs can start on nodes math-alderaan-c[01-32] and existing jobs on nodes loaded more than 80% were killed or suspended.
+Arrangements to use the nodes at reduced load are possible while the heat situation is being resolved, please contact jan.mandel@ucdenver.edu.
 
 ### 2022/07/03
 
