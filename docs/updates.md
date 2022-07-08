@@ -6,9 +6,9 @@ Reload the page to see the latest information. Your browser may be caching an ol
 
 Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
-### 2022/07/11
+### 2022/07/07
 
-* Nodes 01, 03, 07, 11, 19, 20, 23, 24, 27 were put in drain state and any jobs on tthem killed because of overheating 
+* Because of CPU overhearing, nodes math-aldrann-c[01-32] are draining = no new jobs can start, and jobs on nodes loaded more than 80% were killed or suspended.
 
 ### 2022/07/03
 
