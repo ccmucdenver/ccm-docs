@@ -6,10 +6,16 @@ Reload the page to see the latest information. Your browser may be caching an ol
 
 Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
+### 2022/07/08
+
+* Data center temperature successfully lowered. Nodes math-alderaan-c[01-32] resumed. Please do go ahead and submit your jobs and use all  nodes at 100% again.
+
 ### 2022/07/07
 
 * Because of CPU overhearing, no new jobs can start on nodes math-alderaan-c[01-32] and existing jobs on nodes loaded more than 80% were killed or suspended.
 Arrangements to use the nodes at reduced load are possible while the heat situation is being resolved, please contact jan.mandel@ucdenver.edu.
+
+* Node math-alderaan-c01 was reset and returned to operations.
 
 ### 2022/07/03
 
