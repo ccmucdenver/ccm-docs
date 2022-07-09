@@ -9,9 +9,9 @@ Real-time  &nbsp;  &nbsp; [Room temperature](https://demo.openwfm.org/web/aldera
 ### 2022/07/09
 
 * Automatic CPU temperature monitoring was started. All jobs on an Alderaan node will
-be suspended if the temperature of at least one of its CPUs reaches 92 C. 
+be suspended if the temperature of at least one of the CPUs on the node reaches 92 C. 
 
-* A link to real-time CPU temperature on all alderaan nodes was added above.
+* A link to real-time CPU temperature on all Alderaan nodes was added above.
 
 * If the room temperate reaches 29 C, all Alderaan jobs will be automatically suspended.
 
