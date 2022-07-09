@@ -9,8 +9,8 @@ Real-time  &nbsp;  &nbsp; [Room temperature](https://demo.openwfm.org/web/aldera
 ### 2022/07/09
 
 * Temperature monitoring was improved. **All Alderaan nodes can be used at 100% load safely.** 
-Reducing the number of cores used has only a limited affect, the remaining 
-cores will boost their speed up to the full thermal design profile (TDP).
+Reducing the number of cores used has a limited effect, the remaining 
+cores can boost their speed up to the full thermal design profile (TDP) of the CPU.
 Should a [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)  exceed
 92 C, the jobs using the CPU will be suspended automatically and  can be resumed later 
 after a review of the situation. The node will show as `drng` in the 
