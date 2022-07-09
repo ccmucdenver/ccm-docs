@@ -13,7 +13,7 @@ Reducing the number of cores used has only a limited effect anyway, because the 
 cores can boost their speed up to the full thermal design profile (TDP) of the CPU.
 Should a [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)  exceed
 92 C, the jobs using the CPU will be suspended automatically and  can be resumed later 
-after a review of the situation. The node will show as `drng` in the 
+after a review of the situation. The node state will show as `drng` in the 
 [partitions list](https://demo.openwfm.org/web/alderaan/sinfo.txt).
 
 * A link to real-time CPU temperature on all Alderaan nodes was added above.
