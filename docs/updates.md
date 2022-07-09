@@ -6,6 +6,17 @@ Reload the page to see the latest information. Your browser may be caching an ol
 
 Real-time  &nbsp;  &nbsp; [Room temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)  &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
+### 2022/07/09
+
+* Automatic CPU temperature monitoring was started. All jobs on an Alderaan node will
+be suspended if the temperature of at least one of its CPUs reaches 92 C. 
+
+* A link to real-time CPU temperature on all alderaan nodes was added above.
+
+* If the room temperate reaches 29 C, all Alderaan jobs will be automatically suspended.
+
+* Suspended jobs and nodes will be resumed, if possible, after a review of the situation.
+
 ### 2022/07/08
 
 * 1:15pm: Normal operations resumed. 
