@@ -15,7 +15,7 @@ Should a [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)  
 after a review of the situation. The node state will show as `drng` in the 
 [partitions list](https://demo.openwfm.org/web/alderaan/sinfo.txt).
 
-* Reducing  the number of cores used has some effect on the CPU heat generated, but only a limited one because the remaining cores can boost their speed up.
+[//]: # (Reducing  the number of cores used has some effect on the CPU heat generated, but only a limited one because the remaining cores can boost their speed up.)
 
 * A link to real-time CPU temperature on all Alderaan nodes was added above.
 
