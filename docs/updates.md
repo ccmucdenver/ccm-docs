@@ -8,14 +8,13 @@ Real-time  &nbsp;  &nbsp; [Room temperature](https://demo.openwfm.org/web/aldera
 
 ### 2022/07/09
 
-* An automatic monitoring of CPU temperature was added. All jobs on an Alderaan node will
-be suspended if the temperature of any CPU on the node reaches 92 C. 
+* Temperature monitoring was improved. **All nodes can be used at 100% load safely.** 
+Should a [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)  
+exceed 92 C, the jobs using the CPU will be suspended and  can be resumed later 
+after a review of the situation. The node will show as `drng` in the 
+[partitions list](https://demo.openwfm.org/web/alderaan/sinfo.txt).
 
 * A link to real-time CPU temperature on all Alderaan nodes was added above.
-
-* If the room temperature reaches 29 C, all Alderaan jobs will be automatically suspended.
-
-* Suspended jobs and nodes can be resumed after a review of the situation.
 
 ### 2022/07/08
 
