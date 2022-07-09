@@ -15,7 +15,7 @@ be suspended if the temperature of at least one of the CPUs on the node reaches 
 
 * If the room temperate reaches 29 C, all Alderaan jobs will be automatically suspended.
 
-* Suspended jobs and nodes can resumed after a review of the situation.
+* Suspended jobs and nodes can be resumed after a review of the situation.
 
 ### 2022/07/08
 
