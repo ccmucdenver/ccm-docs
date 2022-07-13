@@ -11,7 +11,7 @@ Real-time  &nbsp;  &nbsp; [Room temperature](https://demo.openwfm.org/web/aldera
 * Temperature management now resumes jobs and nodes suspended for overheating, after the temperature drops enough.
 
 * **If your job is suspended to protect the computer hardware, 
-please wait until it gets resumed automatically. This should not take longer than 5 to 10 minutes. Do not attempt to defeat these restrictions.**
+please wait until it gets resumed automatically. This should not take longer than 5  minutes. Please do not attempt to defeat these restrictions.**
 
 * We also increase the speed of 
 the node fans proactively as the CPU temperatures increase.
