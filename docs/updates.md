@@ -6,12 +6,21 @@ Reload the page to see the latest information. Your browser may be caching an ol
 
 Real-time  &nbsp;  &nbsp; [Room temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)  &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
+
+**To protect the computer hardware, jobs running on CPUs which get too hot are 
+suspended automatically. The jobs resume after the temperature drops. 
+This should not take longer than few minutes**
+Please see [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt) for details.
+
+### 2022/07/14 
+
+* One way to avoid getting jobs suspended is to use fewer cores per node. Since the CPU turbo boost feature  will speed up the remaining cores, the number of 
+cores to use takes some trial and error It also depends on your application.
+
 ### 2022/07/12
 
-* Temperature management now resumes jobs and nodes suspended for overheating, after the temperature drops enough.
-
-* **If your job is suspended to protect the computer hardware, 
-please wait until it gets resumed automatically. This should not take longer than 5  minutes. Please do not attempt to defeat these restrictions.**
+* To protect the computer hardware, jobs running on CPUs which get too hot are 
+suspended automatically. The jobs resume after the temperature drops.
 
 * We also increase the speed of 
 the node fans proactively as the CPU temperatures increase.
