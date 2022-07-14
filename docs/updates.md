@@ -14,8 +14,9 @@ Please see [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)
 
 ### 2022/07/14 
 
-* One way to avoid getting jobs suspended is to use fewer cores per node. Since the CPU turbo boost feature  will speed up the remaining cores, the number of 
-cores to use takes some trial and error It also depends on your application.
+* One way to avoid getting jobs suspended is to use fewer cores per node. Since the CPU turbo 
+boost feature will speed up the remaining cores and the load depends on application, 
+the number of cores per node to use is best determined by trial and error. 
 
 ### 2022/07/12
 
