@@ -7,9 +7,9 @@ Reload the page to see the latest information. Your browser may be caching an ol
 Real-time  &nbsp;  &nbsp; [Room temperature](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp; [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)  &nbsp; &nbsp; [CPU load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp; [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp; [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
 
-**To protect the computer hardware, jobs running on CPUs which get too hot are 
-suspended automatically. The jobs resume after the temperature drops. 
-This should not take longer than few minutes**
+**To protect the computer hardware, jobs running on Alderaan CPUs which get too hot are 
+suspended automatically. The jobs resume after the temperature drops, which 
+should not take more than few minutes.**
 Please see [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt) for details.
 
 ### 2022/07/14 
