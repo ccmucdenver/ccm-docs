@@ -12,6 +12,13 @@ suspended automatically. The jobs resume after the temperature drops, which
 should not take more than few minutes.**
 Please see [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt) for details.
 
+### 2022/07/21
+
+* Maintenance in progress. Node math-alderaan-c01 is back online. Nodes math-alderaan-c[29-32] are down, investigating. No jobs were cancelled.
+
+* The [TDP](https://community.amd.com/t5/processors/what-do-amd-mean-by-tdp/td-p/221727) on math-alderaan-c01 and math-alderaan-c07 was changed. 
+Their availability will be limited until testing is completed. 
+
 ### 2022/07/15 
 
 * The high-memory/GPU nodes are math-alderaan-h[01-02] are back in operation.
