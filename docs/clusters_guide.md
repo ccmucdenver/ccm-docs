@@ -257,6 +257,12 @@ If you run an application that can use more cores, you can requests the number o
 
 If you expect that your application will use more memory than 8GB (our nodes have 512GB memory and 64 cores each), you should request more tasks, about the expected memory usage in GB divided by 8. Otherwise the node memory may get overloaded when the machine gets busy with many jobs, and everyone's jobs may stall or crash. Note: this may change once we start allocating memory use, but at the moment we do not.
  
+### Sending a job to a specific node
+Add the following to your SBATCH directives
+
+    #SBATCH --nodelist=math-alderaan-xxx
+
+where xxx is the node you want to use. For more information, see [this link](https://stackoverflow.com/questions/50993346/how-to-run-a-job-on-a-specific-node-using-the-slurm).
 ### A simple MPI job template
 
      #!/bin/bash
