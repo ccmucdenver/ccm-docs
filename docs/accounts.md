@@ -1,21 +1,4 @@
 # Accounts and Allocations
-## Eligibility
-Employees and students with `ucdenver.edu` or `cuanschutz.edu` login credentials. 
-External collaborators sponsored by a faculty member.
-
-## How to get an account
-
-Please use [this form](https://forms.office.com/r/GQ9ef7ei4i) to request accounts and allocations requests. **The form should be filled by a faculty member and list users in their group, such as students or external collaborators.** External collaborators need a POI (a type of affiliate appointment) with VPN access first.
-
-The form will ask for the **CU Denver email addresses** for all accounts to be created, and
-
-* a brief description of the project (few words, one line is OK),
-* funding source, if any,
-* affirmation of the [Terms of Use](../#terms-of-use), which include an acknowledgement of the NSF grant 2019089 in all publications and presentations, and send us at least a citation. The publication itself is always appreciated.
-
-This is needed for reporting to the funding agency (annual reports, quad charts, PI meetings, etc.)
-
-Temporary accounts can be set up for training workshops. 
 
 ## Resources and Allocations
 

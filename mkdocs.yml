@@ -23,11 +23,10 @@ markdown_extensions:
   - admonition
 nav:
     - Welcome: index.md
-    - Terms and Conditions: TermsandConditions.md
     - Workshop: workshop.md
     - Training: training.md
     - News and system status:  updates.md
-    - Overview: overview.md
+    - Registration and Login: Registration_and_Login.md
     - Clusters Guide: clusters_guide.md
     - Examples: examples.md
     - Accounts and Allocations: accounts.md
