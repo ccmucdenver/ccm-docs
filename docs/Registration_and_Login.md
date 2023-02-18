@@ -9,10 +9,15 @@ for more information.
 ## Registering your account
 You must have a faculty member reqeust access on your behalf. They will fill out [this form](https://forms.office.com/r/GQ9ef7ei4i) using their UCDenver credentials.
 This form will require the following:
+
 * Email address of all users
+ 
 * Brief description of project
+ 
 * Funding source(s)
+
 * Project name (optional)
+ 
 * Affirmation of [Terms and Conditions](./index.md/) 
 
 ## Logging in 
@@ -20,6 +25,7 @@ This form will require the following:
 For more information, see the [guide](https://www.ucdenver.edu/offices/office-of-information-technology/software/how-do-i-use/getting-started-with-multi-factor-authentication)
 ### Log into GlobalProtect
 For more information, see the [guide](https://www.ucdenver.edu/offices/office-of-information-technology/software/how-do-i-use/vpn-and-remote-access)
+
 *Note: When using GlobalProtect for Linux, you will need to respond to the push notifications two times.
 ### SSH into a head node
 To log into the clas-compute head node, type `ssh username@clas-compute.ucdenver.pvt`
