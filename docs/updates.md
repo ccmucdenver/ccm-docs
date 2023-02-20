@@ -19,19 +19,19 @@ Please see [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt)
 
 ### 2023/02/18
 
-* Front end math-alderaan is down. 
+* Front end math-alderaan is down since Friday 19:21 MSR.
 The Alderaan cluster is accessible through the alternate front end by
 
      ssh clas-compute.ucdenver.pvt 
 
-* Slurm and all compute nodes are working normally.
+* Slurm and all compute nodes and singluarity are working normally. Use clas=compute to submit slurm jobs.
 
-* Modules and custom software installed in /shared are not available. 
+* Modules and custom software such as compilers, installed in /shared are not available, since /shared is served from the head node. 
 Other filesystems are not affected.
 
 * System monitoring is not being updated.
 
-* Note that some project directories and the /scratch directory are in /data001 and /data002 filesystems, which are not accessible from clas-compute head node, colibri cluster, and the score cluster.
+* Note that some project directories and the /scratch directory are in the /data001 and /data002 filesystems, which are not accessible from clas-compute head node, colibri cluster, and the score cluster.
 
 ### 2023/02/10
 
