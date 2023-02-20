@@ -17,6 +17,10 @@ suspended automatically. This should happen only rarely now. The jobs resume aft
 should not take more than few minutes.**
 Please see [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt) for details.
 
+### 2023/02/20
+
+* Front end math-alderaan is back online. Operations normal.
+
 ### 2023/02/18
 
 * Front end math-alderaan is down since Friday 19:21 MSR.
