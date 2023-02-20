@@ -27,6 +27,8 @@ nav:
     - Training: training.md
     - News and system status:  updates.md
     - Registration and Login: Registration_and_Login.md
+    - News and Status Updates:  updates.md
+    - Overview: overview.md
     - Clusters Guide: clusters_guide.md
     - Examples: examples.md
     - Accounts and Allocations: accounts.md

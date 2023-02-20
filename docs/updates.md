@@ -17,6 +17,26 @@ suspended automatically. This should happen only rarely now. The jobs resume aft
 should not take more than few minutes.**
 Please see [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt) for details.
 
+### 2023/02/18
+
+* Front end math-alderaan is down. 
+The Alderaan cluster is accessible through the alternate front end by
+
+     ssh clas-compute.ucdenver.pvt 
+
+* Slurm and all compute nodes are working normally.
+
+* Modules and custom software installed in /shared are not available. 
+Other filesystems are not affected.
+
+* System monitoring is not being updated.
+
+* Note that some project directories and the /scratch directory are in /data001 and /data002 filesystems, which are not accessible from clas-compute head node, colibri cluster, and the score cluster.
+
+### 2023/02/10
+
+* math-alderaan-h02 is available
+
 ### 2023/02/08
 
 * Taking math-alderaan-h02 down for diagnostics/repair
