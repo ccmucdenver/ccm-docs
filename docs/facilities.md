@@ -1,30 +1,30 @@
 # Facilities, Equipment, and Other Resources
 
 ## The short version
-The Center for Computational Mathematics operates a network of computers including CU Denver's High Performance Computing cluster Alderaan, used by researchers and students from both campuses, and also tied into the Open Science Grid (OSG). The cluster has total 2240 AMD EPYC cores, 20TB memory, 4 NVIDIA A-100 GPUs, HDR100 Infiniband interconnect, and 816TB storage. Installed software includes MATLAB, R, GNU and Intel compilers, Python, and TensorFlow.
+The Center for Computational Mathematics operates a network of computers including CU Denver's High Performance Computing cluster Alderaan, used by researchers and students from both campuses, and also tied into the Open Science Grid (OSG). The cluster has total 2240 AMD EPYC cores, 20TB memory, 4 NVIDIA A-100 GPUs, HDR100 Infiniband interconnect, and 816TB storage. Installed software includes Singularity containers, MATLAB, R, GNU and Intel compilers, Python, and TensorFlow.
 
     The cluster was funded by the National Science Foundation and installed in 2021. It has currently over 100 users, mostly graduate students. It is being used for projects in areas including genomic, fluid dynamics, machine learning, statistics, wildfire simulation, optimization, and equity.
 
 ## The full version
 ### Computing Facilities 
-The Center for Computational Mathematics (CCM) and the Department of Mathematical and Statistical Sciences at CU Denver operate a network of clusters, servers, and workstations, which includes:
+The CU Denver Center for Computational Mathematics (CCM) operates a network of clusters, servers, and workstations, which includes:
 
-*   [Alderaan cluster](../alderaan/), total 2240 AMD 7502 cores and 4 NVIDIA A-100 GPUs: 2048 AMD 7502 cores and 16TB memory in 32 compute nodes (64 cores and 512GB per node), each with dual 960GB SSDs; 2 high-memory GPU nodes each with two NVIDIA A100 GPU, 2TB memory, and 64 AMD 7502 cores, and 960GB SSDs; head node with 64 cores; 816TB storage (1PB raw), HDR100 Infiniband interconnect, and 10Gb/s connectivity from every node to Internet 2. 
+*   [Alderaan cluster](../alderaan/), total 2240 AMD EPYC 7502 cores and 4 NVIDIA A-100 GPUs: 2048 AMD 7502 cores and 16TB memory in 32 compute nodes (64 cores and 512GB per node), each with dual 960GB SSDs; 2 high-memory GPU nodes each with two NVIDIA A100 GPU, 2TB memory, and 64 AMD 7502 cores, and 960GB SSDs; head node with 64 cores; 816TB storage (1PB raw), HDR100 InfiniBand interconnect, and 10Gb/s connectivity from every node to Internet 2. The cluster was funded by the National Science Foundation and installed in 2021. It is available to all faculty and students from CU Denver | Anschutz, with login by standard university credentials. 
 *   [Colibri cluster](../colibri/), 384 Intel Sandy Bridge cores, 48 NVidia Tesla M2090 Fermi GPUs, QDR Infiniband interconnect, 104TB disk array, High Memory Interactive Node with 32 cores, and 1TB memory.
 *   [Score cluster](../score/), 100 Intel Ivy Bridge cores, 5 nodes, 192GB memory per node, 10Gbit Ethernet interconnects.
 *   [Jupyterhub server](../jupyterhub/), 36 Intel E5-2695 v4  cores, 384GB memory, RAID with two 480 GB SSDs, dedicated for classroom use and student research.
 *   [190TB storage array](../storage/).
-*   Network of workstations and servers, connected by 1Gbs Ethernet, with 10Gbs uplink to the campus backbone.
+*   Workstations and servers, connected by 1Gbs Ethernet, with 10Gbs uplink to the campus backbone.
 
 ### Software
-*   The network uses a common SLURM batch scheduler, integrated with clusters from other department in the College of Liberal Arts and Sciences (chemistry, biology).
-*   Installed software on the computing network includes MATLAB, R, and GNU compilers. Additional software can be installed on request. 
+*   The clusters use a common SLURM batch scheduler.
+*   Installed software on the clusters network includes MATLAB, R, and GNU compilers. Additional software is installed on request on Alderaan or in Singularity containers for use anywhere.
 *   A large collection of software is available to CU Denver students and faculty through the Office of Information for free or at reduced costs, including a MATLAB site license.
 
 ### Personnel Resources
 
-* The system administration is done by the CCM Director Jan Mandel, backed by the College of Liberal Arts and Sciences IT, and assisted by student staff. 
+* The system administration is done by the CCM Director Jan Mandel, backed by the College of Liberal Arts and Sciences IT, and assisted by student staff. Search for a college HPC professional administrator is in progress.
 
 ### Other Resources
 
-* CU Denver is member of the the [Rocky Mountain Advanced Computing Consortium](https://rmacc.org) (RMACC). The RMACC operates the [RMACC Summit cluster](https://www.colorado.edu/rc/resources/summit) and [Alpine](https://www.colorado.edu/rc/alpine) supercomputer, and allocations are available to CU Denver students and faculty.
+* CU Denver is member of the the [Rocky Mountain Advanced Computing Consortium](https://rmacc.org) (RMACC). The RMACC operates the [RMACC Summit cluster](https://www.colorado.edu/rc/resources/summit) and [Alpine](https://www.colorado.edu/rc/alpine) supercomputer at CU Boulder. Allocations on RMACC resources are available to CU Denver students and faculty.
