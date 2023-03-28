@@ -17,6 +17,10 @@ suspended automatically. This should happen only rarely now. The jobs resume aft
 should not take more than few minutes.**
 Please see [CPU temperature](https://demo.openwfm.org/web/alderaan/cpu_temp.txt) for details.
 
+### 2023/03/07
+
+* Optimization solver Gurobi with one year site license added to the  /storage/singularity/pyscipopt-geopandas.sif container.
+
 ### 2023/02/20
 
 * Front end math-alderaan is back online. Operations normal.

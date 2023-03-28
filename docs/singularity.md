@@ -108,7 +108,7 @@ R 4.1.2 with numerous standard and custom packages and datasets, see the definit
 
 ### pyscipopt-geopandas.sif
  
-[PySCIPOpt](https://pypi.org/project/PySCIPOpt) 4.2.0 interface to the SCIP Optimization Suite, geopandas, and inequalipy in a minimal python 3.9.13 installation.
+Optimization software [PySCIPOpt](https://pypi.org/project/PySCIPOpt) pyscipopt 4.2.0, ipopt, glpk, pyomo, gurobi, with geopandas.
 
 ### qvina.sif
 

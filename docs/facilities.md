@@ -1,11 +1,5 @@
 # Facilities, Equipment, and Other Resources
 
-## The short version
-The Center for Computational Mathematics operates a network of computers including CU Denver's High Performance Computing cluster Alderaan, used by researchers and students from both campuses, and also tied into the Open Science Grid (OSG). The cluster has total 2240 AMD EPYC cores, 20TB memory, 4 NVIDIA A-100 GPUs, HDR100 Infiniband interconnect, and 816TB storage. Installed software includes Singularity containers, MATLAB, R, GNU and Intel compilers, Python, and TensorFlow.
-
-    The cluster was funded by the National Science Foundation and installed in 2021. It has currently over 100 users, mostly graduate students. It is being used for projects in areas including genomic, fluid dynamics, machine learning, statistics, wildfire simulation, optimization, and equity.
-
-## The full version
 ### Computing Facilities 
 The CU Denver Center for Computational Mathematics (CCM) operates a network of clusters, servers, and workstations, which includes:
 
@@ -23,8 +17,8 @@ The CU Denver Center for Computational Mathematics (CCM) operates a network of c
 
 ### Personnel Resources
 
-* The system administration is done by the CCM Director Jan Mandel, backed by the College of Liberal Arts and Sciences IT, and assisted by student staff. Search for a college HPC professional administrator is in progress.
+* The system administration is done by the CCM Director Jan Mandel, backed by the College of Liberal Arts and Sciences IT, and assisted by student staff. 
 
 ### Other Resources
 
-* CU Denver is member of the the [Rocky Mountain Advanced Computing Consortium](https://rmacc.org) (RMACC). The RMACC operates the [RMACC Summit cluster](https://www.colorado.edu/rc/resources/summit) and [Alpine](https://www.colorado.edu/rc/alpine) supercomputer at CU Boulder. Allocations on RMACC resources are available to CU Denver students and faculty.
+* CU Denver is member of the the [Rocky Mountain Advanced Computing Consortium](https://rmacc.org) (RMACC). The RMACC operates the [Alpine](https://www.colorado.edu/rc/alpine) supercomputer at CU Boulder. Allocations on RMACC resources are available to CU Denver students and faculty. Access to RMACC is through ACCESS federated login (previously XSEDE).
