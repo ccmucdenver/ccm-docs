@@ -124,6 +124,29 @@ coming soon
 Globus is a free service which can transfer large files (many GB and TB) between servers on the internet using a simple web interface and without supervision. 
 See the [Globus](../globus/) section how to use Globus here.
 
+### ```scp``` Tutorial
+
+<ins> Approach 1: Transferring file from local computer to Alderaan <ins>
+
+Open a terminal or command line prompt shell. Do not log into Alderaan – stay connected to your local machine. Type command: 
+
+    scp /path/to/file/on/computer [username]@math-alderaan.ucdenver.pvt:/path/to/file/on/alderaan 
+
+For instance, if my CU Denver username is duffme, I had a file on my local machine located at ~/Desktop/Folder/file.txt, and I wanted to put this file in my home directory on Alderaan, I would use the command:  
+
+    scp ~/Desktop/Folder/file.txt duffme@math-alderaan.ucdenver.pvt:/home/duffme 
+
+<ins> Approach 2: Transferring file from Alderaan to local computer <ins>
+
+Open a terminal or command line prompt shell. Do not log into Alderaan – stay connected to your local machine. Type command: 
+
+    scp /path/to/file/on/computer [username]@math-alderaan.ucdenver.pvt:/path/to/file/on/alderaan 
+
+For instance, if my CU Denver username is duffme, I had a file on Alderaan I wanted to transfer located at /home/duffme/file.txt, and I wanted to put this file on my local machine at  ~/Desktop, I would use the command:  
+
+    scp duffme@math-alderaan.ucdenver.pvt:/home/duffme/file.txt ~/Desktop 
+
+
 ## Requesting Information about the Environment
 
 ### Queues
