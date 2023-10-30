@@ -267,6 +267,23 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 
 **Please do not request the number of nodes on Alderaan by `--nodes` or `-N`, unless you really need entire nodes for some reason. Request only the CPU cores you need by `--ntasks`, then the node or nodes you use can be shared with others.**
 
+### SLURM Directives with Explanations
+
+| Directive             | Explanation                                                  | Options |
+| ---------------------- | ------------------------------------------------------------ | ------- |
+| `#SBATCH --job-name=`  | Specifies a name for your job.                               | Use whatever naming convention makes sense to you! If you would like a suggestion: `#SBATCH --job-name=job`<br>`#SBATCH --output=job.out`<br>`#SBATCH --error=job.err` |
+| `#SBATCH --output=`    | Specifies the file to which standard output (stdout) will be redirected. |  |
+| `#SBATCH --error=`     | Specifies the file to which standard error (stderror) will be redirected. |  |
+| `#SBATCH --nodes=`     | Specifies the number of nodes requested for the job.         | Please do not request a node unless you know you need the full node’s memory or CPU |
+| `#SBATCH --ntasks=`    | Specifies the number of tasks (processes/threads) per node.  | `ntasks` can take a value between 1-64. Recommend: Start small (i.e., 1-5) & if jobs are running out of CPU/memory then increase the value. |
+| `#SBATCH --time=`      | Specifies the maximum runtime for the job in the format `days-hours:minutes:seconds`. <br> Examples: <br>1 Day: `#SBATCH --time=1-00:00:00`<br>1 hour: `#SBATCH --time=01:00:00`<br>1 minute: `#SBATCH --time=00:01:00` | Alderaan partitions will run jobs up to one week. If you need more time, use one of the older partitions (score or colibri). |  
+| `#SBATCH --partition=` | Specifies the partition or queue where the job will be submitted. | Recommend: Use CPU or GPU Alderaan partitions. <br> CPU nodes, specify: `#SBATCH --partition=math-alderaan`<br>GPU nodes, specify: `#SBATCH --partition=math-alderaan-gpu`<br>Older partitions: `math-score`, `math-colibri` |
+| `#SBATCH --array=`     | Specifies an array of job tasks with indices for array job submissions. <br> Examples: <br> `#SBATCH --array=1-5` <br> `#SBATCH --array=0-10,20-21` | You can specify how many array jobs to run at one time with `%`. <br> Example: <br> Run only 3 jobs at one time for 10 jobs: `#SBATCH --array=1-10%3` |
+
+
+  
+
+
 
 ### Single-core job
 
