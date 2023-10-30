@@ -99,6 +99,22 @@ Type <code>chmod og-rwx file_or_directory_name</code> to make the file or direct
 
 On a Linux or Mac computer, you can use file transfer utilities `rsync`, `scp`, `sftp` on your computer to transfer files and entire directores between your computer and clusters. These utilities are normally a part of the system, if not you can install them from your Linux distribution. [Rsync](https://en.wikipedia.org/wiki/Rsync) is recommended. Typing `man rsync` should give you the manual for the system you are on. Rsync can transfer file trees recursively and resume a transfer which was interrupted.
 
+<ins> Approach 1: Transferring file from local computer to Alderaan using 'scp'  <ins>
+
+Open a terminal or command line prompt shell. Do not log into Alderaan – stay connected to your local machine. Type command: 
+
+    scp /path/to/file/on/computer [username]@math-alderaan.ucdenver.pvt:/path/to/file/on/alderaan 
+
+For instance, if your CU Denver username is 'duffme,' and a file is on your local machine, located at '~/Desktop/Folder/file.txt,' and you wish to copy this file to your home directory on Alderaan, the following command can be used: 'scp ~/Desktop/Folder/file.txt duffme@math-alderaan.ucdenver.pvt:/home/duffme'.
+
+<ins> Approach 2: Transferring file from Alderaan to local computer using 'scp'  <ins>
+
+Open a terminal or command line prompt shell. Do not log into Alderaan – stay connected to your local machine. Type command: 
+
+    scp /path/to/file/on/computer [username]@math-alderaan.ucdenver.pvt:/path/to/file/on/alderaan 
+
+For instance, if your username at CU Denver is 'duffme,' and you have a file on Alderaan that you want to copy, located at '/home/duffme/file.txt,' and you'd like to place this file on your local machine at '~/Desktop,' you can use the following command: 'scp duffme@math-alderaan.ucdenver.pvt:/home/duffme/file.txt ~/Desktop'.
+
 ### Windows
 
 On current Windows PC, you can use `scp` and `sftp` from the command window (a.k.a. Powershell window). 
@@ -436,4 +452,89 @@ Here are the best practices when you compile and link your own software:
 
 * Use `clas-compute` or `math-colibri-i02` to build software for the Colibri cluster, and `clas-compute` or `math-score-i01` for the Score cluster. You can download and build libraries and other package in your own account.
 
-* Alderaan runs Centos 8, while `clas-compute` and Colibri and Score clusters Centos 7. Software built on one will normally not work on the other. 
+* Alderaan runs Centos 8, while `clas-compute` and Colibri and Score clusters Centos 7. Software built on one will normally not work on the other.
+
+## Linux Introduction
+
+Navigating the Linux File System: Basic Commands 
+
+1. pwd - Print Working Directory  
+
+The pwd command displays the current working directory, which is your current location in the file system. 
+
+    pwd 
+
+2. ls - List Files and Directories  
+
+The ls command lists the files and directories in the current directory. 
+
+    ls 
+    ls -l          # Displays detailed information about files
+    ls -R          # Lists files and directories recursively, including subdirectories.
+
+3. cd - Change Directory  
+
+The cd command is used to navigate to a different directory. 
+
+    cd /path/to/directory 
+    cd ..          # Move to the parent directory 
+    cd ../ 	       # Move up one directory 
+    cd ~           # Move to the user's home directory 
+    cd /           # Move to the root directory 
+ 
+
+4. mkdir - Make Directory  
+
+The mkdir command is used to create a new directory. 
+
+    mkdir new_directory 
+ 
+
+5. cp - Copy Files and Directories  
+
+The cp command is used to copy files or directories from one location to another. 
+
+    cp file.txt /path/to/destination/	            # Copy a file (file.txt) to a location (/path/to/destination/)
+    cp -r directory /path/to/destination/               # Copy a directory and its contents to a location 
+ 
+
+6. mv - Move or Rename Files and Directories  
+
+The mv command is used to move files or directories to a new location or rename them. 
+
+    mv file.txt new_location/		            # Move a file (file.txt) to a location (new_location/)
+    mv old_name.txt new_name.txt		            # Rename file, original name: old_name.txt, new_name: new_name.txt
+
+
+
+
+7. rm - Remove Files and Directories The rm command is used to remove files or directories.
+ ````
+rm file.txt	              # Remove a file 
+rm -r directory               # Remove a directory and its contents 
+```` 
+
+9. nano- Create File  
+
+The nano command is used to create an empty file. 
+
+    nano new_file.txt               # Create an empty file named new_file.txt 
+ 
+* To save, Ctrl + O
+* To exit text editor, Ctrl + X
+
+10. cat - Display File Content  
+
+The cat command is used to display the contents of a file. 
+
+    cat file.txt            # Display contents of file.txt file
+ 
+
+11. echo - Print Text to the Terminal or File  
+
+The echo command is used to print text to the terminal or write it to a file. 
+
+    echo "Hello, world!"                 # Print text, "Hello, world!", to terminal 
+    echo "Hello, Linux" > greeting.txt   # Save text, "Hello, world!", to file greeting.txt
+ 
+
