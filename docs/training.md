@@ -28,4 +28,10 @@
 * Some knowledge of Linux command line basics is useful, e.g., [Sections 4 and 5 from here](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) but not absolutely required ahead of time.
  
 
+## Previous workshops
 
+* 2023/03/06
+
+* 2023/01/23
+
+* 

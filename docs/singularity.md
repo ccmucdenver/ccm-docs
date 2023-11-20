@@ -127,7 +127,7 @@ Genomic software [saige](https://saigegit.github.io/SAIGE-doc/docs/Installation.
 python3.8.20 (gcc 9.3.9) as python 3, with numpy 1.22.2 and tensorflow 2.8.0 with sklearn matplotlib keras keras-tuner tensorflow_datasets pandas opencv-python-headless,
 CUDA 11.4, jupyter 1.0.0, jupyterhub 2.1.1
 
-Note: tensorflow will run with or withough GPU, but it will crash python on most colibri nodes because their CPUs and GPUs are too old.
+Note: tensorflow will run with or without GPU, but it will crash python on most colibri nodes because their CPUs and GPUs are too old.
 
 ### tensorflow-v1.2.sif and tensorflow-v1.3.sif
 
