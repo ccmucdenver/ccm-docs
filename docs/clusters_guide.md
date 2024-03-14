@@ -6,7 +6,32 @@
 
 The system uses CentOS 7 and 8 operating system. There are two head nodes (entry points) to the system, `math-alderaan.ucdenver.pvt` and `clas-compute.ucdenver.pvt`. You can use either. Alderann cluster runs Centos 8 while the other clusters and `clas-compute` run Centos 7.
 
-At this time, the main way of using the system is to use an SSH client to login to a terminal session on math-alderaan or clas-compute. You will need to be on the CU Denver private network (wired or CU Denver wireless, not CU Denver Guest). To connect from the internet, you need to use the [university's VPN](https://www.ucdenver.edu/offices/office-of-information-technology/get-help/remote-access-vpn) or [remote access](https://remote.ucdenver.edu) (click "Complimentary" to start Windows, then the Windows icon and search for Powershell). See [here](https://www.ucdenver.edu/docs/default-source/offices-oit-documents/vpn-client-software/multi-factor-vmware-horizon-user-guide.pdf?sfvrsn=3d3a4db9_2) for more on the remote client.
+At this time, the main way of using the system is to use an SSH client to login to a terminal session on math-alderaan or clas-compute. You will need to be on the CU Denver private network (wired or CU Denver wireless, not CU Denver Guest). 
+
+If you are not on campus on the CU Denver private network, you need to use the [university's VPN](https://www.ucdenver.edu/offices/office-of-information-technology/get-help/remote-access-vpn) or [remote access](https://remote.ucdenver.edu). The university VPN is the most straightforward option, but if, for any reason, you prefer not to use VPN on your personal device, then the remote access option is recommended.
+
+There are two ways to access the remote access service: 
+
+1. [Web browser](https://remote.ucdenver.edu/portal/webclient/#/home)
+      * All web browsers are compatible, although Firefox may potentially encounter some issues.
+
+2. [VMware Horizon application](https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_horizon_clients/horizon_8#win64)
+
+**Some notes on this service:**
+
+* Both access points work fine, but the application version has a better user experience compared to the web service. For example, the application version allows up to 4 monitors. 
+
+* The system will log you off if your session is idle for more than 15 minutes. 
+
+* **<font color="red">All files saved to the system or changes made to this system will be lost when you log off or when your session expires! Make sure to either upload relevant files to Onedrive or email yourself said files before logging off.</font>**
+
+* Based on our testing of this service, we would recommend users use Vim instead of Nano to create and edit files. 
+
+For both access points, sign in using your university credentials and two-factor authorization. Once signed in, click on the ‘complimentary’ icon to start your remote desktop. 
+
+See [here](https://www.ucdenver.edu/docs/default-source/offices-oit-documents/vpn-client-software/multi-factor-vmware-horizon-user-guide.pdf?sfvrsn=3d3a4db9_2) for a more in depth walkthrough on how to access the remote client.
+
+Once logged onto the remote desktop, you can access the command line by searching for 'cmd' or 'ssh' in the application search bar located at the bottom left of the screen. Click on the respective application, which will open a terminal window. From here, you can sign onto Alderaan and access the cluster similarly to how you would on your personal device.  
 
 This system uses your normal portal/email username and password, but your account must be set up before using the system. Please go to [accounts](../accounts/) to request an account.
 
