@@ -21,12 +21,16 @@ or the International Traffic in Arms  Regulations (ITAR) is permitted on Univers
 Computing resources. This includes export controlled data, export controlled software, and export controlled results
 generated as output.
 
-Do not keep any sensitive files on this system. In particular, no proprietary data, health records, 
-grades, social security numbers, etc. If you use ssh keys to connect elsewhere from this system (such as github or 
-another computer account), it is highly recommended to make an ssh key with a passcode.
-
 All usage of this resource must be fundamental research, intended to be published with no restrictions or approval
 requirement by the sponsor, or any restriction on the nationality of the participants.
+
+Do not keep any sensitive files on this system. In particular, no proprietary data, health records, 
+grades, social security numbers, etc. This system is not suitable
+for [highly confidential data in CU classification](https://www.cu.edu/data-governance/resources-support/data-classification).
+
+If you use ssh keys to connect elsewhere from this system (such as github or 
+another computer account), it is highly recommended to make and use an ssh key with a passcode. Otherwise the security the other account is only as good 
+as the protection of your files here.
 
 ### Storage
 **All files stored on this cluster may be lost at any time with no notice. You (the user) must  maintain copies of all
@@ -34,6 +38,7 @@ important files elsewhere.**
 
 All users must keep their home directories under 25GB so that backup of all home directories is possible.
 Additional project storage is available, which is not backed up. 
+
 By default, files and directories, including your home directory, are created such that all other users have read
 permissions. This is Linux default to encourage collaboration. If you want to keep a file or directory private from 
 users other than system administrators, you need to manually change the permissions for that file or directory.
@@ -41,6 +46,6 @@ users other than system administrators, you need to manually change the permissi
 
     chmod og-rwx file_or_directory_name
 
-for more information on storage, see [link]
+For more information on storage, see [link](../Storage.html)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
