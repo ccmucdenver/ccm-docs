@@ -21,7 +21,7 @@ or the International Traffic in Arms  Regulations (ITAR) is permitted on Univers
 Computing resources. This includes export controlled data, export controlled software, and export controlled results
 generated as output.
 
-Do not keep any confidential or sensitive files on this system. In particular, no proprietary data, health records, 
+Do not keep any sensitive files on this system. In particular, no proprietary data, health records, 
 grades, social security numbers, etc. If you use ssh keys to connect elsewhere from this system (such as github or 
 another computer account), it is highly recommended to make an ssh key with a passcode.
 
