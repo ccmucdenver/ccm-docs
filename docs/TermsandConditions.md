@@ -46,6 +46,6 @@ users other than system administrators, you need to manually change the permissi
 
     chmod og-rwx file_or_directory_name
 
-For more information on storage, see [link](../Storage.html)
+For more information on storage, see the [Clusters Guide](../clusters_guide/#file-storage).
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
