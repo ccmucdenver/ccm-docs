@@ -28,7 +28,7 @@ and follow the directions. Override the default location for the installation lo
 
     /data001/projects/<username>/miniconda3
 
-Here, <username> stands for your username. **It is important to use a directory in /data001 or /data002, because of performance issues with locations in `/home` or `/storage`, which may make some conda commands not work.** At the end, you should see the question
+Here, `<username>` stands for your username. **It is important to use a directory in /data001 or /data002, because of performance issues with locations in `/home` or `/storage`, which may make some conda commands not work.** At the end, you should see the question
     
     Do you wish to update your shell profile to automatically initialize conda? 
     (more text) [yes|no]
