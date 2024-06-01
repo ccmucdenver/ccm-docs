@@ -27,8 +27,8 @@ for [highly confidential data in CU classification](https://www.cu.edu/data-gove
   
 * The above includes data, software, and results generated as output. 
 
-* All usage of this resource must be fundamental research, intended to be published with no restrictions or approval
-requirement by the sponsor, or any restriction on the nationality of the participants.
+* **All usage of this resource must be fundamental research, intended to be published with no restrictions or approval
+requirement by the sponsor, or any restriction on the nationality of the participants.**
 
 ### Connecting from this system and file protections
 
