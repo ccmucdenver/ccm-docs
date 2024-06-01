@@ -16,9 +16,9 @@ work published or posted.
 **You (the user) are responsible for ensuring compliance to the data restrictions as outlined below. Failure to adhere
 to these restrictions may result in account deactivation, and immediate deletion of any or all data.**
 
-Please do not store any sensitive information on this system, such as proprietary data, health records, 
-grades, social security numbers, or data related to technology restricted in any way, in particular technology which may be subject
-to restrictions on export to some countries. In more detail:
+Please do not store or process any sensitive information on this system, such as proprietary data, health records, 
+grades, social security numbers, potentially defense-related data, or data related to technology restricted in any way, 
+in particular technology which may be subject to restrictions on export to some countries. In more detail:
 
 * No project or data are allowed on this resource that require compliance with any regulations or security standards, including HIPPA, FERPA, NIST SP 800-171, etc. No Controlled Unclassified Information (CUI) is allowed. This system is not suitable
 for [highly confidential data in CU classification](https://www.cu.edu/data-governance/resources-support/data-classification). 
