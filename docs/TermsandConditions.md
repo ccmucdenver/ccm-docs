@@ -14,7 +14,8 @@ work published or posted.
 
 ### Legal
 **You (the user) are responsible for ensuring compliance to the data restrictions as outlined below. Failure to adhere
-to these restrictions may result in account deactivation, and immediate deletion of any or all data.**
+to these restrictions may result in account deactivation, and immediate deletion of any or all data. Violations may also
+result in administrative or legal consequences.**
 
 Please do not store or process any sensitive information on this system, such as proprietary data, health records, 
 grades, social security numbers, potentially defense-related data, or data related to technology restricted in any way, 
