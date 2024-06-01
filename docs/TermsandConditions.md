@@ -34,7 +34,7 @@ requirement by the sponsor, or any restriction on the nationality of the partici
 ### Connecting from this system to the outside 
 If you use ssh keys to connect from this system, such as to github or 
 another computer account, it is highly recommended to use an ssh key with a passcode you have to type in every time. 
-Otherwise, the security your other account is only as good 
+If you use an ssh key without a passcode, security of the account you are logging into is only as good 
 as the protection of your files here. 
 
 ### File protection and privacy
