@@ -41,6 +41,14 @@ as the protection of your files here.
 We use the standard Linux file permissions, which cannot be considered secure. 
 In particular, anyone with an administrator account can access any files.
 
+By default, files and directories, including your home directory, are created such that *all other users have read access to your files* except 
+the `.ssh` directory. This is a Linux default to encourage collaboration. If you want to keep a file or directory private from 
+users other than system administrators, you need to manually change the permissions for that file or directory.
+ To do so type the command below:
+
+    chmod og-rwx file_or_directory_name
+
+
 ### Storage
 
 **Any files stored on this cluster may be lost at any time with no notice. You (the user) must  maintain copies of all
@@ -52,13 +60,6 @@ lowest priority in the case of storage issues.
 
 We use redundant storage technologies. Data migration may be required to mitigate a localized hardware failure and for upgrades. 
 But we may not be able to migrate very large files or directories timely and such files are more likely be lost.
-
-By default, files and directories, including your home directory, are created such that all other users have read
-permissions. This is Linux default to encourage collaboration. If you want to keep a file or directory private from 
-users other than system administrators, you need to manually change the permissions for that file or directory.
- To do so type the command below:
-
-    chmod og-rwx file_or_directory_name
 
 For more information on storage, see the [Clusters Guide](../clusters_guide/#file-storage).
 
