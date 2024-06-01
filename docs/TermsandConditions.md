@@ -42,11 +42,15 @@ In particular, anyone with an administrator account can access any files.
 
 ### Storage
 
-**All files stored on this cluster may be lost at any time with no notice. You (the user) must  maintain copies of all
+**Any files stored on this cluster may be lost at any time with no notice. You (the user) must  maintain copies of all
 important files elsewhere.** 
 
-All users must keep their home directories under 25GB so that backup of all home directories is possible.
-Additional project storage is available, which is not backed up. 
+All users should keep their home directories under 25GB. We may not be able to back up or migrate larger directories. 
+Additional project storage is available, which is not backed up. Storage designated as scratch may be deleted and is the 
+lowest priority in the case of storage issues. 
+
+We use redundant storage technologies. Data migration may be required to mitigate a localized hardware failure and for upgrades. 
+But we may not be able to migrate very large files or directories timely and such files are more likely be lost.
 
 By default, files and directories, including your home directory, are created such that all other users have read
 permissions. This is Linux default to encourage collaboration. If you want to keep a file or directory private from 
