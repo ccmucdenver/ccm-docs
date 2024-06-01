@@ -21,7 +21,7 @@ for [highly confidential data in CU classification](https://www.cu.edu/data-gove
 
 * No export controlled technology or technical data related to the Export Administration Regulations (EAR) or the International Traffic in Arms  Regulations (ITAR) is permitted.
   
-* The above includes data, software, and results generated as output. The user is responsible for ensuring compliance. Failure to adhere to this policy may result in account deactivation, and immediate deletion of any or all data maintained by the user on the resource.
+* The above includes data, software, and results generated as output. 
 
 * All usage of this resource must be fundamental research, intended to be published with no restrictions or approval
 requirement by the sponsor, or any restriction on the nationality of the participants.
