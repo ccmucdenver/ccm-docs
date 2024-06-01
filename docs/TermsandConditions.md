@@ -21,7 +21,7 @@ grades, social security numbers, potentially defense-related data, or data relat
 in particular technology which may be subject to restrictions on export to some countries. In more detail:
 
 * No project or data are allowed on this resource that require compliance with any regulations or security standards, including HIPPA, FERPA, NIST SP 800-171, etc. No Controlled Unclassified Information (CUI) is allowed. This system is not suitable
-for [highly confidential data in CU classification](https://www.cu.edu/data-governance/resources-support/data-classification). 
+for [CU highly confidential](https://www.cu.edu/data-governance/resources-support/data-classification) data.
 
 * No export controlled technology or technical data related to the Export Administration Regulations (EAR) or the International Traffic in Arms  Regulations (ITAR) is permitted.
   
