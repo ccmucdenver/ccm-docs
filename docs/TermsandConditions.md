@@ -18,7 +18,7 @@ to these restrictions may result in account deactivation, and immediate deletion
 
 Please do not store or process any sensitive information on this system, such as proprietary data, health records, 
 grades, social security numbers, potentially defense-related data, or data related to technology restricted in any way, 
-in particular technology which may be subject to restrictions on export to some countries. In more detail:
+particularly technology which may be subject to restrictions on export to some countries. In more detail:
 
 * No project or data are allowed on this resource that require compliance with any regulations or security standards, including HIPPA, FERPA, NIST SP 800-171, etc. No Controlled Unclassified Information (CUI) is allowed. This system is not suitable
 for [CU highly confidential](https://www.cu.edu/data-governance/resources-support/data-classification) data.
