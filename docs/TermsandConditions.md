@@ -31,13 +31,13 @@ for [CU highly confidential](https://www.cu.edu/data-governance/resources-suppor
 * **All usage of this resource must be fundamental research, intended to be published with no restrictions or approval
 requirement by the sponsor, or any restriction on the nationality of the participants.**
 
-### Connecting from this system and file protections
-
+### Connecting from this system to the outside 
 If you use ssh keys to connect from this system, such as to github or 
 another computer account, it is highly recommended to use an ssh key with a passcode you have to type in every time. 
 Otherwise, the security your other account is only as good 
 as the protection of your files here. 
 
+### File protection and privacy
 We use the standard Linux file permissions, which cannot be considered secure. 
 In particular, anyone with an administrator account can access any files.
 
