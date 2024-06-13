@@ -20,7 +20,7 @@ This is needed for reporting to the funding agency (annual reports, quad charts,
 
 We really need the "yes" clicks for all those terms and conditions!
 
-**Workshop participants can also get an account by filling the form with "Workshop" in the project box.**
+**Workshop participants can also get a temporary account by filling the form with "Workshop" in the project box.**
 
 
 ## Resources and Allocations
