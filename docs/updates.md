@@ -16,7 +16,9 @@ To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow do
 ### 2024/06/24
 
 * MATLAB not working because it cannot contact license server. Investigating.
+  - Update: fixed
 * SLURM job submission may not work. Existing jobs should not be affected. Investigating.
+  - Update: the issue produces warnings but job submission now appears normal.
 
 ### 2024/04/26
 
