@@ -20,7 +20,7 @@ PLANNED DOWNTIME FRIDAY 6/28 starting at 6pm
 * The /home directories are being migrated to a higher performace storage, which should fix issues such as processes in indefinite D (disk wait) state, which has been making slurm jobs and conda stuck in many cases. 
     This last phase of the migration requires a quiet system to transfer the last changes and switch the storage. Therefore, **all logins will be blocked and all Slurm jobs cancelled when the downtime starts.**
 
-* Submission of new slurm jobs will be turned off from Thursday 6/27/2024 pm
+* Submission of new slurm jobs will be turned off from Thursday 6/27/2024 6 pm
 
 * To help keep the downtime shorter, please avoid creating or modifying large files or a large number of files in your home directory. Use your directory in /data001/projects instead.
 
