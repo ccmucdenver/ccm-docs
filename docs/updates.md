@@ -24,6 +24,15 @@ PLANNED DOWNTIME FRIDAY 6/28 starting at 6pm
 
 * To help keep the downtime shorter, please avoid creating or modifying large files or a large number of files in your home directory. Use your directory in /data001/projects instead.
 
+### 2024/06/27
+
+* Matlab license fixed
+* **All partitions will be marked down at 6pm in preparation of the scheduled downtime tomorrow**
+
+### 2024/06/26
+
+* MATLAB license not working again
+
 ### 2024/06/24
 
 * MATLAB not working because it cannot contact license server. Investigating.
