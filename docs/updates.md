@@ -13,6 +13,10 @@ Real-time &nbsp; [Alderaan Temperature Log](https://demo.openwfm.org/web/alderaa
 
 To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow down intermittently. If datacenter temperature is too high, jobs will be first suspended to protect the hardware and reduce heat output. If temperature increases further, all alderaan nodes will be shut down automatically.
 
+### 2024/07/01
+
+* The downtime ended, all should be normal. There will need to be continuation, which will be announced in due course.
+
 ### 2024/06/28
 
 PLANNED DOWNTIME FRIDAY 6/28 starting at 6pm
