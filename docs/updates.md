@@ -13,6 +13,10 @@ Real-time &nbsp; [Alderaan Temperature Log](https://demo.openwfm.org/web/alderaa
 
 To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow down intermittently. If datacenter temperature is too high, jobs will be first suspended to protect the hardware and reduce heat output. If temperature increases further, all alderaan nodes will be shut down automatically.
 
+### 2024/07/12
+
+**Storage migration** /home and /storage are on a slower legacy file server and commands (like conda) and jobs using files there are getting stuck at times. For this reason, I have been migrating /home and /storage to high-performance Alderaan disk arrays over the last few months. It takes about a day to synchronize /home and /storage with their new location even if nothing changed, plus a few hours for every hundred GB in new or changed files. The final synchronization and switch to the new location will be done in a scheduled downtime (to be announced soon) on quiet data.  **A large volume of new or modified files in /home and /storage will make the downtime longer.** Deleting or moving files away is OK, and smaller changes are OK too. If you need to run something now, you are welcome to, I'd just like to encourage you to write new files to your directory in /data001/projects; the easiest may be to run the jobs from there.
+
 ### 2024/07/01
 
 * The downtime ended, all should be normal. There will need to be continuation, which will be announced in due course.
