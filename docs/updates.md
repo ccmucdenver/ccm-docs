@@ -17,6 +17,8 @@ To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow do
 
 * 10am-12pm Planned maintenance time for network testing and configuration. From about 9am, logins will be disabled, partitions stopped, and running jobs suspended or cancelled. Some nodes may be rebooted. Suspended jobs may be able to continue after the maintenance ends, but it is not guaranteed.
 
+* 3pm Maintenance completed. Please let me know if you see any errors.
+
 ### 2024/04/12
 
 * 2:30pm Files  in /home and /storage mounts dropped on randomly changing compute nodes. Investigating. All partitions are stopped, no new jobs will start. Existing jobs are allowed to continue, though they may have a difficulty doing so.
