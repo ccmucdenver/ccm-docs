@@ -17,19 +17,25 @@ can end up with a broken installation.
  
 
 ## Install Anaconda
-Go to [www.anaconda.org](https://www.anaconda.org), click Download Anaconda, Linux installers,
- right click on the 64-Bit (x86) Installer, and copy the link.
-Open an ssh window an alderaan, type `wget` and paste the link to create a command line like
 
-    wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
-    
-and press enter. (The file name will change in future versions.) After the installer downloads,
+Open an ssh window an alderaan and type 
 
-    /bin/sh Anaconda3-2021.11-Linux-x86_64.sh
+     cd /data001/projects/<username>
+     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+     bash Miniconda3-latest-Linux-x86_64.sh
+
+and follow the directions. Override the default location for the installation location by
+
+    /data001/projects/<username>/miniconda3
+
+Here, replace 
+ 
+    <username>
     
-and folow the directions. You should see 
+by your username. **It is important to use a directory in /data001 or /data002, because of performance issues with locations in `/home` or `/storage`, which may make some conda commands not work.** At the end, you should see the question
     
-    Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no]
+    Do you wish to update your shell profile to automatically initialize conda? 
+    (more text) [yes|no]
     
 Answer yes.  Edit your `~/.bash_profile` file to add the line  
 
@@ -41,7 +47,7 @@ You can stop Conda from activating on login if you do not want to use it every t
 
     conda config --set auto_activate_base false
 
-as suggested by the Anaconda installer. 
+as suggested by the installer. 
 
 Notes: If you already have your own custom settings
 in `~/.bash_profile` or `~/.bashrc`, you should review both files to make sure that they do what you intended, 
@@ -63,6 +69,9 @@ You should see your prompt change to start with `(base)`. Create your first envi
      conda create --name myenv python=3.6 paramiko gdal matplotlib tensorflow pandas
 
 Of course, these are just examples,  use names of the packages and their versions that **you** need. Note that you can request specific versions of everything, even Python itself.
+You can even create an environment with an old python version, for example:
+
+     conda create --name py2numpy python=2.7 numpy
 
  Conda will search for a combination of the versions of dependencies that allows it
 to install what you asked for. It is best to install all packages at once to minimize the chances of a version conflict. 

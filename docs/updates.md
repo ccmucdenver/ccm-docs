@@ -13,6 +13,45 @@ Real-time &nbsp; [Alderaan Temperature Log](https://demo.openwfm.org/web/alderaa
 
 To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow down intermittently. If datacenter temperature is too high, jobs will be first suspended to protect the hardware and reduce heat output. If temperature increases further, all alderaan nodes will be shut down automatically.
 
+### 2024/07/25
+
+* Nodes math-alderaan-c[02,13,24] had issues that made at least some jobs allocated to them fail, sometimes with no files created. Fixed.
+
+### 2024/07/12
+
+* **Storage migration in progress - please do not add or modify large volume of files in /home and /storage** The /home and /storage directories are on a slower legacy file server and commands (like conda) and jobs using files there are getting stuck at times. For this reason, I have been migrating /home and /storage to high-performance Alderaan disk arrays over the last few months. It takes up to a day to synchronize /home and /storage with their new location even if nothing changed, plus a few hours for every hundred GB in new or modified files. The final synchronization and the switch to the new location will be done in a scheduled downtime (to be announced soon) on quiet data.  **A large volume of new or modified files in /home and /storage will make the downtime longer.** Deleting or moving files away is OK, and smaller changes are OK too. You are welcome to keep running jobs, I'd just like to encourage you to write new files to your directory in /data001/projects; the easiest may be to run your jobs from there.
+
+### 2024/07/01
+
+* The downtime ended, all should be normal. There will need to be continuation, which will be announced in due course.
+
+### 2024/06/28
+
+PLANNED DOWNTIME FRIDAY 6/28 starting at 6pm
+
+* The /home directories are being migrated to a higher performace storage to fix issues such as processes in indefinite D (disk wait) state, which has been making slurm jobs and conda stuck in many cases. 
+    This last phase of the migration requires a quiet system to transfer the last changes and switch the storage. Therefore, **all logins will be blocked and all Slurm jobs cancelled when the downtime starts.**
+
+* Submission of new slurm jobs will be turned off from Thursday 6/27/2024 6 pm
+
+* To help keep the downtime shorter, please avoid creating or modifying large files or a large number of files in your home directory. Use your directory in /data001/projects instead.
+
+### 2024/06/27
+
+* Matlab license fixed
+* **All partitions will be marked down at 6pm in preparation of the scheduled downtime tomorrow**
+
+### 2024/06/26
+
+* MATLAB license not working again
+
+### 2024/06/24
+
+* MATLAB not working because it cannot contact license server. Investigating.
+  - Update: fixed
+* SLURM job submission may not work. Existing jobs should not be affected. Investigating.
+  - Update: the issue produces warnings but job submission now appears normal.
+
 ### 2024/04/26
 
 * 10am-12pm Planned maintenance time for network testing and configuration. From about 9am, logins will be disabled, partitions stopped, and running jobs suspended or cancelled. Some nodes may be rebooted. Suspended jobs may be able to continue after the maintenance ends, but it is not guaranteed.

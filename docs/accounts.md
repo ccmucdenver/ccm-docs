@@ -20,7 +20,7 @@ This is needed for reporting to the funding agency (annual reports, quad charts,
 
 We really need the "yes" clicks for all those terms and conditions!
 
-**Workshop participants can also get an account by filling the form with "Workshop" in the project box.**
+**Workshop participants can also get a temporary account by filling the form with "Workshop" in the project box.**
 
 
 ## Resources and Allocations
@@ -31,9 +31,9 @@ To encourage early use, the folowing is in effect for an initial period - we wan
 
 **Users are responsible for maintaining copies of all their important files elsewhere. Files can be lost even with backups.**
 
-* **Home directories** – Home directories are `/home/username`. The `/home` filesystems are limited size, please keep the home directories small, up to 25GB. Backed up occasionally. **Home directories over 25GB are not backed up.**
-* **Project storage** -  **Not backed up.** Project directories are in  `/storage/department/projects/username`. We can make project directories which can be shared between a group of users. Please keep project directories to 25OGB.
-* **Scratch** - no limit, **not backed up**. Please make your own subdirectories in `/scratch` (accessible from Alderaan nodes only). In future, files will be deleted automatically when the filesystem fills up.
+* **Home directories** – Home directories are `/home/username`. The `/home` filesystems are limited size, please keep the home directories small, up to 25GB. Backed up occasionally. **Home directories over 25GB are not backed up.** 
+* **Project storage** -  **Not backed up.**  All users have project directory `/data001/projects/username` which is on a **much faster and more reliable** filesystem. Most users have also legacy project directory in  `/storage/department/projects/username`. Please do not add a large volume of files to these legacy directories, this slows down the migration to faster and more reliable hardware. We can make project directories which can be shared between a group of users. Please keep project directories to 25OGB.
+* **Scratch** - no limit, **not backed up, files may be deleted**. Please make your own subdirectories in `/scratch`. In future, files will be deleted automatically when the filesystem fills up.
 
 Use the command `du -sh` in a directory to see how much storage space you are using, and `df` to monitor the overall storage space. Home directories and most project directories are on a storage system which is using space very efficiently, so the space used can be much less than the actual size of your files as reported by `ls -l`.
 
