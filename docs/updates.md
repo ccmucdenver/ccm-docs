@@ -11,7 +11,7 @@ Real-time &nbsp; [Alderaan Temperature Log](https://demo.openwfm.org/web/alderaa
  [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
 
 
-To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow down intermittently. If datacenter temperature is too high, jobs will be first suspended to protect the hardware and reduce heat output. If temperature increases further, all alderaan nodes will be shut down automatically.
+Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down to avoid heat damage. If temperature increases further, all alderaan nodes shut down automatically.
 
 ### 2024/09/11
 
