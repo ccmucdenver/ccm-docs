@@ -13,6 +13,10 @@ Real-time &nbsp; [Alderaan Temperature Log](https://demo.openwfm.org/web/alderaa
 
 To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow down intermittently. If datacenter temperature is too high, jobs will be first suspended to protect the hardware and reduce heat output. If temperature increases further, all alderaan nodes will be shut down automatically.
 
+### 2024/09/10
+
+* Matlab license not working.
+
 ### 2024/07/25
 
 * Nodes math-alderaan-c[02,13,24] had issues that made at least some jobs allocated to them fail, sometimes with no files created. Fixed.
