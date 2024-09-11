@@ -23,7 +23,8 @@ To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow do
 
 ### 2024/07/25
 
-* Nodes math-alderaan-c[02,13,24] had issues that made at least some jobs allocated to them fail, sometimes with no files created. Fixed.
+* Nodes math-alderaan-c[02,13,24] had issues that made at least some jobs allocated to them fail, sometimes with no files created. 
+  Reason: time synchronization. Fixed.
 
 ### 2024/07/12
 
