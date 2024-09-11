@@ -15,6 +15,10 @@ To protect the hardware, should Alderaan CPUs get too hot, the CPUs will slow do
 
 ### 2024/09/10
 
+* Matlab working now. Reason: the license server has changed.
+ 
+### 2024/09/10
+
 * Matlab license not working.
 
 ### 2024/07/25
