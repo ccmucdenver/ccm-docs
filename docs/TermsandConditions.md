@@ -2,8 +2,6 @@
 
 ## Terms and Conditions
 
-### Acknowledgment
-
 ### Legal
 **You (the user) are responsible for ensuring compliance to the data restrictions as outlined below. Failure to adhere
 to these restrictions may result in account deactivation, and immediate deletion of any or all data. Violations may also
