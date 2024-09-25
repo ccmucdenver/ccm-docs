@@ -13,6 +13,11 @@ Real-time &nbsp; [Alderaan Temperature Log](https://demo.openwfm.org/web/alderaa
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down to avoid heat damage. If temperature increases further, all alderaan nodes shut down automatically.
 
+### 2024/09/24
+
+* 7pm Several nodes inaccessible or down after an earlier network outage.
+* 9pm All alderaan and score nodes normal.
+
 ### 2024/09/11
 
 * Matlab working now. Reason: the license server has changed.
