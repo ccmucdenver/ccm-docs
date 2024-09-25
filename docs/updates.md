@@ -2,15 +2,6 @@
 
 Please contact jan.mandel@ucdenver.edu with any questions.
 
-Reload the page to see the latest information. Your browser may be caching an old version.
-
-Real-time &nbsp; [Alderaan Temperature Log](https://demo.openwfm.org/web/alderaan/temp.txt) &nbsp; &nbsp;
- [CPU Load](https://demo.openwfm.org/web/alderaan/cpu.txt) &nbsp; &nbsp;
- [Memory](https://demo.openwfm.org/web/alderaan/mem.txt) &nbsp; &nbsp;
- [Swap](https://demo.openwfm.org/web/alderaan/swp.txt) &nbsp; &nbsp; 
- [Partitions](https://demo.openwfm.org/web/alderaan/sinfo.txt)
-
-
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down to avoid heat damage. If temperature increases further, all alderaan nodes shut down automatically.
 
 ### 2024/09/24
