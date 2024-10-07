@@ -11,24 +11,23 @@ Please do not store or process any sensitive information on this system, such as
 grades, social security numbers, potentially defense-related data, or data related to technology restricted in any way, 
 particularly technology which may be subject to restrictions on export to some countries. In more detail:
 
-* No project or data are allowed on this resource that require compliance with any regulations or security standards, including HIPPA, FERPA, NIST SP 800-171, etc. No Controlled Unclassified Information (CUI) is allowed. This system is not suitable
-for [CU highly confidential](https://www.cu.edu/data-governance/resources-support/data-classification) data.
+* This system can be used for CU Confidential data, which are defined as usually not shared with public. **No [CU highly confidential](https://www.cu.edu/data-governance/resources-support/data-classification) data are allowed, which includes any data requiring compliance with any regulations or security standards, such HIPPA, FERPA, NIST SP 800-171, etc. No Controlled Unclassified Information (CUI) is allowed.**
 
 * No export controlled technology or technical data related to the Export Administration Regulations (EAR) or the International Traffic in Arms  Regulations (ITAR) is permitted.
   
 * The above includes data, software, and results generated as output. 
 
-* **All usage of this resource must be fundamental research, intended to be published with no restrictions or approval
+* **All use of this resource must be fundamental research, intended to be published with no restrictions or approval
 requirement by the sponsor, or any restriction on the nationality of the participants.**
 
 ### File protection and privacy
-We use the standard Linux file permissions, which cannot be considered secure. 
 
-By default, files and directories, including your home directory, are created such that *all other users have read access to your files* except 
-the `.ssh` directory. This is a Linux default to encourage collaboration. If you want to keep a file or directory private from 
+By default, files and directories, including your home directory, are created such that *all other users have read access to your files. This is a Linux default to encourage collaboration. If you want to keep a file or directory private from 
 users other than system administrators, you need to manually change the permissions for that file or directory. To do so type the command below:
 
     chmod og-rwx file_or_directory_name
+
+However, file permissions cannot be considered secure. 
 
 ### Storage
 
