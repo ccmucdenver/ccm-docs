@@ -23,7 +23,6 @@ requirement by the sponsor, or any restriction on the nationality of the partici
 
 ### File protection and privacy
 We use the standard Linux file permissions, which cannot be considered secure. 
-In particular, anyone with an administrator account can access any files.
 
 By default, files and directories, including your home directory, are created such that *all other users have read access to your files* except 
 the `.ssh` directory. This is a Linux default to encourage collaboration. If you want to keep a file or directory private from 
