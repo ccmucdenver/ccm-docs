@@ -4,6 +4,10 @@ Please contact jan.mandel@ucdenver.edu with any questions.
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down to avoid heat damage. If temperature increases further, all alderaan nodes shut down automatically.
 
+### 2024/10/16
+
+* Please use math-alderaan as the login node. The legacy login node math-compute has been failing and will be removed from the documentation. It may give ssh errors or not respond at all. 
+
 ### 2024/09/24
 
 * 7pm Several nodes inaccessible or down after an earlier network outage.
