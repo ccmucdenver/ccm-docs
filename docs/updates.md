@@ -12,7 +12,6 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 ### 2024/10/16
 
 * Please use math-alderaan as the login node. The legacy login node math-compute has been failing and will be removed from the documentation. It may give ssh errors or not respond at all.
-* 
 * Several nodes are draining or in drain state to prepare for maintenance Monday 2024/10/21.
 
 ### 2024/09/24
