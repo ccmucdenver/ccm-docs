@@ -2,14 +2,14 @@
 
 Please contact jan.mandel@ucdenver.edu with any questions.
 
-Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down to avoid heat damage. If temperature increases further, all alderaan nodes shut down automatically.
+Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down adaptively to avoid heat damage. If the datacenter overheats, all alderaan nodes shut down automatically.
 
 
 ### 2024/10/21 
 
-* 11am Partial downtime. Several nodes need to have their thermal profile lowered to reduce overeheating. The nodes currently cycle the CPU governor settings profile automatically in response to excessive CPU temperatures, which results in inconsistent performance.
+* 11am Partial downtime. Several nodes wil have their thermal profile lowered to reduce overeheating and cycling of CPU speed under load. The nodes cycle the CPU governor settings profile automatically to mitigate excessive CPU temperatures, which may result in inconsistent performance.
 
-* 1pm Maintetance completed. The thermal design profiles of several nodes were decreased to 180W or less in few cases. One failed drive in math-alderaan-s02 disk array was replaced. Operations normal.  
+* 1pm Maintetance completed. The thermal design profiles of several nodes were decreased to 180W or less in few cases. One failed drive in the math-alderaan-s02 disk array was replaced. Operations normal.  
 
 ### 2024/10/16
 
