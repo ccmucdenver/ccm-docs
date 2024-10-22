@@ -9,11 +9,11 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 * 11am Partial downtime. Several nodes wil have their thermal profile lowered to reduce overeheating and cycling of CPU speed under load. The nodes cycle the CPU governor settings profile automatically to mitigate excessive CPU temperatures, which may result in inconsistent performance.
 
-* 1pm Maintetance completed. The thermal design profiles of several nodes were decreased to 180W or less in few cases. One failed drive in the math-alderaan-s02 disk array was replaced. Operations normal.  
+* 1pm Maintenance completed. The thermal design profiles of several nodes were decreased to 180W or less in few cases. One failed drive in the math-alderaan-s02 disk array was replaced. Operations normal.  
 
 ### 2024/10/16
 
-* Please use math-alderaan as the login node. The legacy login node `clas-compute` may give ssh errors or not respond at all.
+* Please use `math-alderaan` only as the login node. The legacy login node `clas-compute` may give ssh errors or not respond at all.
 * Several nodes are draining or in drain state to prepare for maintenance Monday 2024/10/21.
 
 ### 2024/09/24
