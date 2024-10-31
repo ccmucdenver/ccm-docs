@@ -13,7 +13,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2024/10/16
 
-* Please use `math-alderaan` only as the login node. The legacy login node `clas-compute` may give ssh errors or not respond at all.
+* Please access the cluster only through the `math-alderaan` login node. The legacy login node `clas-compute` may give ssh errors or not respond at all.
 * Several nodes are draining or in drain state to prepare for maintenance Monday 2024/10/21.
 
 ### 2024/09/24
