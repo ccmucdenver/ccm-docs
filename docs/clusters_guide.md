@@ -131,7 +131,7 @@ Sometimes, you may need a specific version of some software package from few yea
 
 When working with software like R on our shared system, it’s important to install packages to a personal library to prevent conflicts with other users. This guide will help you set up and manage your R library effectively.
 
-By default, user-installed packages go to a hidden directory in your home directory, `~/.local`, which is also used by other languages (e.g., Python) and can sometimes lead to potential conflicts, such as when packages from different programming languages or different versions of the same language can end up in `~/.local`, causing potential conflicts. You may want to occasionally clear out this directory to reset your personal environment.
+By default, user-installed packages go to a hidden directory in your home directory, `~/.local`, which is also used by other languages (e.g., Python) and can sometimes lead to potential conflicts, such as when packages from different versions of the same language end up in `~/.local` and then get used by another version of the language. You may want to occasionally clear out this directory to reset your personal environment.
 
 > **Warning**: Running `rm -rf ~/.local` will delete **all** your user-installed packages, not just for R but also for Python and other languages. Use this only if you're comfortable reinstalling necessary packages.
 
