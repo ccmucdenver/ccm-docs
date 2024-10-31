@@ -6,31 +6,27 @@
 
 The login node for the system is `math-alderaan.ucdenver.pvt`. There is also a legacy login node `clas-compute`. Alderaan cluster runs Centos 8, while the Score and Colibri clusters and `clas-compute` run Centos 7.
 
-At this time, the main way of using the system is to use an SSH client to login to a terminal session on math-alderaan or clas-compute. You will need to be on the CU Denver private network (wired or CU Denver wireless, not CU Denver Guest). To connect from the internet, you need to use the [university's VPN](https://www.ucdenver.edu/offices/office-of-information-technology/get-help/remote-access-vpn) or [remote access](https://remote.ucdenver.edu) (click "Complimentary" to start Windows, then the Windows icon and search for Powershell). It is highly recommended to download and use the VMware Horizon app instead of continuing the browser. Either way, log in and click on the "Complimentary" button, which will give you a Windows virtual machine on the campus network. Then open a Powershell window (Windows button, search box opens, type `shell`, select `Powershell`). Type `ssh math-alderaan` in the Powershell window. See [here](https://www.ucdenver.edu/docs/default-source/offices-oit-documents/vpn-client-software/multi-factor-vmware-horizon-user-guide.pdf?sfvrsn=3d3a4db9_2) for more on the remote client.
+At this time, the main way of using the system is to use an SSH client to login to a terminal session on math-alderaan or clas-compute. You will need to be on the CU Denver private network (wired or Auraria secure wireless, not Aurariua Guest). To connect from the internet, you need to use the [university's VPN](https://www.ucdenver.edu/vpn) or [VMware Horizon remote access](https://remote.ucdenver.edu) (click "Complimentary" to start Windows, then the Windows icon and search for Powershell). It is highly recommended to download and use the VMware Horizon app instead of continuing the browser. Either way, log in and click on the "Complimentary" button, which will give you a Windows virtual machine on the campus network. Then open a Powershell window (Windows button, search box opens, type `shell`, select `Powershell`). Type `ssh math-alderaan` in the Powershell window. See [here](https://www.ucdenver.edu/docs/default-source/offices-oit-documents/vpn-client-software/multi-factor-vmware-horizon-user-guide.pdf?sfvrsn=3d3a4db9_2) for more on the remote client.
 
-This system uses your normal portal/email username and password, but your account must be set up before using the system. Please go to [accounts](../accounts/) to request an account; if you are a student, the faculty project lead should request your account.
+This system uses your normal portal/email username and password, but your account must be set up before using the system. Please go to [accounts](../accounts/) to request an account; if you are a student, your faculty supervisor/project lead should request your account.
 
-On Linux or a Mac, you can use simply the Terminal app, which is built into the operating system. It is hidden away in Applications -> Utilities folder on a Mac and in similar places on various Linux desktops. You may want to drag it to your dock (on a Mac) or the desktop (on Linux) so that it is available more conveniently next time.
+On Linux or a Mac, you can use simply the Terminal app, which is built into the operating system. It is hidden away in Applications -> Utilities folder on a Mac and in similar places on various Linux desktops. You may want to drag it to your dock (on a Mac) or the desktop (on Linux) so that it is available more conveniently in future.
 
 Current Windows 10/11 has a [native ssh client](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) - just type `ssh` in a terminal window (also called powershell window or command window). The ssh client also has `scp` and `sftp` for file transfer. 
 
-You can also use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (SSL), where you install a Linux distribution as an app and can use it to ssh out like from a terminal window on any Linux machine. Note that the SSL may not work with VPN.
+[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) is not recommended due to known issues with VPN.
 
 Either way, from a terminal window, at the command line prompt type in:
 
     ssh username@math-alderaan.ucdenver.pvt
 
-or 
-
-    ssh username@clas-compute.ucdenver.pvt
-
 The username is your account name, a single short word which you can use to log into the university portal instead of email address, not the firstname.lastname in your university email. Contact us or OIT helpdesk at [ucd-oit-helpdesk@cuanschutz.edu](mailto:ucd-oit-helpdesk@cuanschutz.edu) if you do not know what your account name is.
 
-After connecting, ssh should ask for your CU Denver password and you enter it at this point. You should be then at the `math-alderaan` or `clas-compute` prompt and in your home directory, which is `/home/username`. 
+After connecting, ssh should ask for your CU Denver password and you enter it at this point. You should be then at the `math-alderaan` prompt and in your home directory, which is `/home/username`. 
 
 ### Interactive use limitations
 
-Using a server ‘interactively’ (aka not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, you can type <code>ssh math-colibri-i01</code> or whatever server you want to go to directly. 
+Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, you can type <code>ssh math-colibri-i01</code> or whatever interactive server you want to go to directly. 
 
 **Please do not run anything directly on compute nodes, which are reserved for jobs under the control of the scheduler, even if you may be able to ssh there.  These are nodes with names like math-alderaan-c01 with something else than "i" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.** It is OK to ssh to a compute node to check on your job, but  don't run anything there.
    
