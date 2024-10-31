@@ -127,7 +127,7 @@ and more. See [Singularity](../singularity/) for more details and list of softwa
 
 Sometimes, you may need a specific version of some software package from few years ago. We'll try. If the software version is not too much in the past, we may be able to install the software in a module or in a singularity container. However, installing an older or a more complicated package may require recreating an entire software ecosystem at a certain point in computer history years ago, which would be overwhelming or impossible.
 
-## Installing your own software packages without conflicts
+## Installing your own software packages
 
 When working with software like R on our shared system, it’s important to install packages to a personal library to prevent conflicts with other users. This guide will help you set up and manage your R library effectively.
 
@@ -142,7 +142,7 @@ To manage this safely:
   rm -rf ~/.local/lib/R
   rm -rf ~/.local/lib/python3.8
 
-**Set a custom R library path**:
+- **Set a custom R library path**:
    - You can specify a custom directory for R packages instead of relying on `~/.local`.
    - Add the following to your `~/.Rprofile` file to create and use a dedicated directory for R packages:
      ```r
