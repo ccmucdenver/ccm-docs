@@ -1,6 +1,7 @@
 # Environment modules
 
-**Environment modules are available on Alderaan front end and compute nodes only.**
+**Environment modules are available on Alderaan front end and compute nodes only. Colibri and Score nodes may have different
+legacy module versions or none.**
 
 ## Purpose
 
@@ -12,15 +13,17 @@ Alderaan modules include compilers (GNU, AMD, and Intel) and MPI.
 
 ## Basic module commands
 
-`module load modulename` - make the software pointed to by the module available
+`module load <modulename>` - make the software pointed to by the module available
 
-`module unload modulename` - make the software pointed to by the module unavailable
+`module unload <modulename>` - make the software pointed to by the module unavailable
 
 `module purge` -  unload all modules, strongly recommended before loading modules to start clean and assure a predictable environment
 
 `module list`  - list which modules are loaded
 
-`module avail` - list of all available modules
+`module avail <packagename>` - list of all available modules for versions of a package 
+
+`module avail` - get a complete (long) list of all available modules
 
 ## Modules and running code
 
