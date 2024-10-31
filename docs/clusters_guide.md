@@ -125,7 +125,7 @@ and more. See [Singularity](../singularity/) for more details and list of softwa
 
 ### Old software versions
 
-Sometimes, you may need a specific version of some software package from few years ago. We'll try. If the software version is not too much in the past, we may be able to install the software in a module or in a singularity container. However, installing an older or a more complicated package may require recreating an entire software ecosystem at a certain point in computer history years ago, which would be overwhelming or impossible.
+Sometimes, you may need a specific version of some software package from a few years ago. We'll try. If the software version is not too much in the past, we may be able to install the software in a module or in a singularity container. However, installing an older or a more complicated package may require recreating an entire software ecosystem at a certain point in computer history, which can be overwhelming or impossible when old versions of dependencies are hard to find or just no longer available.
 
 ## Installing your own software packages
 
