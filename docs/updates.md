@@ -7,7 +7,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2024/10/21 
 
-* 11am Partial downtime. Several nodes wil have their thermal profile lowered to reduce overeheating and cycling of CPU speed under load. The nodes cycle the CPU governor settings profile automatically to mitigate excessive CPU temperatures, which may result in inconsistent performance.
+* 11am Partial downtime. Several nodes wil have their thermal profile lowered to reduce overheating and cycling of CPU speed under load. The nodes cycle the CPU governor settings profile automatically to mitigate excessive CPU temperatures, which may result in inconsistent performance.
 
 * 1pm Maintenance completed. The thermal design profiles of several nodes were decreased to 180W or less in few cases. One failed drive in the math-alderaan-s02 disk array was replaced. Operations normal.  
 
