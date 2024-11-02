@@ -13,7 +13,7 @@ particularly technology which may be subject to restrictions on export to some c
 
 * **No [CU highly confidential](https://www.cu.edu/data-governance/resources-support/data-classification) data are allowed, which includes any data requiring compliance with any regulations or security standards, such HIPPA, FERPA, NIST SP 800-171, etc. No Controlled Unclassified Information (CUI) is allowed.**
   
-* No export controlled technology or technical data related to the Export Administration Regulations (EAR) or the International Traffic in Arms  Regulations (ITAR) is permitted.
+* No sensitive techology or export controlled technology or technical data related to the Export Administration Regulations (EAR) or the International Traffic in Arms  Regulations (ITAR) is permitted.
   
 * The above includes data, software, and results generated as output. 
 
