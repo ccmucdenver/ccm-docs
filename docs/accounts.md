@@ -31,7 +31,7 @@ To encourage early use, the folowing is in effect for an initial period - we wan
 
 **Users are responsible for maintaining copies of all their important files elsewhere. Files can be lost even with backups.**
 
-* **Home directories** – Home directories are `/home/username`. The `/home` filesystems are limited size, please keep the home directories small, up to 25GB. Backed up occasionally. **Home directories over 25GB are not backed up.** 
+* **Home directories** – Home directories are `/home/username`. The `/home` filesystems are limited size, please keep the home directories small, up to 25GB. Backed up occasionally. **Home directories over 25GB are not backed up.** **If you install conda, do not put the miniconda3 directory in /home. /home is on a legacy fileserver and  conda can get stuck. Please put miniconda3 to your /data001/projects directory.***
 * **Project storage** -  **Not backed up.**  All users have project directory `/data001/projects/username` which is on a **much faster and more reliable** filesystem. Most users have also legacy project directory in  `/storage/department/projects/username`. Please do not add a large volume of files to these legacy directories, this slows down the migration to faster and more reliable hardware. We can make project directories which can be shared between a group of users. Please keep project directories to 25OGB.
 * **Scratch** - no limit, **not backed up, files may be deleted**. Please make your own subdirectories in `/scratch`. In future, files will be deleted automatically when the filesystem fills up.
 
