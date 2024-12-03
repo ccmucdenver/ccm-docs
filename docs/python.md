@@ -8,8 +8,7 @@ satisfy all dependences does not exist.
 You can use the system-provided Python, or many of our singularity container, each with their collection
 of packages at different versions, including Python itself. But no fixed collection of Python packages versions can satisfy everyone's needs.
 
-The currently preferred solution is to encourage users to install their own Python
-collections of packages for their various needs as **environments**.
+The currently preferred solution is to to install your own Python collections of packages for your specific needs as **conda environments**.
 
 It is best not use `pip` to install packages unless there is no other way. It does not try to resolve version conflicts and you 
 can end up with a broken installation. 
@@ -94,6 +93,8 @@ To make more environments, it is best to start again from the base environment l
 Consistent use of `conda-forge` is recommended because some packages and versions may be available on conda-forge only, it is usually best to minimize incompatibility  
 by pulling packages from the same channel, and other channels (defaults, anaconda) are subject to licensing restrictions under some circumstances, such as when used in
 a project which benefits a private company. See https://www.anaconda.com/pricing/terms-of-service-faqs for details.
+
+It is recommended and sometimes necessary to create separate environments for projects with many dependencies, as too many dependencies tend to conflict eventually.
     
 ## Using Conda environments in a batch script
 
