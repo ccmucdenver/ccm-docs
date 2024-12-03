@@ -5,18 +5,17 @@ Python packages are evolving fast, and many depend on specific versions of other
 install the packages user requires with their dependences automatically, but sometimes a combination of versions that would 
 satisfy all dependences does not exist. 
 
-You can use the system-provided Python, or our tensorflow.sif singularity container, each with their collection
- of packages. But no fixed collection of Python packages can satisfy everyone's needs.
+You can use the system-provided Python, or many of our singularity container, each with their collection
+of packages at different versions, including Python itself. But no fixed collection of Python packages versions can satisfy everyone's needs.
 
 The currently preferred solution is to encourage users to install their own Python
-library with one or more separate collections of packages for their various needs. Conda from the 
-Anaconda distribution is perhaps the most popular package manager, and it maintains such collections called **environments**.
+collections of packages for their various needs as **environments**.
 
-Do not use `pip` to install packages unless there is no other way. It does not try to resolve version conflicts and you 
+It is best not use `pip` to install packages unless there is no other way. It does not try to resolve version conflicts and you 
 can end up with a broken installation. 
  
 
-## Install Anaconda
+## Install Conda
 
 Open an ssh window an alderaan and type 
 
@@ -32,7 +31,7 @@ Here, replace
  
     <username>
     
-by your username. **It is important to use a directory in /data001 or /data002, because of performance issues with locations in `/home` or `/storage`, which may make some conda commands not work.** At the end, you should see the question
+is your username. **It is important to use a directory in /data001 or /data002, because of current performance issues with locations in `/home` or `/storage`, which may make some conda commands not work.** At the end, you should see the question
     
     Do you wish to update your shell profile to automatically initialize conda? 
     (more text) [yes|no]
@@ -66,23 +65,23 @@ Activate the base environment:
     
 You should see your prompt change to start with `(base)`. Create your first environment, for example:
     
-     conda create --name myenv python=3.6 paramiko gdal matplotlib tensorflow pandas
+     conda create --name myenv -c conda-forge python=3.6 paramiko gdal matplotlib tensorflow pandas
 
 Of course, these are just examples,  use names of the packages and their versions that **you** need. Note that you can request specific versions of everything, even Python itself.
 You can even create an environment with an old python version, for example:
 
      conda create --name py2numpy python=2.7 numpy
 
- Conda will search for a combination of the versions of dependencies that allows it
-to install what you asked for. It is best to install all packages at once to minimize the chances of a version conflict. 
-If Conda says that some packages cannot be found, leave installing them for the next step. 
-
-Now, use the conda-forge repository to add into the environment the packages that could not be found in the previous step:
+Conda will search for a combination of the versions of dependencies that allows it
+to install what you asked for. It can install all packages at once, which often minimizes the chances of a version conflict. 
+If Conda says that compatible versions of some packages cannot be found, you can create your enviroment with just a few or even one package, and add others in groups or one by one:
 
     conda activate myenv
     conda  install -c conda-forge netCDF4 PyGrib
+
+It is best to install packages with many or hard to satisfy dependences first. These include tensorflow and gdal.
     
-Finally, use pip to install packages that cannot be found even on conda-forge:
+Finally, use pip to install packages that cannot be found:
 
     pip install MesoPy
 
@@ -91,6 +90,10 @@ You may want to deactivate Conda when you are not using the environment:
     conda deactivate
     
 To make more environments, it is best to start again from the base environment like above.
+
+Consistent use of `conda-forge` is recommended because some packages and versions may be available on conda-forge only, it is usually best to minimize incompatibility  
+by pulling packages from the same channel, and other channels (defaults, anaconda) are subject to licensing restrictions under some circumstances, such as when used in
+a project which benefits a private company. See https://www.anaconda.com/pricing/terms-of-service-faqs for details.
     
 ## Using Conda environments in a batch script
 
@@ -116,7 +119,7 @@ and submit to the scheduler using sbatch as usual.
 Sometimes you may need to uninstall Anaconda, e.g. to save space, or if something goes wrong and you need to start over.
 Delete the Anaconda install directory
 
-    cd
+    cd /data001/projects/<username>
     rm -rf anaconda3
     
 Then, edit `~/.bashrc` and delete the lines from
@@ -126,7 +129,8 @@ Then, edit `~/.bashrc` and delete the lines from
 to 
 
     # <<< conda initialize <<<
-    
+
+ Finally, log out and back in.
 
     
     
