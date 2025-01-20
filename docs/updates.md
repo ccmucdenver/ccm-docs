@@ -4,9 +4,15 @@ Please contact jan.mandel@ucdenver.edu with any questions.
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down adaptively to avoid heat damage. If the datacenter overheats, all alderaan nodes shut down automatically.
 
+### 2025/01/19
+
+* 2am The SLURM scheduler was migrated from a virtual machine at imminent risk of failure to another host. Unfortunately, the state of running and queued jobs could not be preserved. User login enabled.
+
+* 7am SLURM appears to function normally. Affected users were notified to resubmit their jobs.
+
 ### 2025/01/18
 
-* 11pm Urgent slurm scheduler maintenance, user login blocked. Running job should not be affected.
+* 11pm Urgent SLURM scheduler maintenance. User login blocked. Existng jobs keep running,
 
 ### 2024/10/21 
 
