@@ -6,7 +6,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/01/19
 
-* 2am The SLURM scheduler was migrated from a virtual machine at imminent risk of failure to another host. Unfortunately, the state of running and queued jobs could not be preserved. User login enabled.
+* 2am The SLURM scheduler was migrated from a virtual machine at urgent risk of failure to another host, but the state of running and queued jobs could not be preserved. User login enabled.
 
 * 7am SLURM appears to function normally. Affected users were notified to resubmit their jobs.
 
