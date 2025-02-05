@@ -1,8 +1,12 @@
 # Updates
 
-Please contact jan.mandel@ucdenver.edu with any questions.
+Please contact Alderaan Help from your CU Denver email with any questions.
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down adaptively to avoid heat damage. If the datacenter overheats, all alderaan nodes shut down automatically.
+
+### 2025/02/09
+
+* 3:30 PM We are aware of ongoing login issues affecting some users. The issue is being investigated with OIT, and updates will be provided as they become available.
 
 ### 2025/01/19
 
@@ -12,7 +16,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/01/18
 
-* 11pm Urgent SLURM scheduler maintenance. User login blocked. Existng jobs keep running,
+* 11pm Urgent SLURM scheduler maintenance. User login blocked. Existing jobs keep running,
 
 ### 2024/10/21 
 
