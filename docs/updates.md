@@ -12,7 +12,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/01/18
 
-* 11pm Urgent SLURM scheduler maintenance. User login blocked. Existng jobs keep running,
+* 11pm Urgent SLURM scheduler maintenance. User login blocked. Existing jobs keep running,
 
 ### 2024/10/21 
 
