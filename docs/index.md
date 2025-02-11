@@ -12,5 +12,7 @@ This site is hosted from a [git repository](https://github.com/ccmucdenver/ccm-d
 
 jan.mandel@ucdenver.edu
 
+Support: "Alderaan Help" from CU Denver email
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
