@@ -10,7 +10,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/02/09
 
-* 3:30 PM We are aware of ongoing login issues affecting some users. The issue is being investigated with OIT, and updates will be provided as they become available.
+* 3:30om We are aware of ongoing login issues affecting some users. The issue is being investigated with OIT, and updates will be provided as they become available.
 
 ### 2025/01/19
 
