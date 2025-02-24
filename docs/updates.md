@@ -153,7 +153,7 @@ Singularity containers workshop 11am in SCB 4017.
 
 ### 2024/03/04
 
-* 08:12am Login to math-alderaan.ucdenver.pvt does not work. Investigating. Please use clas-compute.ucdenver.edu to submit and access slurm jobs for now.
+* 08:12am Login to math-alderaan does not work. Investigating. Please use clas-compute to submit and access slurm jobs for now.
 * Rebooted, all normal.
 
 ### 2024/02/24
@@ -224,7 +224,7 @@ We appreciate your understanding and cooperation during this maintenance phase. 
 
 * 11:10pm The math-alderaan head node was stuck. Rebooted remotely.
 
-* When you can't log into math-alderaan, please use the alternative head node clas-compute.ucdenver.pvt. All user files are there and you can submit slurm jobs as usual. 
+* When you can't log into math-alderaan, please use the alternative head node clas-compute. All user files are there and you can submit slurm jobs as usual. 
 
 ### 2023/08/08 
 
@@ -299,7 +299,7 @@ The temperature cutoffs were adjusted lower to keep the system from overheating.
 * Front end math-alderaan is down. 
 The Alderaan cluster is accessible through the alternate front end by
 
-     ssh clas-compute.ucdenver.pvt 
+     ssh clas-compute 
 
 * Slurm and all compute nodes are working normally.
 
