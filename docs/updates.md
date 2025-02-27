@@ -4,6 +4,10 @@ Please contact Alderaan Help from your CU Denver email with any questions.
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down adaptively to avoid heat damage. If the datacenter overheats, all alderaan nodes shut down automatically.
 
+### 2025/02/27
+
+* 5:00am All nodes are draining to test SLURM reconfiguration. No new jobs can start. Running jobs are not affected. When enough nodes are drained and become available for the test, the drainging will stop and the remaining nodes will accept new jobs.
+
 ### 2025/02/10
 
 * 10:20am Login issues resolved.
