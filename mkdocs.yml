@@ -32,6 +32,7 @@ nav:
     - Environment modules: modules.md
     - Globus file transfer: globus.md
     - Python: python.md
+    - JupyterHub: jupyterhub.md
     - Alderaan Cluster: alderaan.md
     - Colibri Cluster: colibri.md
     - Score Cluster: score.md
