@@ -1,7 +1,7 @@
 # JupyterHub
 
 JupyterHub provides a graphical interface from a web browser. You need to be on then internal network,
-or VPN, or connecting from [VMWare Horizon](https://remote.ucdenver.ed) (Click on *Complimentary* to get a desktop.)
+or VPN, or connecting from [VMWare Horizon](https://remote.ucdenver.edu) (Click on *Complimentary* to get a desktop.)
 Then, go to
 
   https://math-alderaan 
