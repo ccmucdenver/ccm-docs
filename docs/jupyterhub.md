@@ -18,7 +18,7 @@ time, you should see the JupyterLab screen. Your JupyterLab session will run som
 To access files and directories outside of your home directory, you can make soft links to them in a terminal and then click on the soft 
 in the file tree.
 
-**JupyterHub is a new, still experimental addition to Alderaan.*esions may be inrerrupted as the JupyterHub server is restarted when we work on it, so please save your files frequently.** 
+**JupyterHub is a new, still experimental addition to Alderaan. The web interface may be unavailable and running sessions may be interrupted as we keep working on it, so please save your files frequently.** 
 
 Please write Alderaan Help from CU Denver email if you have any suggestioms or requests.
 
