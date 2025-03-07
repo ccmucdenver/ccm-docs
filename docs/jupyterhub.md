@@ -6,7 +6,7 @@ Then, go to
 
   https://math-alderaan 
 
-or
+or, if the short name does not work, the full name
 
   https://math-alderaan.ucdenver.pvt
 
