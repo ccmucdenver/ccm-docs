@@ -6,7 +6,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/03/14
 
-* 4pm Planned downtime. Feel free to submit jobs till then. All running jobs will be terminated, and access will be unavailable to assure a quiet system. Queued jobs should not be affected. Duration depends on the number of new files in `/home` and `/storage`, so please minimize adding large amounts of files if possible. I’ll aim to minimize downtime, but Alderaan may be down until Monday 3/17.
+* 4pm Planned downtime. Feel free to submit jobs till then. All running jobs will be terminated, and access will be unavailable to assure a quiet system. Queued jobs should not be affected. I’ll aim to minimize downtime, but Alderaan may be down until Monday 3/17.
   
   Planned Work:  
   1. Migrating `/home` and `/storage` from a legacy server to faster Alderaan storage. The time required for this depends on the volume of recent changes in these directories, so please minimize adding new files in these directories if possible.  
