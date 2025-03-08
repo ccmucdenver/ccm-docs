@@ -3,8 +3,7 @@
 ## Access
 
 JupyterHub provides a graphical interface to Alderaan from a web browser. You need to be on the CU Denver 
-internal network, or VPN, or connecting from [VMWare Horizon Remote Desktop](https://remote.ucdenver.edu) (Click on *Complimentary* after you log in.)
-Start a web browser - Firefox recommended - and go to
+internal network, or VPN, or connect from [VMWare Horizon Remote Desktop](https://remote.ucdenver.edu) (Click on *Complimentary* after you log in). Start a web browser (Firefox recommended), and go to
 
   [https://math-alderaan](https://math-alderaan)
 
@@ -13,10 +12,13 @@ or, if the short name does not work, use the full name
   [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
 
 Click away the warnings, and log in with your University username and password. Then click on the blue *New Server* button. After a short
-time, you should see the JupyterLab screen. Your JupyterLab session will run somewhere on Alderaan on a dedicated CPU with 4GB of memoty.
+time, you should see the JupyterLab screen. Your JupyterLab session will run somewhere on Alderaan on a dedicated CPU with at least 4GB of memoty.
 
-To access files and directories outside of your home directory, you can make soft links to them in a terminal and then click on the soft 
-in the file tree.
+To access files and directories outside of your home directory, you can make soft links to them using a terminal. For example
+
+  ln -s /data001/Projects/myuserid ~/MyPrpjects
+  
+and then click on the soft link MyProjects in your home directory in the file tree.
 
 **JupyterHub is a new, still experimental addition to Alderaan. The web interface may be unavailable and running sessions may be interrupted as we keep working on it, so please save your files frequently.** 
 
