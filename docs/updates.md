@@ -10,7 +10,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
    
 ### 2025/03/06
 
-* [Jupyterhub](../jupyterhub) available, section added to docs.
+* [Jupyterhub](../jupyterhub) available, section added to the documentation.
 
 ### 2025/02/27
 
