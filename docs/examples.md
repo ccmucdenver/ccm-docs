@@ -65,12 +65,16 @@ Look which host you are on. You should be on the head node.
 
 Start an interactive job on a GPU node
 
-     > srun -p math-alderaan-gpu --time=02:00:0 -N 1 -n 1 --pty bash -i --gres=gpu:a100:1
+     > srun -p math-alderaan-gpu --time=02:00:0 --nodes=1 --ntasks=1  --gres=gpu:a100:1 --pty bash -i
 
 Check where you are. If a GPU is available, you should be on a high memory/gpu node with a GPU allocated to you.
 
      > hostname
      math-alderaan-h01
+
+Check GPU visibility
+
+    > nvidia-smi
 
 Start a shell in a container
 
