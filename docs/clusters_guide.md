@@ -15,7 +15,9 @@ To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz p
 
 To log in, use your university username (not email) and password. If you do not know your username, you can retrieve it at [https://myaccount.ucdenver.edu/forgot-username](https://myaccount.ucdenver.edu/forgot-username).
 
-Perhaps the easiest way to log in is [JupyterHub](../jupyterhub). Simply go to [https://math-alderaan](https://math-alderaan.ucdenver.pvt), which will give you a web page with several terminal windows.  
+Perhaps the easiest way to log in is [JupyterHub](../jupyterhub). Simply go to 
+[https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
+and log in, which will give you a web page with several terminal windows.  
 
 The traditional way of using the system is to to use SSH. Type
 
