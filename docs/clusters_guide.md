@@ -8,8 +8,8 @@ Your account must be set up before using the system. Please go to [accounts](../
 
 To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz private network. This can be done in several ways:
 
-* On-campus wired network.
-* On-campus secure wireless network (not the guest network)/
+* On campus wired network.
+* On campus secure wireless network (not the guest network)/
 * Through the remote desktop [https://remote.ucdenver.edu](https://remote.ucdenver.edu) After logging in, click on "Complimentary". It is recommended to download and use the VMware Horizon app instead of continuing in the browser.
 * Through [CU Denver VPN](https://www.ucdenver.edu/vpn) or [CU Anschutz VPN](https://www.cuanschutz.edu/vpn). 
 
