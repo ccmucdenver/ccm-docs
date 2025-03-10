@@ -8,10 +8,10 @@ Your account must be set up before using the system. Please go to [accounts](../
 
 To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz private network. This can be done in several ways:
 
-* on campus wired network,
-* on campus secure wireless network (not the guest network),
-* remotely through the [remote desktop](https://remote.ucdenver.edu) (it is recommended to download and use the VMware Horizon app instead of continuing in the browser),
-* through [CU Denver VPN](https://www.ucdenver.edu/vpn) or [CU Anschutz VPN](https://www.cuanschutz.edu/vpn). 
+* On-campus wired network.
+* On-campus secure wireless network (not the guest network)/
+* Through the remote desktop [https://remote.ucdenver.edu](https://remote.ucdenver.edu) After logging in, click on "Complimentary". It is recommended to download and use the VMware Horizon app instead of continuing in the browser.
+* Through [CU Denver VPN](https://www.ucdenver.edu/vpn) or [CU Anschutz VPN](https://www.cuanschutz.edu/vpn). 
 
 To log in, use your university username (not email) and password. If you do not know your username, you can retrieve it at [https://myaccount.ucdenver.edu/forgot-username](https://myaccount.ucdenver.edu/forgot-username).
 
@@ -20,13 +20,17 @@ High Performance Computing (HPC) systems like this one are usually accessed from
 Perhaps the easiest way to log in is to use [JupyterHub](../jupyterhub). Simply go to 
 [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
 and log in, which will give you a web page with a file mavigation tree and one or more terminal windows. 
-Should you not see a terminal window, press the + button on upper left to start the Launcher, then press the Terminal tile. 
+Should you not see a terminal window, press the + button on upper left to start the Launcher, 
+then press the Terminal tile. You can also run Python notebooks, edit files, and more.
 
 Another way of accessing the system is to use the Secure Shell (SSH). Type
 
     ssh math-alderaan.ucdenver.pvt
 
-in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`), and log in with your university username and password. For more convenience and security, you can set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-connection-from-windows).
+in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh)
+10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`), and log in. For more convenience and security, you can 
+set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as 
+from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-connection-from-windows).
 
 SSH also allows you to transfer files via scp, sftp, or rsync commands. 
 
