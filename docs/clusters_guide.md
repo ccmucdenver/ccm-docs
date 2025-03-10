@@ -60,16 +60,16 @@ Press Control-A and then Esc and scrolling up and down will work temporarily the
 **You are responsible for keeping copies of your important files elsewhere. Files and entire filesystems can be lost.** 
 
 The home directories are on a shared file server and linked as `/home/username`. Everyone can have also 
-a project directory `/storage/department/projects/username` 
-(where department may be one of many departments who use this system). Users from some departments have
-project directories created in `/data001/projects/username` instead. These are currently accessible from alderaan nodes only,
-i.e., not accessible from clas-compute and math-colibri or math-score nodes. The location of project directory is emailed to the user
+a project directory. The legacy project directories are  `/storage/department/projects/username` 
+(where department may be one of many departments who use this system). New oroject directories currently 
+created as `/data001/projects/username` instead. The location of project directory is emailed to the user
 when the directory is created, usualy as a part of onboarding.
 
-The difference betwen project and home directories is that home directories are backed up occasionally 
-while project directories are not. Please keep your home directory small to make the backups possible.
-
 In addition, groups can request shared project directories also in `/storage/department/projects' or `/data001/projects`. 
+
+The difference betwen project and home directories is that home directories are backed up occasionally 
+while project directories are not. Please keep your home directory small to make the backups possible. Please be aware that
+even if project space is large and currenly not restricted, it is finite.
 
 Please monitor the usage of the partition you are on by 
 
@@ -78,12 +78,14 @@ Please monitor the usage of the partition you are on by
 and if it nearing full check you you do not use more space than you are aware of by `df -h`. If you need a lot of data storage, please contact us before filling everything you can find.
 
 On Alderaan only, you can make your own directory in `/scratch`, which is on a large fast filesystem.
-When `/scratch` starts filling up, oldest files will be purged automatically. 
+**When `/scratch` starts filling up or the space is needed for the system, oldest files will be purged automatically.**
 
 **Do not keep any confidential or sensitive files on this system.** We are not equipped for the level of security this would take. 
-In particular, no proprietary data, health records, grades, social security numbers, and like are allowed. 
+In particular, proprietary data, health records, grades, social security numbers, or data which have to comply with any 
+law or regulation are not allowed. 
+
 If you use ssh keys to connect elsewhere from this system 
-(such as github or another computer account), it is highly recommended to make an ssh key with a passcode for that. Otherwise,
+(such as github or another computer account), it is highly recommended to make an **ssh key with a passcode** for that. Otherwise,
  the security of the account you are connecting to is only as good as the read protection of your files here.
 
 Files and directories including your home directory are created with permissions which allow anyone to read them but not 
