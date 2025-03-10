@@ -191,6 +191,29 @@ coming soon
 Globus is a free service which can transfer large files (many GB and TB) between servers on the internet using a simple web interface and without supervision. 
 See the [Globus](../globus/) section how to use Globus here.
 
+### ```scp``` Tutorial
+
+<ins> Approach 1: Transferring file from local computer to Alderaan <ins>
+
+Open a terminal or command line prompt shell. Do not log into Alderaan – stay connected to your local machine. Type command: 
+
+    scp /path/to/file/on/computer [username]@math-alderaan.ucdenver.pvt:/path/to/file/on/alderaan 
+
+For instance, if my CU Denver username is duffme, I had a file on my local machine located at ~/Desktop/Folder/file.txt, and I wanted to put this file in my home directory on Alderaan, I would use the command:  
+
+    scp ~/Desktop/Folder/file.txt duffme@math-alderaan.ucdenver.pvt:/home/duffme 
+
+<ins> Approach 2: Transferring file from Alderaan to local computer <ins>
+
+Open a terminal or command line prompt shell. Do not log into Alderaan – stay connected to your local machine. Type command: 
+
+    scp /path/to/file/on/computer [username]@math-alderaan.ucdenver.pvt:/path/to/file/on/alderaan 
+
+For instance, if my CU Denver username is duffme, I had a file on Alderaan I wanted to transfer located at /home/duffme/file.txt, and I wanted to put this file on my local machine at  ~/Desktop, I would use the command:  
+
+    scp duffme@math-alderaan.ucdenver.pvt:/home/duffme/file.txt ~/Desktop 
+
+
 ## Requesting Information about the Environment
 
 ### Queues
@@ -310,6 +333,23 @@ The template batch scripts and simple examples to run are available. Get your co
 To build the examples, type <code>make</code> in the <code>examples</code> directory. 
 
 **Please do not request the number of nodes on Alderaan by `--nodes` or `-N`, unless you really need entire nodes for some reason. Request only the CPU cores you need by `--ntasks`, then the node or nodes you use can be shared with others.**
+
+### SLURM Directives with Explanations
+
+| Directive             | Explanation                                                  | Options |
+| ---------------------- | ------------------------------------------------------------ | ------- |
+| `#SBATCH --job-name=`  | Specifies a name for your job.                               | Use whatever naming convention makes sense to you! If you would like a suggestion: `#SBATCH --job-name=job`<br>`#SBATCH --output=job.out`<br>`#SBATCH --error=job.err` |
+| `#SBATCH --output=`    | Specifies the file to which standard output (stdout) will be redirected. |  |
+| `#SBATCH --error=`     | Specifies the file to which standard error (stderror) will be redirected. |  |
+| `#SBATCH --nodes=`     | Specifies the number of nodes requested for the job.         | Please do not request a node unless you know you need the full node’s memory or CPU |
+| `#SBATCH --ntasks=`    | Specifies the number of tasks (processes/threads) per node.  | `ntasks` can take a value between 1-64. Recommend: Start small (i.e., 1-5) & if jobs are running out of CPU/memory then increase the value. |
+| `#SBATCH --time=`      | Specifies the maximum runtime for the job in the format `days-hours:minutes:seconds`. <br> Examples: <br>1 Day: `#SBATCH --time=1-00:00:00`<br>1 hour: `#SBATCH --time=01:00:00`<br>1 minute: `#SBATCH --time=00:01:00` | Alderaan partitions will run jobs up to one week. If you need more time, use one of the older partitions (score or colibri). |  
+| `#SBATCH --partition=` | Specifies the partition or queue where the job will be submitted. | Recommend: Use CPU or GPU Alderaan partitions. <br> CPU nodes, specify: `#SBATCH --partition=math-alderaan`<br>GPU nodes, specify: `#SBATCH --partition=math-alderaan-gpu`<br>Older partitions: `math-score`, `math-colibri` |
+| `#SBATCH --array=`     | Specifies an array of job tasks with indices for array job submissions. <br> Examples: <br> `#SBATCH --array=1-5` <br> `#SBATCH --array=0-10,20-21` | You can specify how many array jobs to run at one time with `%`. <br> Example: <br> Run only 3 jobs at one time for 10 jobs: `#SBATCH --array=1-10%3` |
+
+
+  
+
 
 
 ### Single-core job
@@ -488,4 +528,79 @@ Here are the best practices when you compile and link your own software:
 
 * Use `clas-compute` or `math-colibri-i02` to build software for the Colibri cluster, and `clas-compute` or `math-score-i01` for the Score cluster. You can download and build libraries and other package in your own account.
 
-* Alderaan runs Centos 8, while `clas-compute` and Colibri and Score clusters Centos 7. Software built on one will normally not work on the other. 
+* Alderaan runs Centos 8, while `clas-compute` and Colibri and Score clusters Centos 7. Software built on one will normally not work on the other.
+
+## Linux Introduction  
+
+<ins>Navigating the Linux File System: Basic Commands<ins>
+
+1. pwd - Print Working Directory  
+
+The pwd command displays the current working directory, which is your current location in the file system. 
+
+    pwd 
+
+2. ls - List Files and Directories  
+
+The ls command lists the files and directories in the current directory. 
+
+    ls 
+    ls -l         # list more information about files and directories 
+
+3. cd - Change Directory  
+
+The cd command is used to navigate to a different directory. 
+
+    cd /path/to/directory 
+    cd ..        # Move to the parent directory 
+    cd ../ 	     # Move up one directory 
+    cd ~         # Move to the user's home directory 
+    cd /         # Move to the root directory 
+ 
+4. mkdir - Make Directory  
+
+The mkdir command is used to create a new directory. 
+
+    mkdir new_directory         # Create a new directory called new_directory
+ 
+5. cp - Copy Files and Directories  
+
+The cp command is used to copy files or directories from one location to another. 
+
+    cp file.txt /path/to/destination/	          # Copy a file  
+    cp -r directory /path/to/destination/             # Copy a directory and its contents 
+ 
+6. mv - Move or Rename Files and Directories  
+
+The mv command is used to move files or directories to a new location or rename them. 
+
+    mv file.txt new_location/		       # Move a file to a new location 
+    mv old_name.txt new_name.txt		       # Rename file 
+
+7. rm - Remove Files and Directories The rm command is used to remove files or directories. 
+```
+rm file.txt	         # Remove a file 
+rm -r directory          # Remove a directory and its contents 
+```
+
+8. nano - Create File  
+
+The nano command is used to create an empty file. 
+
+    nano new_file.txt 
+ 
+* 'Crtl' + 'o' : save file
+* 'Crtl' + 'x' : exit editor
+
+10. cat - Display File Content  
+
+The cat command is used to display the contents of a file. 
+
+    cat file.txt 
+ 
+11. echo - Print Text to the Terminal or File  
+
+The echo command is used to print text to the terminal or write it to a file. 
+
+    echo "Hello, world!"                     # Print "Hello, world!" to the terminal 
+    echo "Hello, Linux" > greeting.txt       # Print "Hello, world!" and save in file greeting.txt
