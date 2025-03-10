@@ -19,7 +19,7 @@ High Performance Computing (HPC) systems like this one are usually accessed from
 
 Perhaps the easiest way to log in is to use [JupyterHub](../jupyterhub). Simply go to 
 [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
-and log in, which will give you a web page with a file mavigation tree and one or more terminal windows. 
+and log in, which will give you a web page with a file navigation tree and one or more terminal windows. 
 Should you not see a terminal window, press the + button on upper left to start the Launcher, 
 then press the Terminal tile. You can also run Python notebooks, edit files, and more.
 
