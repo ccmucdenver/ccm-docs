@@ -1,4 +1,5 @@
 # Hands-on Workshop September 21, 2023
+*Updated March 2025*
 
 Please see the [Clusters Guide](../clusters_guide/) and other documentation sections on the left for more information.
 
@@ -50,13 +51,13 @@ Contact: Megan Duff and Jan Mandel will be happy to answer any questions!
 * Or install your own anaconda or miniconda.
 
 ## Interactive jobs
+* The easiest is to go to https://math-alderaan.ucdenver.edu. You will get an interactive Jupyter session on one of the compute nodes - so you do not need to worry about load on the node - 4GB memory, with terminal windows and python notebooks.
 * Please do not ssh to work on compute nodes, you could interfere with jobs running there which would make you very unpopular. It is OK to ssh to compute nodes to check on your running jobs submitted through sbatch, however.
 * The magical incantation *srun -p math-alderaan --time=2:00:0 -n 1 --pty bash -i* will teleport your session to a compute node for two hours with one core reserved for you. Try it! Your interactive job will not interfere with CPU usage of other. Try *matlab -nodesktop*, run something CPU intensive, ssh to the node from another terminal window, and try *top*
 * Try a Python, R, or Matlab job!
-* Sorry no graphics
 
 ## Memory
-* Our compute nodes have 64 cores and 512GB memory each. This seems like a lot, but you may be sharing it with others. We do not control memory as an allocatable resource yet, so if you need to use a large amount of memory, talk to us first.
+* Our compute nodes have 64 cores and 512GB memory each. This seems like a lot, but you may be sharing it with others. The default memory is 4GB per cpu core. This is memory actually used, not just allocated. You can request more or less by using the *--mem=* flag with memory in MB. For example, *--mem=10240* will request 10GB. If a job runs out of memeory, it may be able to use a limited amount of swapspace, or it will be killed.  
 
 ## Try a Pyto
 
