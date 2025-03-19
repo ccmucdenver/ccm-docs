@@ -57,6 +57,6 @@ Contact: Megan Duff and Jan Mandel will be happy to answer any questions!
 * Try a Python, R, or Matlab job!
 
 ## Memory
-* Our compute nodes have 64 cores and 512GB memory each. This seems like a lot, but you may be sharing it with others. The default memory is 4GB per cpu core. This is memory actually used, not just allocated. You can request more or less by using the *--mem=* flag with memory in MB. For example, *--mem=10240* will request 10GB. If a job runs out of memory, it may be able to use a limited amount of swapspace, or it will be killed.  
+* Our compute nodes have 64 cores and 512GB memory each. This seems like a lot, but you may be sharing it with others. The default memory reserved is 4GB per cpu core. You can reserve more or less by using the *--mem=* flag with memory in MB. For example, *--mem=10240* will request 10GB reservation. If a job tries to use more memory than it has reserved, it may be able to do that a bit, but then it will be killed by OOM (the Out Of Memory daemon). The concept of the "used memory" here is the same as the number shown by `top` under `RES`. It does not include memory allocated by the code but not written to, or swapped out to disk. Use the script `max_mem.sh` to see the current memory reservations on a node.
 
 
