@@ -75,6 +75,134 @@ This command:
 - Pulls the Docker image from Docker Hub
 - Converts it to Singularity format
 
+## Example: Building a Statistical Sampling Environment
+
+This example demonstrates how to set up an environment for a statistical sampling tool in Python. Since I work on Apple Silicon hardware, which doesn't support building Singularity containers locally, I'll show the workflow of building a Docker container locally and then converting it to Singularity on the cluster.
+
+### Dockerfile
+```yaml
+FROM continuumio/miniconda3
+
+# Update and install system dependencies
+RUN apt-get -y update && \
+    apt-get -y upgrade && \
+    apt-get -y dist-upgrade && \
+    apt-get -y install -f build-essential && \
+    apt-get -y install -f libboost-all-dev && \
+    apt-get -y install -f git && \
+    apt-get -y install rename && \
+    apt-get -y install trash-cli && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Create conda environment
+RUN /opt/conda/bin/conda create -y -n InverseIsing -c conda-forge \
+    python=3.10 \
+    numpy \
+    pandas \
+    scipy \
+    numba \
+    cython \
+    jupyter \
+    ipython \
+    multiprocess \
+    boost==1.74 \
+    matplotlib \
+    mpmath \
+    blas=*=openblas \
+    pip
+
+# Initialize conda in bash
+RUN /opt/conda/bin/conda init bash && \
+    echo -e "\nconda activate InverseIsing" >> ~/.bashrc
+
+# Clone and install coniii
+WORKDIR /app
+RUN git clone https://github.com/Al-Borno-Lab/coniii.git && \
+    cd coniii && \
+    . /opt/conda/etc/profile.d/conda.sh && \
+    conda activate InverseIsing && \
+    ./pypi_compile.sh && \
+    pip install dist/*.whl
+
+
+# Create an entrypoint script that activates conda environment
+RUN echo '#!/bin/bash\n\
+. /opt/conda/etc/profile.d/conda.sh\n\
+conda activate InverseIsing\n\
+exec "$@"' > /entrypoint.sh && \
+    chmod +x /entrypoint.sh
+
+# Set the entrypoint to the script
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["bash"]
+```
+
+
+### Complete Walkthrough
+
+1. **Create a Dockerfile**
+   First, create a new directory for your project and save the provided Dockerfile content:
+   ```bash
+   mkdir inverse-ising-project
+   cd inverse-ising-project
+   # Create Dockerfile and paste the content provided above
+   ```
+
+2. **Build the Docker Image**
+   
+   It is **very important** that you use ```--platform linux/amd64```
+   ```bash
+   docker build --platform linux/amd64 -t inverse-ising .
+   ```
+   This will take several minutes as it:
+   - Downloads the base Miniconda image
+   - Installs system dependencies
+   - Creates the conda environment
+   - Clones and builds the coniii package
+
+3. **Tag and Push to Docker Hub**
+   ```bash
+   # Tag the image with your Docker Hub username
+   docker tag inverse-ising your-dockerhub-username/inverse-ising:latest
+   
+   # Login to Docker Hub
+   docker login
+   
+   # Push the image
+   docker push your-dockerhub-username/inverse-ising:latest
+   ```
+
+4. **Build Singularity Container on Cluster**
+   Once logged into the cluster, run:
+   ```bash
+   singularity build inverse-ising.sif docker://your-dockerhub-username/inverse-ising:latest
+   ```
+
+5. **Test the Container**
+   After building, you can test the container:
+   ```bash
+   # Start an interactive shell
+   singularity shell inverse-ising.sif
+   
+   # Or run a specific command
+   singularity exec inverse-ising.sif ./entrypoint.sh python -c "import numpy; print(numpy.__version__)"
+   ```
+
+**Note**: When using Singularity containers built from Docker images, we need to explicitly call ```./entrypoint.sh``` before running commands 
+to properly configure the environment. While Singularity natively supports environment setup in its definition files, this additional step is necessary when converting from Docker. 
+If you're aware of a more streamlined approach for handling environment initialization in converted containers, please share your insights!
+
+### Important Notes
+
+- The container uses Python 3.10 and includes scientific computing packages
+- The conda environment is automatically activated when you enter the container
+- The container includes the coniii package from the Al-Borno-Lab repository
+- All system dependencies (including boost libraries) are pre-installed
+- The container uses OpenBLAS for optimized linear algebra operations
+
+### Submit 
+
 ## Troubleshooting
 
 ### Common Issues
@@ -96,3 +224,4 @@ This command:
 - [Docker Desktop Documentation](https://docs.docker.com/desktop/)
 - [Singularity Documentation](https://docs.sylabs.io/guides/3.0/user-guide/)
 - [Docker Hub Documentation](https://docs.docker.com/docker-hub/) 
+- Contact me if you have questions: gunnar.enserro@ucdenver.edu
