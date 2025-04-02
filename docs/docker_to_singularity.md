@@ -1,13 +1,69 @@
-# Building and Pushing Singularity Containers on ARM for Alderaan Cluster
-By: Gunnar Enserro - updated: Mar 26, 2025
+# Building your own Singularity Containers
 
-This guide demonstrates how to build a Docker image on ARM architecture, push it to Docker Hub, and convert it to a Singularity container for use on a cluster. We'll leverage Docker's platform emulation capabilities to ensure compatibility between ARM-based development environments and x86/AMD64 cluster deployments.
+**Tested on macOS 15 Apple Sillicon with Docker Desktop 4.28**
+
+By: Gunnar Enserro - updated: Mar 26, 2025
+    Jan Mandel - updated: Apr 1, 2025 
+
+This guide walks you through building a Docker image on a Mac with ARM architecture (e.g., M1–M4), pushing it to Docker Hub, and pulling it on a cluster as a Singularity container — **without requiring root access** on the cluster.
+
+> **Note:** This workflow *should* also work on other platforms such as Intel Macs, Linux, or Windows (with WSL2). Minor changes may be needed:
+> - You can usually omit the `--platform linux/amd64` flag on x86-based systems.
+> - Rosetta-related steps are only required on Apple Silicon (M1–M4).
+
+
+## Minimal Test: Use a Docker Image to build Singularity container Without Root
+
+Before diving into your own image, you can quickly test that this workflow works on your cluster:
+
+```bash
+singularity pull alpine.sif docker://alpine
+singularity exec alpine.sif cat /etc/os-release
+```
+
+This verifies that:
+- You can pull and convert a Docker image
+- Singularity pull runs properly without root
+- The process works from Docker Hub to Singularity
 
 ## Prerequisites
 
-1. Docker Desktop for Mac installed
-2. A Docker Hub account
-3. Access to a cluster with Singularity installed
+To build and push your own image:
+
+1. A Mac with Apple Silicon (M1 - M4)
+2. Docker Desktop for Mac (Apple chip version)
+3. A Docker Hub account
+4. Access to a cluster with Singularity installed
+
+## Install Docker on Mac (Apple Silicon)
+
+1. **Install Rosetta 2**  
+   Required for x86/amd64 emulation. In a Terminal window:
+   ```bash
+   softwareupdate --install-rosetta --agree-to-license
+   ```
+
+2. **Download Docker Desktop**  
+   Go to [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+   - Click Personal, 
+   - Choose **Mac with Apple Chip**
+
+3. **Install Docker**  
+   - Drag Docker into Applications
+   - Launch it and follow prompts
+
+4. **Enable AMD64 Emulation**  
+   - Open Docker Desktop → Settings (gear icon)  
+   - Go to **Features in Development** or similar  
+   - Enable: **“Use Rosetta for x86/amd64 emulation on Apple Silicon”**  
+   - Apply & restart Docker
+
+5. **Verify Installation**  
+   In Terminal:
+   ```bash
+   docker version
+   docker run --platform linux/amd64 hello-world
+   ```
 
 ## Building Docker Image on Mac
 
