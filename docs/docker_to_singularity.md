@@ -2,15 +2,14 @@
 
 **Tested on macOS 15 Apple Sillicon with Docker Desktop 4.28**
 
-By: Gunnar Enserro - updated: Mar 26, 2025
-    Jan Mandel - updated: Apr 1, 2025 
+By: Gunnar Enserro Mar 26, 2025
+Updated by Jan Mandel Apr 2, 2025 
 
-This guide walks you through building a Docker image on a Mac with ARM architecture (e.g., M1–M4), pushing it to Docker Hub, and pulling it on a cluster as a Singularity container — **without requiring root access** on the cluster.
+This guide walks you through building a Docker image, pushing it to Docker Hub, and pulling it on a cluster as a Singularity container — **without requiring root access** on the cluster.
 
-> **Note:** This workflow *should* also work on other platforms such as Intel Macs, Linux, or Windows (with WSL2). Minor changes may be needed:
+> **Note:** This workflow is formulated for Mac with ARM architecture (e.g., M1–M4). It *should* also work on other platforms such as Intel Macs, Linux, or Windows (with WSL2) with minor changes:
 > - You can usually omit the `--platform linux/amd64` flag on x86-based systems.
 > - Rosetta-related steps are only required on Apple Silicon (M1–M4).
-
 
 ## Minimal Test: Use a Docker Image to build Singularity container Without Root
 
