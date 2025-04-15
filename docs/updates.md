@@ -6,8 +6,10 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/04/15
 
-* The reconfiguration of cgroups is ongoing.  The goal is that every job will get guaranteed the resources it reserves and jobs can run on the same node together without interfering with each other.  Enforcement of the reservations by the system can change as I am ironing out the bugs and edge cases. To see what your job is doing you can try
-  
+* The reconfiguration of cgroups is ongoing.  The goal is that every job will get guaranteed the resources it reserves and jobs can run on the same node together without interfering with each other.  Enforcement of the reservations by the system can change as I am ironing out the bugs and edge cases.
+
+To see what your job is doing, you can try:
+    
      max_mem.sh  <nodename>
 
 to see the reservations,
