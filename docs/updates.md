@@ -14,18 +14,18 @@ To see what your job is doing, you can try:
 
 to see the reservations,
 
-    scontrol show job number
+    scontrol show <job number>
 
 to see what slurm knows about it, and
 
-    ssh nodename
+    ssh <nodename>
     top
 
 or
 
     top -b -n 1
 
-to see the cpu and memory in use by process.
+to see the cpu and memory in use by each process.
 
 ### 2025/04/10
 
