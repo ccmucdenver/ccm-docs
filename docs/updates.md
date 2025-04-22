@@ -4,6 +4,10 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down adaptively to avoid heat damage. If the datacenter overheats, all alderaan nodes shut down automatically.
 
+### 2025/04/21
+
+* 6:40pm  All alderaan nodes were shut down automatically because of high datacenter temperature. 
+
 ### 2025/04/15
 
 * The reconfiguration of cgroups is ongoing.  The goal is that every job will get guaranteed the resources it reserves and jobs can run on the same node together without interfering with each other.  Enforcement of the reservations by the system can change as I am ironing out the bugs and edge cases.
