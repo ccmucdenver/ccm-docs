@@ -4,6 +4,13 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down adaptively to avoid heat damage. If the datacenter overheats, all alderaan nodes shut down automatically.
 
+### 2025/04/23
+
+* 12:50 pm High temperature persists. It is not critical but but high enough to damage the system over time.  All compute nodes are draining so that no new jobs can start. Nodes are being powered off nodes as they become drained to prepare for a complete shutoff. /data002 not available.
+
+### 2025/04/22
+* 10am Alderaan restarted. /data002 not available due to continued effects of overheating.
+
 ### 2025/04/21
 
 * 6:40pm  All alderaan nodes were shut down automatically because of high datacenter temperature. 
