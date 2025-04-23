@@ -6,7 +6,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/04/23
 
-* 12:50 pm High temperature persists. It is not critical but but high enough to damage the system over time.  All compute nodes are draining so that no new jobs can start. Nodes are being powered off nodes as they become drained to prepare for a complete shutoff. /data002 not available.
+* 12:50 pm High temperature persists. The datacenter temperature is not critical, but it is high enough to potentially damage the storage system over time.  All compute nodes are draining so that no new jobs can start. Nodes are being powered off as they become drained, to prepare for a complete shutoff. /data002 is not available.
 
 ### 2025/04/22
 * 10am Alderaan restarted. /data002 not available due to continued effects of overheating.
