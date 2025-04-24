@@ -6,7 +6,7 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/04/24
 
-* **Status:** Partially Available
+* 12:00 pm  **Alderaan Status: Partially Available**
 
 * Alderaan is running in **reduced capacity mode** 
 * **All jobs are being periodically suspended and resumed** to:
