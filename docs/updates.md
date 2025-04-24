@@ -4,6 +4,17 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down adaptively to avoid heat damage. If the datacenter overheats, all alderaan nodes shut down automatically.
 
+### 2025/04/24
+
+* **Status:** Partially Available
+
+* Alderaan is running in **reduced capacity mode** 
+* **All jobs are being periodically suspended and resumed** to:
+  - Allow disk activity to resolve and prevent jobs from entering uninterruptible disk wait (`D` state).
+  - Reduce sustained thermal load on RAID and compute nodes.
+* This strategy helps maintain system responsiveness under degraded storage conditions, but results in the cluster operating at approximately **2/3 of normal throughput**.
+* Due to ongoing issues with `/data002` and therefore `/scratch` remain **offline**.
+
 ### 2025/04/23
 
 * 12:50 pm High temperature persists. The datacenter temperature is not critical, but it is high enough to potentially damage the storage system over time.  All compute nodes are draining so that no new jobs can start. Nodes are being powered off as they become drained, to prepare for a complete shutoff. /data002 is not available.
