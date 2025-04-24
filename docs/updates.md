@@ -7,9 +7,9 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 ### 2025/04/24
 
 * 12:00 pm  Alderaan is running in a reduced capacity mode.
-    - **All jobs are being periodically suspended and resumed** to allow disk activity to resolve and prevent jobs from entering uninterruptible disk wait (`D` state), and to reduce sustained thermal load on RAID and compute nodes. This strategy helps maintain system responsiveness under degraded thermal conditions, but results in the cluster operating at approximately **2/3 of normal throughput**. This ratio may be reduced as needed.
+    - **All jobs are being periodically suspended and resumed** to allow disk activity to resolve and prevent jobs from entering uninterruptible disk wait (`D` state), and to reduce sustained thermal load on RAID and compute nodes. This strategy helps maintain system responsiveness under degraded thermal conditions, but results in the cluster operating at approximately **1/3 of normal speed**. This ratio may be changed as needed.
     - `/data002` and therefore `/scratch` remain **offline** due to ongoing issues.
-    - Aldeeraan may shut down any time without a notice.
+    - Alderaan may shut down any time without a notice.
     - As always, please maintain copies of essential data elsewhere.
 
 ### 2025/04/23
