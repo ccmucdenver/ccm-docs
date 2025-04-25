@@ -6,8 +6,10 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 
 ### 2025/04/25
 
-* Alderaan jobs are running at 2/3 speed (10 sec suspended, 20 sec resume).
-* /data002 is back.
+* 12:00 am
+    - Alderaan jobs are running at 2/3 speed (10 sec suspended, 20 sec resume).
+    - /data002 is back.
+    - As always, please maintain copies of essential data elsewhere.
 
 ### 2025/04/24
 
