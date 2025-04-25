@@ -2,7 +2,7 @@
 
 Please **contact Alderaan Help from your CU Denver email** with any questions.
 
-Alderaan ia a High Performance Cpmputing (HPC) facility, operating on the edge what the hardware and cooling allow. When CPUs get too hot, they are slowed down adaptively to avoid heat damage. When the disks in storage nodes get too hot, jobs are periodically suspended to allow pending disk activity to resolve. When the datacenter temperature is too high, all nodes shut down automatically.
+Alderaan is a High Performance Cpmputing (HPC) facility, operating on the edge what the hardware and cooling allow. When CPUs get too hot, they are slowed down adaptively to avoid heat damage. When the disks in storage nodes get too hot, jobs are periodically suspended to allow pending disk activity to resolve. When the datacenter temperature is too high, all nodes shut down automatically.
 
 ### 2025/04/25
 
