@@ -9,7 +9,9 @@ Our goal is to get the maximum performance the hardware and the cooling allow. W
 * 12:00 am
     - Alderaan jobs are running at 2/3 speed (10 sec suspended, 20 sec resume).
     - /data002 is back.
-    - As always, please maintain copies of essential data elsewhere.
+    - math-score nodes and math-colibri-i02 are now available.
+    - Alderaan may shut down any time without a notice.
+    - As always, **please maintain copies of essential data elsewhere.**
 
 ### 2025/04/24
 
