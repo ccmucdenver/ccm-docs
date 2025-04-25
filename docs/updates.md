@@ -4,6 +4,11 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 
 Our goal is to get the maximum performance the hardware and the cooling allow. When Alderaan CPUs get too hot, they are slowed down adaptively to avoid heat damage. If the datacenter overheats, all alderaan nodes shut down automatically.
 
+### 2025/04/25
+
+* Alderaan jobs are running at 2/3 speed (10 sec suspended, 20 sec resume).
+* /data002 is back.
+
 ### 2025/04/24
 
 * 12:00 pm  Alderaan is running in a reduced capacity mode.
