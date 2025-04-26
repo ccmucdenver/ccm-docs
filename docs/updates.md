@@ -6,7 +6,9 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/04/26
 
-* 08:10 Alderaan shut down due to sustained high temperature. 
+* 01:00 Alderaan jobs running at 1/2 speed (10 sec suspended, 10 sec resume) to reduce I/O load.
+
+* 08:10 Alderaan shut down due to sustained high temperature.
 
 ### 2025/04/25
 
