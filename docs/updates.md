@@ -5,13 +5,15 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 Alderaan is a High Performance Computing (HPC) facility, operating on the edge of what the hardware and cooling allow. When CPUs get too hot, they are slowed down adaptively to avoid heat damage. When disks in the storage nodes get too hot, jobs are periodically suspended to allow pending disk activity to resolve and to reduce the overall thermal load. When the datacenter temperature is too high, all nodes shut down automatically.
 
 ### 2025/04/28
-* Hardware maintenance planned, no downtime expected
+* Hardware maintenance planned, no downtime expected.
     - Hard reset node math-alderaan-c07 to hopefully return it to operations.
-    - Install additional fans in front of storage nodes
+    - Install additional fans in front of storage nodes to reduce their temperature.
        
 ### 2025/04/27
 
-* Alderaan is available for general use. Go ahead, by using it you will help testing the improved thermal monitoring and management.Always copy important files elsewhere.
+* Alderaan is available for general use. Go ahead, by using it you will help testing the improved thermal monitoring and management. Always copy important files elsewhere.
+
+* Storage nodes are still too warm. Until the disk temperature improves, Alderaan will run at a reduced speed (in a suspend all jobs - resume cycle) as needed to protect the disks with user files by reducing heat and disk I/O congestion.
 
 ### 2025/04/26
 
