@@ -13,7 +13,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 * Alderaan is available for general use. Go ahead, by using it you will help testing the improved thermal monitoring and management. Always copy important files elsewhere.
 
-* Storage nodes are still too warm. Until the disk temperature improves, Alderaan will run at a reduced speed (in a suspend all jobs - resume cycle) as needed to protect the disks with user files by reducing heat and disk I/O congestion.
+* Storage nodes are still too warm. Until the disk temperature improves, Alderaan will run at a reduced speed (in a suspend all jobs - resume cycle) as needed.
 
 ### 2025/04/26
 
