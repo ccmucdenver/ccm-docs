@@ -6,13 +6,17 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/04/29
 
-* Cooling is back to normal. Node math-alderaan-c07 seems dead. Operations normal otherwise.
+* Cooling is back to normal. Operations normal, except node math-alderaan-c07 is down.
 * When you report a problem with a job, please do not change the files and let me know where they are.  
 
 ### 2025/04/28
 * Hardware maintenance planned, no downtime expected.
     - Hard reset node math-alderaan-c07 to hopefully return it to operations.
     - Install additional fans in front of storage nodes to reduce their temperature.
+* 6:00pm
+    - math-alderaan-c07 responds on out of band network, but won't power up yet.
+    - Ambient temperature improved.
+    - Fans intalled.
        
 ### 2025/04/27
 
