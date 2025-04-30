@@ -10,13 +10,13 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 * When you report a problem with a job, please do not change the files and let me know where they are.  
 
 ### 2025/04/28
-* Hardware maintenance planned, no downtime expected.
+* 12:30 pm Hardware maintenance planned, no downtime expected.
     - Hard reset node math-alderaan-c07 to hopefully return it to operations.
     - Install additional fans in front of storage nodes to reduce their temperature.
-* 6:00pm
+* 6:00 pm
     - math-alderaan-c07 responds on out of band network, but won't power up yet.
     - Ambient temperature improved.
-    - Fans intalled.
+    - Additional fans for the storage nodes were installed.
        
 ### 2025/04/27
 
