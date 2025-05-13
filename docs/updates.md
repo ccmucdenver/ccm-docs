@@ -6,9 +6,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/05/12
 
-* 10am Troubleshooting node math-alderaan-c07, which won't power up. Several other nodes are drained and power off for testing. This should not disrupt the operations.
-* 12pm The main network switch went partially down. Login to the head node works, running jobs should not be affected, but new jobs will not start for now. You can check on your jobs by ssh to the node adding -ib at the end the node name.
-* 3pm Corrected an issue with one of the network plugs. The switches recovered. All seems to work normally now. Node math-alderaan-c07 remains out.
+* 10am Troubleshooting math-alderaan-c07. A related network issue prevented submitting new jobs from about 11am to 2pm. 
 
 ### 2025/04/29
 
