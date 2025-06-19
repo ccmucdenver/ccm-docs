@@ -2,9 +2,6 @@
 
 **Tested on macOS 15 Apple Sillicon with Docker Desktop 4.28**
 
-By: Gunnar Enserro Mar 26, 2025
-Updated by Jan Mandel Apr 2, 2025 
-
 This guide walks you through building a Docker image, pushing it to Docker Hub, and pulling it on a cluster as a Singularity container — **without requiring root access** on the cluster.
 
 > **Note:** This workflow is formulated for Mac with ARM architecture (e.g., M1–M4). It *should* also work on other platforms such as Intel Macs, Linux, or Windows (with WSL2) with minor changes:
@@ -280,3 +277,8 @@ If you're aware of a more streamlined approach for handling environment initiali
 - [Singularity Documentation](https://docs.sylabs.io/guides/3.0/user-guide/)
 - [Docker Hub Documentation](https://docs.docker.com/docker-hub/) 
 - Contact me if you have questions: gunnar.enserro@ucdenver.edu
+
+
+By: Gunnar Enserro Mar 26, 2025
+Updated by Jan Mandel Apr 2, 2025 
+

@@ -18,8 +18,13 @@ We often install software requested by users in singularity containers rather th
 
 Ask and we may be able to build a container for you if we do not have one already. Most of our containers originated this way.
 
-Building a Singularity container requires root privileges, so you can't build a container directly on our systems yourself.
-But nothing stops you from setting up your own linux machine with the same version of Singularity we have, building a container, and copying it here. 
+# Building Singularity containers
+
+Building a Singularity container requires root privileges, so you can't build a container directly on our systems yourself.  
+Nothing stops you from setting up your own linux machine with the same version of Singularity we have, building a container, and copying it here. You can also
+build a Docker container first and convert to singularity, without root,
+[like this](docker_to_singularity.md) 
+
 
 ## How to use a Singularity container interactively
 
