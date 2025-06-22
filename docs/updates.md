@@ -15,7 +15,8 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/05/12
 
-* 10am Troubleshooting math-alderaan-c07. A related network issue prevented submitting new jobs from about 11am to 2pm. 
+* 10am Troubleshooting math-alderaan-c07 in the datacenter. A related network issue prevented submitting new jobs from about 11am to 2pm.
+* Node math-alderaan-c07 will not power up and is permanently down.
 
 ### 2025/04/29
 
