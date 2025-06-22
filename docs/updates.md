@@ -7,6 +7,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 ### 2025/06/21
 
 * Node math-alderaan-h02 is being drained due to an issue with its Baseboard Management Controller (BMC). It will be returned service after all jobs running on it end and a visit to the datacenter can be scheduled.
+* Node math-alderaan-c07 removed from Slurm.
 
 ### 2025/05/16
 
@@ -20,8 +21,8 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 * Cooling is back to normal. Operations normal, except node math-alderaan-c07 is down.
 * When you report a problem with a job, please do not change the files and let me know where they are.  
-
 ### 2025/04/28
+
 * 12:30 pm Hardware maintenance planned, no downtime expected.
     - Hard reset node math-alderaan-c07 to hopefully return it to operations.
     - Install additional fans in front of storage nodes to reduce their temperature.
