@@ -6,10 +6,9 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/06/24
 
-* The GPU partitions were reconfigured so that the `math-alderaan-gpu-short` provides a faster turnaround shorter jobs (up to 1 day).
-    * Jobs submitted to the `math-alderaan-gpu` partition (up to 7 days) will run on node `math-alderaan-h01` only.
-    * Jobs submitted to the `math-alderaan-gpu-short` partition (up to 1 day) can run on node `math-alderaan-h02`, or on node `math-alderaan-h01`.
-  * The `math-alderaan-gpu-short` partition has higher scheduling priority than `math-alderaan-gpu`.
+* The GPU partitions were reconfigured so that the `math-alderaan-gpu-short` partition can provide a faster turnaround for shorter jobs (up to 1 day), while longer jobs (up to 7 days) can continue using the `math-alderaan-gpu` partition.
+    * Jobs submitted to the `math-alderaan-gpu` partition can run on node `math-alderaan-h01` only.
+    * Jobs submitted to the `math-alderaan-gpu-short` partition can run on node `math-alderaan-h02`, or, if the node is not available, on node `math-alderaan-h01`, with a higher scheduling priority than the `math-alderaan-gpu` partition.
     
 ### 2025/06/22
 
