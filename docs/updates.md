@@ -6,11 +6,11 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/06/24
 
-* The GPU partitions were reconfigured so that the `math-alderaan-gpu-short` partition can provide a faster turnaround for shorter jobs (up to 1 day), while longer jobs (up to 7 days) can continue using the `math-alderaan-gpu` partition.
-    * Jobs submitted to the `math-alderaan-gpu` partition can run on node `math-alderaan-h01` only.
-    * Jobs submitted to the `math-alderaan-gpu-short` partition can run on node `math-alderaan-h02`, or, if the node is not available, on node `math-alderaan-h01`, with a higher scheduling priority than the `math-alderaan-gpu` partition.
+* The GPU partitions were reconfigured so that the math-alderaan-gpu-short partition can provide a faster turnaround for shorter jobs (up to 1 day), while longer jobs (up to 7 days) can continue using the math-alderaan-gpu partition.
+    * Jobs submitted to the math-alderaan-gpu partition can run on node math-alderaan-h01 only.
+    * Jobs submitted to the math-alderaan-gpu-short partition can run on node math-alderaan-h02, or, if the node is not available, on node math-alderaan-h01, with a higher scheduling priority than the math-alderaan-gpu partition.
 
-* Both GPU nodes require maintenance next week. Partition `math-alderaan-gpu` was disabled. Existing jobs will be able to continue up to their time limit (7 days max). Partition `math-alderaan-gpu-short` will be disabled 1 day prior to the maintenance, exact date TBA, existing jobs will be allowed to finish (1 day max).
+* Partition math-alderaan-gpu was disabled in proparation of maintenance. Partition math-alderaan-gpu-short will be disabled 1 day prior to the maintenance. Exact date TBA. Existing jobs will be allowed to finish, up to their time limit.
     
 ### 2025/06/22
 
