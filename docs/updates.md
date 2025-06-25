@@ -10,7 +10,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
     * Jobs submitted to the math-alderaan-gpu partition can run on node math-alderaan-h01 only.
     * Jobs submitted to the math-alderaan-gpu-short partition can run on node math-alderaan-h02, or, if the node is not available, on node math-alderaan-h01, with a higher scheduling priority than the math-alderaan-gpu partition.
 
-* Partition math-alderaan-gpu was disabled in proparation of maintenance. Partition math-alderaan-gpu-short will be disabled 1 day prior to the maintenance. Exact date TBA. Existing jobs will be allowed to finish, up to their time limit.
+* Partition math-alderaan-gpu was disabled in preparation of maintenance. Partition math-alderaan-gpu-short will be disabled 1 day prior to the maintenance. Exact date TBA. Existing jobs will be allowed to finish.
     
 ### 2025/06/22
 
