@@ -6,11 +6,11 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/06/24
 
-* Partition *math-alderaan-gpu* was disabled to allow nodes *math-alderaan-h[01,02]* drain for maintenance next week, exact date TBD. Please use partition *math-alderaan-gpu-short* to run on the nodes. Partition *math-alderaan-gpu-short* will be disabled 1 day prior to the maintenance. Existing jobs will be allowed to finish.
+* Partition **math-alderaan-gpu** was disabled to allow nodes **math-alderaan-h[01,02]** drain for maintenance next week. Please use partition **math-alderaan-gpu-short** to run on the nodes. Partition **math-alderaan-gpu-short** will be disabled one day prior to the maintenance. Existing jobs will be allowed to finish.
 
-* The GPU partitions were reconfigured so that the math-alderaan-gpu-short partition can provide a faster turnaround for shorter jobs (up to 1 day), while longer jobs (up to 7 days) can continue using the math-alderaan-gpu partition.
-    * Jobs submitted to the math-alderaan-gpu partition can run on node math-alderaan-h01 only.
-    * Jobs submitted to the math-alderaan-gpu-short partition can run on node math-alderaan-h02, or, if the node is not available, on node math-alderaan-h01, with a higher scheduling priority than the math-alderaan-gpu partition.
+* The GPU partitions were reconfigured so that the **math-alderaan-gpu-short** partition can provide a faster turnaround for shorter jobs (up to one day), while longer jobs (up to 7 days) can run using the **math-alderaan-gpu** partition.
+    * Jobs submitted to the **math-alderaan-gpu** partition can run on node **math-alderaan-h01** only.
+    * Jobs submitted to the **math-alderaan-gpu-short** partition can run on node **math-alderaan-h02**, or, if the node is not available, on **node math-alderaan-h01**, with a higher scheduling priority.
     
 ### 2025/06/22
 
