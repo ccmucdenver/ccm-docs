@@ -6,9 +6,9 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/06/30
 
-* **math-alderaan-h01** is currently available in partition **math-alderaan-gpu-short** (1 day max) only due to ongoing maintemace on both **math-alderaan-h[01,02]** to allow for shared GPU use and an upcoming hardware reset.  After the maintance is complete, **math-alderaan-h01** will be added back also to partition **math-alderaan-gpu** (7 day max).
- 
-* **math-alderaan-h02** is not available due ongoing software maintenance (upgrade of CUDA drivers and hardware reset). 
+* Due to ongoing maintenance including upgrade of CUDA drivers and hardware reset:
+    * Partion **math-alderaan-gpu** is down. Please use ***math-alderaan-gpu-short** (1 day duration max).
+    * Jobs will execute on  **math-alderaan-h01**. **math-alderaan-h02** is not available.
 
 ### 2025/06/24
 
