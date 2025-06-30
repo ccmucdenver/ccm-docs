@@ -8,7 +8,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 * Due to ongoing maintenance including upgrade of CUDA drivers and hardware reset:
     * Partion **math-alderaan-gpu** is down. Please use partition **math-alderaan-gpu-short** (1 day job duration max).
-    * Jobs will execute on node **math-alderaan-h01**. node **math-alderaan-h02** is not available.
+    * Jobs will execute on node **math-alderaan-h01**. Node **math-alderaan-h02** is not available.
 
 ### 2025/06/24
 
