@@ -4,11 +4,17 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 
 Alderaan is a High Performance Computing (HPC) facility, operating on the edge of what the hardware and cooling allow. When CPUs get too hot, they are slowed down adaptively to avoid heat damage. When disks in the storage nodes get too hot, jobs are periodically suspended to allow pending disk activity to resolve and to reduce the overall thermal load. When the datacenter temperature is too high, all nodes shut down automatically.
 
+### 2025/06/30
+
+* **math-alderaan-h01** is currently available in partition **math-alderaan-gpu-short** (1 day max) only due to ongoing maintemace on both **math-alderaan-h[01,02]** (7 days max) to allow for shared GPU use and upcoming hardware reset.  After the maintance is complete, **math-alderaan-h01** will be added back also to partition **math-alderaan-gpu** (7 day max).
+ 
+* **math-alderaan-h02** is not available due ongoing software maintenance (upgrade of CUDA drivers and hardware reset). 
+
 ### 2025/06/24
 
-* Partition **math-alderaan-gpu** was disabled to allow nodes **math-alderaan-h[01,02]** drain for maintenance next week. Please use partition **math-alderaan-gpu-short** to run on the nodes. Partition **math-alderaan-gpu-short** will be disabled one day prior to the maintenance. Existing jobs will be allowed to finish.
+* Partition **math-alderaan-gpu** was disabled **temporarily** to allow nodes **math-alderaan-h[01,02]** drain for maintenance next week. Please use partition **math-alderaan-gpu-short** to run on the nodes. Partition **math-alderaan-gpu-short** will be disabled one day prior to the maintenance. Existing jobs will be allowed to finish. After the maintenance is performed, 
 
-* The GPU partitions were reconfigured so that the **math-alderaan-gpu-short** partition can provide a faster turnaround for shorter jobs (up to one day), while longer jobs (up to 7 days) can run using the **math-alderaan-gpu** partition.
+* The GPU partitions were reconfigured **permanently** so that the **math-alderaan-gpu-short** partition can provide a faster turnaround for shorter jobs (up to one day), while longer jobs (up to 7 days) can run using the **math-alderaan-gpu** partition.
     * Jobs submitted to the **math-alderaan-gpu** partition can run on node **math-alderaan-h01** only.
     * Jobs submitted to the **math-alderaan-gpu-short** partition can run on node **math-alderaan-h02**, or, if the node is not available, on **node math-alderaan-h01**, with a higher scheduling priority.
     
