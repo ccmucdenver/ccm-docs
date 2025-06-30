@@ -12,7 +12,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/06/24
 
-* Partition **math-alderaan-gpu** was disabled **temporarily** to allow nodes **math-alderaan-h[01,02]** drain for maintenance next week. Please use partition **math-alderaan-gpu-short** to run on the nodes. Partition **math-alderaan-gpu-short** will be disabled one day prior to the maintenance. Existing jobs will be allowed to finish. After the maintenance is performed, 
+* Partition **math-alderaan-gpu** was disabled **temporarily** to allow nodes **math-alderaan-h[01,02]** drain for maintenance next week. Please use partition **math-alderaan-gpu-short** to run on the nodes. Partition **math-alderaan-gpu-short** will be disabled one day prior to the maintenance. Existing jobs will be allowed to finish.
 
 * The GPU partitions were reconfigured **permanently** so that the **math-alderaan-gpu-short** partition can provide a faster turnaround for shorter jobs (up to one day), while longer jobs (up to 7 days) can run using the **math-alderaan-gpu** partition.
     * Jobs submitted to the **math-alderaan-gpu** partition can run on node **math-alderaan-h01** only.
