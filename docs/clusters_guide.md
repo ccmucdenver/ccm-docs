@@ -439,7 +439,7 @@ You can request the number of nodes. The scheduler will then split the tasks ove
 
 ### How to to run with GPU on Alderaan
 
-The partition math-alderaan-gpu has two high memory/GPU nodes`math-alderann-h[01,02]` with two NVIDIA A-100 40GB GPUs and 2TB memory each. Use `--partition=math-alderaan-gpu` with `--gres=gpu:a100:1` to request one GPU and `--gres=gpu:a100:2` to request two GPUs. At the moment, Alderaan does not support explicit memory allocation by the --mem flag. 
+The partitions math-alderaan-gpu-short and math-alderaan-gpu have two high memory/GPU nodes`math-alderann-h[01,02]` with two NVIDIA A-100 40GB GPUs and 2TB memory each. Use `--partition=math-alderaan-gpu-short` (1 day job dutation maximum) with `--gres=gpu:a100:1` to request one GPU and `--gres=gpu:a100:2` to request two GPUs. For longer jobs, up to 7 days, you can use `--partition=math-alderaan-gpu`, but node availability may be limited and your job may wait longer.
  
 **Please do not use Alderaan GPUs without allocating them by `--gres` as above first. Please do not request an entire node on Alderaan by `--nodes` or `-N`, unless you really need all of it, request only the CPU cores you need by `--ntasks`. Large memory jobs and GPUs jobs can share the same node.**
 
@@ -460,7 +460,7 @@ It is recommended to use the tensorflow singularity container because it has upd
 
 From the command line, 
 
-     srun -p math-alderaan-gpu --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
+     srun -p math-alderaan-gpu-short --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
      
 will give you an interactive shell on one of the GPU nodes with one GPU allocated. You can then start singluarity shell
 
@@ -468,7 +468,7 @@ will give you an interactive shell on one of the GPU nodes with one GPU allocate
 
 You can also start the Singularity shell directly:
 
-    srun -p math-alderaan-gpu --time=2:00:0 -n 1 --gres=gpu:a100:1 singularity shell /storage/singularity/tensorflow.sif
+    srun -p math-alderaan-gpu-short--time=2:00:0 -n 1 --gres=gpu:a100:1 singularity shell /storage/singularity/tensorflow.sif
          
 will allocate one GPU, one core, and run an internactive sinularity shell.
 
@@ -496,7 +496,7 @@ This will request a session for you as a job in a single core slot on a compute 
 
 To start an interactive job on Alderaan with a GPU:
 ```
-srun -p math-alderaan-gpu --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
+srun -p math-alderaan-gpu-short--time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
 ```
 
 ## Viewing Job Queues, Job Status, and System Status
