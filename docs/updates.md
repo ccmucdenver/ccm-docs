@@ -6,11 +6,13 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/07/02
 
-* Nodes **math-alderaan-h[01,02]** are draining for maintenance tomorrow 10am.
-* After the reset is completed,
-    * **math-alderaan-h01** will be available in both partitions **math-alderaan-gpu** and **math-alderaan-gpu-short**
-    * **math-alderaan-h02** will be available in partitions and **math-alderaan-gpu-short** only, which a maximum job duration one day, for faster job turnaround.
-* Continuation of maintenance (CUDA drivers upgrade) on **math-alderaan-h02** is planned next week, with exact date TBD. 
+Nodes **math-alderaan-h[01,02]** are draining for short maintenance (hardware reset) planned for tomorrow 10am.
+
+* After the reset is completed:
+  * **math-alderaan-h01** will be available in both partitions **math-alderaan-gpu** and **math-alderaan-gpu-short**
+  * **math-alderaan-h02** will be available in **math-alderaan-gpu-short** only, with a maximum job duration of one day, for faster job turnaround.
+
+* Continuation of maintenance (CUDA drivers upgrade) on **math-alderaan-h02** is planned next week, date TBD.
 
 ### 2025/06/30
 
