@@ -1,14 +1,14 @@
 # Accounts
 ## Eligibility
-Employees and students with `ucdenver.edu` or `cuanschutz.edu` login credentials. 
-External collaborators sponsored by a faculty member.
+Employees, students, and external collaborators sponsored by a faculty member. `ucdenver.edu` or `cuanschutz.edu` login with VPN access required.
+
 
 ## How to get an account
 
 Please 
 
   * **Read the [Terms and Conditions](../TermsandConditions) first.**
-  * Use [this form](https://forms.office.com/r/GQ9ef7ei4i) to request an account. **For a permanent account, the form should be filled by a faculty member (the PI of the project) and list users in their group, such as students, postdocs, or external collaborators.** Compliance needs the legal "yes" clicks from a faculty member. External collaborators need an affiliate appointment called "POI" with remote access first, talk to your department HR contact. Check "security" on their affiliate form.
+  * Use [this form](https://forms.office.com/r/GQ9ef7ei4i) to request an account. **For a permanent account, the form should be filled by a faculty member (the PI of the project) and list users in their group, such as students, postdocs, or external collaborators.** Compliance needs the legal "yes" clicks from a faculty member. External collaborators need an affiliate appointment called "POI" with remote access first, talk to your department HR contact. Check "security" on their affiliate form to request VPN.
 
 The form will ask for the **CU Denver email addresses** for all accounts to be created, and
 
@@ -56,17 +56,17 @@ Use the command `du -sh` in a directory to see how much storage space you are us
 
 The planned allocaton  in future are:
 
-* **Small** - up to 30,000 Alderaan core hours, max 128 concurrent cores per user, standard storage. Automatic with an account.
-* **Medium** - up to 150,000 Alderaan core hours, max 640 concurrent cores, additional storage.
-* **Large** - larger than medium. 
+  * **Small** - up to 30,000 Alderaan core hours, max 128 concurrent cores per user, standard storage. Automatic with an account.
+  * **Medium** - up to 150,000 Alderaan core hours, max 640 concurrent cores, additional storage.
+  * **Large** - larger than medium. 
 
-Jobs are charged for the total reserved core time, whether used or not. 
-Jobs on Alderaan GPU/high memory nodes are charged for all 64 cores on the node. 
+Jobs are charged for the total reserved core time, whether used or not.  
 
 -->
 
 ## Old Files
  
-Upon project or user inactivation, the files will be deleted after a notification (if the user's university email still works) and a grace period. 
+  * After a period of user inactivity, user files can be deleted after a notification to the user's university email address and a grace period.
+  * Older files in scratch space can be deleted also for active users.
 
 
