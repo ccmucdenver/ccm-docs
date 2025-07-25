@@ -8,6 +8,10 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 * Alderaan will run at reduced capacity because of planned datacenter maintenance. Some partitions will start getting suspended and some nodes getting drained from 8/7.
 
+### 2025/07/25
+
+* Waiting for information from the vendor regarding CUDA drivers upgrade, which are needed for CUDA 12 and pytorch. Nodes **math-alderaan-h[01,02]** are still running in partition **math-alderaan-gpu-short** only, in order to allow installation of CUDA drivers upgrade to continue with 24 hours lead time once ready to proceed.
+
 ### 2025/07/02
 
 Nodes **math-alderaan-h[01,02]** are draining for short maintenance (hardware reset) planned for tomorrow 10am.
