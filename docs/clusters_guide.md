@@ -227,102 +227,133 @@ For instance, if my CU Denver username is duffme, I had a file on Alderaan I wan
 Jobs are submitted to compute nodes through the scheduler.  To see the queues (called "partitions") on the scheduler, type 
 
     $ sinfo
-    PARTITION         AVAIL  TIMELIMIT  NODES  STATE NODELIST
-    math-alderaan        up 7-00:00:00      1 drain* math-alderaan-c28
-    math-alderaan        up 7-00:00:00      4    mix math-alderaan-c[01,08-10]
-    math-alderaan        up 7-00:00:00     25  alloc math-alderaan-c[04-07,11-27,29-32]
-    math-alderaan        up 7-00:00:00      2   idle math-alderaan-c[02-03]
-    math-alderaan-gpu    up 7-00:00:00      1    mix math-alderaan-h01
-    math-alderaan-gpu    up 7-00:00:00      1  alloc math-alderaan-h02
-    math-colibri-gpu     up   infinite     24   idle math-colibri-c[01-24]
-    math-score           up   infinite      5   idle math-score-c[01-05]
-    chem-xenon           up   infinite      6   unk* chem-xenon-c[01-06]
-    clas-interactive     up   infinite      1   idle math-colibri-i02
-    math-alderaan-osg    up 1-00:00:00      1 drain* math-alderaan-c28
-    math-alderaan-osg    up 1-00:00:00      4    mix math-alderaan-c[01,08-10]
-    math-alderaan-osg    up 1-00:00:00     25  alloc math-alderaan-c[04-07,11-27,29-32]
-    math-alderaan-osg    up 1-00:00:00      2   idle math-alderaan-c[02-03]
-    clas-dev             up   infinite      1   idle clas-devnode-c01
+    PARTITION               AVAIL  TIMELIMIT  NODES  STATE NODELIST
+    math-alderaan              up 7-00:00:00      2    mix math-alderaan-c[08,16]
+    math-alderaan              up 7-00:00:00     25  alloc math-alderaan-c[01-06,09-15,17,21-29,31-32]
+    math-alderaan              up 7-00:00:00      3   idle math-alderaan-c[18-20]
+    math-alderaan-short        up 1-00:00:00      2    mix math-alderaan-c[08,16]
+    math-alderaan-short        up 1-00:00:00     25  alloc math-alderaan-c[01-06,09-15,17,21-29,31-32]
+    math-alderaan-short        up 1-00:00:00      3   idle math-alderaan-c[18-20]
+    jupyter                    up 7-00:00:00      2    mix math-alderaan-c[08,16]
+    jupyter                    up 7-00:00:00     25  alloc math-alderaan-c[01-06,09-15,17,21-29,31-32]
+    jupyter                    up 7-00:00:00      3   idle math-alderaan-c[18-20]
+    system_test                up 7-00:00:00      1   idle math-alderaan-c30
+    math-alderaan-gpu        down 7-00:00:00      1  drain math-alderaan-h01
+    math-alderaan-gpu-short    up 1-00:00:00      2    mix math-alderaan-h[01-02]
+    math-score                 up   infinite      5  down* math-score-c[01-05]
+    clas-interactive           up   infinite      2  down* math-colibri-i02,math-score-i01
 
 ### Nodes
 To see a list of all nodes, use:
 
      $ sinfo -N
-     NODELIST           NODES         PARTITION STATE 
-     chem-xenon-c01         1        chem-xenon unk*  
-     chem-xenon-c02         1        chem-xenon unk*  
-     chem-xenon-c03         1        chem-xenon unk*  
-     chem-xenon-c04         1        chem-xenon unk*  
-     chem-xenon-c05         1        chem-xenon unk*  
-     chem-xenon-c06         1        chem-xenon unk*  
-     clas-rcdesktop-01      1    clas-rcdesktop down* 
-     math-alderaan-c01      1     math-alderaan alloc 
-     math-alderaan-c02      1     math-alderaan alloc 
-     math-alderaan-c03      1     math-alderaan alloc 
-     math-alderaan-c04      1     math-alderaan alloc 
-     math-alderaan-c05      1     math-alderaan alloc 
-     math-alderaan-c06      1     math-alderaan alloc 
-     math-alderaan-c07      1     math-alderaan alloc 
-     math-alderaan-c08      1     math-alderaan alloc 
-     math-alderaan-c09      1     math-alderaan alloc 
-     math-alderaan-c10      1     math-alderaan alloc 
-     math-alderaan-c11      1     math-alderaan alloc 
-     math-alderaan-c12      1     math-alderaan alloc 
-     math-alderaan-c13      1     math-alderaan alloc 
-     math-alderaan-c14      1     math-alderaan alloc 
-     math-alderaan-c15      1     math-alderaan alloc 
-     math-alderaan-c16      1     math-alderaan mix   
-     math-alderaan-c17      1     math-alderaan idle  
-     math-alderaan-c18      1     math-alderaan idle  
-     math-alderaan-c19      1     math-alderaan idle  
-     math-alderaan-c20      1     math-alderaan idle  
-     math-alderaan-c21      1     math-alderaan idle  
-     math-alderaan-c22      1     math-alderaan idle  
-     math-alderaan-c23      1     math-alderaan idle  
-     math-alderaan-c24      1     math-alderaan idle  
-     math-alderaan-c25      1     math-alderaan idle  
-     math-alderaan-c26      1     math-alderaan idle  
-     math-alderaan-c27      1     math-alderaan idle  
-     math-alderaan-c28      1     math-alderaan idle  
-     math-alderaan-c29      1     math-alderaan idle  
-     math-alderaan-c30      1     math-alderaan idle  
-     math-alderaan-c31      1     math-alderaan idle  
-     math-alderaan-c32      1     math-alderaan idle  
-     math-alderaan-h01      1 math-alderaan-gpu idle  
-     math-alderaan-h02      1 math-alderaan-gpu idle  
-     math-colibri-c01       1  math-colibri-gpu idle  
-     math-colibri-c02       1  math-colibri-gpu idle  
-     math-colibri-c03       1  math-colibri-gpu idle  
-     math-colibri-c04       1  math-colibri-gpu unk*  
-     math-colibri-c05       1  math-colibri-gpu unk*  
-     math-colibri-c06       1  math-colibri-gpu unk*  
-     math-colibri-c07       1  math-colibri-gpu unk*  
-     math-colibri-c08       1  math-colibri-gpu unk*  
-     math-colibri-c09       1  math-colibri-gpu unk*  
-     math-colibri-c10       1  math-colibri-gpu unk*  
-     math-colibri-c11       1  math-colibri-gpu unk*  
-     math-colibri-c12       1  math-colibri-gpu unk*  
-     math-colibri-c13       1  math-colibri-gpu idle  
-     math-colibri-c14       1  math-colibri-gpu idle  
-     math-colibri-c15       1  math-colibri-gpu idle  
-     math-colibri-c16       1  math-colibri-gpu idle  
-     math-colibri-c17       1  math-colibri-gpu idle  
-     math-colibri-c18       1  math-colibri-gpu idle  
-     math-colibri-c19       1  math-colibri-gpu idle  
-     math-colibri-c20       1  math-colibri-gpu idle  
-     math-colibri-c21       1  math-colibri-gpu idle  
-     math-colibri-c22       1  math-colibri-gpu idle  
-     math-colibri-c23       1  math-colibri-gpu idle  
-     math-colibri-c24       1  math-colibri-gpu idle  
-     math-score-c01         1        math-score unk*  
-     math-score-c02         1        math-score unk*  
-     math-score-c03         1        math-score idle  
-     math-score-c04         1        math-score idle  
-     math-score-c05         1        math-score idle  
+      sinfo -N
+    NODELIST           NODES               PARTITION STATE 
+    math-alderaan-c01      1     math-alderaan-short alloc 
+    math-alderaan-c01      1                 jupyter alloc 
+    math-alderaan-c01      1           math-alderaan alloc 
+    math-alderaan-c02      1     math-alderaan-short alloc 
+    math-alderaan-c02      1                 jupyter alloc 
+    math-alderaan-c02      1           math-alderaan alloc 
+    math-alderaan-c03      1     math-alderaan-short alloc 
+    math-alderaan-c03      1                 jupyter alloc 
+    math-alderaan-c03      1           math-alderaan alloc 
+    math-alderaan-c04      1     math-alderaan-short alloc 
+    math-alderaan-c04      1                 jupyter alloc 
+    math-alderaan-c04      1           math-alderaan alloc 
+    math-alderaan-c05      1     math-alderaan-short alloc 
+    math-alderaan-c05      1                 jupyter alloc 
+    math-alderaan-c05      1           math-alderaan alloc 
+    math-alderaan-c06      1     math-alderaan-short alloc 
+    math-alderaan-c06      1                 jupyter alloc 
+    math-alderaan-c06      1           math-alderaan alloc 
+    math-alderaan-c08      1     math-alderaan-short alloc 
+    math-alderaan-c08      1                 jupyter alloc 
+    math-alderaan-c08      1           math-alderaan alloc 
+    math-alderaan-c09      1     math-alderaan-short alloc 
+    math-alderaan-c09      1                 jupyter alloc 
+    math-alderaan-c09      1           math-alderaan alloc 
+    math-alderaan-c10      1     math-alderaan-short alloc 
+    math-alderaan-c10      1                 jupyter alloc 
+    math-alderaan-c10      1           math-alderaan alloc 
+    math-alderaan-c11      1     math-alderaan-short alloc 
+    math-alderaan-c11      1                 jupyter alloc 
+    math-alderaan-c11      1           math-alderaan alloc 
+    math-alderaan-c12      1     math-alderaan-short alloc 
+    math-alderaan-c12      1                 jupyter alloc 
+    math-alderaan-c12      1           math-alderaan alloc 
+    math-alderaan-c13      1     math-alderaan-short alloc 
+    math-alderaan-c13      1                 jupyter alloc 
+    math-alderaan-c13      1           math-alderaan alloc 
+    math-alderaan-c14      1     math-alderaan-short alloc 
+    math-alderaan-c14      1                 jupyter alloc 
+    math-alderaan-c14      1           math-alderaan alloc 
+    math-alderaan-c15      1     math-alderaan-short alloc 
+    math-alderaan-c15      1                 jupyter alloc 
+    math-alderaan-c15      1           math-alderaan alloc 
+    math-alderaan-c16      1     math-alderaan-short mix   
+    math-alderaan-c16      1                 jupyter mix   
+    math-alderaan-c16      1           math-alderaan mix   
+    math-alderaan-c17      1     math-alderaan-short alloc 
+    math-alderaan-c17      1                 jupyter alloc 
+    math-alderaan-c17      1           math-alderaan alloc 
+    math-alderaan-c18      1     math-alderaan-short idle  
+    math-alderaan-c18      1                 jupyter idle  
+    math-alderaan-c18      1           math-alderaan idle  
+    math-alderaan-c19      1     math-alderaan-short idle  
+    math-alderaan-c19      1                 jupyter idle  
+    math-alderaan-c19      1           math-alderaan idle  
+    math-alderaan-c20      1     math-alderaan-short idle  
+    math-alderaan-c20      1                 jupyter idle  
+    math-alderaan-c20      1           math-alderaan idle  
+    math-alderaan-c21      1     math-alderaan-short alloc 
+    math-alderaan-c21      1                 jupyter alloc 
+    math-alderaan-c21      1           math-alderaan alloc 
+    math-alderaan-c22      1     math-alderaan-short alloc 
+    math-alderaan-c22      1                 jupyter alloc 
+    math-alderaan-c22      1           math-alderaan alloc 
+    math-alderaan-c23      1     math-alderaan-short alloc 
+    math-alderaan-c23      1                 jupyter alloc 
+    math-alderaan-c23      1           math-alderaan alloc 
+    math-alderaan-c24      1     math-alderaan-short alloc 
+    math-alderaan-c24      1                 jupyter alloc 
+    math-alderaan-c24      1           math-alderaan alloc 
+    math-alderaan-c25      1     math-alderaan-short alloc 
+    math-alderaan-c25      1                 jupyter alloc 
+    math-alderaan-c25      1           math-alderaan alloc 
+    math-alderaan-c26      1     math-alderaan-short alloc 
+    math-alderaan-c26      1                 jupyter alloc 
+    math-alderaan-c26      1           math-alderaan alloc 
+    math-alderaan-c27      1     math-alderaan-short alloc 
+    math-alderaan-c27      1                 jupyter alloc 
+    math-alderaan-c27      1           math-alderaan alloc 
+    math-alderaan-c28      1     math-alderaan-short alloc 
+    math-alderaan-c28      1                 jupyter alloc 
+    math-alderaan-c28      1           math-alderaan alloc 
+    math-alderaan-c29      1     math-alderaan-short alloc 
+    math-alderaan-c29      1                 jupyter alloc 
+    math-alderaan-c29      1           math-alderaan alloc 
+    math-alderaan-c30      1             system_test idle  
+    math-alderaan-c31      1     math-alderaan-short alloc 
+    math-alderaan-c31      1                 jupyter alloc 
+    math-alderaan-c31      1           math-alderaan alloc 
+    math-alderaan-c32      1     math-alderaan-short alloc 
+    math-alderaan-c32      1                 jupyter alloc 
+    math-alderaan-c32      1           math-alderaan alloc 
+    math-alderaan-h01      1 math-alderaan-gpu-short drain 
+    math-alderaan-h01      1       math-alderaan-gpu drain 
+    math-alderaan-h02      1 math-alderaan-gpu-short drain 
+    math-colibri-i02       1        clas-interactive down* 
+    math-score-c01         1              math-score down* 
+    math-score-c02         1              math-score down* 
+    math-score-c03         1              math-score down* 
+    math-score-c04         1              math-score down* 
+    math-score-c05         1              math-score down* 
+    math-score-i01         1        clas-interactive down* 
 
 
 
-It looks confusing but there is a method to the madness in the naming convention. Obviously, math-colibri and math-score are the identifiers for what cluster/building the servers are in, but the –c## and –i## stand for compute and interactive. The c## servers are usually part of the queuing system and the i## ones are for interactive use. Again, never ssh to compute nodes directly.
+It looks confusing but there is a method to the madness in the naming convention. Obviously, math-colibri and math-score are the identifiers for what cluster/building the servers are in, but the –c## and –i## stand for compute and interactive. The c## servers are usually part of the queuing system and **the i## ones are for interactive use and you can ssh there directly**. Again, never ssh to compute nodes directly.
 
 ## Submitting Jobs to the Scheduler
 
@@ -352,11 +383,6 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 | `#SBATCH --time=`      | Specifies the maximum runtime for the job in the format `days-hours:minutes:seconds`. <br> Examples: <br>1 Day: `#SBATCH --time=1-00:00:00`<br>1 hour: `#SBATCH --time=01:00:00`<br>1 minute: `#SBATCH --time=00:01:00` | Alderaan partitions will run jobs up to one week. If you need more time, use one of the older partitions (score or colibri). |  
 | `#SBATCH --partition=` | Specifies the partition or queue where the job will be submitted. | Recommend: Use CPU or GPU Alderaan partitions. <br> CPU nodes, specify: `#SBATCH --partition=math-alderaan`<br>GPU nodes, specify: `#SBATCH --partition=math-alderaan-gpu`<br>Older partitions: `math-score`, `math-colibri` |
 | `#SBATCH --array=`     | Specifies an array of job tasks with indices for array job submissions. <br> Examples: <br> `#SBATCH --array=1-5` <br> `#SBATCH --array=0-10,20-21` | You can specify how many array jobs to run at one time with `%`. <br> Example: <br> Run only 3 jobs at one time for 10 jobs: `#SBATCH --array=1-10%3` |
-
-
-  
-
-
 
 ### Single-core job
 
@@ -471,18 +497,6 @@ You can also start the Singularity shell directly:
     srun -p math-alderaan-gpu-short--time=2:00:0 -n 1 --gres=gpu:a100:1 singularity shell /storage/singularity/tensorflow.sif
          
 will allocate one GPU, one core, and run an internactive sinularity shell.
-
-### How to run with GPUs on Colibri
-
- To use Colibri GPUs, do not use `--gres` but reserve a whole node by `--nodes=1`. Singularity containers work on Colibri, but current versions of tensorflow do not support the CPUs on Colibri. You can use an older version instead:
- 
-    #!/bin/bash
-    #SBATCH --job-name=gpu
-    #SBATCH --gres=gpu:a100:1
-    #SBATCH --partition=math-colibri-gpu
-    #SBATCH --time=1:00:00                  # Max wall-clock time 1 day 1 hour
-    #SBATCH --nodes=1                       # number of nodes
-    singularity exec /storage/singularity/tensorflow-v1.3.sif python3 yourgpucode.py
     
     
 ## Interactive jobs
@@ -532,9 +546,7 @@ Here are the best practices when you compile and link your own software:
 
 * Use `math-alderaan` head node to build software for use on the Alderaan cluster. Use `module avail` to see which tools are available in [modules](./modules/). We can add other tools and package them in modules on request.
 
-* Use `clas-compute` or `math-colibri-i02` to build software for the Colibri cluster, and `clas-compute` or `math-score-i01` for the Score cluster. You can download and build libraries and other package in your own account.
-
-* Alderaan runs Centos 8, while `clas-compute` and Colibri and Score clusters Centos 7. Software built on one will normally not work on the other.
+* Alderaan nodes run Centos 8, while Colibri and Score nodes Centos 7. Software built on one will generally not work on the other.
 
 ## Linux Introduction  
 
