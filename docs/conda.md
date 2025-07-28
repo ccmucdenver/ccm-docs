@@ -1,12 +1,16 @@
 # Conda and Python
 
+## Managing Python packages
+
+You can use the system-provided Python, or many of our singularity containers, each with their collection of packages at different versions, including Python itself. But no fixed collection of Python packages versions can satisfy everyone's needs. Python packages are evolving fast, and many depend on specific versions of other packages.
+
 ## Why Conda
 
-Conda provides isolated environments with binary packages, including Python and non-Python software. This avoids dependency conflicts and often eliminates the need for custom Singularity containers.
-
-We use **Miniforge**, which defaults to the **conda-forge** channel — a community-maintained collection with no licensing restrictions. Avoid the `defaults` and `anaconda` channels to stay clear of commercial license issues.
+Package managers have been created to install the packages user requires with their dependences automatically, but sometimes a combination of versions that would satisfy all dependences does not exist. Conda provides isolated **environments* for collections of software packages, including Python and non-Python software. This avoids dependency conflicts and often eliminates the need for custom Singularity containers.
 
 ## Installing Miniforge
+
+We use **Miniforge**, which defaults to the **conda-forge** channel — a community-maintained collection with no licensing restrictions. Avoid the `defaults` and `anaconda` channels to stay clear of commercial license issues.
 
 On a compute node (e.g. `ssh math-alderaan`):
 
