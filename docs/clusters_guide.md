@@ -34,7 +34,7 @@ from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-con
 
 SSH also allows you to transfer files via scp, sftp, or rsync commands. 
 
-Alderaan cluster runs Centos 8, while the legacy Score and Colibri nodes and `clas-compute` secondary head node run Centos 7.
+Alderaan cluster runs Centos 8, while some additional legacy nodes run Centos 7.
 
 ### Interactive use limitations
 
