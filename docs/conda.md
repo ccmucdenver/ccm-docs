@@ -1,135 +1,101 @@
-# Python and Conda
+# Conda and Python
 
-## Managing Python packages
-Python packages are evolving fast, and many depend on specific versions of other packages. Package managers have been created to 
-install the packages user requires with their dependences automatically, but sometimes a combination of versions that would 
-satisfy all dependences does not exist. 
+## Why Conda
 
-You can use the system-provided Python, or many of our singularity container, each with their collection
-of packages at different versions, including Python itself. But no fixed collection of Python packages versions can satisfy everyone's needs.
+Conda provides isolated environments with binary packages, including Python and non-Python software. This avoids dependency conflicts and often eliminates the need for custom Singularity containers.
 
-## Conda
+We use **Miniforge**, which defaults to the **conda-forge** channel — a community-maintained collection with no licensing restrictions. Avoid the `defaults` and `anaconda` channels to stay clear of commercial license issues.
 
-The currently preferred solution is to to install your own Python packages for your specific needs in **Conda environments**. 
-Conda environments are collections of packages compatible with each other. 
-It is best not use `pip` to install Python packages in a Conda environment unless there is no other way. 
-Pip does not try to check and resolve version conflicts and you can end up with a broken installation. 
+## Installing Miniforge
 
-Conda allows to install also other software packages besides Python. The invidual software instructions should list how, if conda packaging is available.
+On a compute node (e.g. `ssh math-alderaan`):
 
-## Install Conda
+```bash
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+bash Miniforge3-Linux-x86_64.sh
+```
 
-Open an ssh window an alderaan and type 
+At the end, say **yes** to:
 
-     wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
-     bash Miniforge3-Linux-x86_64.sh
+```
+Do you wish to update your shell profile to automatically initialize conda?
+```
 
-and follow the directions. At the end, you should see the question
-    
-    Do you wish to update your shell profile to automatically initialize conda? 
-    (...) [yes|no]
-    
-Answer yes.  Edit your `~/.bash_profile` file to add the line  
+Then edit your `~/.bash_profile` and add:
 
-    source .bashrc
-    
-then log out and back in. The `conda` command should now be available.
- 
-You can stop Conda from activating on login if you do not want to use it every time you log in, by
+```bash
+source .bashrc
+```
 
-    conda config --set auto_activate_base false
+Log out and back in. The `conda` command should now work. If you wish to avoid auto-activating the base environment:
 
-as suggested by the installer. 
+```bash
+conda config --set auto_activate_base false
+```
 
-Notes: If you already have your own custom settings
-in `~/.bash_profile` or `~/.bashrc`, you should review both files to make sure that they do what you intended, 
-because a login shell will now source both files and the resulting environment may change. 
-Initializing anaconda makes changes to your `~/.bashrc` file. 
-When a new interactive shell starts it will source `~/.bashrc` and make `conda` available, 
-but a login shell will source `~/.bash_profile` instead. See
-`man bash` and search for INVOCATION for more details. 
-You can't change `bash` to another shell because of the way how the authentication is set up on the clusters.
+## Creating and Managing Environments
 
-## Create Conda environments and install packages
+Create an environment with specific packages, for example:
 
-Activate the base environment:
-    
-    conda activate
-    
-You should see your prompt change to start with `(base)`. Create your first environment, for example:
-    
-     conda create --name myenv -c conda-forge python=3.6 paramiko gdal matplotlib tensorflow pandas
+```bash
+conda create -n myenv -c conda-forge python=3.11 numpy gdal tensorflow openmpi
+```
 
-**conda-forge** is a channel (a collection of packages) available without licensing restrictions. See https://www.anaconda.com/docs/tools/working-with-conda/channels for more details and https://www.datacamp.com/blog/navigating-anaconda-licensing for licensing issues.
+Activate it:
 
-Of course, these are just examples,  use names of the packages and their versions that **you** need. Note that you can request specific versions of everything, even Python itself.
-You can even create an environment with an old python version, for example:
+```bash
+conda activate myenv
+```
 
-     conda create --name py2numpy python=2.7 numpy
+To install additional packages in an evironment, first activate it, then:
 
-Conda will search for a combination of the versions of dependencies that allows it
-to install what you asked for. It can install all packages at once, which often minimizes the chances of a version conflict. 
-If Conda says that compatible versions of some packages cannot be found, you can create your enviroment with just a few or even one package, and add others in groups or one by one:
+```bash
+conda install -c conda-forge netCDF4 PyGrib
+```
 
-    conda activate myenv
-    conda  install -c conda-forge netCDF4 PyGrib
+Only use `pip` if a Python package isn’t on `conda-forge`:
 
-It is best to install packages with many or hard to satisfy dependences first. These include tensorflow and gdal.
-    
-Finally, use pip to install packages that cannot be found:
+```bash
+pip install MesoPy
+```
 
-    pip install MesoPy
+Deactivate when done:
 
-You may want to deactivate Conda when you are not using the environment:
+```bash
+conda deactivate
+```
 
-    conda deactivate
-    
-To make more environments, it is best to start again from the base environment like above.
+Keep packages from one project in a dedicated environment.
 
-Consistent use of `conda-forge` is recommended because some packages and versions may be available on conda-forge only, it is usually best to minimize incompatibility  
-by pulling packages from the same channel.
+## Using in Slurm Jobs
 
-Avoid the defaults and anaconda channels. Their use may require a commercial license if your organization has 200 or more employees or contractors, regardless of non-profit or academic status. Prefer conda-forge, which is free and community-maintained.and other channels (defaults, anaconda) are subject to licensing restrictions under some circumstances, such as when used in
-a project which benefits a private company. See https://www.anaconda.com/pricing/terms-of-service-faqs for details.
+Example batch script:
 
-It is recommended and sometimes necessary to create separate environments for projects with many dependencies, as too many dependencies tend to conflict eventually.
-    
-## Using Conda environments in a batch script
+```bash
+#!/bin/bash
+#SBATCH --partition=math-alderaan
+#SBATCH --job-name=myjob
+#SBATCH --time=1:00:00
+#SBATCH --ntasks=1
 
-Make a batch script like this:
+source ~/.bashrc
+conda activate myenv
+python myscript.py
+```
 
-    #!/bin/bash
-    #SBATCH --partition=math-alderaan
-    #SBATCH --job-name=conda
-    #SBATCH --nodes=1                         # Number of requested nodes
-    #SBATCH --time=1:00:00                    # Max wall time
-    #SBATCH --ntasks=1                      # Number of tasks per job
-    #
-    # first emulate what happens at login or interactive shell
-    source ~/.bashrc
-    # now we can do what we normally would at the command line
-    conda activate myenv
-    python mycode.py
-    
-and submit to the scheduler using sbatch as usual.
+Submit with:
 
-## Uninstalling Anaconda
+```bash
+sbatch myjob.sh
+```
 
-Sometimes you may need to uninstall Anaconda, e.g. to save space, or if something goes wrong and you need to start over.
-Delete the Anaconda install directory
+## Uninstalling Conda
 
-    cd /data001/projects/<username>
-    rm -rf anaconda3
-    
-Then, edit `~/.bashrc` and delete the lines from
+To remove Miniforge:
 
-    # >>> conda initialize >>>
-    
-to 
+```bash
+rm -rf ~/miniforge3
+```
 
-    # <<< conda initialize <<<
+Then clean up your `~/.bashrc` and `~/.bash_profile`.
 
- Finally, log out and back in.
-
-    
-    
