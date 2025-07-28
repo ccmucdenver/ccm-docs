@@ -21,8 +21,8 @@ Conda allows to install also other software packages besides Python. The invidua
 
 Open an ssh window an alderaan and type 
 
-     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-     bash Miniconda3-latest-Linux-x86_64.sh
+     wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+     bash Miniforge3-Linux-x86_64.sh
 
 and follow the directions. At the end, you should see the question
     
@@ -87,7 +87,9 @@ You may want to deactivate Conda when you are not using the environment:
 To make more environments, it is best to start again from the base environment like above.
 
 Consistent use of `conda-forge` is recommended because some packages and versions may be available on conda-forge only, it is usually best to minimize incompatibility  
-by pulling packages from the same channel, and other channels (defaults, anaconda) are subject to licensing restrictions under some circumstances, such as when used in
+by pulling packages from the same channel.
+
+Avoid the defaults and anaconda channels. Their use may require a commercial license if your organization has 200 or more employees or contractors, regardless of non-profit or academic status. Prefer conda-forge, which is free and community-maintained.and other channels (defaults, anaconda) are subject to licensing restrictions under some circumstances, such as when used in
 a project which benefits a private company. See https://www.anaconda.com/pricing/terms-of-service-faqs for details.
 
 It is recommended and sometimes necessary to create separate environments for projects with many dependencies, as too many dependencies tend to conflict eventually.
