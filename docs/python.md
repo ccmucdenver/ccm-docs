@@ -1,4 +1,4 @@
-# Python
+# Python and Conda
 
 ## Managing Python packages
 Python packages are evolving fast, and many depend on specific versions of other packages. Package managers have been created to 
@@ -8,38 +8,32 @@ satisfy all dependences does not exist.
 You can use the system-provided Python, or many of our singularity container, each with their collection
 of packages at different versions, including Python itself. But no fixed collection of Python packages versions can satisfy everyone's needs.
 
-The currently preferred solution is to to install your own Python collections of packages for your specific needs as **conda environments**.
+## Conda
 
-It is best not use `pip` to install packages unless there is no other way. It does not try to resolve version conflicts and you 
-can end up with a broken installation. 
- 
+The currently preferred solution is to to install your own Python packages for your specific needs in **Conda environments**. 
+Conda environments are collections of packages compatible with each other. 
+It is best not use `pip` to install Python packages in a Conda environment unless there is no other way. 
+Pip does not try to check and resolve version conflicts and you can end up with a broken installation. 
+
+Conda allows to install also other software packages besides Python. The invidual software instructions should list how, if conda packaging is available.
 
 ## Install Conda
 
 Open an ssh window an alderaan and type 
 
-     cd /data001/projects/<username>
      wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
      bash Miniconda3-latest-Linux-x86_64.sh
 
-and follow the directions. Override the default location for the installation location by
-
-    /data001/projects/<username>/miniconda3
-
-Here, replace 
- 
-    <username>
-    
-is your username. **It is important to use a directory in /data001 or /data002, because of current performance issues with locations in `/home` or `/storage`, which may make some conda commands not work.** At the end, you should see the question
+and follow the directions. At the end, you should see the question
     
     Do you wish to update your shell profile to automatically initialize conda? 
-    (more text) [yes|no]
+    (...) [yes|no]
     
 Answer yes.  Edit your `~/.bash_profile` file to add the line  
 
     source .bashrc
     
-then log out and back in. The `conda` command should now be available
+then log out and back in. The `conda` command should now be available.
  
 You can stop Conda from activating on login if you do not want to use it every time you log in, by
 
@@ -65,6 +59,8 @@ Activate the base environment:
 You should see your prompt change to start with `(base)`. Create your first environment, for example:
     
      conda create --name myenv -c conda-forge python=3.6 paramiko gdal matplotlib tensorflow pandas
+
+**conda-forge** is a channel (a collection of packages) available without licensing restrictions. See https://www.anaconda.com/docs/tools/working-with-conda/channels for more details and https://www.datacamp.com/blog/navigating-anaconda-licensing for licensing issues.
 
 Of course, these are just examples,  use names of the packages and their versions that **you** need. Note that you can request specific versions of everything, even Python itself.
 You can even create an environment with an old python version, for example:
