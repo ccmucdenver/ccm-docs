@@ -12,7 +12,7 @@ Package managers have been created to install the packages user requires with th
 
 We use **Miniforge**, which defaults to the **conda-forge** channel — a community-maintained collection with no licensing restrictions. Avoid the `defaults` and `anaconda` channels to stay clear of commercial license issues.
 
-On a compute node (e.g. `ssh math-alderaan`):
+On the `math-alderaan` head node:
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
@@ -31,7 +31,7 @@ Then edit your `~/.bash_profile` and add:
 source .bashrc
 ```
 
-Log out and back in. The `conda` command should now work. If you wish to avoid auto-activating the base environment:
+Log out and back in. The `conda` command should now work. If you wish to avoid auto-activating the base Conda environment:
 
 ```bash
 conda config --set auto_activate_base false
