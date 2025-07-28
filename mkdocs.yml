@@ -31,7 +31,7 @@ nav:
     - Accounts: accounts.md
     - Environment modules: modules.md
     - Globus file transfer: globus.md
-    - Python: python.md
+    - Conda and Python: conda.md
     - JupyterHub: jupyterhub.md
     - Alderaan Cluster: alderaan.md
     - Colibri Cluster: colibri.md
