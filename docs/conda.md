@@ -6,7 +6,7 @@ You can use the system-provided Python, or many of our singularity containers, e
 
 ## Why Conda
 
-Package managers have been created to install the packages user requires with their dependences automatically, but sometimes a combination of versions that would satisfy all dependences does not exist. Conda provides isolated **environments* for collections of software packages, including Python and non-Python software. This avoids dependency conflicts and often eliminates the need for custom Singularity containers.
+Package managers have been created to install the packages user requires with their dependences automatically, but sometimes a combination of versions that would satisfy all dependences does not exist. Conda provides isolated **environments** for collections of software packages, including Python and non-Python software. This avoids dependency conflicts and often eliminates the need for custom Singularity containers.
 
 ## Installing Miniforge
 
