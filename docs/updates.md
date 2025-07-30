@@ -10,7 +10,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/07/29
 
-* Node **math-alderaan-h01** weas upgraded to NVIDIA drivers 575.x and CUDA 12.9. The node is available in a temporayy partion **math-alderaan-cuda12** with maximum runtime 1 day. Singularity containers with CUDA 11 should still work with **singularity --nv**. Testing welcome. 
+* Node **math-alderaan-h01** upgraded to NVIDIA drivers 575.x and CUDA 12.9. The node is available in a temporayy partion **math-alderaan-cuda12** with maximum runtime 1 day. Singularity containers with CUDA 11 should still work with **singularity --nv**. Testing welcome. 
 * Node **math-alderaan-h02** is available only in partition **math-alderaan-gpu-short** in order to allow installation of CUDA drivers upgrade to continue with 24 hours lead time once ready to proceed.
 
 ### 2025/07/25
