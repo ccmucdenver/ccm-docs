@@ -65,7 +65,7 @@ a project directory. The legacy project directories are  `/storage/department/pr
 created as `/data001/projects/username` instead. The location of the project directory is emailed to the user
 when the directory is created as a part of setting up a new accoun.
 
-In addition, groups can request shared project directories also in `/storage/department/projects' or `/data001/projects`. 
+In addition, groups can request shared project directories also in `/storage/department/projects` or `/data001/projects`. 
 
 The difference betwen project and home directories is that home directories are backed up occasionally (if not too large)
 while project directories and too large home directories are not backed up. Please keep your home directory small to make the backups possible. 
