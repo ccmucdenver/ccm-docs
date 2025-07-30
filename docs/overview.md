@@ -25,7 +25,11 @@ using your university username and password.
 
 ## Quick Tips 
 
-* If you need special software that is not installed on the compute nodes, have the job execute your code in a [singularity container](../singularity), which can carry the complete software environment with it.
+* If you need software that is not installed on Alderaan, you can
+  * check if it may be available in one of our [singularity containers](../singularity)
+  * check if it may be availale in a module by `module avail`
+  * install it in your account using [Conda](../conda) in many cases
+  * ask for it to be installed, which may be done in a new singularity container or module
 
 * Request an estimated number of cores your code needs, if you do not know exactly how many (e.g., some codes in R)
 
