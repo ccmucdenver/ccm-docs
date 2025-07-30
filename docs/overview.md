@@ -11,7 +11,7 @@
 * Connect by command line ssh to the head node,  
 `ssh math-alderaan.ucdenver.pvt` 
 or in a web browser to Jupyterhub 
-`[https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
+[https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt),
 using your university username and password. 
 
 * Write a job script, say `myjob`, with the commands to execute and special
