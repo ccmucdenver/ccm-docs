@@ -99,7 +99,7 @@ Type <code>chmod og-rwx file_or_directory_name</code> to make the file or direct
 
 ## Where is the software? Modules and Singularity containers
 
-We normally do not install application software directly on the system because of software and version conflicts. Instead, we install sofware in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](../conda.html)**.
+We normally do not install application software directly on the system because of software and version conflicts. Instead, we install sofware in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](../conda)**.
 
 ### Modules
 
