@@ -9,8 +9,8 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 * Alderaan will run at reduced capacity because of planned datacenter maintenance. Some partitions will start getting suspended and some nodes getting drained from 8/7.
 
 ### 2025/08/01 
-* Node **math-alderaan-h01** with CUDA 12.9 is available in partition **math-alderaan-gpu-cuda12**. New singularity container
-  **cuda12.2-tf.sif** with CUDA 12.2, TensorFlow 2.16, and conda is avilable, maximum runtime 1 day. Use with **singularity run --nv**.
+* New singularity container **cuda12.2-tf.sif** with CUDA 12.2, TensorFlow 2.16, and conda is available. Use with **singularity run --nv**.
+* Node **math-alderaan-h01** with CUDA 12.9 remains available in partition **math-alderaan-gpu-cuda12**, with maximum runtime 1 day.
 * Node **math-alderaan-h02** remains available in partition **math-alderaan-gpu-short**, maximum runtime 1 day.
 * Partition **math-alderaan-gpu** with 7 days runtime remains down until the transition to CUDA 12 is complete.
 
