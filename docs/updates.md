@@ -6,7 +6,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/08/14 and 15
 
-* Alderaan will run at reduced capacity because of planned datacenter maintenance. Some partitions will start getting suspended and some nodes getting drained from 8/7.
+* Alderaan will run at reduced capacity because of planned datacenter maintenance. Partitions with 7 days runtime will start getting suspended and nodes gradually drained starting 8/7.
 
 ### 2025/08/01 
 * New singularity container **cuda12.2-tf.sif** with CUDA 12.2, TensorFlow 2.16, and conda is available. Use with **singularity run --nv**.
