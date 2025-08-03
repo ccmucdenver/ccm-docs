@@ -1,10 +1,12 @@
-# What is a container?
+# Singularity Containers
+
+## What is a container?
 
 When running in a container, you have access to your files as usual, but the operating system and intstalled software are replaced by those in the container.
 
 Container is somewhat like a different computer just for you, similar to a virtual machine. 
 
-# How do we use containers?
+## How do we use containers?
 
 A system administrator can build a containter with installed software instead of installing it directly on the system. This allows to keep everything the software needs nicely together, and to run the software on different nodes, even with different versions of linux, without reinstalling anything. 
 
@@ -14,20 +16,19 @@ Software with complicated dependencies is often distributed as singularity conta
 
 We often install software requested by users in singularity containers rather than on the system itself to provide the required versions of dependencies, avoid software conflicts, and allow them to run on all of our clusters. 
 
-# How do I put software in a container?
+## How do I put software in a container?
 
-Ask and we may be able to build a container for you if we do not have one already. Most of our containers originated this way.
 
-# Building Singularity containers
+## Building Singularity containers
 
-Building a Singularity container requires root privileges, so you can't build a container directly on our systems yourself.  
-Nothing stops you from setting up your own linux machine with 
-the same version of Singularity we have, building a container, and copying it here. 
-But you can
-build a Docker container first, push to the Docker Hub, and pull as Singularity
+Building a Singularity container requires root privileges, so you can't build a container directly on our systems yourself.  Ask, and we may be able to build a container for you with software you need if we do not have one already. Most of our containers originated this way.
+
+But you can build a Docker container first, push to the Docker Hub, and pull as a Singularity
 container without root privileges. Here is a 
 [complete example](docker_to_singularity.md).
 
+Also, nothing stops you from setting up your own linux machine with 
+the same version of Singularity we have, building a container, and copying it here. 
 
 ## How to use a Singularity container interactively
 
