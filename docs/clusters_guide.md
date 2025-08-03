@@ -99,7 +99,7 @@ Type <code>chmod og-rwx file_or_directory_name</code> to make the file or direct
 
 ## Where is the software? Modules and Singularity containers
 
-We normally do not install application software directly on the system because of software and version conflicts. Instead, we install sofware in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](../conda)**.
+We normally do not install application software directly on the system because of software dependencies and version conflicts. Instead, we install sofware in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](../conda)**.
 
 ### Modules
 
@@ -125,7 +125,9 @@ and start over loading exactly the modules you need, or simply log out and back 
 
 Installed software and environment modules on our different clusters are generally different. See [modules](../modules) for more information.
 
-### Singularity containers
+### Singularity Containers
+
+*See [Singularity Containers](../singularity/) for more details and a list of our containers*.
 
 A singularity container is a bit like a separate computer in itself which just runs on the same hardware. Thus, software in different containers won't conflict, and a container can provide a complete environment including a different operating system, libraries, etc. A disadvantage, however, is that you can use only the software installed in the container; software on the system outside of the container is not visible from the inside. Containers are read only and cannot be changed. An exception is that some package managers, like conda, may allow installing software while you are inside the container. Additions made by conda this way actually reside in directory `.local` in your home directory.
 
@@ -135,7 +137,7 @@ Using singularity is easy. Type, for example,
     python3
     
 and you can use many Python packages for machine learning. We have containers with statistics software, optimization, molecular chemistry, optimization,
-and more. See [Singularity](../singularity/) for more details and list of software in our containers.
+and more. 
 
 ### Old software versions
 
