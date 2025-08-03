@@ -81,10 +81,20 @@ Finally, submit the job as usual:
 
 If the commands you invoke inside the singularity container can take advantage of
 more than one core, you can increase the job parameter `--ntasks` to reserve and use 
-more cores. **If your singularity job uses lot of memory, please increase --ntasks to 
-about 8 GB per core even if you may not use the cores. Otherwise, node memory may get
-overloaded with unfortunate consequences such as jobs stuck and 
-nodes down until someone resets them.**
+more cores. 
+
+## How to run Singularity with GPUs
+
+For GPUs, use the flag `--nv` as follows:
+
+```
+    singularity exec --nv /storage/singularity/your_container.sif
+```
+or
+```
+    singularity shell --nv /storage/singularity/your_container.sif
+```
+This makes the container use NVIDIA drivers libraries from the node, and it is particularly important if you use a container to run a different version of CUDA than installed on the node. You may need to do that because different versions of TensorFlow and PyTorch work only with certain CUDA versions.
 
 ## How to run Singularity with MPI and on multiple nodes
 
@@ -96,7 +106,7 @@ Containers we have built are in `/storage/singularity`. For convenience, `/stora
 
 To see what is in a container, start with a short description which should be provided by every container:
 
-     singularity run-help /storage/singularity/container.sif
+     singularity run-help /storage/singularity/your_container.sif
       
 For more details, you can look how the software in the container was built. This is was done by a script, called definition file, which you can see by
 
@@ -135,6 +145,10 @@ Imported Docker nvidia/cuda:11.6.1-devel-ubuntu20.04
 ### cuda-120.sif
 
 Ubuntu 22.04 with cuda 12.0, NVIDIA compilers, tensorflow, pytorch, and other common machine learning packages
+
+### cuda12.2-tf.sif
+
+Ubuntu 22.04 with cuda 12.2, tensorflow, and machine learning tools suitable for nodes installed with CUDA 12.9 and required upgraded NVIDIA drivers, currently `math-alderaan-h01`.
 
 ### go.sif
 
