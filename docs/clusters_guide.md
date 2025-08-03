@@ -242,7 +242,6 @@ Jobs are submitted to compute nodes through the scheduler.  To see the queues (c
     system_test                up 7-00:00:00      1   idle math-alderaan-c30
     math-alderaan-gpu        down 7-00:00:00      1  drain math-alderaan-h01
     math-alderaan-gpu-short    up 1-00:00:00      2    mix math-alderaan-h[01-02]
-    math-score                 up   infinite      5  down* math-score-c[01-05]
     clas-interactive           up   infinite      2  down* math-colibri-i02,math-score-i01
 
 ### Nodes
@@ -346,15 +345,7 @@ To see a list of all nodes, use:
     math-alderaan-h01      1       math-alderaan-gpu drain 
     math-alderaan-h02      1 math-alderaan-gpu-short drain 
     math-colibri-i02       1        clas-interactive down* 
-    math-score-c01         1              math-score down* 
-    math-score-c02         1              math-score down* 
-    math-score-c03         1              math-score down* 
-    math-score-c04         1              math-score down* 
-    math-score-c05         1              math-score down* 
-    math-score-i01         1        clas-interactive down* 
-
-
-
+    
 It looks confusing but there is a method to the madness in the naming convention. Obviously, math-colibri and math-score are the identifiers for what cluster/building the servers are in, but the –c## and –i## stand for compute and interactive. The c## servers are usually part of the queuing system and **the i## ones are for interactive use and you can ssh there directly**. Again, never ssh to compute nodes directly.
 
 ## Submitting Jobs to the Scheduler
