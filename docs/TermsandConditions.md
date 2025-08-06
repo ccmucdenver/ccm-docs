@@ -46,7 +46,7 @@ For more information on storage, see the [Clusters Guide](../clusters_guide/#fil
 If you use ssh keys to connect from this system, such as to github or 
 another computer account, it is highly recommended to use an ssh key with a passcode you have to type in every time. 
 If you use an ssh key without a passcode, security of the account you are logging into is only as good 
-as the protection of your files here, cannot be considered secure.
+as the protection of your files here, which **cannot be considered secure**.
 
 ### Ackowledgement of Support
 
