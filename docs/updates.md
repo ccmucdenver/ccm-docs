@@ -4,9 +4,9 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 
 Alderaan is a High Performance Computing (HPC) facility, operating on the edge of what the hardware and cooling allow. When CPUs get too hot, they are slowed down adaptively to avoid heat damage. When disks in the storage nodes get too hot, jobs are periodically suspended to allow pending disk activity to resolve and to reduce the overall thermal load. When the datacenter temperature is too high, all nodes shut down automatically.
 
-### 2025/08/14 and 15
+### 2025/08/13-15
 
-* Alderaan will run at reduced capacity because of planned datacenter maintenance. Partitions with 7 days runtime will start getting suspended and nodes gradually drained starting 8/7.
+* Alderaan will run at reduced capacity because of planned datacenter maintenance. Partitions `math-alderaan` and `math-alderaan-gpu` with 7 days runtime are down and not accepting new jobs. All nodes will be draining and not accepting new jobs one day in advance. Depending on developments, some nodes may remain powered on and running or accepting new jobs. Access to head node `math-alderaan` and user files should be available, but is not guaranteed.
 
 ### 2025/08/01 
 * New singularity container **cuda12.2-tf.sif** with CUDA 12.2, TensorFlow 2.16, and conda is available. Use as
