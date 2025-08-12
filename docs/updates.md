@@ -8,13 +8,13 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 * **Alderaan Power reduction during datacenter maintenance** (Aug 13–15)
 
-* **Window:** Tue Aug 13–Thu Aug 15
+* **Window:** Wed Aug 13–Fri Aug 15
 
 * **Policy in effect until maintenance completes:**
 
  * Jobs with requested runtime > 1 day **will not start**.
  * Most nodes are draining or powered off.
- * Limited capacity remains in `math-alderaan-short` and `math-alderaan-gpu-short`.
+ * Limited capacity remains in `math-alderaan-short` and `math-alderaan-gpu-short` partitions.
  * Jupyter service remains available.
  * Do not submit large job bursts. **Users queuing excessive jobs may have SLURM priority reduced to preserve fairness**.
 
