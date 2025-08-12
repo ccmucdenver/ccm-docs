@@ -6,12 +6,11 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/08/13-15
 
-* Alderaan will run at reduced capacity because of planned datacenter maintenance. Partitions `math-alderaan` and `math-alderaan-gpu` with 7 days runtime are down and not accepting new jobs. All nodes will be draining and not accepting new jobs one day in advance. Depending on developments, some nodes may remain powered on and running or accepting new jobs. Access to head node `math-alderaan` and user files should be available, but is not guaranteed.
+* Alderaan will run at reduced capacity because of planned datacenter maintenance. Depending on developments, some nodes may remain powered on and running or accepting new jobs. Access to head node `math-alderaan` and user files should be available, but is not guaranteed.
 
 ### 2025/08/12
-* In preparation for datacenter maintenance August 13-15, Alderaan is reducing power use. Until the maintenance is completed
-
-  * jobs with runtime over 1 day will not start.
+* In preparation for datacenter maintenance August 13-15, Alderaan is reducing power use. Until the maintenance is completed,
+  * Jobs with runtime over 1 day will not start.
   * Most nodes are either draining or already powered off.
   * A subset of nodes in partitions `math-alderaan-short` and `math-alderaan-gpu-short` remains available.
   * Jupyter remains available.
