@@ -4,18 +4,27 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 
 Alderaan is a High Performance Computing (HPC) facility, operating on the edge of what the hardware and cooling allow. When CPUs get too hot, they are slowed down adaptively to avoid heat damage. When disks in the storage nodes get too hot, jobs are periodically suspended to allow pending disk activity to resolve and to reduce the overall thermal load. When the datacenter temperature is too high, all nodes shut down automatically.
 
-### 2025/08/13-15
-
-* Alderaan will run at reduced capacity because of planned datacenter maintenance. Depending on developments, some nodes may remain powered on and running or accepting new jobs. Access to head node `math-alderaan` and user files should be available, but is not guaranteed.
-
 ### 2025/08/12
-* In preparation for datacenter maintenance August 13-15, Alderaan is reducing power use. Until the maintenance is completed,
-  * Jobs with runtime over 1 day will not start.
-  * Most nodes are either draining or already powered off.
-  * A subset of nodes in partitions `math-alderaan-short` and `math-alderaan-gpu-short` remains available.
-  * Jupyter remains available.
- 
-Please do not overwhelm the cluster queues with a large number of jobs. **Users with a large number of jobs queued will have their SLURM priority reduced** to give others a chance.
+
+* **Alderaan Power reduction during datacenter maintenance** (Aug 13–15)
+
+* **Window:** Tue Aug 13–Thu Aug 15
+
+* **Policy in effect until maintenance completes:**
+
+ * Jobs with requested runtime > 1 day **will not start**.
+ * Most nodes are draining or powered off.
+ * Limited capacity remains in `math-alderaan-short` and `math-alderaan-gpu-short`.
+ * Jupyter service remains available.
+ * Do not submit large job bursts. **Users queuing excessive jobs may have SLURM priority reduced to preserve fairness**.
+
+* **Notes:**
+
+* Expect longer queue times.
+* Check node/queue status with `sinfo` and job status with `squeue`.
+* Requeue or shorten jobs if possible to fit within the 1‑day limit.
+
+* **We will announce when normal scheduling resumes.**
 
 ### 2025/08/01 
 * New singularity container **cuda12.2-tf.sif** with CUDA 12.2, TensorFlow 2.16, and conda is available. Use as
