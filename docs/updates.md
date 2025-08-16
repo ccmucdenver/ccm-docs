@@ -7,7 +7,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 
 ### 2025/08/15
 
-* Datacenter maintanance completed, Alderaan available
+* Datacenter maintenance completed, Alderaan available
 
 * The long-runtime GPU partition remains down to facilitate the upcoming CUDA upgrade on math-alderaan-h02 and to support shared use of GPU nodes.
 Please use these partitions with a 1 day run time limit:
