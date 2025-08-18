@@ -34,8 +34,6 @@ nav:
     - Conda and Python: conda.md
     - JupyterHub: jupyterhub.md
     - Alderaan Cluster: alderaan.md
-    - Colibri Cluster: colibri.md
-    - Score Cluster: score.md
     - Research Storage: storage.md
     - Singularity Containers: singularity.md
     - Local network: local.md
