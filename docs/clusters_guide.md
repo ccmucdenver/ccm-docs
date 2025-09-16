@@ -458,11 +458,18 @@ You can request the number of nodes. The scheduler will then split the tasks ove
 
 ### How to to run with GPU on Alderaan
 
-The partitions math-alderaan-gpu-short and math-alderaan-gpu have two high memory/GPU nodes`math-alderann-h[01,02]` with two NVIDIA A-100 40GB GPUs and 2TB memory each. Use `--partition=math-alderaan-gpu-short` (1 day job dutation maximum) with `--gres=gpu:a100:1` to request one GPU and `--gres=gpu:a100:2` to request two GPUs. For longer jobs, up to 7 days, you can use `--partition=math-alderaan-gpu`, but node availability may be limited and your job may wait longer.
+The partitions 
+
+    math-alderaan-gpu-short
+    math-alderaan-gpu
+    math-alderaan-cuda12
+    
+have two high memory/GPU nodes`math-alderann-h[01,02]` with two NVIDIA A-100 40GB GPUs and 2TB memory each. Use `--partition=math-alderaan-gpu-short` (1 day job dutation maximum) with `--gres=gpu:a100:1` to request one GPU and `--gres=gpu:a100:2` to request two GPUs. For longer jobs, up to 7 days, you can use `--partition=math-alderaan-gpu`, but node availability may be limited and your job may wait longer.
  
 **Please do not use Alderaan GPUs without allocating them by `--gres` as above first. Please do not request an entire node on Alderaan by `--nodes` or `-N`, unless you really need all of it, request only the CPU cores you need by `--ntasks`. Large memory jobs and GPUs jobs can share the same node.**
 
 An example job script:
+
     #!/bin/bash
     #SBATCH --job-name=gpu
     #SBATCH --gres=gpu:a100:1
@@ -471,7 +478,15 @@ An example job script:
     #SBATCH --ntasks=1                        # number of cores
     singularity exec /storage/singularity/tensorflow.sif python3 yourgpucode.py
 
-Of course, instead of singularity you can run another GPU code on one of the GPU nodes directly. The nodes have currently installed CUDA 11.2. You will have to install tensorflow in your account yourself. A compatible version is [tensorflow 2.4.0] (https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-03.html).
+Of course, instead of singularity you can run another GPU code on one of the GPU nodes directly. 
+
+Currently,
+  * Node `math-alderaan-h01` has upgraded NVIDIA drivers and CUDA 12, and is available in partition `math-alderaan-cuda12`.
+  * Node `math-alderaan-h02` has currently CUDA 11.2, and is available in partition `math-alderaan-gpu-short`.
+
+Use `nvidia-smi` on the nodes for details of the GPU and the current load.
+
+You will have to install tensorflow or other GPU software in your account yourself. A version compatible with CUDA 11.2 is [tensorflow 2.4.0] (https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-03.html).
 
 It is recommended to use the tensorflow singularity container because it has updated CUDA  (11.4) and a version of tensorflow compatible with the CUDA version.
 
