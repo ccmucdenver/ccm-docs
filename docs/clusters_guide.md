@@ -11,11 +11,11 @@ To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz p
 * On campus wired network.
 * On campus secure wireless network (not the guest network)/
 * Through the remote desktop [https://remote.ucdenver.edu](https://remote.ucdenver.edu) After logging in, click on "Complimentary". It is recommended to download and use the VMware Horizon app instead of continuing in the browser.
-* Through [CU Denver VPN](https://www.ucdenver.edu/vpn) or [CU Anschutz VPN](https://www.cuanschutz.edu/vpn). 
+* Through [CU Denver](https://www.ucdenver.edu/vpn) or [CU Anschutz](https://www.cuanschutz.edu/vpn) by GlobalProtect VPN.
 
 To log in, use your university username (not email) and password. If you do not know your username, you can retrieve it at [https://myaccount.ucdenver.edu/forgot-username](https://myaccount.ucdenver.edu/forgot-username).
 
-High Performance Computing (HPC) systems like this one are usually accessed from a command line terminal window.
+High Performance Computing (HPC) systems like Alderaan are usually accessed from a command line terminal window.
 
 Perhaps the easiest way to log in is to use [JupyterHub](../jupyterhub). Simply go to 
 [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
@@ -27,14 +27,20 @@ Another way of accessing the system is to use the Secure Shell (SSH). Type
 
     ssh math-alderaan.ucdenver.pvt
 
-in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh)
-10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`), and log in. For more convenience and security, you can 
+in a terminal window on Linux or Mac, or in a Powershell window on 
+[Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh)
+10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`), and log in. 
+
+**Windows Subsystem for Linux (WSL) is not recommended with VPN**, as GlobalProtect sometimes does not forward 
+connections properly from WSL, even though it works for other Windows applications.
+
+For more convenience and security, you can 
 set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as 
 from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-connection-from-windows).
 
 SSH also allows you to transfer files via scp, sftp, or rsync commands. 
 
-Alderaan cluster runs Centos 8, while some additional legacy nodes run Centos 7.
+Alderaan cluster runs Centos 8.
 
 ### Interactive use limitations
 
