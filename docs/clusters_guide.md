@@ -25,16 +25,18 @@ then press the Terminal tile. You can also run Python notebooks, edit files, and
 
 Another way of accessing the system is to use the Secure Shell (SSH). Type
 
-    ssh math-alderaan.ucdenver.pvt
+    ssh username@math-alderaan.ucdenver.pvt
 
-in a terminal window on Linux or Mac, or in a Powershell window on 
+where username is your university username, in a terminal window on Linux or Mac, or in a Powershell window on 
 [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh)
 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`), and log in. 
 
 **Windows Subsystem for Linux (WSL) is not recommended with VPN**, as GlobalProtect sometimes does not forward 
 connections properly from WSL, even though it works for other Windows applications.
 
-For more convenience and security, you can 
+If you omit the username, your system's ssh may prompt you for it, or it may send your local username instead, which would not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections.
+
+For more convenience and security, you can
 set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as 
 from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-connection-from-windows).
 
