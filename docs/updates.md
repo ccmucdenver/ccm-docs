@@ -7,7 +7,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 ### 2025/11/04
 
 * Node **math-alderaan-h02** was upgraded to CUDA 12.9 and returned to operations.
-* Both **math-alderaan-h01** and  **math-alderaan-h02** now run CUDA 12.9.
+* Both GPU nodes **math-alderaan-h01** and  **math-alderaan-h02** now run CUDA 12.9 and are in the partititions **math-alderaan-gpu** (7 days max, lower priority) and **math-alderaan-gpu-short** (1 day max, higher priority). Partition **math-alderaan-cuda12** is set to Down for limited time for continuity and will be deleted.
 * Singularity containers with CUDA 11 should still work using **singularity exec --nv**.
 * TensorFlow is currently not compatible yet with CUDA 12.9. New singularity container **cuda12.2-tf.sif** with CUDA 12.2, TensorFlow 2.16, and conda is available and will run with the upgraded CUDA drivers. Use as
   ```
