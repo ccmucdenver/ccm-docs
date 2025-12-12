@@ -33,6 +33,7 @@ nav:
     - Globus file transfer: globus.md
     - Conda and Python: conda.md
     - JupyterHub: jupyterhub.md
+    - Apache Spark: spark.md
     - Alderaan Cluster: alderaan.md
     - Research Storage: storage.md
     - Singularity Containers: singularity.md
