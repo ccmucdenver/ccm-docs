@@ -8,7 +8,7 @@ Alderaan is a High Performance Computing (HPC) facility, operating on the edge o
 * Updating Slurm cgroups configuration to get rid of the HWLOC Affinity warning. All nodes draining, then updated and returned to operations as they become available.
 
 ### 2025/12/12
-* Adding to docs new section [Apache Spark](../spark.md) how to run Spark on a single node.
+* Adding to docs new section [Apache Spark](../spark/) how to run Spark on a single node.
 
 ### 2025/11/04
 
