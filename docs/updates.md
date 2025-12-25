@@ -9,12 +9,12 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 
 * Rolling update in progress to improve Slurm behavior when jobs exceed memory allocations under shared-node cgroup enforcement and reduce nodes going in DRAINING/DRAIN state.
 * Changes applied:
-  * Set `AllowedSwapSpace=0` in `cgroup.conf` to prevent swap thrashing and delayed teardown. **This may result in jobs running out of memory when they were previously allowed to continue. Increase the memory requested by the job when that happens.**
-  * Set `UnkillableStepTimeout=300` in `slurm.conf` to reduce premature node drains due to slow job termination.
+    * Set `AllowedSwapSpace=0` in `cgroup.conf` to prevent swap thrashing and delayed teardown. **This may result in jobs running out of memory when they were previously allowed to continue. Increase the memory requested by the job when that happens.**
+    * Set `UnkillableStepTimeout=300` in `slurm.conf` to reduce premature node drains due to slow job termination.
 * Rollout procedure:
-  * Cluster drained and updated configs distributed.
-  * `slurmd` restarted and nodes resumed only on idle nodes to avoid disturbing running jobs.
-  * Other nodes will resume incrementally as running jobs complete, allowing `slurmd` to be restarted. This may take up to 7 days.
+    * Cluster drained and updated configs distributed.
+    * `slurmd` restarted and nodes resumed only on idle nodes to avoid disturbing running jobs.
+    * Other nodes will resume incrementally as running jobs complete, allowing `slurmd` to be restarted. This may take up to 7 days.
 
 ### 2025/12/19
 
@@ -48,9 +48,9 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 ### 2025/08/16
 
 * Due to datacenter overheating:
-  * All partitions are down and no new jobs can start.
-  * All running jobs are suspended, nodes running idle.
-  * All nodes without jobs on them are powered off.
+    * All partitions are down and no new jobs can start.
+    * All running jobs are suspended, nodes running idle.
+    * All nodes without jobs on them are powered off.
  
 ### 2025/08/15
 
@@ -58,8 +58,8 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 
 * The long-runtime GPU partition remains down to facilitate the upcoming CUDA upgrade on math-alderaan-h02 and to support shared use of GPU nodes.
 Please use these partitions with a 1 day run time limit:
-  * math-alderaan-gpu-short
-  * math-alderaan-cuda12
+   * math-alderaan-gpu-short
+   * math-alderaan-cuda12
 
 ### 2025/08/12
 
@@ -69,11 +69,11 @@ Please use these partitions with a 1 day run time limit:
 
 * **Policy in effect until maintenance completes:**
 
- * Jobs with requested runtime > 1 day **will not start**.
- * Most nodes are draining or powered off.
- * Limited capacity remains in `math-alderaan-short` and `math-alderaan-gpu-short` partitions.
- * Jupyter service remains available.
- * Do not submit large job bursts. **Users queuing excessive jobs may have SLURM priority reduced to preserve fairness**.
+    * Jobs with requested runtime > 1 day **will not start**.
+    * Most nodes are draining or powered off.
+    * Limited capacity remains in `math-alderaan-short` and `math-alderaan-gpu-short` partitions.
+    * Jupyter service remains available.
+    * Do not submit large job bursts. **Users queuing excessive jobs may have SLURM priority reduced to preserve fairness**.
 
 * **Notes:**
 
@@ -109,8 +109,8 @@ Please use these partitions with a 1 day run time limit:
 Nodes **math-alderaan-h[01,02]** are draining for short maintenance (hardware reset) planned for tomorrow 10am.
 
 * After the reset is completed:
-  * **math-alderaan-h01** will be available in both partitions **math-alderaan-gpu** and **math-alderaan-gpu-short**
-  * **math-alderaan-h02** will be available in **math-alderaan-gpu-short** only, with a maximum job duration of one day, for faster job turnaround.
+    * **math-alderaan-h01** will be available in both partitions **math-alderaan-gpu** and **math-alderaan-gpu-short**
+    * **math-alderaan-h02** will be available in **math-alderaan-gpu-short** only, with a maximum job duration of one day, for faster job turnaround.
 
 * Continuation of maintenance (CUDA drivers upgrade) on **math-alderaan-h02** is planned next week, date TBD.
 
