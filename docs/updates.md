@@ -9,13 +9,12 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 
 * Rolling update in progress to improve Slurm behavior when jobs exceed memory allocations under shared-node cgroup enforcement.
 * Changes applied:
-  - Set `AllowedSwapSpace=0` in `cgroup.conf` to prevent swap thrashing and delayed teardown.
-  - Set `UnkillableStepTimeout=300` in `slurm.conf` to reduce premature node drains due to slow job termination.
+  * Set `AllowedSwapSpace=0` in `cgroup.conf` to prevent swap thrashing and delayed teardown.
+  * Set `UnkillableStepTimeout=300` in `slurm.conf` to reduce premature node drains due to slow job termination.
 * Rollout procedure:
-  - Cluster drained.
-  - Updated configs distributed.
-  - `slurmd` restarted **only on idle nodes**.
-  - Nodes resume incrementally as running jobs complete.
+  * Cluster drained and updated configs distributed.
+  * `slurmd` restarted and nodes resumed only on idle nodes to avoid disturbing running jobs.
+  * Other nodes will resume incrementally as running jobs complete, allowing `slurmd` to be restarted. This may take up to 7 days.
 
 ### 2025/12/19
 
