@@ -4,6 +4,18 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 
 Alderaan is a High Performance Computing (HPC) facility, operating on the edge of what the hardware and cooling allow. When CPUs get too hot, they are slowed down adaptively to avoid heat damage. When disks in the storage nodes get too hot, jobs are periodically suspended to allow pending disk activity to resolve and to reduce the overall thermal load. When the datacenter temperature is too high, all nodes shut down automatically.
 
+## 2025-12-24
+
+* Rolling update in progress to improve Slurm behavior when jobs exceed memory allocations under shared-node cgroup enforcement.
+* Changes applied:
+  - Set `AllowedSwapSpace=0` in `cgroup.conf` to prevent swap thrashing and delayed teardown.
+  - Set `UnkillableStepTimeout=300` in `slurm.conf` to reduce premature node drains due to slow job termination.
+* Rollout procedure:
+  - Cluster drained.
+  - Updated configs distributed.
+  - `slurmd` restarted **only on idle nodes**.
+  - Nodes resume incrementally as running jobs complete.
+
 ### 2025/12/19
 
 * Update of Slurm cgroups configuration on all nodes completed.
