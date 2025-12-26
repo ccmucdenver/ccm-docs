@@ -5,6 +5,19 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 Alderaan is a High Performance Computing (HPC) facility operating close to the thermal limits of the available hardware and cooling infrastructure. To avoid hardware-level thermal CPU throttling which may result in node failures, Alderaan employs active, software-controlled thermal management.
 When CPU temperatures approach defined thresholds, a site-specific daemon proactively reduces CPU performance to keep temperatures within safe bounds. When disks in the storage nodes approach thermal limits, running jobs may be temporarily suspended to allow outstanding I/O to complete and to reduce overall thermal load on the disk arrays, which may lead to failed disks and ultimately loss of data. If datacenter ambient temperature limits are exceeded, a site-specific daemon proactively shuts down the cluster.
 
+### 2025/12/26 Improved memory scheduling on compute nodes
+
+* The cluster scheduler was updated to more accurately account for memory when placing jobs on compute nodes.
+    * What this means for users:
+      Jobs that request large amounts of memory will no longer be co-scheduled on the same node if insufficient memory is available.
+      This prevents memory oversubscription, swap storms, and unexpected job terminations due to out-of-memory conditions.
+      As a result, some jobs that previously started immediately may now remain pending longer if their requested memory cannot be satisfied.
+      Users are encouraged to request realistic memory amounts using --mem or --mem-per-cpu to ensure fair and efficient scheduling.
+    * What does not change:
+      Running jobs are unaffected.
+      CPU scheduling behavior is unchanged.
+      No changes are required to existing job scripts unless they relied on implicit memory oversubscription.
+
 ### 2025/12/24
 
 * Rolling update in progress to improve Slurm behavior when jobs exceed memory allocations under shared-node cgroup enforcement and reduce nodes going in DRAINING/DRAIN state.
