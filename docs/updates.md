@@ -5,9 +5,9 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 Alderaan is a High Performance Computing (HPC) facility operating close to the thermal limits of the available hardware and cooling infrastructure. To avoid hardware-level thermal CPU throttling which may result in node failures, Alderaan employs active, software-controlled thermal management.
 When CPU temperatures approach defined thresholds, a site-specific daemon proactively reduces CPU performance to keep temperatures within safe bounds. When disks in the storage nodes approach thermal limits, running jobs may be temporarily suspended to allow outstanding I/O to complete and to reduce overall thermal load on the disk arrays, which may lead to failed disks and ultimately loss of data. If datacenter ambient temperature limits are exceeded, a site-specific daemon proactively shuts down the cluster.
 
-### 2025/12/26 Improved memory scheduling on compute nodes
+### 2025/12/26 
 
-* The cluster scheduler was updated to more accurately account for memory when placing jobs on compute nodes.
+* Improved memory scheduling on compute nodes: The cluster Slurm scheduler was updated to more accurately account for memory when placing jobs on compute nodes.
     * What this means for users:
       Jobs that request large amounts of memory will no longer be co-scheduled on the same node if insufficient memory is available.
       This prevents memory oversubscription, swap storms, and unexpected job terminations due to out-of-memory conditions.
