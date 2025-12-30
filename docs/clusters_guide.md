@@ -52,7 +52,7 @@ Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed
    
 ### Screen virtual terminal in interactive usage
 
-If you use `screen`, if you get disconnected, whatever you were running is still going and you can connect to it later. This is called a virtual terminal session. It is generally a good idea to use `screen` on math-compute, math-alderaan, or on the interactive nodes.  
+If you use `screen`, if you get disconnected, whatever you were running is still going and you can connect to it later. This is called a virtual terminal session. It is generally a good idea to use `screen` on math-alderaan only.
 
 Typing `screen` creates a new terminal session. You can give it a name you want to juggle more sessions, by `screen -S 'name'`  (make the name whatever you want). 
 
@@ -250,7 +250,10 @@ Jobs are submitted to compute nodes through the scheduler.  To see the queues (c
     system_test                up 7-00:00:00      1   idle math-alderaan-c30
     math-alderaan-gpu        down 7-00:00:00      1  drain math-alderaan-h01
     math-alderaan-gpu-short    up 1-00:00:00      2    mix math-alderaan-h[01-02]
-    clas-interactive           up   infinite      2  down* math-colibri-i02,math-score-i01
+    math-alderaan-gpu-quick    up    2:00:00      1    mix math-alderaan-h[01-02]
+
+**Partitions with shorter runtime have higher priority.**
+
 
 ### Nodes
 To see a list of all nodes, use:
@@ -352,9 +355,8 @@ To see a list of all nodes, use:
     math-alderaan-h01      1 math-alderaan-gpu-short drain 
     math-alderaan-h01      1       math-alderaan-gpu drain 
     math-alderaan-h02      1 math-alderaan-gpu-short drain 
-    math-colibri-i02       1        clas-interactive down* 
     
-It looks confusing but there is a method to the madness in the naming convention. Obviously, math-colibri and math-score are the identifiers for what cluster/building the servers are in, but the –c## and –i## stand for compute and interactive. The c## servers are usually part of the queuing system and **the i## ones are for interactive use and you can ssh there directly**. Again, never ssh to compute nodes directly.
+Nodes `math-alderaan-c01` to `math-alderaan-c32` are compute nodes. Nodes `math-alderaan-h01` and `math-alderaan-h02` are high memory GPU nodes. Again, never ssh to nodes directly to work on them, only to monitor your allocated jobs.
 
 ## Submitting Jobs to the Scheduler
 
@@ -381,8 +383,7 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 | `#SBATCH --error=`     | Specifies the file to which standard error (stderror) will be redirected. |  |
 | `#SBATCH --nodes=`     | Specifies the number of nodes requested for the job.         | Please do not request a node unless you know you need the full node’s memory or CPU |
 | `#SBATCH --ntasks=`    | Specifies the number of tasks (processes/threads) per node.  | `ntasks` can take a value between 1-64. Recommend: Start small (i.e., 1-5) & if jobs are running out of CPU/memory then increase the value. |
-| `#SBATCH --time=`      | Specifies the maximum runtime for the job in the format `days-hours:minutes:seconds`. <br> Examples: <br>1 Day: `#SBATCH --time=1-00:00:00`<br>1 hour: `#SBATCH --time=01:00:00`<br>1 minute: `#SBATCH --time=00:01:00` | Alderaan partitions will run jobs up to one week. If you need more time, use one of the older partitions (score or colibri). |  
-| `#SBATCH --partition=` | Specifies the partition or queue where the job will be submitted. | Recommend: Use CPU or GPU Alderaan partitions. <br> CPU nodes, specify: `#SBATCH --partition=math-alderaan`<br>GPU nodes, specify: `#SBATCH --partition=math-alderaan-gpu`<br>Older partitions: `math-score`, `math-colibri` |
+| `#SBATCH --partition=` | Specifies the partition or queue where the job will be submitted. | Recommend: Use CPU or GPU Alderaan partitions. <br> CPU nodes, specify: `#SBATCH --partition=math-alderaan`<br>GPU nodes, specify: `#SBATCH --partition=math-alderaan-gpu`<br> |
 | `#SBATCH --array=`     | Specifies an array of job tasks with indices for array job submissions. <br> Examples: <br> `#SBATCH --array=1-5` <br> `#SBATCH --array=0-10,20-21` | You can specify how many array jobs to run at one time with `%`. <br> Example: <br> Run only 3 jobs at one time for 10 jobs: `#SBATCH --array=1-10%3` |
 
 ### Single-core job
@@ -542,15 +543,6 @@ The command <code>sinfo</code> will show a summary of jobs and partitions status
     math-alderaan        up 7-00:00:00     14   idle math-alderaan-c[16-28,30]
     math-alderaan-gpu    up 7-00:00:00      1   drng math-alderaan-h01
     math-alderaan-gpu    up 7-00:00:00      1    mix math-alderaan-h02
-    math-colibri-gpu     up   infinite     24   idle math-colibri-c[01-24]
-    math-score           up   infinite      5   idle math-score-c[01-05]
-    chem-xenon           up   infinite      6  down* chem-xenon-c[01-06]
-    clas-interactive     up   infinite      1  down* math-score-i01
-    clas-interactive     up   infinite      1   idle math-colibri-i02
-    math-alderaan-osg    up 1-00:00:00     10    mix math-alderaan-c[01-10]
-    math-alderaan-osg    up 1-00:00:00      8  alloc math-alderaan-c[11-15,29,31-32]
-    math-alderaan-osg    up 1-00:00:00     14   idle math-alderaan-c[16-28,30]
-    clas-dev             up   infinite      1   idle clas-devnode-c01
 
 Real-time system status including temperature, load, and the partitions from `sinfo`, is available in [News and Status Updates](./updates/).
 
@@ -562,7 +554,7 @@ Here are the best practices when you compile and link your own software:
 
 * Use `math-alderaan` head node to build software for use on the Alderaan cluster. Use `module avail` to see which tools are available in [modules](./modules/). We can add other tools and package them in modules on request.
 
-* Alderaan nodes run Centos 8, while Colibri and Score nodes Centos 7. Software built on one will generally not work on the other.
+* Alderaan nodes run Centos 8.
 
 ## Linux Introduction  
 
