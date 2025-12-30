@@ -486,18 +486,43 @@ An example job script:
     #SBATCH --ntasks=1                        # number of cores
     singularity exec  --nv /storage/singularity/cuda12.2-tf.sif your_script
     
-Currently, both GPU nodes were upgraded to CUDA version 12.9 and drivers version 575. 
-CUDA 12.9 is **not compatible** with some current software versions, nameley TensorFlow. For compatibility reasons. For this reason, a compatibility container is provided with earlier version CUDA 12.2. You can use
+Both GPU nodes have been upgraded to CUDA 12.9 with NVIDIA driver version 575.
+At present, CUDA 12.9 is not compatible with several commonly used GPU software stacks, most notably TensorFlow when using official prebuilt binaries.
+
+### TensorFlow GPU Usage Requirement
+
+Users requiring TensorFlow GPU support must use the CUDA 12.2 compatibility container.
+Earlier containers may still start, but if they do, TensorFlow will run on CPU only, not on the GPU.
+Use the following command to enter the supported environment:
+
+To ensure TensorFlow functionality, a compatibility container is provided that uses CUDA 12.2, which is compatible with the latest TensorFlow release at the time of writing.
+
+    singularity shell --nv /storage/singularity/cuda12.2-tf.sif
+
+Users requiring TensorFlow GPU support must use this compatibility container rather than earlier containers, which may still work but if they do, Tensorflow will run on CPU not GPU. Use
 
     singularity shell  --nv /storage/singularity/cuda12.2-tf.sif
 
-and make your own conda environments. Use `nvidia-smi` on the nodes too see the details of the GPU software and the current GPU utilization.
+Inside the container, create and manage your own conda environments as needed.
 
-***Legacy singularity containers relying on earlier NVIDIA drivers may not work. This can result in your code using CPU only while your job consumes a GPU reservation. Please ssh into the node and run `nvidia-smi` to monitor if your job has nonzero GPU utilization. If not, please remove the `gpu:` flag from your job.** 
+### Verifying GPU Usage
 
-We can try to rebuild older containeers on request, which will usually involve upgrading other software to current/compatible versions.
+Use nvidia-smi on the compute node to verify:
+    * Installed driver and CUDA runtime versions
+    * Current GPU utilization, to confirm your job is actually using the GPU. If GPU utilization is zero, your workload is running on CPU even if a GPU was allocated. 
 
-It is recommended to use the tensorflow singularity container because it has updated CUDA  (11.4) and a version of tensorflow compatible with the CUDA version.
+### Important Warning
+
+**Legacy Singularity containers built against older NVIDIA drivers may no longer function correctly.**
+In such cases:
+    * Your job may run CPU-only
+    * A GPU reservation may still be consumed unnecessarily
+If you observe zero GPU utilization with nvidia-smi, please remove the `gpu:` flag from your job submission.
+
+### Legacy Container Support
+
+We can attempt to rebuild older containers upon request.
+This will typically require upgrading dependent software to versions compatible with the current CUDA and driver stack.
 
 ### Interactive jobs with GPU on Alderaan
 
@@ -515,7 +540,6 @@ You can also start the Singularity shell directly:
          
 will allocate one GPU, one core, and run an internactive sinularity shell.
     
-    
 ## Interactive jobs
 
 Remember you should not directly ssh to a node because it would interfere with jobs scheduled to run on that node. For interactive access to a compute node, do instead:
@@ -527,7 +551,7 @@ This will request a session for you as a job in a single core slot on a compute 
 
 To start an interactive job on Alderaan with a GPU:
 ```
-srun -p math-alderaan-gpu-short--time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
+srun -p math-alderaan-gpu-quick --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
 ```
 
 ## Viewing Job Queues, Job Status, and System Status
