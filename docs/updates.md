@@ -8,7 +8,7 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 ### 2025/12/29
 
 * Rolling update in progress to improve Slurm scheduler stability. A node configuration issue may have caused jobs getting cancelled and nodes going in DRAIN status in some cases.
-    * Cluster was drained. This does not affect running jobs, but no new jobs can start. Updated Slurm configuration was activated on the head node controller and idle nodes only to avoid disturbing running jobs, and nodes resumed. Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
+* Cluster was drained. This does not affect running jobs, but no new jobs can start. Updated Slurm configuration was activated on the head node controller and idle nodes only to avoid disturbing running jobs, and nodes resumed. Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
 
 ### 2025/12/26 
 
@@ -16,14 +16,14 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
     * Jobs will no longer be scheduled on the same node if sufficient unallocated memory is not available.
     * This prevents memory oversubscriptio and unexpected job terminations due to out-of-memory conditions.
     * As a result, some jobs that previously started immediately may now remain pending longer if their requested memory cannot be satisfied.
+ * This chamge affects only jobs waiting in the queue. It is in effect immediately.
 
 ### 2025/12/24
 
 * Rolling update in progress to improve Slurm behavior when jobs exceed memory allocations under shared-node cgroup enforcement and reduce nodes going in DRAINING/DRAIN state.
     * Jobs are no longer allowed to use more memory than allocated. This should help prevent delayed exit, which was causing nodes to enter DRAINING/DRAIN state. **This may result in jobs running out of memory while they were previously allowed to continue. Increase the memory requested by the job when that happens.**
     * Slurm waits on job termination for 300s rather than previous 60s. This may result in jobs staying in exiting state longer.
-* Rollout procedure:
-    * Cluster drained. This does not affect running jobs, but no new jobs can start. Updated Slurm configuration activated on idle nodes only to avoid disturbing running jobs, and nodes resumed. Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
+* Cluster was drained. This does not affect running jobs, but no new jobs can start. Updated Slurm configuration activated on idle nodes only to avoid disturbing running jobs, and nodes resumed. Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
 
 ### 2025/12/19
 
