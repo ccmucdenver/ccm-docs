@@ -8,32 +8,22 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 ### 2025/12/29
 
 * Rolling update in progress to improve Slurm scheduler stability. A node configuration issue may have caused jobs getting cancelled and nodes going in DRAIN status in some cases.
-    * Cluster was drained. This does not affect running jobs, but no new jobs can start.
-    * Updated Slurm configuration was activated on the head node controller and idle nodes only to avoid disturbing running jobs, and nodes resumed.
-    * Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
+    * Cluster was drained. This does not affect running jobs, but no new jobs can start. Updated Slurm configuration was activated on the head node controller and idle nodes only to avoid disturbing running jobs, and nodes resumed. Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
 
 ### 2025/12/26 
 
-* Improved memory scheduling on compute nodes: The cluster Slurm scheduler was updated to more accurately account for memory when placing jobs on compute nodes.
-    * What this means for users:
-      Jobs that request large amounts of memory will no longer be co-scheduled on the same node if insufficient memory is available.
-      This prevents memory oversubscription, swap storms, and unexpected job terminations due to out-of-memory conditions.
-      As a result, some jobs that previously started immediately may now remain pending longer if their requested memory cannot be satisfied.
-      Users are encouraged to request realistic memory amounts using --mem or --mem-per-cpu to ensure fair and efficient scheduling.
-    * What does not change:
-      Running jobs are unaffected.
-      CPU scheduling behavior is unchanged.
-      No changes are required to existing job scripts unless they relied on implicit memory oversubscription.
+* The cluster Slurm scheduler configuration was updated to enforce that allocated memory is available to jobs.
+    * Jobs will no longer be scheduled on the same node if sufficient unallocated memory is not available.
+    * This prevents memory oversubscriptio and unexpected job terminations due to out-of-memory conditions.
+    * As a result, some jobs that previously started immediately may now remain pending longer if their requested memory cannot be satisfied.
 
 ### 2025/12/24
 
 * Rolling update in progress to improve Slurm behavior when jobs exceed memory allocations under shared-node cgroup enforcement and reduce nodes going in DRAINING/DRAIN state.
-    * Jobs are allowed to use no more memory than allocated to help prevent delayed exit, which was causing nodes to enter DRAINING/DRAIN state. **This may result in jobs running out of memory while they were previously allowed to continue. Increase the memory requested by the job when that happens.**
+    * Jobs are no longer allowed to use more memory than allocated. This should help prevent delayed exit, which was causing nodes to enter DRAINING/DRAIN state. **This may result in jobs running out of memory while they were previously allowed to continue. Increase the memory requested by the job when that happens.**
     * Slurm waits on job termination for 300s rather than previous 60s. This may result in jobs staying in exiting state longer.
 * Rollout procedure:
-    * Cluster drained. This does not affect running jobs, but no new jobs can start.
-    * Updated Slurm configuration activated on idle nodes only to avoid disturbing running jobs, and nodes resumed.
-    * Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
+    * Cluster drained. This does not affect running jobs, but no new jobs can start. Updated Slurm configuration activated on idle nodes only to avoid disturbing running jobs, and nodes resumed. Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
 
 ### 2025/12/19
 
