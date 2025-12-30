@@ -16,7 +16,7 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
     * Jobs will no longer be scheduled on the same node if sufficient unallocated memory is not available.
     * This prevents memory oversubscriptio and unexpected job terminations due to out-of-memory conditions.
     * As a result, some jobs that previously started immediately may now remain pending longer if their requested memory cannot be satisfied.
- * This chamge affects only jobs waiting in the queue. It is in effect immediately.
+ * This change affects only jobs waiting in the queues. It is in effect immediately.
 
 ### 2025/12/24
 
