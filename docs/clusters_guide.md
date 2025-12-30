@@ -470,8 +470,7 @@ The partitions
 
     math-alderaan-gpu-short
     math-alderaan-gpu
-    math-alderaan-cuda12
-    
+   
 have two high memory/GPU nodes`math-alderann-h[01,02]` with two NVIDIA A-100 40GB GPUs and 2TB memory each. Use `--partition=math-alderaan-gpu-short` (1 day job dutation maximum) with `--gres=gpu:a100:1` to request one GPU and `--gres=gpu:a100:2` to request two GPUs. For longer jobs, up to 7 days, you can use `--partition=math-alderaan-gpu`, but node availability may be limited and your job may wait longer.
  
 **Please do not use Alderaan GPUs without allocating them by `--gres` as above first. Please do not request an entire node on Alderaan by `--nodes` or `-N`, unless you really need all of it, request only the CPU cores you need by `--ntasks`. Large memory jobs and GPUs jobs can share the same node.**
@@ -484,17 +483,18 @@ An example job script:
     #SBATCH --partition=math-alderaan-gpu
     #SBATCH --time=1:00:00                  # Max wall-clock time 1 day 1 hour
     #SBATCH --ntasks=1                        # number of cores
-    singularity exec /storage/singularity/tensorflow.sif python3 yourgpucode.py
+    singularity exec  --nv /storage/singularity/cuda12.2-tf.sif your_script
+    
+Currently, both GPU nodes were upgraded to CUDA version 12.9 and drivers version 575. 
+CUDA 12.9 is **not compatible** with some current software versions, nameley TensorFlow. For compatibility reasons. For this reason, a compatibility container is provided with earlier version CUDA 12.2. You can use
 
-Of course, instead of singularity you can run another GPU code on one of the GPU nodes directly. 
+    singularity shell  --nv /storage/singularity/cuda12.2-tf.sif
 
-Currently,
-  * Node `math-alderaan-h01` has upgraded NVIDIA drivers and CUDA 12, and is available in partition `math-alderaan-cuda12`.
-  * Node `math-alderaan-h02` has currently CUDA 11.2, and is available in partition `math-alderaan-gpu-short`.
+and make your own conda environments. Use `nvidia-smi` on the nodes too see the details of the GPU software and the current GPU utilization.
 
-Use `nvidia-smi` on the nodes for details of the GPU and the current load.
+***Legacy singularity containers relying on earlier NVIDIA drivers may not work. This can result in your code using CPU only while your job consumes a GPU reservation. Please ssh into the node and run `nvidia-smi` to monitor if your job has nonzero GPU utilization. If not, please remove the `gpu:` flag from your job.** 
 
-You will have to install tensorflow or other GPU software in your account yourself. A version compatible with CUDA 11.2 is [tensorflow 2.4.0] (https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-03.html).
+We can try to rebuild older containeers on request, which will usually involve upgrading other software to current/compatible versions.
 
 It is recommended to use the tensorflow singularity container because it has updated CUDA  (11.4) and a version of tensorflow compatible with the CUDA version.
 
@@ -506,11 +506,11 @@ From the command line,
      
 will give you an interactive shell on one of the GPU nodes with one GPU allocated. You can then start singluarity shell
 
-    singularity shell /storage/singularity/tensorflow.sif 
+    singularity shell /storage/singularity/cuda12.2-tf.siff 
 
 You can also start the Singularity shell directly:
 
-    srun -p math-alderaan-gpu-short--time=2:00:0 -n 1 --gres=gpu:a100:1 singularity shell /storage/singularity/tensorflow.sif
+    srun -p math-alderaan-gpu-short--time=2:00:0 -n 1 --gres=gpu:a100:1 singularity shell /storage/singularity/cuda12.2-tf.sif
          
 will allocate one GPU, one core, and run an internactive sinularity shell.
     
