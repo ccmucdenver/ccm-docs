@@ -12,9 +12,9 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 
 ### 2025/12/26 
 
-* The cluster Slurm scheduler configuration was updated to enforce that allocated memory is available to jobs.
+* The cluster Slurm scheduler configuration was updated to ensure that allocated memory is available to jobs.
     * Jobs will no longer be scheduled on the same node if sufficient unallocated memory is not available.
-    * This prevents memory oversubscriptio and unexpected job terminations due to out-of-memory conditions.
+    * This prevents memory oversubscription and unexpected job terminations due to out-of-memory conditions.
     * As a result, some jobs that previously started immediately may now remain pending longer if their requested memory cannot be satisfied.
  * This change affects only jobs waiting in the queues. It is in effect immediately.
 
