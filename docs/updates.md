@@ -5,6 +5,13 @@ Please **contact Alderaan Help from your CU Denver email** with any questions.
 Alderaan is a High Performance Computing (HPC) facility operating close to the thermal limits of the available hardware and cooling infrastructure. To avoid hardware-level thermal CPU throttling which may result in node failures, Alderaan employs active, software-controlled thermal management.
 When CPU temperatures approach defined thresholds, a site-specific daemon proactively reduces CPU performance to keep temperatures within safe bounds. When disks in the storage nodes approach thermal limits, running jobs may be temporarily suspended to allow outstanding I/O to complete and to reduce overall thermal load on the disk arrays, which may lead to failed disks and ultimately loss of data. If datacenter ambient temperature limits are exceeded, a site-specific daemon proactively shuts down the cluster.
 
+### 2025/12/29
+
+* Rolling update in progress to improve Slurm scheduler stability. A node configuration issue may have caused jobs getting cancelled and nodes going in DRAIN status in some cases.
+    * Cluster was drained. This does not affect running jobs, but no new jobs can start.
+    * Updated Slurm configuration was activated on the head node controller and idle nodes only to avoid disturbing running jobs, and nodes resumed.
+    * Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
+
 ### 2025/12/26 
 
 * Improved memory scheduling on compute nodes: The cluster Slurm scheduler was updated to more accurately account for memory when placing jobs on compute nodes.
@@ -24,8 +31,8 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
     * Jobs are allowed to use no more memory than allocated to help prevent delayed exit, which was causing nodes to enter DRAINING/DRAIN state. **This may result in jobs running out of memory while they were previously allowed to continue. Increase the memory requested by the job when that happens.**
     * Slurm waits on job termination for 300s rather than previous 60s. This may result in jobs staying in exiting state longer.
 * Rollout procedure:
-    * Cluster drained.
-    * Updated Slurm configuration activated on idle nodes only and nodes resumed to avoid disturbing running jobs.
+    * Cluster drained. This does not affect running jobs, but no new jobs can start.
+    * Updated Slurm configuration activated on idle nodes only to avoid disturbing running jobs, and nodes resumed.
     * Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
 
 ### 2025/12/19
