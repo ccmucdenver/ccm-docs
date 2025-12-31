@@ -7,7 +7,7 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 
 ### 2025/12/29
 
-* Rolling Slurm configuration update in progress to correct Slurn node configuration issue which may have caused jobs getting cancelled and nodes going in DRAIN status in some cases.
+* Rolling Slurm configuration update in progress to correct a node Slurm configuration issue which may have caused jobs getting cancelled and nodes going in DRAIN status in some cases.
 * Cluster was drained. This does not affect running jobs, but no new jobs can start. Updated Slurm configuration was activated on the head node controller and idle nodes only to avoid disturbing running jobs, and nodes resumed. Other nodes will be updated and resume incrementally as running jobs complete. This may take up to 7 days.
 
 ### 2025/12/26 
