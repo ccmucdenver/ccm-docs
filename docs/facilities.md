@@ -2,7 +2,7 @@
 
 ### Computing Facilities 
 
-The CU Denver Center for Computational Mathematics (CCM) operates HPC cluater [Alderaan cluster](../alderaan/), total 2240 AMD EPYC 7502 cores and 4 NVIDIA A-100 GPUs: 2048 AMD 7502 cores and 16TB memory in 32 compute nodes (64 cores and 512GB per node), each with dual 960GB SSDs; 2 high-memory GPU nodes each with two NVIDIA A100 GPU, 2TB memory, and 64 AMD 7502 cores, and 960GB SSDs; head node with 64 cores and 256GB memory; 816TB storage (1PB raw), HDR100 InfiniBand interconnect, and 10Gb/s connectivity from every node to Internet 2. The cluster was funded by the National Science Foundation and installed in 2021. 
+The CU Denver Center for Computational Mathematics (CCM) operates HPC cluater [Alderaan](../alderaan/), with total 2240 AMD EPYC 7502 cores and 4 NVIDIA A-100 GPUs: 2048 AMD 7502 cores and 16TB memory in 32 compute nodes (64 cores and 512GB per node), each with dual 960GB SSDs; 2 high-memory GPU nodes each with two NVIDIA A100 GPU, 2TB memory, and 64 AMD 7502 cores, and 960GB SSDs; head node with 64 cores and 256GB memory; 816TB storage (1PB raw), HDR100 InfiniBand interconnect, and 10Gb/s connectivity from every node to Internet 2. The cluster was funded by the National Science Foundation and installed in 2021. 
 
 Accounts are available for faculty and students at CU Denver | Anschutz campuses, as well as to sponsored external collaborars with affiliate appointments. Login is by university credentials. 
 
