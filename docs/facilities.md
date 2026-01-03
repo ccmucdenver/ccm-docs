@@ -1,20 +1,17 @@
 # Facilities, Equipment, and Other Resources
 
 ### Computing Facilities 
-The CU Denver Center for Computational Mathematics (CCM) operates a network of clusters, servers, and workstations, which includes:
 
-*   [Alderaan cluster](../alderaan/), total 2240 AMD EPYC 7502 cores and 4 NVIDIA A-100 GPUs: 2048 AMD 7502 cores and 16TB memory in 32 compute nodes (64 cores and 512GB per node), each with dual 960GB SSDs; 2 high-memory GPU nodes each with two NVIDIA A100 GPU, 2TB memory, and 64 AMD 7502 cores, and 960GB SSDs; head node with 64 cores and 256GB memory; 816TB storage (1PB raw), HDR100 InfiniBand interconnect, and 10Gb/s connectivity from every node to Internet 2. The cluster was funded by the National Science Foundation and installed in 2021. 
-*   [Colibri cluster](../colibri/), 384 Intel Sandy Bridge cores, 48 NVidia Tesla M2090 Fermi GPUs, QDR Infiniband interconnect, 104TB disk array, High Memory Interactive Node with 32 cores, and 1TB memory.
-*   [Score cluster](../score/), 100 Intel Ivy Bridge cores, 5 nodes, 192GB memory per node, 10Gbit Ethernet interconnects.
-*   [190TB storage array](../storage/).
-*   Workstations and servers, connected by 1Gbs Ethernet, with 10Gbs uplink to the campus backbone.
+The CU Denver Center for Computational Mathematics (CCM) operates HPC cluater [Alderaan cluster](../alderaan/), total 2240 AMD EPYC 7502 cores and 4 NVIDIA A-100 GPUs: 2048 AMD 7502 cores and 16TB memory in 32 compute nodes (64 cores and 512GB per node), each with dual 960GB SSDs; 2 high-memory GPU nodes each with two NVIDIA A100 GPU, 2TB memory, and 64 AMD 7502 cores, and 960GB SSDs; head node with 64 cores and 256GB memory; 816TB storage (1PB raw), HDR100 InfiniBand interconnect, and 10Gb/s connectivity from every node to Internet 2. The cluster was funded by the National Science Foundation and installed in 2021. 
 
 Accounts are available for faculty and students at CU Denver | Anschutz campuses, as well as to sponsored external collaborars with affiliate appointments. Login is by university credentials. 
 
+Faculty and students use workstations in their offices as well as the campus wireless network,
+
 ### Software
-*   The clusters use a common SLURM batch scheduler.
-*   Installed software on the clusters network includes MATLAB, R, and GNU compilers. Additional software is installed on request on Alderaan or in Singularity containers for use anywhere.
-*   A large collection of software is available to CU Denver students and faculty through the Office of Information for free or at reduced costs, including a MATLAB site license.
+*   The cluster uses SLURM batch scheduler.
+*   Installed software includes MATLAB, R, and GNU compilers. Additional software is installed on request on Alderaan or in Singularity containers for use anywhere.
+*   A large collection of software for individual devices is available to CU Denver students and faculty through the Office of Information for free or at reduced costs, including a MATLAB site license.
 
 ### Personnel Resources
 
