@@ -15,7 +15,7 @@ Faculty and students use workstations in their offices as well as the campus wir
 
 ### Personnel Resources
 
-* The system administration is done by the CCM Director Jan Mandel, backed by the College of Liberal Arts and Sciences IT, and assisted by student staff. 
+* The system administrator is Professsor Emeritus Jan Mandel, backed by the College of Liberal Arts and Sciences IT, and assisted by student staff. 
 
 ### Other Resources
 
