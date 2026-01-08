@@ -7,8 +7,10 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 
 ### 2026/01/07
 
-* Alderaan is unreachable since today 2026/01/07 11:16. Investigating.
-* 3:20pm Conectivity reestablished.  Running jobs and processes which do not require an external connection were not affected.
+* 11:16 MT Alderaan is unreachable. Investigating.
+  * Impact: Login unavailable. Slurm jobs not affected. Outgoing connections (licenses, downloads, etc.) time out.
+* 15:20 MT Connectivity reestablished.
+
 
 ### 2025/12/29
 
