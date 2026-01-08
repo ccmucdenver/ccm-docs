@@ -10,7 +10,7 @@ When CPU temperatures approach defined thresholds, a site-specific daemon proact
 * 11:16 MT Alderaan is unreachable. Investigating.
   * Impact: Login unavailable. Slurm jobs not affected. Outgoing connections (licenses, downloads, etc.) time out.
 * 15:20 MT Connectivity reestablished.
-
+* Cause: Upstream campus network switch port was disabled during unrelated maintenance.
 
 ### 2025/12/29
 
