@@ -6,6 +6,16 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/01/30
+
+* **9:00–10:00 AM scheduled maintenance** for a network uplink change.
+   * Network connectivity to Alderaan is expected to be interrupted for about 10 minutes.
+   * SSH login and Jupyterhub will be unavailable during the interruption.
+   * Existing SSH and JupyterHub connections may disconnect. You may need to refresh your browser or reconnect after the maintenance.
+   * Running batch jobs and existing Jupyter servers are expected to continue, but jobs that rely on continuous network access or external services may be affected.
+   * Alderaan is expected to be fully available again by 10:00 AM.
+   * Please avoid starting interactive or time-critical work during this window.
+
 ### 2026/01/07
 
 * 11:16 MT Alderaan is unreachable. Investigating.
