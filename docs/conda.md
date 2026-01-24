@@ -30,7 +30,7 @@ Do you wish to update your shell profile to automatically initialize conda?
 Then edit your `~/.bash_profile` and add:
 
 ```bash
-source .bashrc
+source ~/.bashrc
 ```
 
 Log out and back in. The `conda` command should now work. If you wish to avoid auto-activating the base Conda environment:
