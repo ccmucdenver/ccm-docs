@@ -8,6 +8,8 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/01/30
 
+* MATLAB was upgraded to current version R2025b. This version is activated by **module load matlab** now. To activate the previous version, do **module load matlab/2023a** instead.
+
 * **9:00–10:00 AM scheduled maintenance** for a network uplink change.
    * Network connectivity to Alderaan is expected to be interrupted for about 10 minutes.
    * SSH login and Jupyterhub will be unavailable during the interruption.
