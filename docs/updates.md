@@ -16,6 +16,8 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
    * Existing SSH and JupyterHub connections may disconnect. You may need to refresh your browser or reconnect after the maintenance.
    * Running batch jobs and existing Jupyter servers are expected to continue, but jobs that rely on network access or external services, such as license servers or data acquisition, may be affected.
    * Please avoid starting interactive or time-critical work during this window.
+     
+* Maintenance completed as scheduled.
 
 ### 2026/01/07
 
