@@ -14,7 +14,7 @@ You need to be on the CU Denver  internal network, or VPN, or connect from [VMWa
 
 ## Windows
 
-Use Remote Desktop Connection (built-in). No special configuration required. Create PC **math-alderaan**
+Use Remote Desktop Connection (built-in). No special configuration required. Create remote PC **math-alderaan**.
 * Copy: Ctrl+C
 * Paste: Ctrl+V
 
@@ -37,6 +37,7 @@ Use Remote Desktop Connection (built-in). No special configuration required. Cre
 
 ## Notes
 * The desktop is Linux-based, therefore mouse and keyboard, esp. shortcuts, may behave differently than on your computer (Windows or macOS).
-* Features may depend on versions.
+* Names and details may change with software versions on your computer.
+* If the name **math-alderaan** does not work, use **math-alderaan.ucdenver.pvt**.
 
 ```
