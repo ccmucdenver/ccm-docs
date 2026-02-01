@@ -29,10 +29,11 @@ nav:
     - Clusters Guide: clusters_guide.md
     - Examples: examples.md
     - Accounts: accounts.md
-    - Environment modules: modules.md
-    - Globus file transfer: globus.md
+    - Environment Modules: modules.md
+    - Globus File Transfer: globus.md
     - Conda and Python: conda.md
     - JupyterHub: jupyterhub.md
+    - Remote Desktop: remote_desktop.md
     - Apache Spark: spark.md
     - Alderaan Cluster: alderaan.md
     - Research Storage: storage.md
