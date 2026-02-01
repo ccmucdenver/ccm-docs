@@ -38,6 +38,6 @@ Use Remote Desktop Connection (built-in). No special configuration required. Cre
 ## Notes
 * The desktop is Linux-based, therefore mouse and keyboard, esp. shortcuts, may behave differently than on your computer (Windows or macOS).
 * Names and details may change with software versions on your computer.
-* If the name **math-alderaan** does not work, use **math-alderaan.ucdenver.pvt**.
+* If the name **math-alderaan** does not work, use **math-alderaan.ucdenver.pvt**
 
 ```
