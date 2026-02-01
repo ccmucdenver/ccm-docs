@@ -20,13 +20,14 @@ Use Remote Desktop Connection (built-in). No special configuration required. Cre
 
 ## macOS
 
-* Install **Windows App**  from the App Store. In the app Settings
-•	Enable clipboard sharing.
-•	Use default keyboard mode (do not remap Cmd to Ctrl).
+* Install **Windows App**  from the App Store.
+* In the app Settings:
+    *	Enable clipboard sharing.
+    *	Use default keyboard mode (do not remap Cmd to Ctrl).
 * In Settings -> Keyboard, choose *Either Command* and make sure all boxes below are checked.
 * Connection -> Add PC -> PC name **math-alderaan**, leave all else at defaults.
-* Copy: Select text with mouse and tap with two fingers (or right click) on it, then Copy in the menu that appears. Command+C (macOS) is understood as interrupt rather than Copy.
-*  Paste: Command+V
+* Copy: Select text with mouse and tap with two fingers (right click) on it, then Copy in the menu that appears. Command+C (macOS) is understood by Linux terminal as interrupt rather than Copy.
+* Paste: Command+V, or tap with two fingers (right click), then Paste in the menu that appears.
 
 ## Session behavior
 
@@ -36,8 +37,6 @@ Use Remote Desktop Connection (built-in). No special configuration required. Cre
 
 ## Notes
 * The desktop is Linux-based, therefore mouse and keyboard, esp. shortcuts, may behave differently than on your computer (Windows or macOS).
-* Features may depend on versions. 
-.
+* Features may depend on versions.
 
 ```
-
