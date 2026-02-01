@@ -1,5 +1,9 @@
 # Remote Desktop
 
+**This is an experimental feature. Testing and comments welcome.**
+
+**Contact: jan.mandel@ucdenver.edu**
+
 XRDP remote desktop provides a graphical interface to Alderaan similar to having your own monitor connected directly to Alderaan, running in a window
 This service is intended for interactive work such as visualization, debugging, and GUI-based tools, such as MATLAB or R. 
 All desktop sessions of all users share one compute node, so please do not overload it. For computations requiring many cores or many GB of memory, please use batch jobs. Batch computation must still be submitted via SLURM.
