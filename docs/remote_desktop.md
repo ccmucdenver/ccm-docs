@@ -41,5 +41,3 @@ Use Remote Desktop Connection (built-in). No special configuration required. Cre
 * If the name **math-alderaan** does not work, use **math-alderaan.ucdenver.pvt**
 * MATLAB displays its normal GUI
 * In R, open the graphics window by **x11()**
-
-```
