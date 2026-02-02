@@ -10,8 +10,9 @@ To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz p
 
 * On campus wired network.
 * On campus secure wireless network (not the guest network)/
-* Through the remote desktop [https://remote.ucdenver.edu](https://remote.ucdenver.edu) After logging in, click on "Complimentary". It is recommended to download and use the VMware Horizon app instead of continuing in the browser.
-* Through [CU Denver](https://www.ucdenver.edu/vpn) or [CU Anschutz](https://www.cuanschutz.edu/vpn) by GlobalProtect VPN.
+* Through [CU Denver](https://www.ucdenver.edu/vpn) or [CU Anschutz](https://www.cuanschutz.edu/vpn) by GlobalProtect VPN.   **Windows Subsystem for Linux (WSL) is not recommended with VPN**, as GlobalProtect sometimes does not forward 
+connections properly from WSL, even though it works for other Windows applications.
+* Through the Windows remote desktop [https://remote.ucdenver.edu](https://remote.ucdenver.edu) After logging in, click on "Complimentary". It is recommended to download and use the VMware Horizon app instead of continuing in the browser.
 
 To log in, use your university username (not email) and password. If you do not know your username, you can retrieve it at [https://myaccount.ucdenver.edu/forgot-username](https://myaccount.ucdenver.edu/forgot-username).
 
@@ -29,12 +30,7 @@ work with graphical software such as Matlab or R directly. Just create a remote 
 
     ssh username@math-alderaan.ucdenver.pvt
 
-where username is your university username, in a terminal window on Linux or Mac, or in a Powershell window on 
-[Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh)
-10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`), and log in. 
-
-**Windows Subsystem for Linux (WSL) is not recommended with VPN**, as GlobalProtect sometimes does not forward 
-connections properly from WSL, even though it works for other Windows applications.
+  where username is your university username, in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`), and log in. 
 
 If you omit the username, your system's ssh may prompt you for it, or it may send your local username instead, which would not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections.
 
