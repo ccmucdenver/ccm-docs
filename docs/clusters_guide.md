@@ -15,15 +15,17 @@ To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz p
 
 To log in, use your university username (not email) and password. If you do not know your username, you can retrieve it at [https://myaccount.ucdenver.edu/forgot-username](https://myaccount.ucdenver.edu/forgot-username).
 
-High Performance Computing (HPC) systems like Alderaan are usually accessed from a command line terminal window.
+We curently offer three ways how to access Alderaan cluster:
 
-Perhaps the easiest way to log in is to use [JupyterHub](../jupyterhub). Simply go to 
+* Perhaps the easiest way to log in is to use [JupyterHub](../jupyterhub). Simply go to 
 [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
 and log in, which will give you a web page with a file navigation tree and one or more terminal windows. 
-Should you not see a terminal window, press the + button on upper left to start the Launcher, 
-then press the Terminal tile. You can also run Python notebooks, edit files, and more.
+You can also run Python notebooks, edit files, and more.
 
-Another way of accessing the system is to use the Secure Shell (SSH). Type
+* The [Remote Desktop](../remote_desktop) will give you a Linux desktop with the ability to open terminal windows and
+work with graphical software such as Matlab or R directly. Just create a remote PC (also called connection) named **math-alderaan** in Windows, or on macOS in Windows App (previously Microsoft Remote Desktop).
+
+* Secure Shell (SSH) provides a classical way to access Alderaan from a command line of a terminal window on your computer. Type
 
     ssh username@math-alderaan.ucdenver.pvt
 
