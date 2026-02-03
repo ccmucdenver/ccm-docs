@@ -26,19 +26,15 @@ You can also run Python notebooks, edit files, and more.
 * The [Remote Desktop](../remote_desktop) will give you a Linux desktop with the ability to open terminal windows and
 work with graphical software such as Matlab or R directly. Just create a remote PC (also called connection) named **math-alderaan** in Windows, or on macOS in Windows App (previously Microsoft Remote Desktop).
 
-* Secure Shell (SSH) provides a classical way to access Alderaan from a command line of a terminal window on your computer. Type
+* Secure Shell (SSH) provides a classical way to access Alderaan from a command line of a terminal window on your computer. Type **ssh username@math-alderaan.ucdenver.pvt** in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`). 
 
-    ssh username@math-alderaan.ucdenver.pvt
+ If you omit the username, your system's ssh may prompt you for it, or it may send your local username instead, which would not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections.
 
-  where username is your university username, in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`), and log in. 
-
-If you omit the username, your system's ssh may prompt you for it, or it may send your local username instead, which would not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections.
-
-For more convenience and security, you can
+ For more convenience and security, you can
 set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as 
 from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-connection-from-windows).
 
-SSH also allows you to transfer files via scp, sftp, or rsync commands. 
+ SSH also allows you to transfer files via scp, sftp, or rsync commands. 
 
 Alderaan cluster runs Centos 8.
 
