@@ -24,13 +24,9 @@ and log in, which will give you a web page with a file navigation tree and one o
 You can also run Python notebooks, edit files, and more.
 
 * The [Remote Desktop](../remote_desktop) will give you a Linux desktop with the ability to open terminal windows and
-work with graphical software such as Matlab or R directly. Just create a remote PC (also called connection) named **math-alderaan** in Windows, or on macOS in Windows App (previously Microsoft Remote Desktop).
+work with graphical software such as Matlab or R directly. Just create a remote PC (also called connection) named **math-alderaan** in Windows, or on macOS in Windows App (previously Microsoft Remote Desktop). See the [Remote Desktop](../remote_desktop) chapter for more details.
 
-* Secure Shell (SSH) provides a classical way to access Alderaan from a command line of a terminal window on your computer. Type **ssh username@math-alderaan.ucdenver.pvt** in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`). 
-
- If you omit the username, your system's ssh may prompt you for it, or it may send your local username instead, which would not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections.
-
- For more convenience and security, you can
+* Secure Shell (SSH) is a classical way to access Alderaan from the command line. Type **ssh username@math-alderaan.ucdenver.pvt** in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`). If you omit the username may send your local username instead, which may not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections. For more convenience and security, you can
 set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as 
 from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-connection-from-windows).
 
