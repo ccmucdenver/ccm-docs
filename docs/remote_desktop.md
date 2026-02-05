@@ -13,7 +13,7 @@ All desktop sessions of all users share one compute node, so please do not overl
 
 For computations requiring many cores or many GB of memory, please use batch jobs. Batch computation must still be submitted via SLURM. 
 
-Jupyter notebooks may perform better in the [JupyterHub](../jupyterhub), where your session will run in a batch job with its own memory and CPU allocation.
+Jupyter notebooks may perform better in the [JupyterHub](../jupyterhub) directly in a web browser, a your session will run in a batch job with its own memory and CPU allocation.
 
 ## Access
 
