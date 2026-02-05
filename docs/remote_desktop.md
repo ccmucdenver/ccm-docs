@@ -4,8 +4,11 @@
 
 **Contact: jan.mandel@ucdenver.edu**
 
-XRDP remote desktop provides a graphical interface to Alderaan similar to having your own monitor connected directly to Alderaan, running in a window
+## Use
+
+XRDP remote desktop provides a graphical interface to Alderaan similar to having your own monitor connected directly to Alderaan, running in a window on your computer.
 This service is intended for interactive work such as visualization, debugging, and GUI-based tools, such as MATLAB or R. 
+
 All desktop sessions of all users share one compute node, so please do not overload it. For computations requiring many cores or many GB of memory, please use batch jobs. Batch computation must still be submitted via SLURM.
 
 ## Access
@@ -36,8 +39,9 @@ Use Remote Desktop Connection (built-in). No special configuration required. Cre
 * Logging out ends the session.
 
 ## Notes
-* The desktop is Linux-based, therefore mouse and keyboard, esp. shortcuts, may behave differently than on your computer (Windows or macOS).
-* Names and details may change with software versions on your computer.
+* The desktop is Linux-based, therefore it will behave somewhat differently than a Windows or macOS desktop.
+* Names and details may change with software versions.
 * If the name **math-alderaan** does not work, use **math-alderaan.ucdenver.pvt**
-* MATLAB displays its normal GUI
+* MATLAB displays its normal GUI.
 * In R, open the graphics window by **x11()**
+* You can use Firefox to open graphics files.
