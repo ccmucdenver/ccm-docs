@@ -10,12 +10,14 @@ XRDP remote desktop provides a graphical interface to Alderaan similar to having
 This service is intended for interactive work such as visualization, debugging, and GUI-based tools, such as MATLAB or R. 
 
 All desktop sessions of all users share one compute node, so please do not overload it. 
+
 For computations requiring many cores or many GB of memory, please use batch jobs. Batch computation must still be submitted via SLURM. 
-Jupyter notebooks may be better suited for the [JupyterHub](../jupyterhub.html)
+
+Jupyter notebooks may perform better in the [JupyterHub](../jupyterhub), where your session will run in a batch job with its own memory and CPU allocation.
 
 ## Access
 
-You need to be on the CU Denver  internal network, or VPN, or connect from [VMWare Horizon Remote Desktop](https://remote.ucdenver.edu) (Click on *Complimentary* after you log in. For better performance, you can download and use the app.) 
+You need to be on the CU Denver  internal network, or on VPN, or connected from [VMWare Horizon Remote Desktop](https://remote.ucdenver.edu) (Click on *Complimentary* after you log in. For better performance, you can download and use the app.) 
 
 ## Windows
 
