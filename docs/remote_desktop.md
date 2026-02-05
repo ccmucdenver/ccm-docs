@@ -13,7 +13,7 @@ All desktop sessions of all users share one compute node, so please do not overl
 
 ## Access
 
-You need to be on the CU Denver  internal network, or VPN, or connect from [VMWare Horizon Remote Desktop](https://remote.ucdenver.edu) (Click on *Complimentary* after you log in). 
+You need to be on the CU Denver  internal network, or VPN, or connect from [VMWare Horizon Remote Desktop](https://remote.ucdenver.edu) (Click on *Complimentary* after you log in. For better performance, you can download and use the app.) 
 
 ## Windows
 
