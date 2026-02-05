@@ -17,7 +17,7 @@ Jupyter notebooks may perform better in the [JupyterHub](../jupyterhub), where y
 
 ## Access
 
-You need to be on the CU Denver  internal network, or on VPN, or connected from [VMWare Horizon Remote Desktop](https://remote.ucdenver.edu) (Click on *Complimentary* after you log in. For better performance, you can download and use the app.) 
+You need to be on the CU Denver  internal network, or on VPN, or connected from [VMWare Horizon Remote Desktop](https://remote.ucdenver.edu) (Click on *Complimentary* after you log in. For better performance, you can download and use the Horizon app.) 
 
 ## Windows
 
