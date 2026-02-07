@@ -1,4 +1,4 @@
-# Clusters Overview
+# Alderaan Overview
 
 ## Configuration
 
@@ -8,11 +8,10 @@
 
 ## Quick basics 
 
-* Connect by command line ssh to the head node,  
-`ssh math-alderaan.ucdenver.pvt` 
-or in a web browser to Jupyterhub 
-[https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt),
-using your university username and password. 
+* Connect by using your university username and password:
+ * in a web browser to Jupyterhub [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt),
+ * by Remote Desktop (Windows App on macOS) to **math-alderaan** 
+ * by command line ssh to the head node by **ssh username@math-alderaan.ucdenver.pvt**
 
 * Write a job script, say `myjob`, with the commands to execute and special
  comments how many cores and which kind of node it needs (=partition name). See
@@ -21,7 +20,6 @@ using your university username and password.
 * Submit the script to the SLURM scheduler by `sbatch myjob` 
  
 * The scheduler finds a compute node with enough free cores and memory, marks the cores as allocated, and starts executing the job script on the node.
-
 
 ## Quick Tips 
 
@@ -35,7 +33,7 @@ using your university username and password.
 
 * If you run sofware that needs [modules](../modules) loaded first: add `module load module_name` in your job script. 
 
-* If you need to run interactively, not as a script, you can:
+* If you need to run on compute nodes interactively, not as a script, you can:
   * use [Jupyterhub](../jupyterhub), which provides multiple terminal and notebook windows (7 days max)
   * run interactively on an alderaan node by entering the magic line   
     `srun --pty -N 1 -n 1 -t 1:00:00 -p math-alderaan /bin/bash -l`  
