@@ -35,8 +35,6 @@ nav:
     - JupyterHub: jupyterhub.md
     - Remote Desktop: remote_desktop.md
     - Apache Spark: spark.md
-    - Alderaan Cluster: alderaan.md
-    - Research Storage: storage.md
     - Singularity Containers: singularity.md
     - Local network: local.md
     - External Resources: external.md
