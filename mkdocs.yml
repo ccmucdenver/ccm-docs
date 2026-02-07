@@ -36,7 +36,6 @@ nav:
     - Remote Desktop: remote_desktop.md
     - Apache Spark: spark.md
     - Singularity Containers: singularity.md
-    - Local network: local.md
     - External Resources: external.md
     - Facilities, Equipment, and Other Resources: facilities.md
     - How to Edit: pull_request.md
