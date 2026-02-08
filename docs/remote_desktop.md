@@ -4,9 +4,12 @@
 
 **Contact: jan.mandel@ucdenver.edu**
 
-## Use
+Alderaan provides a remote Linux desktop (XFCE) accessible via [Microsoft Remote Desktop (RDP)}(https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients).
 
-XRDP remote desktop provides a graphical interface to Alderaan similar to having your own monitor connected directly to Alderaan, running in a window on your computer.
+## Usage
+
+The Alderaan remote desktop uses the [XFCE desktop environment](https://xfce.org/)
+The desktop provides a graphical interface to Alderaan similar to having your own monitor connected directly to Alderaan, running in a window on your computer.
 This service is intended for interactive work such as visualization, debugging, and GUI-based tools, such as MATLAB or R. 
 
 All desktop sessions of all users share one compute node, so please do not overload it. 
