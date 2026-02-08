@@ -38,7 +38,7 @@ Recommended settings:
 
 Copy/Paste tip:
 - In terminals, Command+C may stop programs instead of copying.
-- Use the mouse right-click (two fingers on a touch pad) menu for Copy and Paste if unsure.
+- Use the mouse right-click (two fingers tap on a touch pad) menu for Copy and Paste if unsure.
 
 ## Session behavior
 
