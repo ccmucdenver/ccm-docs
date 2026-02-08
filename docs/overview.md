@@ -3,7 +3,7 @@
 ## Configuration
 
 * 32 compute nodes with 64 cores and 512GB memory each, 30 available.
-* 2 nodes with 2TB memory and 2 NVIDIA A100 GPUs each,
+* 2 nodes with 64 cores, 2TB memory, and 2 NVIDIA A100 GPUs each,
 * 800TB storage (1PB raw).
 
 ## Quick basics 
