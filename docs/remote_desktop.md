@@ -60,8 +60,9 @@ This service uses the lightweight [XFCE desktop environment](https://docs.xfce.o
 
 ## Troubleshooting
 
+- Window at login ending with "could not be authenticated" → Click OK and try again.
 - Cannot connect → check VPN or campus network.
 - Black screen then disconnect → wait 30 seconds and reconnect.
-- Copy/paste not working → use right-click menu inside the desktop.
-- In R, open the graphics window by **x11()**
+- Copy/paste not working → use right-click (two finders tap) menu inside the desktop.
+- In R, open the graphics window by the command `x11()`
 - You can use Firefox to open graphics files.
