@@ -1,37 +1,45 @@
 # Remote Desktop
 
-## Quick start
-
-1. Connect to the CU Denver network (on campus or VPN).
-2. Open Remote Desktop on your computer (on MacOS, Windows App from the App Store)
-3. Connect to:
-
-   PC name: `math-alderaan`
-
-If that does not work, try: `math-alderaan.ucdenver.pvt`
-
-Log in with your CU Denver | Anschutz username and password.
-
 ## What this is
 
-Alderaan provides an experimental remote graphical desktop session
+Alderaan provides a remote graphical desktop session
 (similar quick interactive use as having a monitor attached).
 
 This is useful for MATLAB, R graphics, visualization, and debugging.
 
-## Windows
+## Quick start
 
-Use the built-in “Remote Desktop Connection” app.
+1. Connect to the CU Denver network (on campus or VPN).
+2. Open Remote Desktop on your computer (on MacOS, Windows App from the App Store)
+3. Connect to PC name: `math-alderaan`
 
-- PC name: `math-alderaan`
+Should that not work, try: `math-alderaan.ucdenver.pvt`
+
+Click away the certificate warning.
+
+Log in with your CU Denver | Anschutz username and password.
+
+## Connection through VMware Horizon
+
+1. Go to [https://remote.ucdenver.edu](https://remote.ucdenver.edu), download the app (recommended).
+2. Log into the web client or the app with your CU Denver | Anschutz username and password.
+3. Click on the Remote Desktop tile.
+4. Connect to Computer: `math-alderaan`
+   
+Should that not work, try: `math-alderaan.ucdenver.pvt`
+
+Click away the certificate warning.
+
+Log in with your CU Denver | Anschutz username and password.
+
+## Copy/Paste
+### Windows
 - Copy:  Ctrl+C
 - Paste: Ctrl+V
 
-## macOS
+### macOS
 
-Install “Windows App” from the App Store.
-
-Recommended settings:
+Recommended settings in the Windows App:
 - Enable clipboard sharing.
 - Settings -> Keyboard, choose *Either Command* and make sure all boxes below are checked.
 - Do not remap Command to Control
