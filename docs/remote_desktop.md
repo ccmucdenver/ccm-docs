@@ -22,19 +22,21 @@ This is useful for MATLAB, R graphics, visualization, and debugging.
 
 ## Copy/Paste
 ### Windows
-- Copy:  Ctrl+C
-- Paste: Ctrl+V
+
+Integrated, no configuration needed.
+* Copy:  Ctrl+C
+* Paste: Ctrl+V
 
 ### macOS
 
-Recommended settings in the Windows App:
-- Enable clipboard sharing.
-- Settings -> Keyboard, choose *Either Command* and make sure all boxes below are checked.
-- Do not remap Command to Control
+Recommended settings in the Windows App: 
+* Enable clipboard sharing.
+* Settings -> Keyboard, choose *Either Command* and make sure all boxes below are checked.
+* Do not remap Command to Control
 
 Copy/Paste tip:
-- In terminals, Command+C may stop programs instead of copying.
-- Use the mouse right-click (two fingers tap on a touch pad) menu for Copy and Paste if unsure.
+* In terminals, Command+C may stop programs instead of copying.
+* Use the mouse right-click (two fingers tap on a touch pad) menu for Copy and Paste if unsure.
 
 ## Session behavior
 
@@ -46,13 +48,13 @@ Copy/Paste tip:
 
 All users share the same interactive node.
 
-- Use this for light interactive work only.
-- For heavy computation, submit batch jobs via SLURM.
-- For notebooks, [JupyterHub](../jupyterhub) is usually faster.
-
-Do not use Alderaan including this service for confidential or controlled data.
+* Use this for light interactive work only.
+* For heavy computation, submit batch jobs via SLURM.
+* For notebooks, [JupyterHub](../jupyterhub) is usually faster.
 
 This service uses the lightweight [XFCE desktop environment](https://docs.xfce.org/xfce/getting-started#the_desktop_environment). It behaves in some aspects differently from native Windows or macOS desktops.
+
+Do not use Alderaan including this service for confidential or controlled data.
 
 ## Troubleshooting
 
