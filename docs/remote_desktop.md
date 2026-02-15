@@ -11,26 +11,14 @@ This is useful for MATLAB, R graphics, visualization, and debugging.
 
 1. Connect to the CU Denver network (on campus or VPN).
 2. Open Remote Desktop on your computer (on MacOS, Windows App from the App Store)
-3. Connect to PC name: `math-alderaan`
-
-Should that not work, try: `math-alderaan.ucdenver.pvt`
-
-Click away the certificate warning.
-
-Log in with your CU Denver | Anschutz username and password.
+3. Connect to PC name: `math-alderaan` . Should that not work, try: `math-alderaan.ucdenver.pvt` . Click away the certificate warning. Log in with your CU Denver | Anschutz username and password.
 
 ## Connection through VMware Horizon
 
 1. Go to [https://remote.ucdenver.edu](https://remote.ucdenver.edu), download the app (recommended).
 2. Log into the web client or the app with your CU Denver | Anschutz username and password.
 3. Click on the Remote Desktop tile.
-4. Connect to Computer: `math-alderaan`
-   
-Should that not work, try: `math-alderaan.ucdenver.pvt`
-
-Click away the certificate warning.
-
-Log in with your CU Denver | Anschutz username and password.
+4. Connect to Computer: `math-alderaan` . Should that not work, try: `math-alderaan.ucdenver.pvt` . Click away the certificate warning. Log in with your CU Denver | Anschutz username and password.
 
 ## Copy/Paste
 ### Windows
