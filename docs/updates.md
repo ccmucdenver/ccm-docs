@@ -6,6 +6,10 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/02/20
+
+* Enforcement of per-user limits on concurrent CPUs usage was updated to use the Quality of Service (QOS) mechanism. The limits themselves were not changed. The updated configuration is being rolled out across compute nodes. Nodes are being drained and resumed after running jobs complete. No impact to currently running jobs.
+
 ### 2026/01/30
 
 * MATLAB was upgraded to current version R2025b. This version is activated by **module load matlab** now. To activate the previous version, do **module load matlab/2023a** instead.
