@@ -553,6 +553,10 @@ srun -p math-alderaan-gpu-quick --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash 
 The command <code>squeue</code> will show one line for each
 job running on the system.
 
+The command <code>squeue.sh</code> will show one line for each
+job running on the system with a listing of all resources requested - CPUs, memory, GPUs. <code>jobs-on-nodes.sh</code> shows the jobs running node by node with the resources reserve. These custom commands should help understanding the use of the resource and the reasons why jobs may wait. 
+
+
 The command <code>sinfo</code> will show a summary of jobs and partitions status on the system:
 
     PARTITION         AVAIL  TIMELIMIT  NODES  STATE NODELIST
