@@ -1,0 +1,3 @@
+[mcp_servers.basic-memory]
+command = "/opt/homebrew/bin/uvx"
+args = ["basic-memory", "mcp", "--project", "ccm-docs"]
