@@ -67,6 +67,12 @@ This file defines strict operating constraints for any agent working in this rep
 - For edits touching `docs/updates.md`, include only the requested date window or entry.
 - Never run destructive git commands (`reset --hard`, checkout discard, etc.).
 
+## 8. Commits
+- Reread all changed files.
+- Commit changes in related groups only.
+- For each change group, suggest commit message for approval first.
+- After user approves, run the commit command through sandbox.
+
 ## 8. Validation Expectations
 
 - Run available local checks when dependencies exist:
