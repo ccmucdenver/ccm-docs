@@ -12,7 +12,7 @@ For best response, please send support requests from CU Denver email to Alderaan
 
 ### Funding
 
-The Alddraan cluster was funded by [NSF grant 2019089](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089). Additional GPUS were purchased by the Department of Mathematical and Statistical Sciences and by the Center for Computational Mathematics. Additional cooling was provided using funds from Simons Foundation.
+The Alderaan cluster was funded by [NSF grant 2019089](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089). Additional GPUS were purchased by the Department of Mathematical and Statistical Sciences and by the Center for Computational Mathematics. Additional cooling was provided using funds from Simons Foundation.
 
 ### How to contribute
 

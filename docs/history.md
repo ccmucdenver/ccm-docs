@@ -40,7 +40,7 @@ Real-time:  &nbsp;  &nbsp; [Temperature](https://demo.openwfm.org/web/alderaan/t
 
 ### 2022/05/25
 
-Alderaan powered down during the nighnt, circuit breakers on the PDU tripped. Restarted in the morning.
+Alderaan powered down during the night, circuit breakers on the PDU tripped. Restarted in the morning.
 
 Work in the datacenter will resume tomorrow morning.
 The whole alderaan cluster will be powered off.
@@ -66,9 +66,9 @@ math-alderaan-c[25-32] are down, verified due to a power issue. We will work on 
 
 ### 2022/05/20
 
-Work will continue on the GPU/high memory nodes math-alderann-h01 and h02 Monday from about 12:30. The nodes will be offline from and any jobs running will be killed.  The nodes will be put in drain status in advance.
+Work will continue on the GPU/high memory nodes math-alderaan-h01 and h02 Monday from about 12:30. The nodes will be offline from and any jobs running will be killed.  The nodes will be put in drain status in advance.
 
-Nodes math-alderann-c18 and c25-32 are down. We'll investigate the issue Monday afternoon. Node c18 has hardware failure, the rest may be only a power issue.
+Nodes math-alderaan-c18 and c25-32 are down. We'll investigate the issue Monday afternoon. Node c18 has hardware failure, the rest may be only a power issue.
 
 Some other nodes may be powered off and jobs running on them killed during the maintenance. We'll try to minimize that.
 

@@ -13,7 +13,7 @@
  * by [Remote Desktop](../remote_desktop) (use Windows App on macOS) to **math-alderaan**, or
  * on the command line by **ssh username@math-alderaan.ucdenver.pvt**
 
-* Use the SLURM schueduler:
+* Use the SLURM scheduler:
  * Write a job script, with the commands to execute and special
  comments how many cores and which kind of node it needs (=partition name)
  * Submit the script to the SLURM scheduler. See [examples](../examples) for details.
@@ -23,13 +23,13 @@
 
 * If you need software that is not installed on Alderaan, you can
   * check if it may be available in one of our [singularity containers](../singularity)
-  * check if it may be availale in a [module](../clusters_guide/#where-is-the-software-modules-and-singularity-containers)
+  * check if it may be available in a [module](../clusters_guide/#where-is-the-software-modules-and-singularity-containers)
   * install it in your account using [Conda](../conda)
   * ask for it to be installed, which may be typically done in a new singularity container or module
 
 * In your SLURM job,
  * request an estimated number of cores your code needs, if you do not know exactly how many (e.g., some codes in R)
- * if you run sofware that needs [modules](../modules) loaded first: add `module load module_name` in your job script. 
+ * if you run software that needs [modules](../modules) loaded first: add `module load module_name` in your job script. 
 
 * If you need to run on compute nodes interactively, not as a script, you can:
   * use [Jupyterhub](../jupyterhub), which provides multiple terminal and notebook windows with dedicated resources

@@ -63,7 +63,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 ### 2025/11/04
 
 * Node **math-alderaan-h02** was upgraded to CUDA 12.9 and returned to operations.
-* Both GPU nodes **math-alderaan-h01** and  **math-alderaan-h02** now run CUDA 12.9 and are in the partititions **math-alderaan-gpu** (7 days max, lower priority) and **math-alderaan-gpu-short** (1 day max, higher priority). Partition **math-alderaan-cuda12** is set to Down for limited time for continuity and will be deleted.
+* Both GPU nodes **math-alderaan-h01** and  **math-alderaan-h02** now run CUDA 12.9 and are in the partitions **math-alderaan-gpu** (7 days max, lower priority) and **math-alderaan-gpu-short** (1 day max, higher priority). Partition **math-alderaan-cuda12** is set to Down for limited time for continuity and will be deleted.
 * Singularity containers with CUDA 11 should still work using **singularity exec --nv**.
 * TensorFlow is currently not compatible yet with CUDA 12.9. New singularity container **cuda12.2-tf.sif** with CUDA 12.2, TensorFlow 2.16, and conda is available and will run with the upgraded CUDA drivers. Use as
   ```
@@ -164,7 +164,7 @@ Nodes **math-alderaan-h[01,02]** are draining for short maintenance (hardware re
     
 ### 2025/06/22
 
-* Node math-alderaan-h02 resumed, removed from math-alderaan-gpu, and left in math-alderaan-gpu-short partion only so that it can be drained faster in future. 
+* Node math-alderaan-h02 resumed, removed from math-alderaan-gpu, and left in math-alderaan-gpu-short partition only so that it can be drained faster in future. 
 
 ### 2025/06/21
 
@@ -207,7 +207,7 @@ Nodes **math-alderaan-h[01,02]** are draining for short maintenance (hardware re
 
 * 08:10 Alderaan shut down due to sustained high temperature.
 
-* 12:00 Cooled down, but the storage nodes are still too hot for sustained usex.
+* 12:00 Cooled down, but the storage nodes are still too hot for sustained use.
 
 ### 2025/04/25
 
@@ -708,7 +708,7 @@ Other filesystems are not affected.
 
 * 5pm: Maintenance completed, operations normal. 
 
-* 10am: Maintenance started: continue moving nodes and cables improve air flow and adding fan strips.  Nodes math-alderann-c[01-12] will be powered off. Other nodes and functionality may be affected too.
+* 10am: Maintenance started: continue moving nodes and cables improve air flow and adding fan strips.  Nodes math-alderaan-c[01-12] will be powered off. Other nodes and functionality may be affected too.
 
 * 12am: Nodes math-alderaan-c[01-12] are draining, no new jobs can start on them. Existing jobs can continue while the nodes remain up. Any nodes suspended automatically for CPU overheating will remain suspended until the maintenance is completed.
 
@@ -850,7 +850,7 @@ Normal operations will resume when the temperature returns to at most 25 C. Plea
 ### 2022/06/10
 
 * Node math-alderaan-h01 will be powered off Monday 6/13 afternoon to add a second GPU. All running jobs will be killed. The node will be put in draining state in 
-advance so that no new jobs can start. Node math-alderann-h02 will be put  back, upgraded to two GPUs. Other nodes should not be affected.
+advance so that no new jobs can start. Node math-alderaan-h02 will be put  back, upgraded to two GPUs. Other nodes should not be affected.
 
 * SLURM reconfiguration to allocate also GPUs and memory at least in the math-alderaan-gpu partition is coming soon.
 

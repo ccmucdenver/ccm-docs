@@ -16,7 +16,7 @@ connections properly from WSL, even though it works for other Windows applicatio
 
 To log in, use your university username (not email) and password. If you do not know your username, you can retrieve it at [https://myaccount.ucdenver.edu/forgot-username](https://myaccount.ucdenver.edu/forgot-username).
 
-We curently offer three ways how to access Alderaan cluster:
+We currently offer three ways how to access Alderaan cluster:
 
 * Perhaps the easiest way to log in is to use [JupyterHub](../jupyterhub). Simply go to 
 [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
@@ -38,7 +38,7 @@ Alderaan cluster runs Centos 8.
 
 Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, you can type <code>ssh math-colibri-i02</code> or whatever interactive server you want to go to directly. 
 
-**Please do not run anything directly on compute nodes without a reservation. Theu are reserved for jobs under the control of the Slurm scheduler, even if you may be able to ssh there.  These are nodes with names like math-alderaan-c01 with something else than "i" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.** It is OK to ssh to a compute node to check on your job, but  don't run anything there.
+**Please do not run anything directly on compute nodes without a reservation. They are reserved for jobs under the control of the Slurm scheduler, even if you may be able to ssh there.  These are nodes with names like math-alderaan-c01 with something else than "i" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.** It is OK to ssh to a compute node to check on your job, but  don't run anything there.
    
 ### Screen virtual terminal in interactive usage
 
@@ -61,13 +61,13 @@ The home directories are on a shared file server and linked as `/home/username`.
 a project directory. The legacy project directories are  `/storage/department/projects/username` 
 (where department may be one of many departments who use this system). New project directories are currently 
 created as `/data001/projects/username` instead. The location of the project directory is emailed to the user
-when the directory is created as a part of setting up a new accoun.
+when the directory is created as a part of setting up a new account.
 
 In addition, groups can request shared project directories also in `/storage/department/projects` or `/data001/projects`. 
 
-The difference betwen project and home directories is that home directories are backed up occasionally (if not too large)
+The difference between project and home directories is that home directories are backed up occasionally (if not too large)
 while project directories and too large home directories are not backed up. Please keep your home directory small to make the backups possible. 
-Please be aware that even if disk space is large and currenly not restricted, it is finite.
+Please be aware that even if disk space is large and currently not restricted, it is finite.
 
 Please monitor the usage of the partition you are on by 
 
@@ -97,7 +97,7 @@ Type <code>chmod og-rwx file_or_directory_name</code> to make the file or direct
 
 ## Where is the software? Modules and Singularity containers
 
-We normally do not install application software directly on the system because of software dependencies and version conflicts. Instead, we install sofware in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](../conda)**.
+We normally do not install application software directly on the system because of software dependencies and version conflicts. Instead, we install software in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](../conda)**.
 
 ### Modules
 
@@ -170,7 +170,7 @@ To manage this safely:
 
 ### Linux or Mac
 
-On a Linux or Mac computer, you can use file transfer utilities `rsync`, `scp`, `sftp` on your computer to transfer files and entire directores between your computer and clusters. These utilities are normally a part of the system, if not you can install them from your Linux distribution. [Rsync](https://en.wikipedia.org/wiki/Rsync) is recommended. Typing `man rsync` should give you the manual for the system you are on. Rsync can transfer file trees recursively and resume a transfer which was interrupted.
+On a Linux or Mac computer, you can use file transfer utilities `rsync`, `scp`, `sftp` on your computer to transfer files and entire directories between your computer and clusters. These utilities are normally a part of the system, if not you can install them from your Linux distribution. [Rsync](https://en.wikipedia.org/wiki/Rsync) is recommended. Typing `man rsync` should give you the manual for the system you are on. Rsync can transfer file trees recursively and resume a transfer which was interrupted.
 
 ### Windows
 
@@ -178,7 +178,7 @@ On current Windows PC, you can use `scp` and `sftp` from the command window (a.k
 
 ### From a Website
 
-You can download a file from a website using simply `wget` followed by the URL of the file. You can get the URL of a file posted on the web by a right-click and selectingv something like "Copy link address".
+You can download a file from a website using simply `wget` followed by the URL of the file. You can get the URL of a file posted on the web by a right-click and selecting something like "Copy link address".
 
 ### Github
 
@@ -462,7 +462,7 @@ The partitions
     math-alderaan-gpu-short
     math-alderaan-gpu
    
-have two high memory/GPU nodes`math-alderann-h[01,02]` with two NVIDIA A-100 40GB GPUs and 2TB memory each. Use `--partition=math-alderaan-gpu-short` (1 day job dutation maximum) with `--gres=gpu:a100:1` to request one GPU and `--gres=gpu:a100:2` to request two GPUs. For longer jobs, up to 7 days, you can use `--partition=math-alderaan-gpu`, but node availability may be limited and your job may wait longer.
+have two high memory/GPU nodes`math-alderaan-h[01,02]` with two NVIDIA A-100 40GB GPUs and 2TB memory each. Use `--partition=math-alderaan-gpu-short` (1 day job duration maximum) with `--gres=gpu:a100:1` to request one GPU and `--gres=gpu:a100:2` to request two GPUs. For longer jobs, up to 7 days, you can use `--partition=math-alderaan-gpu`, but node availability may be limited and your job may wait longer.
  
 **Please do not use Alderaan GPUs without allocating them by `--gres` as above first. Please do not request an entire node on Alderaan by `--nodes` or `-N`, unless you really need all of it, request only the CPU cores you need by `--ntasks`. Large memory jobs and GPUs jobs can share the same node.**
 

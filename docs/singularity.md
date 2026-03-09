@@ -120,7 +120,7 @@ Note: Rebuilding a container usually picks up current version of software, so th
 
 ### bfctools.sif
 
-Bioinformatics sofware bfctools 1.15.1 for processing and analyzing sequencing data. Based on Ubuntu 20.04 with Development Tools.
+Bioinformatics software bfctools 1.15.1 for processing and analyzing sequencing data. Based on Ubuntu 20.04 with Development Tools.
 
 ### bio-lowry.sif
 

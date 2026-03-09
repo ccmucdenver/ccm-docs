@@ -9,7 +9,7 @@ The network is mostly for interactive use. The network is behind the campus fire
 outside except through the VPN.
 ## Hardware
 The network consists of workstations and printers on the 4th floor.
-The individual devices have 1Gbs ethernet connection to a switch with 10Gbs uplink to the campus backcbone.
+The individual devices have 1Gbs ethernet connection to a switch with 10Gbs uplink to the campus backbone.
 
 
 ## Software

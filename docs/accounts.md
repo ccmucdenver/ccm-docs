@@ -25,7 +25,7 @@ We really need the "yes" clicks for all those terms and conditions!
 
 ## Resources and Allocations
 
-To encourage early use, the folowing is in effect for an initial period - we want you to work here! A more formal allocation process will start when needed.
+To encourage early use, the following is in effect for an initial period - we want you to work here! A more formal allocation process will start when needed.
 
 ### Storage
 
@@ -39,7 +39,7 @@ Use the command `du -sh` in a directory to see how much storage space you are us
 
 ### Running Jobs
 
-  * Users are set up with the initial 500 concurrent cores limit. More is possible upon request. Your cores limit may be increased quitely temporarily when your jobs are waiting and there are enough cores available for everyone.
+  * Users are set up with the initial 500 concurrent cores limit. More is possible upon request. Your cores limit may be increased quietly temporarily when your jobs are waiting and there are enough cores available for everyone.
   * Run time of jobs on math-alderaan nodes is maximum 7 days. This is a hard limit. Job run time on other math-score nodes is unlimited.
   * The total usage of CPU and GPU hours is unlimited.
 
@@ -54,7 +54,7 @@ Use the command `du -sh` in a directory to see how much storage space you are us
 
 
 
-The planned allocaton  in future are:
+The planned allocation  in future are:
 
   * **Small** - up to 30,000 Alderaan core hours, max 128 concurrent cores per user, standard storage. Automatic with an account.
   * **Medium** - up to 150,000 Alderaan core hours, max 640 concurrent cores, additional storage.
