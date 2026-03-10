@@ -1,12 +1,18 @@
+.PHONY: help build-web build-file serve sync
+
 build-web:
-	mkdocs build --clean --use-directory-urls
+	conda run -n mkdocs mkdocs build --clean --use-directory-urls
 
 build-file:
-	mkdocs build --clean --no-directory-urls
+	conda run -n mkdocs mkdocs build --clean --no-directory-urls
 
 serve:
-	mkdocs serve
+	conda run -n mkdocs mkdocs serve
 
 sync:
 	-git commit -a -m update
 	git push
+
+help:
+	# Usage: make help build-web build-file serve sync
+
