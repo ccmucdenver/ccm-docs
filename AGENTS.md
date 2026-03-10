@@ -11,6 +11,7 @@ This file defines strict operating constraints for any agent working in this rep
 ## 2. Authority and Sources of Truth
 
 - Treat current repository files as authoritative unless a user explicitly overrides.
+- Treat `readthedocs.io` as the primary build and rendering target; prefer RTD-compatible choices over local-only behavior.
 - For operational cluster status, treat the latest dated entry in `docs/updates.md` as authoritative.
 - Do not invent infrastructure facts (nodes, partitions, limits, outages, versions).
 - If a fact is uncertain, leave a TODO note and ask for confirmation instead of guessing.
