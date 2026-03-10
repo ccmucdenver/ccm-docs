@@ -12,7 +12,7 @@ A system administrator can build a containter with installed software instead of
 
 We are using a type of containers called Singularity, which was developed with HPC in mind. You may have heard about Docker, which is similar.
 
-Software with complicated dependencies is often distributed as singularity containters, with their own runtime environment. Singularity containers are **large** files, many GB. If you bring any containters of your own, pleasee put them in your project directory and **do not store singularity containers in your home directory.**
+Software with complicated dependencies is often distributed as singularity containters, with their own runtime environment. Singularity containers are **large** files, many GB. If you bring any containters of your own, please put them in your project directory and **do not store singularity containers in your home directory.**
 
 We often install software requested by users in singularity containers rather than on the system itself to provide the required versions of dependencies, avoid software conflicts, and allow them to run on all of our clusters. 
 
