@@ -34,7 +34,7 @@ the same version of Singularity we have, building a container, and copying it he
 
 **Please do not run computationally intensive jobs on the front end machines, math-alderaan or clas-compute.**
 
-So, if you plan to do anything of substance, first ssh to an interactive node (recommended math-colibri-i01 with 1TB memory, or math-score-i01 with a faster and newer cpu). Or, start an [interactive batch job](../clusters_guide/#interactive-jobs), e.g.,
+So, if you plan to do anything of substance, first ssh to an interactive node (recommended math-colibri-i01 with 1TB memory, or math-score-i01 with a faster and newer cpu). Or, start an [interactive batch job](clusters_guide.md#interactive-jobs), e.g.,
 
     srun -p math-alderaan --time=2:00:0 -n 1 --pty bash -i
 

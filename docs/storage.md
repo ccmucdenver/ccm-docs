@@ -3,7 +3,7 @@
 ## Funding
 This equipment was purchased in 2021 from CCM budget.
 ## Purpose
-A storage facility for the [research clusters](../clusters_guide), including home directories. [Alderaan](../alderaan) has also its own storage disk arrays.
+A storage facility for the [research clusters](clusters_guide.md), including home directories. [Alderaan](alderaan.md) has also its own storage disk arrays.
 ## Hardware
 Research storage (clas-rcstor-01) is a Dell PowerEdge R730 24 cores/48 threads and 512GB of DDR4 memory which acts as both system RAM (minimal) and (mostly) high speed file system cache.
  

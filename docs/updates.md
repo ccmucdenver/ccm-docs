@@ -58,7 +58,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 * Updating Slurm cgroups configuration to get rid of the HWLOC Affinity warning. All nodes were put to draining state. When jobs running on a node have ended, Slurm daemons on the node are restarted and the node gets returned to operations. No jobs are getting cancelled.
 
 ### 2025/12/12
-* Adding to docs new section [Apache Spark](../spark/) how to run Spark on a single node.
+* Adding to docs new section [Apache Spark](spark.md) how to run Spark on a single node.
 
 ### 2025/11/04
 
@@ -274,7 +274,7 @@ to see the cpu and memory in use by each process.
    
 ### 2025/03/06
 
-* [Jupyterhub](../jupyterhub) available, section added to the documentation.
+* [Jupyterhub](jupyterhub.md) available, section added to the documentation.
 
 ### 2025/02/27
 
@@ -539,7 +539,7 @@ Please check here or try later. Thanks for your patience!
 
 ### 2023/04/21
 
-* Guide [how to use Personal Globus endpoint](../globus) for data transfer is now available. It was ported from the legacy [wiki](http://ccm.ucdenver.edu), updated, and tested. Globus can transfer large quantities of data (many TB) and work through firewalls.
+* Guide [how to use Personal Globus endpoint](globus.md) for data transfer is now available. It was ported from the legacy [wiki](http://ccm.ucdenver.edu), updated, and tested. Globus can transfer large quantities of data (many TB) and work through firewalls.
 
 
 ### 2023/04/08 
@@ -605,7 +605,7 @@ Other filesystems are not affected.
 
 ### 2023/01/23
 
-* [Hands-on workshop](../training/)
+* [Hands-on workshop](training.md)
 
 ### 2022/12/07
 
@@ -684,7 +684,7 @@ Other filesystems are not affected.
 
 ### 2022/08/16
 
-* Software maintenance planned on math-alderaan-h[01-02] is postponed. Please continue using the existing GPU directions in the [Clusters guide](../clusters_guide/#how-to-run-with-gpu-on-alderaan).
+* Software maintenance planned on math-alderaan-h[01-02] is postponed. Please continue using the existing GPU directions in the [Clusters guide](clusters_guide.md#how-to-run-with-gpu-on-alderaan).
 
 ### 2022/08/15
 

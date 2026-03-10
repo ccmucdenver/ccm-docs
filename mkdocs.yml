@@ -4,7 +4,6 @@ site_url: https://ccm-docs.readthedocs.io/en/latest/
 repo_url: https://github.com/ccmucdenver/ccm-docs 
 edit_uri: edit/main/docs/
 site_description: Documentation for computing resources at the CCM
-use_directory_urls: false
 theme:
   name: readthedocs
   highlightjs: true

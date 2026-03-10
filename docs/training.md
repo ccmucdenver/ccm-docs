@@ -4,11 +4,11 @@
 
 * 11:00-`12:00 p.m. in room SCB 4125
 
-* Workhop materials are now available [here](../workshop/).
+* Workhop materials are now available [here](workshop.md).
 
 ### Registration
 
-**We need to hear in advance from those who do not have their account set up yet, or maybe used to have but can't log in for some reason.** Please go  [here to request an account](../accounts). We can set up accounts for participants who register at least one day in advance, but we won't have enough time to set up or fix accounts during the workshop. Faculty can also [request an account](../accounts) for their students.
+**We need to hear in advance from those who do not have their account set up yet, or maybe used to have but can't log in for some reason.** Please go  [here to request an account](accounts.md). We can set up accounts for participants who register at least one day in advance, but we won't have enough time to set up or fix accounts during the workshop. Faculty can also [request an account](accounts.md) for their students.
 
 ### Agenda
 

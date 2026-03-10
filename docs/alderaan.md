@@ -6,7 +6,7 @@ The Alderaan cluster is a resource for both campuses of the University of Colora
 
 Alderaan is a shared cluster running multi-core jobs using MPI and the high-speed interconnect (High-Performance Computing, HPC), as well as multiple single-core jobs (High-Throughput Computing, HTC). Alderaan head node, `math-alderaan`, is an alternative login node for the joint scheduler along with `clas-compute`.
 
-All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](../score/) or [Colibri cluster](../colibri/)  partitions instead. 
+All jobs need to be limited in duration. Long-running single-core jobs should be submitted to [Score cluster](score.md) or [Colibri cluster](colibri.md)  partitions instead. 
 
 Work consisting of a very large number of single-core jobs can be also submitted to the [Open Science Grid (OSG)](https://opensciencegrid.org) - log into https://www.osgconnect.net with your CU Denver credentials and follow the instructions to be contacted by OSG staff for an onboarding meeting.
 

@@ -1,7 +1,7 @@
 # Hands-on Workshop September 21, 2023
 *Updated March 2025*
 
-Please see the [Clusters Guide](../clusters_guide/) and other documentation sections on the left for more information.
+Please see the [Clusters Guide](clusters_guide.md) and other documentation sections on the left for more information.
 
 Contact: Megan Duff and Jan Mandel will be happy to answer any questions!
 
@@ -38,7 +38,7 @@ Contact: Megan Duff and Jan Mandel will be happy to answer any questions!
 
 ## Singularity containers
 * Complete computing environments with custom software and different Linux versions.
-* Our containers are in */storage/singularity*. See [Singularity](../singularity/) for what containers we have and more details.
+* Our containers are in */storage/singularity*. See [Singularity](singularity.md) for what containers we have and more details.
 * *alderaan_single_gpu.sh* you used before runs tensorflow in a singularity container. Look at the script how it works!
 * *singularity_alderaan_shell.slurm* allows you to run an entire shell script in a singularity container. Try to add another command. Try to use another container.
 * **Extra credit:** run the examples from [https://github.com/ResearchComputing/Intro_GPU_Acceleration](https://github.com/ResearchComputing/Intro_GPU_Acceleration).

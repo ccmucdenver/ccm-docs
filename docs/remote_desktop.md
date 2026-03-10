@@ -50,7 +50,7 @@ All users share the same interactive node.
 
 * Use this for light interactive work only.
 * For heavy computation, submit batch jobs via SLURM.
-* For notebooks, [JupyterHub](../jupyterhub) is usually faster.
+* For notebooks, [JupyterHub](jupyterhub.md) is usually faster.
 
 This service uses the lightweight [XFCE desktop environment](https://docs.xfce.org/xfce/getting-started#the_desktop_environment). It behaves in some aspects differently from native Windows or macOS desktops.
 

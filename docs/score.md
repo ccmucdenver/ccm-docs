@@ -12,7 +12,7 @@ The Score cluster is suitable for long-running single-core jobs.
 The interactive node math-score-i01 has dual E5-2640v2 CPU and 128GB RAM. 
 
 ## How to Use
-Jobs for the Score cluster compute nodes should be submitted to the [math-score](../clusters_guide) partition. 
+Jobs for the Score cluster compute nodes should be submitted to the [math-score](clusters_guide.md) partition. 
 You can also use `math-score-i01` interactively by ssh.
 Score nodes do not mount Alderaan filesystems, so it does not have access to modules and the /data001 and /data002 filesystems. Please use singularity containers for custom software environments. 
 

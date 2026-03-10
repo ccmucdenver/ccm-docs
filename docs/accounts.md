@@ -7,14 +7,14 @@ Employees, students, and external collaborators sponsored by a faculty member. `
 
 Please 
 
-  * **Read the [Terms and Conditions](../TermsandConditions) first.**
+  * **Read the [Terms and Conditions](TermsandConditions.md) first.**
   * Use [this form](https://forms.office.com/r/GQ9ef7ei4i) to request an account. **For a permanent account, the form should be filled by a faculty member (the PI of the project) and list users in their group, such as students, postdocs, or external collaborators.** Compliance needs the legal "yes" clicks from a faculty member. External collaborators need an affiliate appointment called "POI" with remote access first, talk to your department HR contact. Check "security" on their affiliate form to request VPN.
 
 The form will ask for the **CU Denver email addresses** for all accounts to be created, and
 
   * A brief description of the project. Just few words are enough. 
   * Funding source, if any,
-  * Affirmation of the [Terms of Use](../#terms-of-use),
+  * Affirmation of the [Terms of Use](TermsandConditions.md),
 
 This is needed for reporting to the funding agency (annual reports, quad charts, PI meetings, etc.)
 

@@ -4,7 +4,7 @@
 
 ### How to log in
 
-Your account must be set up before using the system. Please go to [accounts](../accounts/) for more about getting an account.
+Your account must be set up before using the system. Please go to [accounts](accounts.md) for more about getting an account.
 
 To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz private network. This can be done in several ways:
 
@@ -18,13 +18,13 @@ To log in, use your university username (not email) and password. If you do not 
 
 We currently offer three ways how to access Alderaan cluster:
 
-* Perhaps the easiest way to log in is to use [JupyterHub](../jupyterhub). Simply go to 
+* Perhaps the easiest way to log in is to use [JupyterHub](jupyterhub.md). Simply go to 
 [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
 and log in, which will give you a web page with a file navigation tree and one or more terminal windows. 
 You can also run Python notebooks, edit files, and more.
 
-* The [Remote Desktop](../remote_desktop) will give you a Linux desktop with the ability to open terminal windows and
-work with graphical software such as Matlab or R directly. Just create a remote PC (also called connection) named **math-alderaan** in Windows, or on macOS in Windows App (previously Microsoft Remote Desktop). See the [Remote Desktop](../remote_desktop) chapter for more details.
+* The [Remote Desktop](remote_desktop.md) will give you a Linux desktop with the ability to open terminal windows and
+work with graphical software such as Matlab or R directly. Just create a remote PC (also called connection) named **math-alderaan** in Windows, or on macOS in Windows App (previously Microsoft Remote Desktop). See the [Remote Desktop](remote_desktop.md) chapter for more details.
 
 * Secure Shell (SSH) is a classical way to access Alderaan from the command line. Type **ssh username@math-alderaan.ucdenver.pvt** in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`). If you omit the username, your computer may send your local username instead, which may not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections. For more convenience and security, you can
 set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as 
@@ -97,7 +97,7 @@ Type <code>chmod og-rwx file_or_directory_name</code> to make the file or direct
 
 ## Where is the software? Modules and Singularity containers
 
-We normally do not install application software directly on the system because of software dependencies and version conflicts. Instead, we install software in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](../conda)**.
+We normally do not install application software directly on the system because of software dependencies and version conflicts. Instead, we install software in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](conda.md)**.
 
 ### Modules
 
@@ -121,11 +121,11 @@ You may need to load multiple modules at the same time. When you are done with a
 
 and start over loading exactly the modules you need, or simply log out and back in again.
 
-Installed software and environment modules on our different clusters are generally different. See [modules](../modules) for more information.
+Installed software and environment modules on our different clusters are generally different. See [modules](modules.md) for more information.
 
 ### Singularity Containers
 
-*See [Singularity Containers](../singularity/) for more details and a list of our containers*.
+*See [Singularity Containers](singularity.md) for more details and a list of our containers*.
 
 A singularity container is a bit like a separate computer in itself which just runs on the same hardware. Thus, software in different containers won't conflict, and a container can provide a complete environment including a different operating system, libraries, etc. A disadvantage, however, is that you can use only the software installed in the container; software on the system outside of the container is not visible from the inside. Containers are read only and cannot be changed. An exception is that some package managers, like conda, may allow installing software while you are inside the container. Additions made by conda this way actually reside in directory `.local` in your home directory.
 
@@ -195,7 +195,7 @@ coming soon
 ### Globus
 
 Globus is a free service which can transfer large files (many GB and TB) between servers on the internet using a simple web interface and without supervision. 
-See the [Globus](../globus/) section how to use Globus here.
+See the [Globus](globus.md) section how to use Globus here.
 
 ### ```scp``` Tutorial
 
@@ -566,7 +566,7 @@ The command <code>sinfo</code> will show a summary of jobs and partitions status
     math-alderaan-gpu    up 7-00:00:00      1   drng math-alderaan-h01
     math-alderaan-gpu    up 7-00:00:00      1    mix math-alderaan-h02
 
-Real-time system status including temperature, load, and the partitions from `sinfo`, is available in [News and Status Updates](./updates/).
+Real-time system status including temperature, load, and the partitions from `sinfo`, is available in [News and Status Updates](updates.md).
 
 **We will be happy to install software and build containers for you, do not hesitate to ask!** 
 
@@ -574,7 +574,7 @@ Real-time system status including temperature, load, and the partitions from `si
 
 Here are the best practices when you compile and link your own software:
 
-* Use `math-alderaan` head node to build software for use on the Alderaan cluster. Use `module avail` to see which tools are available in [modules](./modules/). We can add other tools and package them in modules on request.
+* Use `math-alderaan` head node to build software for use on the Alderaan cluster. Use `module avail` to see which tools are available in [modules](modules.md). We can add other tools and package them in modules on request.
 
 * Alderaan nodes run Centos 8.
 
