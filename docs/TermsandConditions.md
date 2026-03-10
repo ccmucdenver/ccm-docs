@@ -20,6 +20,14 @@ particularly technology which may be subject to restrictions on export to some c
 * **All use of this resource must be fundamental research, intended to be published with no restrictions or approval
 requirement by the sponsor, and no restriction on the nationality of the participants.**
 
+### AI agents and automation
+
+Use of AI agents, AI bots, or other autonomous decision-making tools to access CCM systems is **not allowed without prior explicit approval from system administrators**.
+
+Routine non-AI automation (for example shell scripts, scheduled jobs, workflow scripts, and orchestration tools), including scripts from external sources, is allowed when it complies with all other Terms and Conditions and cluster usage policies. Users are responsible for understanding and safely running the tools and scripts they use. Support for user-provided automation and orchestration tooling is best effort and may be unavailable.
+
+You must not share your personal password, MFA codes, SSH private keys, active sessions, or personal access tokens with AI agents or third-party automation tools. Approved AI automation must use credentials and access methods explicitly designated for that purpose by system administrators.
+
 ### File protection and privacy
 
 By default, files and directories, including your home directory, are created such that *all other users have read access to your files*. This is a Linux default to encourage collaboration. If you want to make a file or directory not accessible by other users (except for system administrators), you need to manually change the permissions for that file or directory. To do so type the command below:
