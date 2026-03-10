@@ -24,9 +24,9 @@ requirement by the sponsor, and no restriction on the nationality of the partici
 
 Use of AI agents, AI bots, or other autonomous decision-making tools to access CCM systems is **not allowed without prior explicit approval from system administrators**.
 
-Routine non-AI automation (for example shell scripts, scheduled jobs, workflow scripts, and orchestration tools), including scripts from external sources, is allowed when it complies with all other Terms and Conditions and cluster usage policies. Users are responsible for understanding and safely running the tools and scripts they use. Support for user-provided automation and orchestration tooling is best effort and may be unavailable.
-
 You must not share your personal password, MFA codes, SSH private keys, active sessions, or personal access tokens with AI agents or third-party automation tools. Approved AI automation must use credentials and access methods explicitly designated for that purpose by system administrators.
+
+Routine non-AI automation (for example shell scripts, scheduled jobs, workflow scripts, and orchestration tools), including scripts from external sources, is allowed when it complies with all other Terms and Conditions and cluster usage policies. Users are responsible for understanding and safely running the tools and scripts they use. Support for user-provided automation and orchestration tooling is best effort and may be unavailable.
 
 ### File protection and privacy
 
