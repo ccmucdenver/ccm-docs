@@ -97,127 +97,41 @@ Type <code>chmod og-rwx file_or_directory_name</code> to make the file or direct
 
 ## Where is the software? Modules and Singularity containers
 
-We normally do not install application software directly on the system because of software dependencies and version conflicts. Instead, we install software in *modules* or *singularity containers*. You can also install software in your account yourself. The preferred way of doing that is by using **[Conda](conda.md)**.
+Use the dedicated guides for software environments:
 
-### Modules
+* [Environment Modules](modules.md) for system-provided software.
+* [Singularity Containers](singularity.md) for containerized software stacks.
+* [Conda and Python](conda.md) for user-managed environments.
 
-To see what software is available in modules,
+Quick module commands:
 
     module avail
-
-provide a list of available software packages and their versions. A command `module load modulename/version` will change your environment (such as the `PATH` variable) temporarily so that the software and its various parts can be found, for example
-
-    module load R/4.2.1
-
-or
-
-    module load matlab
-
-Try that and use `env` command to see what has changed. 
-
-You may need to load multiple modules at the same time. When you are done with a module you can `module unload` it but it is strongly recommended to do
-
+    module load <module>
     module purge
 
-and start over loading exactly the modules you need, or simply log out and back in again.
-
-Installed software and environment modules on our different clusters are generally different. See [modules](modules.md) for more information.
-
-### Singularity Containers
-
-*See [Singularity Containers](singularity.md) for more details and a list of our containers*.
-
-A singularity container is a bit like a separate computer in itself which just runs on the same hardware. Thus, software in different containers won't conflict, and a container can provide a complete environment including a different operating system, libraries, etc. A disadvantage, however, is that you can use only the software installed in the container; software on the system outside of the container is not visible from the inside. Containers are read only and cannot be changed. An exception is that some package managers, like conda, may allow installing software while you are inside the container. Additions made by conda this way actually reside in directory `.local` in your home directory.
-
-Using singularity is easy. Type, for example, 
-
-    singularity shell /storage/singularity/tensorflow
-    python3
-    
-and you can use many Python packages for machine learning. We have containers with statistics software, optimization, molecular chemistry, optimization,
-and more. 
-
-### Old software versions
-
-Sometimes, you may need a specific version of some software package from a few years ago. We'll try. If the software version is not too much in the past, we may be able to install the software in a module or in a singularity container. However, installing an older or a more complicated package may require recreating an entire software ecosystem at a certain point in computer history, which can be overwhelming or impossible when old versions of dependencies are hard to find or just no longer available.
+If you need older software versions, contact support. Availability depends on whether compatible dependencies can still be built or obtained.
 
 ## Installing your own software packages
 
-When working with software like R on our shared system, it’s important to install packages to a personal library to prevent conflicts with other users. This guide will help you set up and manage your R library effectively.
+Install user packages in your own home or project directories, not system locations.
 
-By default, user-installed packages go to a hidden directory in your home directory, `~/.local`, which is also used by other languages (e.g., Python) and can sometimes lead to potential conflicts, such as when packages from different versions of the same language end up in `~/.local` and then get used by another version of the language. You may want to occasionally clear out this directory to reset your personal environment.
+For Python environments and package management, use [Conda and Python](conda.md).
 
-> **Warning**: Running `rm -rf ~/.local` will delete **all** your user-installed packages, not just for R but also for Python and other languages. Use this only if you're comfortable reinstalling necessary packages.
-
-To manage this safely:
-
-- **Selective Cleanup**: Instead of wiping `~/.local`, you might choose to delete only specific folders within `.local/lib` for R or Python packages. For example:
-  ```bash
-  rm -rf ~/.local/lib/R
-  rm -rf ~/.local/lib/python3.8
-
-- **Set a custom R library path**:
-   - You can specify a custom directory for R packages instead of relying on `~/.local`.
-   - Add the following to your `~/.Rprofile` file to create and use a dedicated directory for R packages:
-     ```r
-     # .Rprofile file
-     dir.create(Sys.getenv("HOME"), "R_packages", showWarnings = FALSE)
-     .libPaths(c("~/R_packages", .libPaths()))
-     ```
-   - This configuration will tell R to look in `~/R_packages` for user-installed packages, separate from `~/.local`.
+If you use R, configure a personal R library path in your home directory so package installs do not interfere with other tools.
 
 ## File Transfer
 
-### Linux or Mac
+Recommended options:
 
-On a Linux or Mac computer, you can use file transfer utilities `rsync`, `scp`, `sftp` on your computer to transfer files and entire directories between your computer and clusters. These utilities are normally a part of the system, if not you can install them from your Linux distribution. [Rsync](https://en.wikipedia.org/wiki/Rsync) is recommended. Typing `man rsync` should give you the manual for the system you are on. Rsync can transfer file trees recursively and resume a transfer which was interrupted.
+* [Globus File Transfer](globus.md) for large unattended transfers.
+* `rsync`, `scp`, or `sftp` for command-line transfers.
+* `git clone` for source repositories.
+* `wget <URL>` for direct downloads.
 
-### Windows
+Examples:
 
-On current Windows PC, you can use `scp` and `sftp` from the command window (a.k.a. Powershell window). Current Windows 10 and 11 have OpenSSH client built in.
-
-### From a Website
-
-You can download a file from a website using simply `wget` followed by the URL of the file. You can get the URL of a file posted on the web by a right-click and selecting something like "Copy link address".
-
-### Github
-
-The easiest way to download files from Github is to clone the entire repository. On the repository main page, click green button "Code" and copy the link. Then
-
-    git clone <the link you just copied>
-    
-You can use https link if you want to clone the repository for reading only. If you want to push your changes to Github in future, [you need to use ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh). It is strongly recommended to create a separate key secured by a strong passphrase for this. Otherwise, the security of your Github account is only as good as the protection of files here - anyone who gains administrator access here can log into your Github account. 
-
-### Dropbox
-
-coming soon
-
-### Globus
-
-Globus is a free service which can transfer large files (many GB and TB) between servers on the internet using a simple web interface and without supervision. 
-See the [Globus](globus.md) section how to use Globus here.
-
-### ```scp``` Tutorial
-
-<ins> Approach 1: Transferring file from local computer to Alderaan <ins>
-
-Open a terminal or command line prompt shell. Do not log into Alderaan – stay connected to your local machine. Type command: 
-
-    scp /path/to/file/on/computer [username]@math-alderaan.ucdenver.pvt:/path/to/file/on/alderaan 
-
-For instance, if my CU Denver username is duffme, I had a file on my local machine located at ~/Desktop/Folder/file.txt, and I wanted to put this file in my home directory on Alderaan, I would use the command:  
-
-    scp ~/Desktop/Folder/file.txt duffme@math-alderaan.ucdenver.pvt:/home/duffme 
-
-<ins> Approach 2: Transferring file from Alderaan to local computer <ins>
-
-Open a terminal or command line prompt shell. Do not log into Alderaan – stay connected to your local machine. Type command: 
-
-    scp /path/to/file/on/computer [username]@math-alderaan.ucdenver.pvt:/path/to/file/on/alderaan 
-
-For instance, if my CU Denver username is duffme, I had a file on Alderaan I wanted to transfer located at /home/duffme/file.txt, and I wanted to put this file on my local machine at  ~/Desktop, I would use the command:  
-
-    scp duffme@math-alderaan.ucdenver.pvt:/home/duffme/file.txt ~/Desktop 
+    scp ~/Desktop/file.txt username@math-alderaan.ucdenver.pvt:/home/username/
+    scp username@math-alderaan.ucdenver.pvt:/home/username/file.txt ~/Desktop/
 
 
 ## Requesting Information about the Environment
@@ -479,7 +393,7 @@ You can request the number of nodes. The scheduler will then split the tasks ove
      
 ## How to use GPU 
 
-### How to to run with GPU on Alderaan
+### How to run with GPU on Alderaan
 
 The partitions 
 
@@ -490,7 +404,7 @@ have two high memory/GPU nodes`math-alderaan-h[01,02]` with two NVIDIA A-100 40G
  
 **Please do not use Alderaan GPUs without allocating them by `--gres` as above first. Please do not request an entire node on Alderaan by `--nodes` or `-N`, unless you really need all of it, request only the CPU cores you need by `--ntasks`. Large memory jobs and GPUs jobs can share the same node.**
 
-An example job script:
+Minimal example job script:
 
     #!/bin/bash
     #SBATCH --job-name=gpu
@@ -500,47 +414,7 @@ An example job script:
     #SBATCH --ntasks=1                        # number of cores
     singularity exec  --nv /storage/singularity/cuda12.2-tf.sif your_script
     
-Both GPU nodes now run NVIDIA driver 575 (CUDA 12.9 capable).
-
-CUDA 12.9 refers to the **driver capability**. However, many prebuilt GPU software stacks — most notably official TensorFlow binaries — are built and tested against specific CUDA user-space library versions (not 12.9). Running TensorFlow directly against the system CUDA stack may fail or silently fall back to CPU.
-
-## TensorFlow GPU Usage
-
-Users requiring TensorFlow with GPU support **must use the CUDA 12.2 compatibility container**.
-
-Earlier containers may still start, but TensorFlow may run on CPU only even if a GPU is allocated.
-
-Enter the supported environment with:
-
-```
-    singularity shell –nv /storage/singularity/cuda12.2-tf.sif
-```
-Inside the container, create and manage your own conda environments as needed.
-
-### Verifying GPU Usage
-
-After starting your job, confirm that your code is using the GPU:
-
-```
-    nvidia-smi
-```
-
-If GPU utilization remains at 0% during execution, your job is running on CPU. In that case, remove the `--gres=gpu:` request.
-
-### Important Warning
-
-**Legacy Singularity containers built against older NVIDIA drivers may no longer function correctly.**
-
-In such cases:
-    * Your job may run CPU-only
-    * A GPU reservation may still be consumed unnecessarily
-If you observe zero GPU utilization with nvidia-smi, please remove the `--gres=gpu:` flag from your job submission.
-
-### Legacy Container Support
-
-We can attempt to rebuild older containers upon request.
-This will typically require upgrading software to versions compatible with the current CUDA and driver stack.
-It is often not possible to recreate a software ecosystem from years ago to satisfy the dependences of legacy software. 
+GPU software stack and TensorFlow container guidance are maintained in [Singularity Containers](singularity.md).
 
 ### Interactive jobs with GPU on Alderaan
 
@@ -548,15 +422,11 @@ From the command line,
 
      srun -p math-alderaan-gpu-short --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
      
-will give you an interactive shell on one of the GPU nodes with one GPU allocated. You can then start singluarity shell
+will give you an interactive shell on one of the GPU nodes with one GPU allocated.
 
-    singularity shell /storage/singularity/cuda12.2-tf.siff 
+To confirm that your job is using the GPU:
 
-You can also start the Singularity shell directly:
-
-    srun -p math-alderaan-gpu-short--time=2:00:0 -n 1 --gres=gpu:a100:1 singularity shell /storage/singularity/cuda12.2-tf.sif
-         
-will allocate one GPU, one core, and run an internactive sinularity shell.
+    nvidia-smi
     
 ## Interactive jobs
 
@@ -578,7 +448,7 @@ The command <code>squeue</code> will show one line for each
 job running on the system.
 
 The command <code>squeue.sh</code> will show one line for each
-job running on the system with a listing of all resources requested - CPUs, memory, GPUs. <code>jobs-on-nodes.sh</code> shows the jobs running node by node with the resources reserve. These custom commands should help understanding the use of the resource and the reasons why jobs may wait. 
+job running on the system with a listing of all resources requested - CPUs, memory, GPUs. <code>jobs-on-nodes.sh</code> shows the jobs running node by node with the resources reserved. These custom commands should help understanding the use of the resource and the reasons why jobs may wait. 
 
 
 The command <code>sinfo</code> will show a summary of jobs and partitions status on the system:
@@ -604,75 +474,10 @@ Here are the best practices when you compile and link your own software:
 
 ## Linux Introduction  
 
-<ins>Navigating the Linux File System: Basic Commands<ins>
+If you are new to Linux command-line usage, start with:
 
-1. pwd - Print Working Directory  
+* `pwd`, `ls`, `cd` for navigation
+* `cp`, `mv`, `rm` for file operations
+* `cat`, `echo`, and `nano` for basic file viewing and editing
 
-The pwd command displays the current working directory, which is your current location in the file system. 
-
-    pwd 
-
-2. ls - List Files and Directories  
-
-The ls command lists the files and directories in the current directory. 
-
-    ls 
-    ls -l         # list more information about files and directories 
-
-3. cd - Change Directory  
-
-The cd command is used to navigate to a different directory. 
-
-    cd /path/to/directory 
-    cd ..        # Move to the parent directory 
-    cd ../ 	     # Move up one directory 
-    cd ~         # Move to the user's home directory 
-    cd /         # Move to the root directory 
- 
-4. mkdir - Make Directory  
-
-The mkdir command is used to create a new directory. 
-
-    mkdir new_directory         # Create a new directory called new_directory
- 
-5. cp - Copy Files and Directories  
-
-The cp command is used to copy files or directories from one location to another. 
-
-    cp file.txt /path/to/destination/	          # Copy a file  
-    cp -r directory /path/to/destination/             # Copy a directory and its contents 
- 
-6. mv - Move or Rename Files and Directories  
-
-The mv command is used to move files or directories to a new location or rename them. 
-
-    mv file.txt new_location/		       # Move a file to a new location 
-    mv old_name.txt new_name.txt		       # Rename file 
-
-7. rm - Remove Files and Directories The rm command is used to remove files or directories. 
-```
-rm file.txt	         # Remove a file 
-rm -r directory          # Remove a directory and its contents 
-```
-
-8. nano - Create File  
-
-The nano command is used to create an empty file. 
-
-    nano new_file.txt 
- 
-* 'Crtl' + 'o' : save file
-* 'Crtl' + 'x' : exit editor
-
-10. cat - Display File Content  
-
-The cat command is used to display the contents of a file. 
-
-    cat file.txt 
- 
-11. echo - Print Text to the Terminal or File  
-
-The echo command is used to print text to the terminal or write it to a file. 
-
-    echo "Hello, world!"                     # Print "Hello, world!" to the terminal 
-    echo "Hello, Linux" > greeting.txt       # Print "Hello, world!" and save in file greeting.txt
+Use `man <command>` for detailed help, for example `man rsync` or `man srun`.
