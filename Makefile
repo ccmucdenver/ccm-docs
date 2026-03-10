@@ -21,3 +21,6 @@ mac: build-file
 help:
 	# Usage: make help build-web build-file serve sync
 
+clean:
+	rm -rf site/*
+

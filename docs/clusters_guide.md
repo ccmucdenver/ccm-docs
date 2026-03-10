@@ -376,6 +376,30 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 | `#SBATCH --partition=` | Specifies the partition or queue where the job will be submitted. | Recommend: Use CPU or GPU Alderaan partitions. <br> CPU nodes, specify: `#SBATCH --partition=math-alderaan`<br>GPU nodes, specify: `#SBATCH --partition=math-alderaan-gpu`<br> |
 | `#SBATCH --array=`     | Specifies an array of job tasks with indices for array job submissions. <br> Examples: <br> `#SBATCH --array=1-5` <br> `#SBATCH --array=0-10,20-21` | You can specify how many array jobs to run at one time with `%`. <br> Example: <br> Run only 3 jobs at one time for 10 jobs: `#SBATCH --array=1-10%3` |
 
+### How to make your job start faster
+
+Use these practical rules to improve queue wait time:
+
+* Request only what you need:
+  * Keep `--time` close to expected runtime.
+  * Use `--ntasks` for cores you actually use.
+  * Avoid `--nodes` unless you really need full nodes.
+
+* Use shorter-runtime partitions when possible. Partitions with shorter runtime have higher priority.
+
+* For job arrays, limit concurrency with `%` (for example `--array=1-1000%10`) so you do not flood the queue.
+
+* Check system pressure before submitting:
+  * `sinfo` for partition availability
+  * `squeue` for queue status
+  * `squeue.sh` and `jobs-on-nodes.sh` for resource detail by job and by node
+  * [News and Status Updates](updates.md) for current operational constraints
+
+* Full-node rule of thumb:
+  * Compute nodes: requesting 64 cores or memory near 500GB is effectively a full-node job.
+  * High-memory GPU nodes: requesting memory near 1800GB or two GPUs is effectively a full-node job.
+  * When your request is effectively full-node, reducing minor settings usually will not make the job start faster. Focus on accurate runtime, partition choice, and current queue conditions.
+
 ### Single-core job
 
 This script will be sufficient for many jobs, such as those you code yourself which do not use multiprocessing.

@@ -25,17 +25,22 @@ nav:
     - Welcome: index.md
     - Terms and Conditions: TermsandConditions.md
     - Updates:  updates.md
-    - Overview: overview.md
-    - Clusters Guide: clusters_guide.md
-    - Examples: examples.md
     - Accounts: accounts.md
-    - Environment Modules: modules.md
-    - Globus File Transfer: globus.md
-    - Conda and Python: conda.md
-    - JupyterHub: jupyterhub.md
-    - Remote Desktop: remote_desktop.md
-    - Apache Spark: spark.md
-    - Singularity Containers: singularity.md
+    - User Guide:
+        - Start Here:
+            - Overview: overview.md
+            - Clusters Guide: clusters_guide.md
+            - Examples: examples.md
+        - Access Methods:
+            - JupyterHub: jupyterhub.md
+            - Remote Desktop: remote_desktop.md
+        - Software and Environments:
+            - Environment Modules: modules.md
+            - Conda and Python: conda.md
+            - Singularity Containers: singularity.md
+            - Apache Spark: spark.md
+        - Data Transfer:
+            - Globus File Transfer: globus.md
     - External Resources: external.md
     - Facilities, Equipment, and Other Resources: facilities.md
     - How to Edit: pull_request.md
