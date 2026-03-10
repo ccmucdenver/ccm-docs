@@ -34,7 +34,7 @@ the same version of Singularity we have, building a container, and copying it he
 
 **Please do not run computationally intensive jobs on the front end machines, math-alderaan or clas-compute.**
 
-So, if you plan to do anything of substance, first ssh to an interactive node (recommended math-colibri-i01 with 1TB memory, or math-score-i01 with a faster and newer cpu). Or, start an [interactive batch job](clusters_guide.md#interactive-jobs), e.g.,
+So, if you plan to do anything of substance, first start an [interactive batch job](clusters_guide.md#interactive-jobs), e.g.,
 
     srun -p math-alderaan --time=2:00:0 -n 1 --pty bash -i
 
@@ -181,8 +181,6 @@ Genomic software [saige](https://saigegit.github.io/SAIGE-doc/docs/Installation.
 ### tensorflow-1.4-new.sif
 
 Cuda 11, tensorflow 1.4, sklearn, matplotlib, keras, keras-tuner, tensorflow_datasets, pdf2image and pandas, on Ubuntu 20.04
-
-Note: Tensorflow will run with or without GPU, but it will crash python on most colibri nodes because their CPUs and GPUs are too old.
 
 ### tensorflow-v1.4.sif
 

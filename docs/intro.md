@@ -77,9 +77,8 @@ application, and by selecting software to become accessible to a user through **
 
 ## What is the configuration of our cluster?
 
-Our cluster is actually a collection of three clusters: Alderaan, a new cluster with over 2000 cores, 
-2 high-end GPUs, and a high-speed InfiniBand interconnect; Score, a smaller cluster built specifically for
-long-running single-core jobs; and Colibri, an older cluster with GPUs. The three clusters are accessed
+Our cluster is centered on Alderaan, with over 2000 cores,
+2 high-end GPUs, and a high-speed InfiniBand interconnect. Resources are accessed
 as different **queues** on the same scheduler, called **SLURM**. The cluster has two head nodes,
 **math-alderaan** and **clas-compute**. You can submit jobs from either.
 

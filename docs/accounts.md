@@ -40,7 +40,7 @@ Use the command `du -sh` in a directory to see how much storage space you are us
 ### Running Jobs
 
   * Users are set up with the initial 500 concurrent cores limit. More is possible upon request. Your cores limit may be increased quietly temporarily when your jobs are waiting and there are enough cores available for everyone.
-  * Run time of jobs on math-alderaan nodes is maximum 7 days. This is a hard limit. Job run time on other math-score nodes is unlimited.
+  * Run time of jobs on math-alderaan nodes is maximum 7 days. This is a hard limit.
   * The total usage of CPU and GPU hours is unlimited.
 
 <!-- 
@@ -68,5 +68,4 @@ Jobs are charged for the total reserved core time, whether used or not.
  
   * After a period of user inactivity, user files can be deleted after a notification to the user's university email address and a grace period.
   * Older files in scratch space can be deleted also for active users.
-
 

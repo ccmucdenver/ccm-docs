@@ -1,7 +1,6 @@
 # Environment modules
 
-**Environment modules are available on Alderaan front end and compute nodes only. Colibri and Score nodes may have different
-legacy module versions or none.**
+**Environment modules are available on Alderaan front end and compute nodes only.**
 
 ## Purpose
 
