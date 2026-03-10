@@ -56,7 +56,7 @@ as the protection of your files here, which **cannot be considered secure**.
 including the Alderaan cluster, supported by the National Science Foundation award
 [OAC-2019089](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2019089)."* 
 
-Please the PI [jan.mandel@ucdenver.edu](mailto:jan.mandel@ucdenver.edu) copies of and links to all such
+Please send to the PI [jan.mandel@ucdenver.edu](mailto:jan.mandel@ucdenver.edu) copies of and links to all such
 work published or posted. 
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
