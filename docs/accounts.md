@@ -39,7 +39,7 @@ Use the command `du -sh` in a directory to see how much storage space you are us
 
 ### Running Jobs
 
-  * Users are set up with the initial 500 concurrent cores limit. More is possible upon request. Your cores limit may be increased quietly temporarily when your jobs are waiting and there are enough cores available for everyone.
+  * Users are set up with the default 500 concurrent CPU cores and 3 concurrent GPUs limit. Higher CPU cores limit is possible upon request. Your cores limit may be increased quietly temporarily when your jobs are waiting and there are enough cores available for everyone.
   * Run time of jobs on math-alderaan nodes is maximum 7 days. This is a hard limit.
   * The total usage of CPU and GPU hours is unlimited.
 
