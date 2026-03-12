@@ -8,7 +8,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/02/20
 
-* Enforcement of per-user limits on concurrent CPUs usage was updated to use the Quality of Service (QOS) mechanism. The limits themselves were not changed. The updated configuration is being rolled out across compute nodes. Nodes are being drained and resumed after running jobs complete. No impact to currently running jobs.
+* Enforcement of per-user limits on concurrent CPU and GPU usage was updated to use the Quality of Service (QOS) mechanism. The limits themselves were not changed. The updated configuration is being rolled out across compute nodes. Nodes are being drained and resumed after running jobs complete. No impact to currently running jobs.
 
 ### 2026/01/30
 
