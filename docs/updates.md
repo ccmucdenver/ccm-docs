@@ -6,6 +6,18 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/03/10
+
+* [Remote Desktop](remote_desktop.md) is now available for a full Linux desktop environment for interactive work and GUI applications.
+
+* [Terms and Conditions](TermsandConditions.md) were updated to address AI agent use.
+
+* New command guidance for queue and node visibility with resource reservations is available in [Viewing Job Queues, Job Status, and System Status](clusters_guide.md#viewing-job-queues-job-status-and-system-status).
+
+* New guidance for faster job starts and efficient node use is available in [How to make your job start faster](clusters_guide.md#how-to-make-your-job-start-faster).
+
+* Documentation was updated: [Clusters Guide](clusters_guide.md) was streamlined for core operations, with deeper topics moved to dedicated pages for easier navigation from [Welcome](index.md).
+
 ### 2026/02/20
 
 * Enforcement of per-user limits on concurrent CPU and GPU usage was updated to use the Quality of Service (QOS) mechanism. The limits themselves were not changed. The updated configuration is being rolled out across compute nodes. Nodes are being drained and resumed after running jobs complete. No impact to currently running jobs.
@@ -886,4 +898,3 @@ advance so that no new jobs can start. Node math-alderaan-h02 will be put  back,
 * Alderaan will be down 2022/05/27 from about 10:30am to continue work on power distribution. The clas-compute front end, the score cluster, and the colibri cluster should not be affected.
 
 * Announcements switched from emails to this page, announced in login message on front ends. 
-
