@@ -9,6 +9,28 @@ conda env create -f mkdocs-env.yml
 conda activate mkdocs
 ```
 
+## Rebuild the Conda mkdocs environment
+
+Use this when dependencies drift or builds start failing unexpectedly.
+
+```bash
+conda deactivate
+conda env remove -n mkdocs
+conda env create -f mkdocs-env.yml
+```
+
+To refresh pinned docs dependencies and reinstall them into the `mkdocs` conda env:
+
+```bash
+python3 -m venv .venv-deps
+source .venv-deps/bin/activate
+python -m pip install --upgrade pip pip-tools
+pip-compile --upgrade docs/requirements.in -o docs/requirements.txt
+deactivate
+
+conda run -n mkdocs python -m pip install -r docs/requirements.txt
+```
+
 ## Build the site (web server / Read the Docs style)
 
 ```bash
