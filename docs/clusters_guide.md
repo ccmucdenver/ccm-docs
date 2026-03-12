@@ -315,7 +315,7 @@ Use these practical rules to improve queue wait time.
 
 * **Use these full-node rules of thumb.**
     * Compute nodes: requesting 64 cores or memory near 500GB is effectively a full-node job.
-    * High-memory GPU nodes: requesting memory near 1800GB or two GPUs is effectively a full-node job.
+    * High-memory GPU nodes: requesting memory near 2000GB or two GPUs is effectively a full-node job.
     * If your request is effectively full-node, reducing minor settings usually will not make the job start faster. Focus on accurate runtime, partition choice, and current queue conditions.
 
 ### Single-core job
