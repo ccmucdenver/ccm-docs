@@ -11,7 +11,7 @@ Please do not store or process any sensitive information on this system, such as
 grades, social security numbers, potentially defense-related data, or data related to technology restricted in any way, 
 particularly technology which may be subject to restrictions on export to some countries. In more detail:
 
-* **No [CU highly confidential](https://www.cu.edu/data-governance/resources-support/data-classification) data are allowed, which includes any data requiring compliance with any regulations or security standards, such HIPPA, FERPA, NIST SP 800-171, etc. No Controlled Unclassified Information (CUI) is allowed.**
+* **No [CU highly confidential](https://www.cu.edu/data-governance/resources-support/data-classification) data are allowed, which includes any data requiring compliance with any regulations or security standards, such as HIPPA, FERPA, NIST SP 800-171 (Controlled Unclassified Information, CUI), etc.**
   
 * No sensitive technology or export controlled technology or technical data related to the Export Administration Regulations (EAR) or the International Traffic in Arms  Regulations (ITAR) is permitted.
   
