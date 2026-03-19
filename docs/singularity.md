@@ -25,7 +25,7 @@ Building a Singularity container requires root privileges, so you can't build a 
 
 But you can build a Docker container first, push to the Docker Hub, and pull as a Singularity
 container without root privileges. Here is a 
-[complete example](docker_to_singularity.md).
+[complete example](legacy/docker_to_singularity.md).
 
 Also, nothing stops you from setting up your own linux machine with 
 the same version of Singularity we have, building a container, and copying it here. 

@@ -623,7 +623,7 @@ Other filesystems are not affected.
 
 ### 2023/01/23
 
-* [Hands-on workshop](training.md)
+* [Hands-on workshop](legacy/training.md)
 
 ### 2022/12/07
 

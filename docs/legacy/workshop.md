@@ -1,7 +1,7 @@
 # Hands-on Workshop September 21, 2023
 *Updated March 2025*
 
-Please see the [Clusters Guide](clusters_guide.md) and other documentation sections on the left for more information.
+Please see the [Clusters Guide](../clusters_guide.md) and other documentation sections on the left for more information.
 
 Contact: Megan Duff and Jan Mandel will be happy to answer any questions!
 
@@ -38,7 +38,7 @@ Contact: Megan Duff and Jan Mandel will be happy to answer any questions!
 
 ## Singularity containers
 * Complete computing environments with custom software and different Linux versions.
-* Our containers are in */storage/singularity*. See [Singularity](singularity.md) for what containers we have and more details.
+* Our containers are in */storage/singularity*. See [Singularity](../singularity.md) for what containers we have and more details.
 * *alderaan_single_gpu.sh* you used before runs tensorflow in a singularity container. Look at the script how it works!
 * *singularity_alderaan_shell.slurm* allows you to run an entire shell script in a singularity container. Try to add another command. Try to use another container.
 * **Extra credit:** run the examples from [https://github.com/ResearchComputing/Intro_GPU_Acceleration](https://github.com/ResearchComputing/Intro_GPU_Acceleration).
@@ -58,5 +58,4 @@ Contact: Megan Duff and Jan Mandel will be happy to answer any questions!
 
 ## Memory
 * Our compute nodes have 64 cores and 512GB memory each. This seems like a lot, but you may be sharing it with others. The default memory reserved is 4GB per cpu core. You can reserve more or less by using the *--mem=* flag with memory in MB. For example, *--mem=10240* will request 10GB reservation. If a job tries to use more memory than it has reserved, it may be able to do that a bit, but then it will be killed by OOM (the Out Of Memory daemon). The concept of the "used memory" here is the same as the number shown by `top` under `RES`. It does not include memory allocated by the code but not written to, or swapped out to disk. Use the script `max_mem.sh` to see the current memory reservations on a node.
-
 
