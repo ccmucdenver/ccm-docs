@@ -32,7 +32,7 @@ the same version of Singularity we have, building a container, and copying it he
 
 ## How to use a Singularity container interactively
 
-**Please do not run computationally intensive jobs on the front end machines, math-alderaan or clas-compute.**
+**Please do not run computationally intensive jobs on the front end machine `math-alderaan`.**
 
 So, if you plan to do anything of substance, first start an [interactive batch job](clusters_guide.md#interactive-jobs), e.g.,
 

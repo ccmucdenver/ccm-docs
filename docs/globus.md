@@ -10,7 +10,7 @@ Globus data transfer runs between two software installations, called [endpoints]
 
 CU Denver does not have Globus subscription and thus we do not have any Server endpoints. But you can install Globus Personal endpoint in your account on our Linux servers or your PC and transfer data to and from any Server endpoint you are allowed to log into.
 
-Log into your account on the `math-alderaan` or `clas-compute`, and install the 
+Log into your account on `math-alderaan`, and install the
 endpoint from the command line:
 
     mkdir globus
@@ -75,4 +75,3 @@ http://help.unc.edu/help/globus-connect-file-transfer/ Example
 https://docs.globus.org/how-to/access-google-drive/
 
 https://ci.uchicago.edu/press-releases/globus-expands-data-services-accelerate-secure-cancer-research ''...expect to become eligible for HIPAA business associate agreements in mid-2018.''
-
