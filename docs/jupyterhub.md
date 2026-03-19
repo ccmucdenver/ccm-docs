@@ -29,19 +29,19 @@ Please write Alderaan Help from CU Denver email if you have any suggestioms or r
 ### Using the Terminal
 
 1. **Activate your conda environment** (replace `myenv` with your environment's name):
-   \`\`\`bash
+   ```bash
    conda activate myenv
-   \`\`\`
+   ```
 
 2. **Install the `ipykernel` package** (if not already installed):
-   \`\`\`bash
+   ```bash
    conda install ipykernel
-   \`\`\`
+   ```
 
 3. **Register the environment as a Jupyter kernel**:
-   \`\`\`bash
+   ```bash
    python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
-   \`\`\`
+   ```
 
 This command registers the environment as a kernel available in Jupyter Notebook under the display name “Python (myenv)”.
 
@@ -49,13 +49,13 @@ This command registers the environment as a kernel available in Jupyter Notebook
 
 You can run the same commands within a notebook cell by prefixing them with `!`. For example:
 
-\`\`\`python
+```python
 # Install ipykernel in your environment (if needed)
 !conda install ipykernel -y
 
 # Register the kernel (ensure your notebook is running in the desired environment)
 !python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
-\`\`\`
+```
 
 After running these commands, restart your Jupyter Notebook server. When creating a new notebook or changing the kernel in an existing one, the "Python (myenv)" option should be available.
 
@@ -66,31 +66,31 @@ After running these commands, restart your Jupyter Notebook server. When creatin
 ### Using the Terminal
 
 1. **List all installed kernels**:
-   \`\`\`bash
+   ```bash
    jupyter kernelspec list
-   \`\`\`
+   ```
 
    Example output:
-   \`\`\`
+   ```
    myenv    /home/username/.local/share/jupyter/kernels/myenv
    python3  /usr/local/share/jupyter/kernels/python3
-   \`\`\`
+   ```
 
 2. **Remove the kernel** using its kernel spec name (for example, `myenv`):
-   \`\`\`bash
+   ```bash
    jupyter kernelspec remove myenv
-   \`\`\`
+   ```
 
    Confirm the deletion when prompted.
 
 ### Using a Jupyter Notebook
 
 You can also run the removal command from a notebook cell:
-\`\`\`python
+```python
 !jupyter kernelspec list
 # Identify the kernel spec name you want to remove, then:
 !jupyter kernelspec remove myenv
-\`\`\`
+```
 
 ---
 
@@ -104,5 +104,4 @@ You can also run the removal command from a notebook cell:
 
 - **Refreshing the Environment:**  
   After adding or removing kernels, you may need to restart your Jupyter Notebook server to see the changes.
-```
 
