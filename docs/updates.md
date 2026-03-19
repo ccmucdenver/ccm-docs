@@ -160,6 +160,11 @@ Nodes **math-alderaan-h[01,02]** are draining for short maintenance (hardware re
 
 * Continuation of maintenance (CUDA drivers upgrade) on **math-alderaan-h02** is planned next week, date TBD.
 
+### 2025/07/01
+
+* The project to retire legacy infrastructure was completed.
+* Retired systems included the score nodes, `math-colibri-i02`, and the old virtual environment (`vCenter`) with its remaining legacy virtual machines and services, including `clas-compute` and the Gurobi license server.
+
 ### 2025/06/30
 
 * Due to ongoing maintenance including upgrade of CUDA drivers and hardware reset:
