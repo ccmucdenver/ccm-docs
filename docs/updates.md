@@ -164,6 +164,7 @@ Nodes **math-alderaan-h[01,02]** are draining for short maintenance (hardware re
 
 * The project to retire legacy infrastructure was completed.
 * Retired systems included the score nodes, `math-colibri-i02`, and the old virtual environment (`vCenter`) with its remaining legacy virtual machines and services, including `clas-compute` and the Gurobi license server.
+* The legacy OSG incoming access node was retired with the virtual environment, so CU Denver no longer provides OSG cycles.
 
 ### 2025/06/30
 
