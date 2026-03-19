@@ -12,6 +12,7 @@ This file defines strict operating constraints for any agent working in this rep
 
 - Treat current repository files as authoritative unless a user explicitly overrides.
 - Treat `readthedocs.io` as the primary build and rendering target; prefer RTD-compatible choices over local-only behavior.
+- Do NOT apply global chagnes to fles in legacy sucbdirectory and to updates.md, unless requested explicitly.
 - Secondary targets:
   - hosted under a web server anywhere
   - local `file://site/index.html` build through the existing `Makefile`
