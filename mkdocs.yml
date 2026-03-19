@@ -31,7 +31,7 @@ nav:
             - Overview: overview.md
             - Clusters Guide: clusters_guide.md
             - Examples: examples.md
-        - Access Methods:
+        - Graphical Access:
             - JupyterHub: jupyterhub.md
             - Remote Desktop: remote_desktop.md
         - Software and Environments:
