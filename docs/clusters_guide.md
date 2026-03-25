@@ -36,7 +36,7 @@ Alderaan cluster runs Centos 8.
 
 ### Interactive use limitations
 
-Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as shown below.
+Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as described in the [Interactive jobs](#interactive-jobs) section below.
 
 **Please do not run anything directly on compute nodes without a reservation. They are reserved for jobs under the control of the Slurm scheduler, even if you may be able to ssh there.  These are nodes with names like math-alderaan-c01 with something else than "i" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.** It is OK to ssh to a compute node to check on your job, but  don't run anything there.
    
@@ -395,6 +395,20 @@ You can request the number of nodes. The scheduler will then split the tasks ove
 **Please do not request the number of nodes on Alderaan by `--nodes` or `-N`, unless you really need entire nodes for some reason. Request only the CPU cores you need by `--ntasks`, then the node or nodes you use can be shared with others.**
 
      
+## Interactive jobs
+
+Remember you should not directly ssh to a node because it would interfere with jobs scheduled to run on that node. For interactive access to a compute node, do instead:
+
+```
+srun -p math-alderaan --time=2:00:0 -n 1 --pty bash -i
+```
+This will request a session for you as a job in a single core slot on a compute node in the math-alderaan partition for up to 2 hours. After the job starts, your session is transfered to the node. The job will end when you exit or the time runs out. Of course you can do the same for other partitions and add other flags such as to request more cores or a GPU. 
+
+To start an interactive job on Alderaan with a GPU:
+```
+srun -p math-alderaan-gpu-quick --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
+```
+
 ## How to use GPU 
 
 ### How to run with GPU on Alderaan
@@ -432,20 +446,6 @@ To confirm that your job is using the GPU:
 
     nvidia-smi
     
-## Interactive jobs
-
-Remember you should not directly ssh to a node because it would interfere with jobs scheduled to run on that node. For interactive access to a compute node, do instead:
-
-```
-srun -p math-alderaan --time=2:00:0 -n 1 --pty bash -i
-```
-This will request a session for you as a job in a single core slot on a compute node in the math-alderaan partition for up to 2 hours. After the job starts, your session is transfered to the node. The job will end when you exit or the time runs out. Of course you can do the same for other partitions and add other flags such as to request more cores or a GPU. 
-
-To start an interactive job on Alderaan with a GPU:
-```
-srun -p math-alderaan-gpu-quick --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
-```
-
 ## Viewing Job Queues, Job Status, and System Status
 
 The command <code>squeue</code> will show one line for each
