@@ -60,9 +60,9 @@ say `singularity_alderaan_shell.slurm`, like this:
      #SBATCH --time=1:00:00              # Max wall-clock time
      #SBATCH --ntasks=1                  # Total number of tasks over all nodes, max 64*nodes
 
-     singularity exec /storage/singularity/container.sif ./mycode.sh
+     singularity exec /storage/singularity/your_container.sif ./mycode.sh
      
-where `container` is the container name. Instead of a shell script, you can use an executable binary such as compiled C code, or call python from inside the container like `python3 mycode.py`, etc. You can also copy your shell script inside the batch script si that you can deal with only one file, like this:
+where `your_container.sif` is the actual container filename you want to use. Instead of a shell script, you can use an executable binary such as compiled C code, or call python from inside the container like `python3 mycode.py`, etc. You can also copy your shell script inside the batch script si that you can deal with only one file, like this:
 
      #!/bin/bash
      #SBATCH --job-name=singularity
@@ -71,7 +71,7 @@ where `container` is the container name. Instead of a shell script, you can use 
      #SBATCH --time=1:00:00              # Max wall-clock time
      #SBATCH --ntasks=1                  # Total number of tasks over all nodes, max 64*nodes
 
-     singularity shell /storage/singularity/container.sif << EOF
+     singularity shell /storage/singularity/your_container.sif << EOF
      echo This is a shell command which gets executed in the singularity container
      EOF
      
@@ -102,7 +102,7 @@ Not so easy for MPI over the fast interconnect InfiniBand. In future.
                                                                                                                           
 ## What containers we have
 
-Containers we have built are in `/storage/singularity`. For convenience, `/storage/singularity/container.sif` points to a sample container.
+Containers we have built are in `/storage/singularity`.
 
 To see what is in a container, start with a short description which should be provided by every container:
 
@@ -110,90 +110,62 @@ To see what is in a container, start with a short description which should be pr
       
 For more details, you can look how the software in the container was built. This is was done by a script, called definition file, which you can see by
 
-     singularity inspect --deffile /storage/singularity/container.sif
+     singularity inspect --deffile /storage/singularity/your_container.sif
 
 You can see that the script is exactly like installing your own Linux machine after you installed a base system from distribution media.
 
 Then start a shell in the container as above, and you can do whatever you normally do to examine softwares and their versions.
 
-Note: Rebuilding a container usually picks up current version of software, so the versions listed below may change when containers are rebuilt.
+Note: Container inventory changes over time. Some older images remain for continuity and compatibility and may be legacy or may not work on all nodes or software stacks.
 
-### bfctools.sif
+### Recommended/current starting points
 
-Bioinformatics software bfctools 1.15.1 for processing and analyzing sequencing data. Based on Ubuntu 20.04 with Development Tools.
+These are the most useful containers for most current Alderaan workflows:
 
-### bio-lowry.sif
+- `cuda12.2-tf.sif`:
+  Compatibility container for TensorFlow and older CUDA-dependent software on current Alderaan GPU nodes. Use with `singularity exec --nv` or `singularity shell --nv`.
+- `tensorflow.sif`:
+  Older general TensorFlow container still present in storage.
+- `jupyterhub.sif`:
+  Lightweight Jupyter environment.
+- `mixtures.sif`:
+  Project-specific container for the mixtures workflow.
+- `poppler.sif`:
+  CPU-oriented Python/data-science container with Poppler and related packages.
+- `pyscipopt-geopandas.sif`:
+  Optimization and geospatial container with PySCIPOpt, Pyomo, Gurobi, and geopandas.
 
-Ubuntu 20.04 with Development Tools and biology packages bbmap megahit megabat checkm gtdbtkUbuntu 20.04 with Development Tools and biology packages bbmap megahit megabat checkm gtdbtk.
+### Current inventory on Alderaan (2026/05/08)
 
-### biopython.sif
+The following container images were present in `/storage/singularity` when this page was reconciled with the live system:
 
-Biopython 1.78 in Anacoda 3 Python 3.9.13 based on Ubuntu 20.04.
+```text
+bio-lowry.sif
+biopython.sif
+cactus-gpu.sif
+cuda-116.sif
+cuda-120.sif
+cuda12.2-tf.sif
+go.sif
+jupyterhub.sif
+mixtures.sif
+poppler.sif
+pyscipopt-geopandas.sif
+qvina.sif
+rserver-launcher-centos7.simg
+sagemath.sif
+saige.sif
+tensorflow-1.4-new.sif
+tensorflow-1.4.sif
+tensorflow-2.6.0-cuda-11.2.sif
+tensorflow.sif
+tensorflow_latest-gpu-jupyter.sif
+tensorflow_nvidia.sif
+tf-1.4.sif
+tf14.sif
+tf2.sif
+wine-7f0a88.sif
+wine.sif
+```
 
-### cactus-gpu.sif
-
-Imported Docker quay.io/comparative-genomics-toolkit/cactus:v2.5.2-gpu
-
-### CentOS8-DevelopmentTools.sif
-
-CentOS Linux 8.4.2105, gcc 8.4.1 and standard Development Tools from Centos.
-
-### cuda-116.sif
-
-Imported Docker nvidia/cuda:11.6.1-devel-ubuntu20.04
-
-### cuda-120.sif
-
-Ubuntu 22.04 with cuda 12.0, NVIDIA compilers, tensorflow, pytorch, and other common machine learning packages
-
-### cuda12.2-tf.sif
-
-Ubuntu 22.04 with cuda 12.2, tensorflow, and machine learning tools suitable for nodes installed with CUDA 12.9 and required upgraded NVIDIA drivers, currently `math-alderaan-h01`.
-
-### go.sif
-
-The Go language with gcc/gfortran 9 and development tools, based on Ubuntu 20.04
-
-### mixtures.sif
-
-Custom container for the mixtures project. R 4.1.2 with  raresim, plink2, Python with  regenie, bcftools, pliknk,hapgen2, bedtools. etc., and datasets. Based on Ubuntu 22.04
-
-### poppler.sif
-
-Container with python3-poppler-qt5, tensorflow, sklearn, matplotlib, keras, keras-tuner, tensorflow_datasets, pdf2image, jupyterhub, jupyter and pandas. No CUDA. Based on Ubuntu 22.04
-
-### pyscipopt-geopandas.sif
- 
-Optimization software [PySCIPOpt](https://pypi.org/project/PySCIPOpt) pyscipopt 4.2.0, ipopt, glpk, pyomo, gurobi, with geopandas in miniconda and Ubuntu 21.04 
-
-### qvina.sif
-
-Modecular chemistry software [QuickVina](https://github.com/QVina/qvina), gcc, gfortran, python3 on Ubuntu 21.04
-
-### sagemath.sif
-
-[SageMath](https://www.sagemath.org) mathematical sofrware, SAGE 9.5 with R 4.2.1 and Python 3.10.6 on Ubuntu 22.04.
-
-### saige.sif
-
-Genomic software [saige](https://saigegit.github.io/SAIGE-doc/docs/Installation.html) container from docker image wzhou88/saige:1.1.6, comes with R 3.6.3.
-
-### tensorflow-1.4-new.sif
-
-Cuda 11, tensorflow 1.4, sklearn, matplotlib, keras, keras-tuner, tensorflow_datasets, pdf2image and pandas, on Ubuntu 20.04
-
-### tensorflow-v1.4.sif
-
-cuda 11, tensorflow 1.4, sklearn, matplotlib, keras, keras-tuner, tensorflow_datasets, pdf2image and pandas.
-
-### tensorflow-2.6.0-cuda-1.1.2.sif
-
-NVIDIA nvidia/cuda:11.2.2-base-ubuntu20.04 with Anaconda and cuDNN 8 added. 
-
-### tensorflow.sif
-
-Cuda 11, tensorflow, sklearn, matplotlib, keras, keras-tuner, tensorflow_datasets, pdf2image, jupyterhub, jupyter and pandas.
-
-### tensorflow_latest-gpu-jupyter.sif
-
-Cuda 11, tensorflow 1.4, sklearn, matplotlib, keras, keras-tuner, tensorflow_datasets, pdf2image and pandas.
+Use `ls -1 /storage/singularity` on Alderaan to check the current live inventory.
