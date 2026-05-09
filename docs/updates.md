@@ -6,6 +6,13 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/05/08
+
+* [GPU documentation](examples.md) was updated to better match current Alderaan practice.
+    * Short GPU examples now prefer the `math-alderaan-gpu-short` and `math-alderaan-gpu-quick` partitions for short batch and interactive work.
+    * Minimal GPU examples now use a native GPU smoke-test path by default.
+    * Singularity/container examples are still supported, but are now described primarily as compatibility paths for older CUDA-dependent software stacks.
+
 ### 2026/03/10
 
 * [Remote Desktop](remote_desktop.md) is now available for a full Linux desktop environment for interactive work and GUI applications.

@@ -22,41 +22,33 @@ Then submit it
     
 
 
-## Batch job with Tensorflow on GPU using Singularity
+## Batch job smoke test on GPU
 
-Prepare two files as follows.
+Prepare this batch script, say `hello-gpu.sh`. For short GPU jobs, use the
+higher-priority `math-alderaan-gpu-short` partition.
 
-Example batch script `alderaan_single_gpu.sh`:
+Example batch script `hello-gpu.sh`:
 
      #!/bin/bash
      #SBATCH --job-name=gpu
-     #SBATCH --partition=math-alderaan-gpu
+     #SBATCH --partition=math-alderaan-gpu-short
      #SBATCH --gres=gpu:a100:1
-     #SBATCH --time=1-1:00:00                  # Max wall-clock time 1 day 1 hour
-     #SBATCH --ntasks=1                        # number of cores 
+     #SBATCH --time=1:00:00                    # Max wall-clock time 1 hour
+     #SBATCH --ntasks=1                        # number of cores
 
-     # run tensorflow in singularity container
-     # redirect output to a file so that it can be inspected before the end of the job
-     singularity exec /storage/singularity/tensorflow.sif python3 gpucode.py >& gpucode.log 
-     # copy the output to the job output for reference
-     cat gpucode.log
+     hostname
+     pwd
+     nvidia-smi -L
 
 ** Please do not use Alderaan GPUs without allocating them by --gres as above first.** 
 
-Example python code `gpucode.py`:
-
-     print('gpus available to tensorflow:')
-     from tensorflow.python.client import device_lib    
-     print(device_lib.list_local_devices())
-     print("done") 
-
 Submit your batch job by:
 
-     sbatch alderaan_single_gpu.sh
+     sbatch hello-gpu.sh
      
-You can find the files above in the repository https://github.com/ccmucdenver/templates
+For TensorFlow and older CUDA compatibility stacks, see [Singularity Containers](singularity.md).
 
-## Interactive job with Tensorflow on GPU
+## Interactive job on GPU
 
 Look which host you are on. You should be on the head node.
 
@@ -65,7 +57,7 @@ Look which host you are on. You should be on the head node.
 
 Start an interactive job on a GPU node
 
-     > srun -p math-alderaan-gpu --time=02:00:0 --nodes=1 --ntasks=1  --gres=gpu:a100:1 --pty bash -i
+     > srun -p math-alderaan-gpu-quick --time=02:00:0 --nodes=1 --ntasks=1 --gres=gpu:a100:1 --pty bash -i
 
 Check where you are. If a GPU is available, you should be on a high memory/gpu node with a GPU allocated to you.
 
@@ -76,11 +68,11 @@ Check GPU visibility
 
     > nvidia-smi
 
-Start a shell in a container
+If you need a compatibility container for TensorFlow or older CUDA libraries, start a shell in
 
-     > singularity shell /storage/singularity/tensorflow.sif 
+     > singularity shell --nv /storage/singularity/cuda12.2-tf.sif
 
-Do your python:
+and then do your Python there:
 
      Singularity> python3
      Python 3.8.10 (default, Nov 26 2021, 20:14:08)
@@ -89,7 +81,7 @@ Do your python:
      >>> from tensorflow.python.client import device_lib
      >>> 
 
-When you are done, exit so that someone else can use the gpu node
+When you are done, exit so that someone else can use the GPU node
 
      >>> exit()
      exit

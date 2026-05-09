@@ -427,12 +427,12 @@ Minimal example job script:
     #!/bin/bash
     #SBATCH --job-name=gpu
     #SBATCH --gres=gpu:a100:1
-    #SBATCH --partition=math-alderaan-gpu
-    #SBATCH --time=1:00:00                  # Max wall-clock time 1 day 1 hour
+    #SBATCH --partition=math-alderaan-gpu-short
+    #SBATCH --time=1:00:00                  # Max wall-clock time 1 hour
     #SBATCH --ntasks=1                        # number of cores
-    singularity exec  --nv /storage/singularity/cuda12.2-tf.sif your_script
+    nvidia-smi -L
     
-GPU software stack and TensorFlow container guidance are maintained in [Singularity Containers](singularity.md).
+GPU software stack and TensorFlow compatibility-container guidance are maintained in [Singularity Containers](singularity.md).
 
 ### Interactive jobs with GPU on Alderaan
 
