@@ -8,6 +8,16 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/05/08
 
+* Slurm maintenance in progress.
+    * We are updating node memory limits because the previous configuration allowed jobs to reserve too much memory on compute nodes, which would occasionally result in failed job and drained node.
+    * The memory limit on 512 GB compute nodes is being reduced to 500000M to leave more memory for the system. Jobs requesting more memory will not be able to start. High memory GPU nodes are not affected.
+    * Some nodes may show as drain or drng in sinfo while maintenance rolls through the cluster. Running jobs are being allowed to finish normally. New jobs may wait longer than usual until nodes resume.
+
+* Node `math-alderaan-c18` appears to have failed and is marked DOWN for now.
+
+* Jupyterhub
+    * Replaced memory text input with dropdown values: 4G, 8G, 16G, 32G, 64G, 128G, 256G. Default remains 4G. This prevents bad memory requests resulting in failed Jupyterhub launch or Slurm issues.
+
 * [GPU documentation](examples.md) was updated to better match current Alderaan practice.
     * Short GPU examples now prefer the `math-alderaan-gpu-short` and `math-alderaan-gpu-quick` partitions for short batch and interactive work.
     * Minimal GPU examples now use a native GPU smoke-test path by default.
