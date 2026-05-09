@@ -6,6 +6,21 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/05/08
+
+* Slurm maintenance in progress.
+
+** We are updating node memory limits because the previous configuration allowed jobs to reserve too much memory on compute nodes, which would occasionally result in failed job and drained node.
+
+** The memory limit on 512 GB compute nodes is being reduced to 500000M to leave more memory for the system. Jobs requesting more memory will not be able to start. High memory GPU nodes
+are not affected.
+
+** Some nodes may show as drain or drng in sinfo while maintenance rolls through the cluster. Running jobs are being allowed to finish normally. New jobs may wait longer than usual until nodes resume.
+
+* Jupyterhub
+
+** Replaced memory text input with dropdown values: 4G, 8G, 16G, 32G, 64G, 128G, 256G. Default remains 4G. This prevents bad memory requests resulting in failed Jupyterhub launch or Slurm issues.
+
 ### 2026/03/10
 
 * [Remote Desktop](remote_desktop.md) is now available for a full Linux desktop environment for interactive work and GUI applications.
