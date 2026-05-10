@@ -6,6 +6,13 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/05/10
+
+* To enable cluster use while Slurm maintenance is in progress:
+    * Partitions with shorter max run time (up to one day) are available.
+    * Partitions with max run time 7 days (`math-alderaan` and `math-alderaan-gpu`) are marked down and new jobs in them cannot start.
+    * Nodes will be set to drain, updated, and returned to the pool when long-runing jobs on them end.
+
 ### 2026/05/08
 
 * Slurm maintenance in progress.
