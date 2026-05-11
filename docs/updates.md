@@ -10,8 +10,9 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 * To enable cluster use while Slurm maintenance is in progress:
     * Partitions with shorter max run time (up to one day) are available.
-    * Partitions with max run time 7 days (`math-alderaan` and `math-alderaan-gpu`) are marked down and new jobs in them cannot start.
-    * Nodes will be set to drain, updated, and returned to the pool when long-runing jobs on them end.
+    * Partitions with max run time 7 days (`math-alderaan` and `math-alderaan-gpu`) are marked down and new jobs in them cannot start. When all jobs in those long-running partitions on a node end, then
+        * the node will be set to drain
+        * when the node drains (in at most one day), it will be updated and made available.
 
 ### 2026/05/08
 
