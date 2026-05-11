@@ -11,7 +11,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 * Slurm maintenance is in progress. To allow more jobs to run during the maintenance:
     * Partitions with shorter max run time (up to one day) are available as normal.
     * Partitions for long-running jobs (7 days max in `math-alderaan` and `math-alderaan-gpu`) are marked **down** and new jobs cannot start in them.
-    * Since Slurm configuration on all nodes needs to be the same, high-memory GPU nodes are also being updates.
+    * Since Slurm configuration on all nodes needs to be the same, high-memory GPU nodes are also being updated.
     * After all long-running jobs on a node end, the node will be set to drain (for at most one day), and after all jobs end, it will be updated and made available again.
     * After all nodes in a partition are updated, the partition will be marked **up** again.
 
