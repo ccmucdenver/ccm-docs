@@ -8,18 +8,18 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/05/10
 
-* To enable cluster use while Slurm maintenance is in progress:
-    * Partitions with shorter max run time (up to one day) are available.
-    * Partitions with max run time 7 days (`math-alderaan` and `math-alderaan-gpu`) are marked down and new jobs in them cannot start. When all jobs in those long-running partitions on a node end, then
-        * the node will be set to drain
-        * when the node drains (in at most one day), it will be updated and made available.
+* Slurm maintenance is in progress. To allow more jobs to run during the maintenance:
+    * Partitions with shorter max run time (up to one day) are available as normal.
+    * Partitions for long-running jobs (7 days max in `math-alderaan` and `math-alderaan-gpu`) are marked **down** and new jobs cannot start in them. 
+    * After all long-running jobs on a node end, the node will be set to drain (for at most one day), and after all jobs end, it will be updated and made available again.
+    * After all nodes in a partition are updated, the partition will be marked **up** again.
 
 ### 2026/05/08
 
 * Slurm maintenance in progress.
     * We are updating node memory limits because the previous configuration allowed jobs to reserve too much memory on compute nodes, which would occasionally result in failed job and drained node.
     * The memory limit on 512 GB compute nodes is being reduced to 500000M to leave more memory for the system. Jobs requesting more memory will not be able to start. High memory GPU nodes are not affected.
-    * Some nodes may show as drain or drng in sinfo while maintenance rolls through the cluster. Running jobs are being allowed to finish normally. New jobs may wait longer than usual until nodes resume.
+    * Some nodes may show as drain or drng in sinfo while maintenance rolls through the cluster. Running jobs are being allowed to finish normally. New jobs may wait longer than usual (**up to 7 days**) until existing jobs finish and the node can update and resume.
 
 * Node `math-alderaan-c18` appears to have failed and is marked DOWN for now.
 
