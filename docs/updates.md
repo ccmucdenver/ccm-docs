@@ -24,8 +24,8 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 * Node `math-alderaan-c18` appears to have failed and is marked DOWN for now.
 
-* Jupyterhub
-    * Replaced memory text input with dropdown values: 4G, 8G, 16G, 32G, 64G, 128G, 256G. Default remains 4G. This prevents bad memory requests resulting in failed Jupyterhub launch or Slurm issues.
+* Jupyterhub web interface change.
+    * Memory text input was replaced with dropdown values: 4G, 8G, 16G, 32G, 64G, 128G, 256G. Default remains 4G. This prevents bad memory requests resulting in failed Jupyterhub launch or Slurm issues.
 
 * [GPU documentation](examples.md) was updated to better match current Alderaan practice.
     * Short GPU examples now prefer the `math-alderaan-gpu-short` and `math-alderaan-gpu-quick` partitions for short batch and interactive work.
