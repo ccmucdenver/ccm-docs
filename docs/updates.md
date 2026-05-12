@@ -9,6 +9,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 ### 2026/05/12
 
 * Node `math-alderaan-c18` was reset and is back in service.
+* All partitions are up, operations normal.
 
 ### 2026/05/10
 
