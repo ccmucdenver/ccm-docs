@@ -6,6 +6,10 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/05/12
+
+* Node `math-alderaan-c18` was reset and is back in service.
+
 ### 2026/05/10
 
 * Slurm maintenance is in progress. To allow more jobs to run during the maintenance:
