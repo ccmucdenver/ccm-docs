@@ -21,7 +21,7 @@ We currently offer three ways how to access Alderaan cluster:
 * Perhaps the easiest way to log in is to use [JupyterHub](jupyterhub.md). Simply go to 
 [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
 and log in, which will give you a web page with a file navigation tree and one or more terminal windows. 
-You can also run Python notebooks, edit files, and more.
+You can also run Python notebooks, edit files, and more. Your session will run safely on some a compute node as a batch job.
 
 * The [Remote Desktop](remote_desktop.md) will give you a Linux desktop with the ability to open terminal windows and
 work with graphical software such as Matlab or R directly. Just create a remote PC (also called connection) named **math-alderaan** in Windows, or on macOS in Windows App (previously Microsoft Remote Desktop). See the [Remote Desktop](remote_desktop.md) chapter for more details.
@@ -36,7 +36,9 @@ Alderaan cluster runs Centos 8.
 
 ### Interactive use limitations
 
-Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as described in the [Interactive jobs](#interactive-jobs) section below.
+Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as described in the [Interactive jobs](#interactive-jobs) section below, or use [JupyterHub](jupyterhub.md), where your session will run as a Slurm job for up to a week.
+
+***Please do not run anything computationally intensive on the head `math-alderaan`.*** This can destabilize important services which keep the cluster running,and make the experience worse for everyione.
 
 **Please do not run anything directly on compute nodes without a reservation. They are reserved for jobs under the control of the Slurm scheduler, even if you may be able to ssh there.  These are nodes with names like math-alderaan-c01 with something else than "i" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.** It is OK to ssh to a compute node to check on your job, but  don't run anything there.
    
