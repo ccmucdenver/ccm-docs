@@ -7,8 +7,7 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
 ### 2026/05/18
-* 06:15 PM CPU thermal control scripts have a large number of processes in disk wait state. All jobs suspended to prevent accidental overheating during repair.
-* 10PM CPU thermal control resolved by logging in local storage only and adding locks to synchronize.  Operations normal.
+* 06:15 PM CPU thermal control scripts on multiple nodes have a large number of processes in disk wait state, affecting the rest of the system. All jobs suspended to prevent accidental overheating during repair. Resolved by a change of logging to local storage only and adding synchronization locks.
 
 ### 2026/05/12
 
