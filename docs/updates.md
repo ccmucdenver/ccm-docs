@@ -8,7 +8,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/05/18
 * 06:15 PM CPU thermal control scripts have a large number of processes in disk wait state. All jobs suspended to prevent accidental overheating during repair.
-* 10PM CPU thermal control updated to use logging in local storage only.  Operations norma.
+* 10PM CPU thermal control resolved by logging in local storage only and adding locks to synchronize.  Operations normal.
 
 ### 2026/05/12
 
