@@ -8,7 +8,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/05/27
 
-* Corrected consistent limitat of 3 GPUs for all users.
+* Corrected consistent limit of 3 GPUs for all users.
 * Partition **math-alderaan-gpu** (run time 7 days max) is limited to 3000G memory per user,  total to prevent one user from blocking both 2000G 2GPU nodes for a week. 
 
 ### 2026/05/18
