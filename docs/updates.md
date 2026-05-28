@@ -9,7 +9,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 ### 2026/05/27
 
 * Corrected consistent limit of 3 GPUs for all users.
-* Partition **math-alderaan-gpu** (run time 7 days max) is limited to 3000G memory per user,  total to prevent one user from blocking both 2000G 2GPU nodes for a week. 
+* Partition **math-alderaan-gpu** (run time 7 days max) is limited to 3000G memory per user to prevent one user from blocking both 2000G 2GPU nodes for a week. 
 
 ### 2026/05/18
 * 06:15 PM CPU thermal control scripts on multiple nodes have a large number of processes in disk wait state, affecting the rest of the system. All jobs suspended to prevent accidental overheating during repair. Resolved by a change of logging to local storage only and adding synchronization locks.
