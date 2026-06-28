@@ -14,7 +14,6 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 #SBATCH --qos=gpu_short_4
 #SBATCH --time=24:00:00
 ```
-
 ### 2026/05/27
 
 * Corrected consistent limit of 3 GPUs for all users.
