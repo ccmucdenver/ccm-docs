@@ -6,6 +6,15 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/06/27
+
+* Added QoS gpu_short_4 to allow up to 4 concurrent GPUs for up to 24h.
+* To use with any GPU partition:
+```
+#SBATCH --qos=gpu_short_4
+#SBATCH --time=24:00:00
+```
+
 ### 2026/05/27
 
 * Corrected consistent limit of 3 GPUs for all users.
