@@ -19,7 +19,7 @@ To see which QoS classes you are authorized to use, run:
 ```
 sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 ```
-If a QaS you need is not listed for your account, please contact me with a brief description of your workload and resource requirements so the appropriate QoS can be enabled.
+If a QoS you need is not listed for your account, please contact me with a brief description of your workload and resource requirements so the appropriate QoS can be enabled.
 
 ### 2026/06/27
 
