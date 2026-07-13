@@ -8,7 +8,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/07/13
 
-The cluster now uses **QoS (Quality of Service)** to manage resources. QoS helps ensure fair resource sharing by preventing a single user from occupying a large fraction of the cluster resources (such as CPUs or GPUs) for an extended period of time. Higher QoS that allow larger allocations for shorter-running jobs are available when needed but **SLURM jobs must request a higher QoS explicitly**. Users who were previously allowed larger numbers of concurrent CPUs have been granted access to the corresponding higher-resource QoS.
+The cluster now uses **QoS (Quality of Service)** to manage resources. QoS is used to ensure fair resource sharing by preventing a single user from occupying a large fraction of the cluster resources (such as CPUs or GPUs) for an extended period of time. Higher QoS that allow larger allocations for shorter-running jobs are available when needed but **SLURM jobs must request such QoS explicitly**. Users who were previously allowed larger numbers of concurrent CPUs have been granted access to the corresponding higher-resource QoS.
 
 **By default, jobs run with the normal QoS, so no changes are required for such workloads**. If you need access to a special QoS (such as larger number of CPUs allocations), you must explicitly request it in your Slurm script, for example:
 ```
