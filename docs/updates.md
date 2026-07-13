@@ -6,6 +6,21 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/07/13
+
+The cluster now uses **QOS (Quality of Service)** to manage resources. QOS helps ensure fair resource sharing by preventing a single user from occupying a large fraction of the cluster resources (such as CPUs or GPUs) for an extended period of time. Higher QoS that allow larger allocations for shorter-running jobs are available when needed but **SLURM jobs must request a higher QoS explicitly**. Users who were previously allowed larger numbers of concurrent CPUs have been granted access to the corresponding higher-resource QOS.
+
+**By default, jobs run with the normal QOS, so no changes are required for such workloads**. If you need access to a special QoS (such as larger number of CPUs allocations), you must explicitly request it in your Slurm script, for example:
+```
+#SBATCH --qos=burstcpu
+```
+then request the resources withing the QoS. 
+To see which QOS classes you are authorized to use, run:
+```
+sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
+```
+If the QOS you need is not listed for your account, please contact me with a brief description of your workload and resource requirements so the appropriate QOS can be enabled.
+
 ### 2026/06/27
 
 * Added QoS gpu_short_4 to allow up to 4 concurrent GPUs for up to 24h.
