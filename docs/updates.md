@@ -14,7 +14,7 @@ The cluster now uses **QoS (Quality of Service)** to manage resources. QoS is us
 ```
 #SBATCH --qos=burstcpu
 ```
-then request the resources withing the QoS. 
+then request the resources within the QoS. 
 To see which QoS classes you are authorized to use, run:
 ```
 sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
