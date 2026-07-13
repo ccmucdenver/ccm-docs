@@ -8,18 +8,18 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/07/13
 
-The cluster now uses **QOS (Quality of Service)** to manage resources. QOS helps ensure fair resource sharing by preventing a single user from occupying a large fraction of the cluster resources (such as CPUs or GPUs) for an extended period of time. Higher QoS that allow larger allocations for shorter-running jobs are available when needed but **SLURM jobs must request a higher QoS explicitly**. Users who were previously allowed larger numbers of concurrent CPUs have been granted access to the corresponding higher-resource QOS.
+The cluster now uses **QoS (Quality of Service)** to manage resources. QoS helps ensure fair resource sharing by preventing a single user from occupying a large fraction of the cluster resources (such as CPUs or GPUs) for an extended period of time. Higher QoS that allow larger allocations for shorter-running jobs are available when needed but **SLURM jobs must request a higher QoS explicitly**. Users who were previously allowed larger numbers of concurrent CPUs have been granted access to the corresponding higher-resource QoS.
 
-**By default, jobs run with the normal QOS, so no changes are required for such workloads**. If you need access to a special QoS (such as larger number of CPUs allocations), you must explicitly request it in your Slurm script, for example:
+**By default, jobs run with the normal QoS, so no changes are required for such workloads**. If you need access to a special QoS (such as larger number of CPUs allocations), you must explicitly request it in your Slurm script, for example:
 ```
 #SBATCH --qos=burstcpu
 ```
 then request the resources withing the QoS. 
-To see which QOS classes you are authorized to use, run:
+To see which QoS classes you are authorized to use, run:
 ```
 sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 ```
-If the QOS you need is not listed for your account, please contact me with a brief description of your workload and resource requirements so the appropriate QOS can be enabled.
+If a QaS you need is not listed for your account, please contact me with a brief description of your workload and resource requirements so the appropriate QoS can be enabled.
 
 ### 2026/06/27
 
