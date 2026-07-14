@@ -24,12 +24,13 @@ To see which QoS classes you are authorized to use, run:
 ```
 sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 ```
+Only request QoS classes that are listed for your account by this command. If a job requests a QoS that is not authorized for your account, `sbatch` will fail with an error such as `allocation failure: Invalid qos specification`.
 If a QoS you need is not listed for your account, please contact me with a brief description of your workload and resource requirements so the appropriate QoS can be enabled.
 
 ### 2026/06/27
 
 * Added QoS gpu_short_4 to allow up to 4 concurrent GPUs for up to 24h.
-* To use with any GPU partition:
+* To use with any GPU partition after `gpu_short_4` has been enabled for your account:
 ```
 #SBATCH --qos=gpu_short_4
 #SBATCH --time=24:00:00
