@@ -290,7 +290,32 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 | `#SBATCH --nodes=`     | Specifies the number of nodes requested for the job.         | Please do not request a node unless you know you need the full node’s memory or CPU |
 | `#SBATCH --ntasks=`    | Specifies the number of tasks (processes/threads) per node.  | `ntasks` can take a value between 1-64. Recommend: Start small (i.e., 1-5) & if jobs are running out of CPU/memory then increase the value. |
 | `#SBATCH --partition=` | Specifies the partition or queue where the job will be submitted. | Recommend: Use CPU or GPU Alderaan partitions. <br> CPU nodes, specify: `#SBATCH --partition=math-alderaan`<br>GPU nodes, specify: `#SBATCH --partition=math-alderaan-gpu`<br> |
+| `#SBATCH --qos=`       | Requests a Quality of Service (QoS) class for resource limits and runtime limits. | Most jobs do not need this. Use only a QoS that is enabled for your account. |
 | `#SBATCH --array=`     | Specifies an array of job tasks with indices for array job submissions. <br> Examples: <br> `#SBATCH --array=1-5` <br> `#SBATCH --array=0-10,20-21` | You can specify how many array jobs to run at one time with `%`. <br> Example: <br> Run only 3 jobs at one time for 10 jobs: `#SBATCH --array=1-10%3` |
+
+### Quality of Service (QoS)
+
+Alderaan uses QoS classes to manage fair resource sharing. By default, jobs run with the normal QoS, currently up to 500 concurrent CPUs and 3 concurrent GPUs per user. No `--qos` line is needed for normal workloads.
+
+Higher QoS classes allow larger allocations for shorter jobs when they have been enabled for your account. To request one, add the QoS line and then request resources within that QoS. For example:
+
+```
+#SBATCH --qos=burstcpu
+```
+
+To list all available QoS classes on the cluster, run:
+
+```
+sacctmgr show qos format=Name,MaxWall,MaxTRESPU -P
+```
+
+To see which QoS classes you are authorized to use, run:
+
+```
+sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
+```
+
+Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will fail with an error such as `allocation failure: Invalid qos specification`. If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your workload and resource requirements.
 
 ### How to make your job start faster
 
@@ -423,6 +448,8 @@ The partitions
 have two high memory/GPU nodes`math-alderaan-h[01,02]` with two NVIDIA A-100 40GB GPUs and 2TB memory each. Use `--partition=math-alderaan-gpu-short` (1 day job duration maximum) with `--gres=gpu:a100:1` to request one GPU and `--gres=gpu:a100:2` to request two GPUs. For longer jobs, up to 7 days, you can use `--partition=math-alderaan-gpu`, but node availability may be limited and your job may wait longer.
  
 **Please do not use Alderaan GPUs without allocating them by `--gres` as above first. Please do not request an entire node on Alderaan by `--nodes` or `-N`, unless you really need all of it, request only the CPU cores you need by `--ntasks`. Large memory jobs and GPUs jobs can share the same node.**
+
+If the `gpu_short_4` QoS has been enabled for your account, you can use it with any GPU partition to allow up to 4 concurrent GPUs for jobs up to 24 hours. Add `#SBATCH --qos=gpu_short_4` and `#SBATCH --time=24:00:00` to your script.
 
 Minimal example job script:
 
