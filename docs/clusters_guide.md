@@ -295,31 +295,25 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 
 ### Quality of Service (QoS) and job priority
 
-Alderaan uses QoS classes and partition priority to manage fair resource sharing. By default, jobs run with QoS normal, currently up to 500 concurrent CPUs and 3 concurrent GPUs per user. No `--qos` line is needed for normal workloads. 
+Alderaan uses QoS classes and partition priorities to manage resource allocation and job scheduling. By default, jobs run with QoS `normal`, which currently allows each user up to 500 concurrently allocated CPUs and, in GPU partitions, 3 concurrently allocated GPUs. No `--qos` line is needed for normal workloads.
 
-Jobs submitted to partition `math-alderaan-short` with QoS normal have higher priority. Other QoS classes allow a larger number of concurrent CPUs, but they give the job a lower priority. 
+Jobs submitted to the `math-alderaan-short` partition with QoS `normal` have higher scheduling priority than jobs submitted to the regular `math-alderaan` partition. Other QoS classes allow users to run larger numbers of CPUs concurrently, but jobs using these QoS classes have progressively lower scheduling priority.
 
-Job with a lower priority can start if no job with a higher priority is waiting in the same partition, or  if it can run on idle cpus that wait for a higher priority job scheduled to start on.
+A lower-priority job may start while higher-priority jobs are waiting if Slurm determines that running the lower-priority job will not delay the expected start of the higher-priority jobs. This allows otherwise-idle resources to be used through backfill scheduling.
 
-To request other QoS than normal, add the QoS line and then request resources within that QoS. For example:
-
+To submit a job with a QoS other than `normal`, add a QoS directive to the job script and request resources within the limits of that QoS. For example:
 ```
 #SBATCH --qos=burstcpu
 ```
-
 To list all available QoS classes on the cluster, run:
-
 ```
 sacctmgr show qos format=Name,MaxWall,MaxTRESPU -P
 ```
-
 To see which QoS classes you are authorized to use, run:
-
 ```
 sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 ```
-
-Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will fail with an error such as `allocation failure: Invalid qos specification`.
+Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will reject the submission with an error such as `Invalid qos specification`.
 
 If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your workload and resource requirements.
 
@@ -328,7 +322,7 @@ If a QoS you need is not listed for your account, contact Alderaan Help from you
 Use these practical rules to improve queue wait time.
 
 * **Request only what you need.**
-    * Keep `--time` shorts, only for the time you need.
+    * Keep `--time` short, only for the time you need.
     * Use `--ntasks` smaller, only for the number of cores you need.
     * Avoid `--nodes` unless you really need full nodes.
 
