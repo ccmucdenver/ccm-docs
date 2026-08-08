@@ -295,9 +295,13 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 
 ### Quality of Service (QoS)
 
-Alderaan uses QoS classes to manage fair resource sharing. By default, jobs run with the normal QoS, currently up to 500 concurrent CPUs and 3 concurrent GPUs per user. No `--qos` line is needed for normal workloads.
+Alderaan uses QoS classes and partition priority to manage fair resource sharing. By default, jobs run with QoS normal, currently up to 500 concurrent CPUs and 3 concurrent GPUs per user. No `--qos` line is needed for normal workloads. 
 
-Higher QoS classes allow larger allocations for shorter jobs when they have been enabled for your account. To request one, add the QoS line and then request resources within that QoS. For example:
+Jobs submitted to partition `math-alderaan-short` with QoS normal have higher priority. Other QoS classes allow a larger number of concurrent CPUs, but they give the job a lower priority. 
+
+Job with a lower priority can start if no job with a higher priority is waiting in the same partition, or  if it can run on idle cpus that wait for a higher priority job scheduled to start on.
+
+To request other QoS than normal, add the QoS line and then request resources within that QoS. For example:
 
 ```
 #SBATCH --qos=burstcpu
@@ -315,7 +319,9 @@ To see which QoS classes you are authorized to use, run:
 sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 ```
 
-Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will fail with an error such as `allocation failure: Invalid qos specification`. If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your workload and resource requirements.
+Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will fail with an error such as `allocation failure: Invalid qos specification`.
+
+If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your workload and resource requirements.
 
 ### How to make your job start faster
 
