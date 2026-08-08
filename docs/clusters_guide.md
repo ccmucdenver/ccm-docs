@@ -293,7 +293,7 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 | `#SBATCH --qos=`       | Requests a Quality of Service (QoS) class for resource limits and runtime limits. | Most jobs do not need this. Use only a QoS that is enabled for your account. |
 | `#SBATCH --array=`     | Specifies an array of job tasks with indices for array job submissions. <br> Examples: <br> `#SBATCH --array=1-5` <br> `#SBATCH --array=0-10,20-21` | You can specify how many array jobs to run at one time with `%`. <br> Example: <br> Run only 3 jobs at one time for 10 jobs: `#SBATCH --array=1-10%3` |
 
-### Quality of Service (QoS)
+### Quality of Service (QoS) and job priority
 
 Alderaan uses QoS classes and partition priority to manage fair resource sharing. By default, jobs run with QoS normal, currently up to 500 concurrent CPUs and 3 concurrent GPUs per user. No `--qos` line is needed for normal workloads. 
 
@@ -328,13 +328,12 @@ If a QoS you need is not listed for your account, contact Alderaan Help from you
 Use these practical rules to improve queue wait time.
 
 * **Request only what you need.**
-    * Keep `--time` close to expected runtime.
-    * Use `--ntasks` for cores you actually use.
+    * Keep `--time` shorts, only for the time you need.
+    * Use `--ntasks` smaller, only for the number of cores you need.
     * Avoid `--nodes` unless you really need full nodes.
 
 * **Choose partition and runtime strategically.**
-    * Use shorter-runtime partitions when possible.
-    * Partitions with shorter runtime have higher priority.
+    * Use shorter-runtime partitions when possible, they have higher priority.
 
 * **Control array submission pressure.**
     * Limit array concurrency with `%` (for example `--array=1-1000%10`).
