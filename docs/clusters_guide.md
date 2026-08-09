@@ -315,17 +315,17 @@ sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 ```
 Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will reject the submission with an error such as `Invalid qos specification`.
 
-If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your workload and resource requirements.
+If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your resource requirements.
 
-Jobs submitted to the `math-alderaan-short` partition, which has shorter maximum run time, have a higher scheduling priority than the same jobs submitted to the regular `math-alderaan` partition. 
+#### Partition priority and maximum run time
 
-#### Partition priority
+We use partition priority to prioritize short-running jobs. A job submitted to a partition with a shorter maximum run time, i. e., `math-alderaan-short`, `math-alderaan-gpu-short`, or `math-alderaan-gpu-quick`, has a higher scheduling priority than the same job submitted to the `math-alderaan` or `math-alderaan-gpu` partition. 
 
-Using a partition with a shorter maximum run time, i. e., `math-alderaan-short`, `math-alderaan-gpu-short`, `math-alderaan-gpu-quick`, will increase the job priority.
+The requested job time (`--time`) does not directly affect the job’s priority. It determines which partitions the job is eligible to use and also affects backfill scheduling: jobs with shorter requested run times may run sooner, because they can fit into more available scheduling windows without delaying higher-priority jobs.
 
 #### Job size
 
-The Slurm scheduler gives larger jobs higher priority and then schedules smaller jobs around them. However, lower-priority job may start while higher-priority jobs are waiting if Slurm determines that running the lower-priority job will not delay the expected start of the higher-priority jobs. This allows otherwise-idle resources to be used through backfill scheduling. Consequently, **smaller jobs with fewer CPUs and shorter maximum run time often run faster**.
+The Slurm scheduler gives larger jobs higher priority and then schedules smaller jobs around them. Lower-priority job may start while higher-priority jobs are waiting if Slurm determines that running the lower-priority job will not delay the expected start of the higher-priority jobs.  Consequently, **smaller jobs with fewer CPUs and shorter requested run time often run sooner**.
 
 ### How to make your job start faster
 
