@@ -26,21 +26,23 @@ nav:
     - Terms and Conditions: TermsandConditions.md
     - Updates:  updates.md
     - Accounts: accounts.md
-    - User Guide:
-        - Start Here:
-            - Overview: overview.md
-            - Clusters Guide: clusters_guide.md
-            - Examples: examples.md
-        - Graphical Access:
+    - Alderaan Overview: overview.md
+    - Connecting to Alderaan:
+            - Logging in: access.md
             - JupyterHub: jupyterhub.md
             - Remote Desktop: remote_desktop.md
-        - Software and Environments:
+    - Storage and Data Transfer:
+            - File Storage and Transfer: storage.md
+            - Globus File Transfer: globus.md
+    - Running Jobs:
+            - Clusters Guide: clusters_guide.md
+            - Examples: examples.md
+    - Software and Environments:
+            - Software: software.md
             - Environment Modules: modules.md
             - Conda and Python: conda.md
             - Singularity Containers: singularity.md
             - Apache Spark: spark.md
-        - Data Transfer:
-            - Globus File Transfer: globus.md
     - External Resources: external.md
     - Facilities, Equipment, and Other Resources: facilities.md
     - How to Edit: pull_request.md

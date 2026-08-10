@@ -23,7 +23,7 @@
 
 * If you need software that is not installed on Alderaan, you can
   * check if it may be available in one of our [singularity containers](singularity.md)
-  * check if it may be available in a [module](clusters_guide.md#where-is-the-software-modules-and-singularity-containers)
+  * check if it may be available in a [module](software.md#where-is-the-software-modules-and-singularity-containers)
   * install it in your account using [Conda](conda.md)
   * ask for it to be installed, which may be typically done in a new singularity container or module
 

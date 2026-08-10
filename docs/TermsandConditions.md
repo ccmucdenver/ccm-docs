@@ -48,7 +48,7 @@ lowest priority in the case of storage issues.
 We use redundant storage technologies. Data migration may be required to mitigate a localized hardware failure and for upgrades. 
 But we may not be able to migrate very large files or directories and such files are more likely be lost.
 
-For more information on storage, see the [Clusters Guide](clusters_guide.md#file-storage).
+For more information on storage, see the [Clusters Guide](storage.md#file-storage).
 
 ### SSH keys 
 If you use ssh keys to connect from this system, such as to github or 
