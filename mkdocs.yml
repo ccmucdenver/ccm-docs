@@ -37,8 +37,8 @@ nav:
     - Running Jobs:
             - Slurm: slurm.md
             - Examples: examples.md
-    - Software and Environments:
-            - Software: software.md
+    - Software:
+            - Installing Software: software.md
             - Environment Modules: modules.md
             - Conda and Python: conda.md
             - Singularity Containers: singularity.md

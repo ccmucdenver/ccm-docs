@@ -1,4 +1,4 @@
-# Software
+# Installing Software
 
 Use the dedicated guides for software environments:
 
