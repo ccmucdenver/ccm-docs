@@ -6,6 +6,12 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/08/10
+
+* [Job priority](slurm.md#job-priority) now accounts for QoS, partition priority, and job size. Short-runtime partitions receive higher priority, larger jobs receive priority so they can acquire sufficient resources, and smaller or shorter jobs can use backfill opportunities when they will not delay higher-priority jobs. The objectives are fair resource sharing, making large jobs possible, and using otherwise idle resources efficiently.
+
+* Documentation was reorganized into direct topic pages with shallower navigation. Duplicate and obsolete guidance was removed, page titles were aligned with navigation, and Slurm memory guidance was updated for explicit `--mem-per-cpu` requests under cgroup enforcement.
+
 ### 2026/07/13
 
 The cluster now uses **QoS (Quality of Service)** to manage resources. QoS is used to ensure fair resource sharing by preventing a single user from occupying a large fraction of the cluster resources (such as CPUs or GPUs) for an extended period of time. Higher QoS that allow larger allocations for shorter-running jobs are available when needed but **SLURM jobs must request such QoS explicitly**. Users who were previously allowed larger numbers of concurrent CPUs have been granted access to the corresponding higher-resource QoS.
