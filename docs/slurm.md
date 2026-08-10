@@ -48,10 +48,21 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 | `#SBATCH --output=`    | Specifies the file to which standard output (stdout) will be redirected. |  |
 | `#SBATCH --error=`     | Specifies the file to which standard error (stderror) will be redirected. |  |
 | `#SBATCH --nodes=`     | Specifies the number of nodes requested for the job.         | Please do not request a node unless you know you need the full node’s memory or CPU |
-| `#SBATCH --ntasks=`    | Specifies the number of tasks (processes/threads) per node.  | `ntasks` can take a value between 1-64. Recommend: Start small (i.e., 1-5) & if jobs are running out of CPU/memory then increase the value. |
+| `#SBATCH --ntasks=`    | Specifies the number of tasks.                               | Start small and request only the CPUs the application can use. |
+| `#SBATCH --mem-per-cpu=` | Specifies memory allocated per requested CPU.              | The default is `4096M`; increase it for applications that need more memory. |
 | `#SBATCH --partition=` | Specifies the partition or queue where the job will be submitted. | Recommend: Use CPU or GPU Alderaan partitions. <br> CPU nodes, specify: `#SBATCH --partition=math-alderaan`<br>GPU nodes, specify: `#SBATCH --partition=math-alderaan-gpu`<br> |
 | `#SBATCH --qos=`       | Requests a Quality of Service (QoS) class for resource limits and runtime limits. | Most jobs do not need this. Use only a QoS that is enabled for your account. |
 | `#SBATCH --array=`     | Specifies an array of job tasks with indices for array job submissions. <br> Examples: <br> `#SBATCH --array=1-5` <br> `#SBATCH --array=0-10,20-21` | You can specify how many array jobs to run at one time with `%`. <br> Example: <br> Run only 3 jobs at one time for 10 jobs: `#SBATCH --array=1-10%3` |
+
+### Requesting memory
+
+Slurm allocates `4096M` of memory per requested CPU by default. To make the request explicit, add:
+
+    #SBATCH --mem-per-cpu=4096M
+
+Increase `--mem-per-cpu` if the application needs more memory. Total requested memory is the number of allocated CPUs multiplied by the memory requested per CPU. Cgroups enforce the allocation, so exceeding it may terminate the job. Do not request extra CPUs merely to obtain memory.
+
+Compute nodes provide `500000M` of schedulable memory. To use nearly all of it, request all 64 CPUs with `#SBATCH --mem-per-cpu=7800M`, for `499200M` total. High-memory GPU nodes provide `2000G` each.
 
 ### Job priority
 

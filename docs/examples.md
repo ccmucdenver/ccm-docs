@@ -109,7 +109,7 @@ This script will be sufficient for many jobs, such as those you code yourself wh
      
 If you run an application that can use more cores, you can requests the number of cores in <code>--ntask</code> parameter instead of 1. Your allocation will be charged for the time of all cores you requested, regardless if you use them or not.
 
-If you expect that your application will use more memory than 8GB (our nodes have 512GB memory and 64 cores each), you should request more tasks, about the expected memory usage in GB divided by 8. Otherwise the node memory may get overloaded when the machine gets busy with many jobs, and everyone's jobs may stall or crash. Note: this may change once we start allocating memory use, but at the moment we do not.
+See [Requesting memory](slurm.md#requesting-memory) for memory allocation and `--mem-per-cpu` guidance.
 
 ## Multiple single-core jobs using arrays
 
