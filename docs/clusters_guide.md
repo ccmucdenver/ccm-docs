@@ -1,136 +1,32 @@
-# Guide to CCM Clusters
+# Slurm
 
-## Requesting Information about the Environment
+## Viewing Job Queues, Job Status, and System Status
 
-### Queues
+### Queues and partitions
 
-Jobs are submitted to compute nodes through the scheduler.  To see the queues (called "partitions") on the scheduler, type 
+Jobs are submitted to compute nodes through the scheduler. To see the queues, which Slurm calls partitions, use:
 
-    $ sinfo
-    PARTITION               AVAIL  TIMELIMIT  NODES  STATE NODELIST
-    math-alderaan              up 7-00:00:00      2    mix math-alderaan-c[08,16]
-    math-alderaan              up 7-00:00:00     25  alloc math-alderaan-c[01-06,09-15,17,21-29,31-32]
-    math-alderaan              up 7-00:00:00      3   idle math-alderaan-c[18-20]
-    math-alderaan-short        up 1-00:00:00      2    mix math-alderaan-c[08,16]
-    math-alderaan-short        up 1-00:00:00     25  alloc math-alderaan-c[01-06,09-15,17,21-29,31-32]
-    math-alderaan-short        up 1-00:00:00      3   idle math-alderaan-c[18-20]
-    jupyter                    up 7-00:00:00      2    mix math-alderaan-c[08,16]
-    jupyter                    up 7-00:00:00     25  alloc math-alderaan-c[01-06,09-15,17,21-29,31-32]
-    jupyter                    up 7-00:00:00      3   idle math-alderaan-c[18-20]
-    system_test                up 7-00:00:00      1   idle math-alderaan-c30
-    math-alderaan-gpu        down 7-00:00:00      1  drain math-alderaan-h01
-    math-alderaan-gpu-short    up 1-00:00:00      2    mix math-alderaan-h[01-02]
-    math-alderaan-gpu-quick    up    2:00:00      1    mix math-alderaan-h[01-02]
+    sinfo
 
-**Partitions with shorter runtime have higher priority.**
-
+Partitions with shorter runtime have higher priority.
 
 ### Nodes
+
 To see a list of all nodes, use:
 
-     $ sinfo -N
-      sinfo -N
-    NODELIST           NODES               PARTITION STATE 
-    math-alderaan-c01      1     math-alderaan-short alloc 
-    math-alderaan-c01      1                 jupyter alloc 
-    math-alderaan-c01      1           math-alderaan alloc 
-    math-alderaan-c02      1     math-alderaan-short alloc 
-    math-alderaan-c02      1                 jupyter alloc 
-    math-alderaan-c02      1           math-alderaan alloc 
-    math-alderaan-c03      1     math-alderaan-short alloc 
-    math-alderaan-c03      1                 jupyter alloc 
-    math-alderaan-c03      1           math-alderaan alloc 
-    math-alderaan-c04      1     math-alderaan-short alloc 
-    math-alderaan-c04      1                 jupyter alloc 
-    math-alderaan-c04      1           math-alderaan alloc 
-    math-alderaan-c05      1     math-alderaan-short alloc 
-    math-alderaan-c05      1                 jupyter alloc 
-    math-alderaan-c05      1           math-alderaan alloc 
-    math-alderaan-c06      1     math-alderaan-short alloc 
-    math-alderaan-c06      1                 jupyter alloc 
-    math-alderaan-c06      1           math-alderaan alloc 
-    math-alderaan-c08      1     math-alderaan-short alloc 
-    math-alderaan-c08      1                 jupyter alloc 
-    math-alderaan-c08      1           math-alderaan alloc 
-    math-alderaan-c09      1     math-alderaan-short alloc 
-    math-alderaan-c09      1                 jupyter alloc 
-    math-alderaan-c09      1           math-alderaan alloc 
-    math-alderaan-c10      1     math-alderaan-short alloc 
-    math-alderaan-c10      1                 jupyter alloc 
-    math-alderaan-c10      1           math-alderaan alloc 
-    math-alderaan-c11      1     math-alderaan-short alloc 
-    math-alderaan-c11      1                 jupyter alloc 
-    math-alderaan-c11      1           math-alderaan alloc 
-    math-alderaan-c12      1     math-alderaan-short alloc 
-    math-alderaan-c12      1                 jupyter alloc 
-    math-alderaan-c12      1           math-alderaan alloc 
-    math-alderaan-c13      1     math-alderaan-short alloc 
-    math-alderaan-c13      1                 jupyter alloc 
-    math-alderaan-c13      1           math-alderaan alloc 
-    math-alderaan-c14      1     math-alderaan-short alloc 
-    math-alderaan-c14      1                 jupyter alloc 
-    math-alderaan-c14      1           math-alderaan alloc 
-    math-alderaan-c15      1     math-alderaan-short alloc 
-    math-alderaan-c15      1                 jupyter alloc 
-    math-alderaan-c15      1           math-alderaan alloc 
-    math-alderaan-c16      1     math-alderaan-short mix   
-    math-alderaan-c16      1                 jupyter mix   
-    math-alderaan-c16      1           math-alderaan mix   
-    math-alderaan-c17      1     math-alderaan-short alloc 
-    math-alderaan-c17      1                 jupyter alloc 
-    math-alderaan-c17      1           math-alderaan alloc 
-    math-alderaan-c18      1     math-alderaan-short idle  
-    math-alderaan-c18      1                 jupyter idle  
-    math-alderaan-c18      1           math-alderaan idle  
-    math-alderaan-c19      1     math-alderaan-short idle  
-    math-alderaan-c19      1                 jupyter idle  
-    math-alderaan-c19      1           math-alderaan idle  
-    math-alderaan-c20      1     math-alderaan-short idle  
-    math-alderaan-c20      1                 jupyter idle  
-    math-alderaan-c20      1           math-alderaan idle  
-    math-alderaan-c21      1     math-alderaan-short alloc 
-    math-alderaan-c21      1                 jupyter alloc 
-    math-alderaan-c21      1           math-alderaan alloc 
-    math-alderaan-c22      1     math-alderaan-short alloc 
-    math-alderaan-c22      1                 jupyter alloc 
-    math-alderaan-c22      1           math-alderaan alloc 
-    math-alderaan-c23      1     math-alderaan-short alloc 
-    math-alderaan-c23      1                 jupyter alloc 
-    math-alderaan-c23      1           math-alderaan alloc 
-    math-alderaan-c24      1     math-alderaan-short alloc 
-    math-alderaan-c24      1                 jupyter alloc 
-    math-alderaan-c24      1           math-alderaan alloc 
-    math-alderaan-c25      1     math-alderaan-short alloc 
-    math-alderaan-c25      1                 jupyter alloc 
-    math-alderaan-c25      1           math-alderaan alloc 
-    math-alderaan-c26      1     math-alderaan-short alloc 
-    math-alderaan-c26      1                 jupyter alloc 
-    math-alderaan-c26      1           math-alderaan alloc 
-    math-alderaan-c27      1     math-alderaan-short alloc 
-    math-alderaan-c27      1                 jupyter alloc 
-    math-alderaan-c27      1           math-alderaan alloc 
-    math-alderaan-c28      1     math-alderaan-short alloc 
-    math-alderaan-c28      1                 jupyter alloc 
-    math-alderaan-c28      1           math-alderaan alloc 
-    math-alderaan-c29      1     math-alderaan-short alloc 
-    math-alderaan-c29      1                 jupyter alloc 
-    math-alderaan-c29      1           math-alderaan alloc 
-    math-alderaan-c30      1             system_test idle  
-    math-alderaan-c31      1     math-alderaan-short alloc 
-    math-alderaan-c31      1                 jupyter alloc 
-    math-alderaan-c31      1           math-alderaan alloc 
-    math-alderaan-c32      1     math-alderaan-short alloc 
-    math-alderaan-c32      1                 jupyter alloc 
-    math-alderaan-c32      1           math-alderaan alloc 
-    math-alderaan-h01      1 math-alderaan-gpu-short drain 
-    math-alderaan-h01      1       math-alderaan-gpu drain 
-    math-alderaan-h02      1 math-alderaan-gpu-short drain 
-    
-Nodes `math-alderaan-c01` to `math-alderaan-c32` are compute nodes. Nodes `math-alderaan-h01` and `math-alderaan-h02` are high memory GPU nodes. Again, never ssh to nodes directly to work on them, only to monitor your allocated jobs.
+    sinfo -N
+
+Nodes `math-alderaan-c01` to `math-alderaan-c32` are compute nodes. Nodes `math-alderaan-h01` and `math-alderaan-h02` are high memory GPU nodes.
+
+### Jobs
+
+The command `squeue` shows one line for each job running on the system.
+
+The command `squeue.sh` shows the CPUs, memory, and GPUs requested by each job. The command `jobs-on-nodes.sh` shows reserved resources and jobs by node.
+
+Real-time system status including temperature, load, and partitions is available in [News and Status Updates](updates.md).
 
 ## Submitting Jobs to the Scheduler
-
-### Submitting a job
 
 The <code>sbatch job_script</code> command is used to submit a job into a queue. Your job starts executing in the directory where it was submitted, so submit it from a directory accessible to all compute nodes, such as a subdirectory of your home directory. You can add switches to the <code>sbatch</code> command, but it is recommended to make them a part of your batch script so that you do not have to do that every time. Please do not use more cores than the number of tasks specified in your script.
 
@@ -163,7 +59,7 @@ Alderaan uses Quality of Service (QoS) classes and scheduling priority to manage
 
 #### Quality of Service (QoS)
 
-By default, all jobs run with QoS `normal`, which currently allows each user **up to 500 concurrently allocated CPUs** and, in GPU partitions, **3 concurrently allocated GPUs**. No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but jobs using these QoS classes have lower maximum time and lower scheduling priority.
+By default, all jobs run with QoS `normal`. Current per-user CPU and GPU limits are listed in [Accounts](accounts.md#running-jobs). No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but jobs using these QoS classes have lower maximum time and lower scheduling priority.
 
 To submit a job with a QoS other than `normal`, add a QoS directive to the job script and request resources within the limits of that QoS. For example:
 ```
@@ -225,12 +121,9 @@ Remember you should not directly ssh to a node because it would interfere with j
 ```
 srun -p math-alderaan --time=2:00:0 -n 1 --pty bash -i
 ```
-This will request a session for you as a job in a single core slot on a compute node in the math-alderaan partition for up to 2 hours. After the job starts, your session is transfered to the node. The job will end when you exit or the time runs out. Of course you can do the same for other partitions and add other flags such as to request more cores or a GPU. 
+This will request a session for you as a job in a single core slot on a compute node in the math-alderaan partition for up to 2 hours. After the job starts, your session is transfered to the node. The job will end when you exit or the time runs out. Of course you can do the same for other partitions and add other flags such as to request more cores or a GPU.
 
-To start an interactive job on Alderaan with a GPU:
-```
-srun -p math-alderaan-gpu-quick --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
-```
+See [Examples](examples.md#interactive-job-on-gpu) for an interactive GPU example.
 
 ## How to use GPUs 
 
@@ -247,48 +140,6 @@ have two high memory/GPU nodes`math-alderaan-h[01,02]` with two NVIDIA A-100 40G
 
 If the `gpu_short_4` QoS has been enabled for your account, you can use it with any GPU partition to allow up to 4 concurrent GPUs for jobs up to 24 hours. Add `#SBATCH --qos=gpu_short_4` and `#SBATCH --time=24:00:00` to your script.
 
-Minimal example job script:
-
-    #!/bin/bash
-    #SBATCH --job-name=gpu
-    #SBATCH --gres=gpu:a100:1
-    #SBATCH --partition=math-alderaan-gpu-short
-    #SBATCH --time=1:00:00                  # Max wall-clock time 1 hour
-    #SBATCH --ntasks=1                        # number of cores
-    nvidia-smi -L
-    
 GPU software stack and TensorFlow compatibility-container guidance are maintained in [Singularity Containers](singularity.md).
 
-### Interactive jobs with GPU on Alderaan
-
-From the command line, 
-
-     srun -p math-alderaan-gpu-short --time=2:00:0 -n 1 --gres=gpu:a100:1 --pty bash -i
-     
-will give you an interactive shell on one of the GPU nodes with one GPU allocated.
-
-To confirm that your job is using the GPU:
-
-    nvidia-smi
-    
-## Viewing Job Queues, Job Status, and System Status
-
-The command <code>squeue</code> will show one line for each
-job running on the system.
-
-The command <code>squeue.sh</code> will show one line for each
-job running on the system with a listing of all resources requested - CPUs, memory, GPUs. <code>jobs-on-nodes.sh</code> shows the jobs running node by node with the resources reserved. These custom commands should help understanding the use of the resource and the reasons why jobs may wait. 
-
-
-The command <code>sinfo</code> will show a summary of jobs and partitions status on the system:
-
-    PARTITION         AVAIL  TIMELIMIT  NODES  STATE NODELIST
-    math-alderaan        up 7-00:00:00     10    mix math-alderaan-c[01-10]
-    math-alderaan        up 7-00:00:00      8  alloc math-alderaan-c[11-15,29,31-32]
-    math-alderaan        up 7-00:00:00     14   idle math-alderaan-c[16-28,30]
-    math-alderaan-gpu    up 7-00:00:00      1   drng math-alderaan-h01
-    math-alderaan-gpu    up 7-00:00:00      1    mix math-alderaan-h02
-
-Real-time system status including temperature, load, and the partitions from `sinfo`, is available in [News and Status Updates](updates.md).
-
-**We will be happy to install software and build containers for you, do not hesitate to ask!**
+See [Examples](examples.md) for batch and interactive GPU examples.

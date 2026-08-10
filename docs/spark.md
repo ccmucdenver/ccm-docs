@@ -1,4 +1,4 @@
-# Apache Spark on Alderaan (Single‑Node Usage)
+# Apache Spark
 
 ## Overview
 

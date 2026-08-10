@@ -1,4 +1,4 @@
-# Environment modules
+# Environment Modules
 
 **Environment modules are available on Alderaan front end and compute nodes only.**
 

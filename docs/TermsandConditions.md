@@ -1,8 +1,6 @@
-# Center for Computational Mathematics (CCM) University of Colorado Denver
+# Terms and Conditions
 
-## Terms and Conditions
-
-### Legal
+## Legal
 **You (the user) are responsible for ensuring compliance to the data restrictions as outlined below. Failure to adhere
 to these restrictions may result in account deactivation, and immediate deletion of any or all data. Violations may also
 result in administrative or legal consequences.**
@@ -20,7 +18,7 @@ particularly technology which may be subject to restrictions on export to some c
 * **All use of this resource must be fundamental research, intended to be published with no restrictions or approval
 requirement by the sponsor, and no restriction on the nationality of the participants.**
 
-### AI agents and automation
+## AI agents and automation
 
 Use of AI agents, AI bots, or other autonomous decision-making tools to access CCM systems is **not allowed without prior explicit approval from system administrators**.
 
@@ -28,7 +26,7 @@ You must not share your personal password, MFA codes, SSH private keys, active s
 
 Routine non-AI automation (for example shell scripts, scheduled jobs, workflow scripts, and orchestration tools), including scripts from external sources, is allowed when it complies with all other Terms and Conditions and cluster usage policies. Users are responsible for understanding and safely running the tools and scripts they use. Support for user-provided automation and orchestration tooling is best effort and may be unavailable.
 
-### File protection and privacy
+## File protection and privacy
 
 By default, files and directories, including your home directory, are created such that *all other users have read access to your files*. This is a Linux default to encourage collaboration. If you want to make a file or directory not accessible by other users (except for system administrators), you need to manually change the permissions for that file or directory. To do so type the command below:
 
@@ -36,7 +34,7 @@ By default, files and directories, including your home directory, are created su
 
 Please note that file permissions cannot be considered secure. 
 
-### Storage
+## Storage
 
 **Any files stored on this cluster may be lost at any time with no notice. You (the user) must  maintain copies of all
 important files elsewhere.** 
@@ -48,15 +46,15 @@ lowest priority in the case of storage issues.
 We use redundant storage technologies. Data migration may be required to mitigate a localized hardware failure and for upgrades. 
 But we may not be able to migrate very large files or directories and such files are more likely be lost.
 
-For more information on storage, see the [Clusters Guide](storage.md#file-storage).
+For more information on storage, see [File Storage and Transfer](storage.md).
 
-### SSH keys 
+## SSH keys
 If you use ssh keys to connect from this system, such as to github or 
 another computer account, it is highly recommended to use an ssh key with a passcode you have to type in every time. 
 If you use an ssh key without a passcode, security of the account you are logging into is only as good 
 as the protection of your files here, which **cannot be considered secure**.
 
-### Acknowledgement of Support
+## Acknowledgement of Support
 
 **All work should acknowledge the CCM and reference the NSF grant number.** Here is a suggested acknowledgement:
 

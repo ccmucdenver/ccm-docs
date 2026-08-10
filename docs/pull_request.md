@@ -1,4 +1,4 @@
-# How to edit
+# How to Edit
 
 Please submit a pull request to CCM:
 

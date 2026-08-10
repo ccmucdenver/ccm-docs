@@ -1,7 +1,5 @@
 # Logging in
 
-## How to log in
-
 Your account must be set up before using the system. Please go to [accounts](accounts.md) for more about getting an account.
 
 To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz private network. This can be done in several ways:
@@ -10,19 +8,14 @@ To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz p
 * On campus secure wireless network (not the guest network)
 * Through [CU Denver](https://www.ucdenver.edu/vpn) or [CU Anschutz](https://www.cuanschutz.edu/vpn) by GlobalProtect VPN.   **Windows Subsystem for Linux (WSL) is not recommended with VPN**, as GlobalProtect sometimes does not forward 
 connections properly from WSL, even though it works for other Windows applications.
-* Through the Windows remote desktop [https://remote.ucdenver.edu](https://remote.ucdenver.edu) After logging in, click on "Complimentary". It is recommended to download and use the VMware Horizon app instead of continuing in the browser.
+* Through [Remote Desktop](remote_desktop.md).
 
 To log in, use your university username (not email) and password. If you do not know your username, you can retrieve it at [https://myaccount.ucdenver.edu/forgot-username](https://myaccount.ucdenver.edu/forgot-username).
 
 We currently offer three ways how to access Alderaan cluster:
 
-* Perhaps the easiest way to log in is to use [JupyterHub](jupyterhub.md). Simply go to 
-[https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
-and log in, which will give you a web page with a file navigation tree and one or more terminal windows. 
-You can also run Python notebooks, edit files, and more. Your session will run safely on some a compute node as a batch job.
-
-* The [Remote Desktop](remote_desktop.md) will give you a Linux desktop with the ability to open terminal windows and
-work with graphical software such as Matlab or R directly. Just create a remote PC (also called connection) named **math-alderaan** in Windows, or on macOS in Windows App (previously Microsoft Remote Desktop). See the [Remote Desktop](remote_desktop.md) chapter for more details.
+* [JupyterHub](jupyterhub.md).
+* [Remote Desktop](remote_desktop.md).
 
 * Secure Shell (SSH) is a classical way to access Alderaan from the command line. Type **ssh username@math-alderaan.ucdenver.pvt** in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`). If you omit the username, your computer may send your local username instead, which may not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections. For more convenience and security, you can
 set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as 
@@ -30,11 +23,9 @@ from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-con
 
  SSH also allows you to transfer files via scp, sftp, or rsync commands. 
 
-Alderaan cluster runs Centos 8.
-
 ## Interactive use limitations
 
-Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as described in the [Interactive jobs](clusters_guide.md#interactive-jobs) section below, or use [JupyterHub](jupyterhub.md), where your session will run as a Slurm job for up to a week.
+Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as described in [Interactive jobs](clusters_guide.md#interactive-jobs), or use [JupyterHub](jupyterhub.md), where your session will run as a Slurm job for up to a week.
 
 ***Please do not run anything computationally intensive on the head `math-alderaan`.*** This can destabilize important services which keep the cluster running,and make the experience worse for everyione.
 
