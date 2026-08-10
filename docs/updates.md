@@ -80,11 +80,11 @@ If a QoS you need is not listed for your account, please contact me with a brief
 
 * [Terms and Conditions](TermsandConditions.md) were updated to address AI agent use.
 
-* New command guidance for queue and node visibility with resource reservations is available in [Viewing Job Queues, Job Status, and System Status](clusters_guide.md#viewing-job-queues-job-status-and-system-status).
+* New command guidance for queue and node visibility with resource reservations is available in [Viewing Job Queues, Job Status, and System Status](slurm.md#viewing-job-queues-job-status-and-system-status).
 
-* New guidance for faster job starts and efficient node use is available in [How to make your job start faster](clusters_guide.md#how-to-make-your-job-start-faster).
+* New guidance for faster job starts and efficient node use is available in [How to make your job start faster](slurm.md#how-to-make-your-job-start-faster).
 
-* Documentation was updated: [Clusters Guide](clusters_guide.md) was streamlined for core operations, with deeper topics moved to dedicated pages for easier navigation from [Welcome](index.md).
+* Documentation was updated: [Clusters Guide](slurm.md) was streamlined for core operations, with deeper topics moved to dedicated pages for easier navigation from [Welcome](index.md).
 
 ### 2026/02/20
 
@@ -770,7 +770,7 @@ Other filesystems are not affected.
 
 ### 2022/08/16
 
-* Software maintenance planned on math-alderaan-h[01-02] is postponed. Please continue using the existing GPU directions in the [Clusters guide](clusters_guide.md#how-to-run-with-gpu-on-alderaan).
+* Software maintenance planned on math-alderaan-h[01-02] is postponed. Please continue using the existing GPU directions in the [Clusters guide](slurm.md#how-to-run-with-a-gpu-on-alderaan).
 
 ### 2022/08/15
 

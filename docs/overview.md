@@ -5,6 +5,6 @@ See [Facilities, Equipment, and Other Resources](facilities.md#computing-facilit
 ## Quick basics 
 
 * See [Logging in](access.md) for ways to connect to Alderaan.
-* See [Slurm](clusters_guide.md) to submit and manage jobs.
+* See [Slurm](slurm.md) to submit and manage jobs.
 * See [Examples](examples.md) for job scripts.
 * See [Software](software.md) to choose and install software.

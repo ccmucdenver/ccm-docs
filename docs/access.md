@@ -25,7 +25,7 @@ from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-con
 
 ## Interactive use limitations
 
-Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as described in [Interactive jobs](clusters_guide.md#interactive-jobs), or use [JupyterHub](jupyterhub.md), where your session will run as a Slurm job for up to a week.
+Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as described in [Interactive jobs](slurm.md#interactive-jobs), or use [JupyterHub](jupyterhub.md), where your session will run as a Slurm job for up to a week.
 
 ***Please do not run anything computationally intensive on the head `math-alderaan`.*** This can destabilize important services which keep the cluster running,and make the experience worse for everyione.
 

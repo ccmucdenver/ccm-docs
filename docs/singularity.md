@@ -34,7 +34,7 @@ the same version of Singularity we have, building a container, and copying it he
 
 **Please do not run computationally intensive jobs on the front end machine `math-alderaan`.**
 
-So, if you plan to do anything of substance, first start an [interactive batch job](clusters_guide.md#interactive-jobs), e.g.,
+So, if you plan to do anything of substance, first start an [interactive batch job](slurm.md#interactive-jobs), e.g.,
 
     srun -p math-alderaan --time=2:00:0 -n 1 --pty bash -i
 
