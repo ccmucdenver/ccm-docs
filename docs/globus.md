@@ -34,23 +34,23 @@ Log into [Globus](https://globus.org) again and search for your personal endpoin
 
 Optional: Make a Personal endpoint on your computer the same way following [instructions](https://www.globus.org/globus-connect-personal). You can now transfer data between any Server endpoint and your computer.
 
-# Security notes
+## Security notes
 
 * Your personal endpoint runs as you and, in principle, it has access to any files on the computer that you have. 
 * A personal endpoint seems to refuse access to some files outside of your home directory, even if they are owned by you.
 * Your personal endpoint is visible to anyone on Globus but it is accessible from your own Globus account only.
 
-# Works with
+## Works with
 This guide was tested in the following environment. It should work in other similar cases too.
 
-* 2023-04-21 math-alderaan Centos 8, globus 3.2.0, command line ssh, no graphics
+* 2023-04-21 math-alderaan CentOS 8, globus 3.2.0, command line ssh, no graphics
 
-# Some Globus Server endpoints
+## Some Globus Server endpoints
 
 * RMACC Alpine at CU Boulder - use the `CU Boulder Research Computing ACCESS` endpoint, select your `ACCESS CI` identity 
 * NCAR - use the `NCAR Data Sharing Service` endpoint
 
-# External links
+## External links
 
 https://docs.globus.org/how-to/get-started/
 

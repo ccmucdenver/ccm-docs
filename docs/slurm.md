@@ -40,7 +40,7 @@ To build the examples, type <code>make</code> in the <code>examples</code> direc
 
 **Please do not request the number of nodes on Alderaan by `--nodes` or `-N`, unless you really need entire nodes for some reason. Request only the CPU cores you need by `--ntasks`, then the node or nodes you use can be shared with others.**
 
-### SLURM Directives with Explanations
+### Slurm Directives with Explanations
 
 | Directive             | Explanation                                                  | Options |
 | ---------------------- | ------------------------------------------------------------ | ------- |
@@ -125,7 +125,7 @@ This will request a session for you as a job in a single core slot on a compute 
 
 See [Examples](examples.md#interactive-job-on-gpu) for an interactive GPU example.
 
-## How to use GPUs 
+## How to use GPUs
 
 ### How to run with a GPU on Alderaan
 

@@ -4,11 +4,11 @@
 
 Apache Spark is a distributed data‑processing framework designed for large‑scale parallel computation using resilient distributed datasets (RDDs), DataFrames, and SQL‑like operations. Spark is typically deployed on clusters using a resource manager such as **YARN**, **Kubernetes**, or Spark’s own **standalone** cluster manager.
 
-On **Alderaan**, none of these Spark cluster managers are installed. However, Spark can still be used effectively in **local mode** within a single SLURM job allocation. In this mode:
+On **Alderaan**, none of these Spark cluster managers are installed. However, Spark can still be used effectively in **local mode** within a single Slurm job allocation. In this mode:
 
 * Spark runs entirely on **one compute node**.
 * Parallelism is provided by **threads**, not distributed executors.
-* SLURM controls resource allocation (nodes, CPUs, memory).
+* Slurm controls resource allocation (nodes, CPUs, memory).
 * Spark uses the allocated CPUs via `local[N]` execution.
 
 This setup is suitable for:
@@ -31,7 +31,7 @@ It is **not** a multi‑node Spark cluster.
 All Spark usage must therefore:
 
 * Be installed in **user space** (e.g., via conda)
-* Run inside a **single SLURM job**
+* Run inside a **single Slurm job**
 * Use `spark-submit --master local[N]`
 
 ---
@@ -86,9 +86,9 @@ spark-submit --master local[4] spark_pi.py
 
 ---
 
-## Running Spark in a SLURM Job (1 Node)
+## Running Spark in a Slurm Job (1 Node)
 
-Create a SLURM batch script `spark1node.sbatch`:
+Create a Slurm batch script `spark1node.sbatch`:
 
 ```bash
 #!/bin/bash
@@ -134,8 +134,8 @@ cat slurm-<jobid>.err
 
 ## Why `--master local[N]` Is Required
 
-* SLURM enforces CPU limits using cgroups.
-* Spark does **not** automatically understand SLURM allocations.
+* Slurm enforces CPU limits using cgroups.
+* Spark does **not** automatically understand Slurm allocations.
 * `local[N]` explicitly tells Spark how many worker threads to use.
 
 Using:
@@ -146,7 +146,7 @@ Using:
 
 ensures:
 
-* Spark uses **exactly** the CPUs allocated by SLURM
+* Spark uses **exactly** the CPUs allocated by Slurm
 * No oversubscription
 * Predictable performance
 
@@ -191,7 +191,7 @@ are expected and harmless in this configuration.
 For Alderaan users:
 
 * Use Spark **only in local mode**
-* Always run Spark inside a SLURM job
+* Always run Spark inside a Slurm job
 * Always specify `--master local[N]`
 * Treat Spark as a **threaded analytics framework**, not a cluster service
 

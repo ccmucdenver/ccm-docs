@@ -27,7 +27,7 @@ from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-con
 
 Using a server ‘interactively’ (a.k.a. not scheduling a job) is often needed for troubleshooting a job or just watching what it is doing in real time. After SSH’ing into a head node, start an interactive Slurm job as described in [Interactive jobs](slurm.md#interactive-jobs), or use [JupyterHub](jupyterhub.md), where your session will run as a Slurm job for up to a week.
 
-***Please do not run anything computationally intensive on the head `math-alderaan`.*** This can destabilize important services which keep the cluster running,and make the experience worse for everyione.
+***Please do not run anything computationally intensive on the head `math-alderaan`.*** This can destabilize important services which keep the cluster running, and make the experience worse for everyone.
 
 **Please do not run anything directly on compute nodes without a reservation. They are reserved for jobs under the control of the Slurm scheduler, even if you may be able to ssh there.  These are nodes with names like math-alderaan-c01 with something else than "i" before the number. Using compute nodes, where other people run jobs through the scheduler, will interfere with their work and make you very unpopular.** It is OK to ssh to a compute node to check on your job, but  don't run anything there.
    
@@ -44,7 +44,7 @@ When you want to reconnect to your screen session later, log back onto wherever 
 You can't just scroll in `screen` to see your terminal history as you normally would.
 Press Control-A and then Esc and scrolling up and down will work temporarily the usual way. When you type anything, `screen` will leave the scrolling model.
 
-## Linux Introduction  
+## Linux Introduction
 
 If you are new to Linux command-line usage, start with:
 

@@ -12,17 +12,17 @@ or, if the short name does not work, use the full name
   [https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt)
 
 Click away the warnings, and log in with your University username and password. Then click on the blue *New Server* button. After a short
-time, you should see the JupyterLab screen. Your JupyterLab session will run somewhere on Alderaan on a dedicated CPU with at least 4GB of memoty.
+time, you should see the JupyterLab screen. Your JupyterLab session will run somewhere on Alderaan on a dedicated CPU with at least 4GB of memory.
 
 To access files and directories outside of your home directory, you can make soft links to them using a terminal. For example
 
-  ln -s /data001/Projects/myuserid ~/MyPrpjects
+  ln -s /data001/projects/myuserid ~/MyProjects
   
 and then click on the soft link MyProjects in your home directory in the file tree.
 
 **JupyterHub is a new, still experimental addition to Alderaan. The web interface may be unavailable and running sessions may be interrupted as we keep working on it, so please save your files frequently.** 
 
-Please write Alderaan Help from CU Denver email if you have any suggestioms or requests.
+Please write Alderaan Help from CU Denver email if you have any suggestions or requests.
 
 ## Adding a Conda Environment as a Jupyter Kernel
 
@@ -104,4 +104,3 @@ You can also run the removal command from a notebook cell:
 
 - **Refreshing the Environment:**  
   After adding or removing kernels, you may need to restart your Jupyter Notebook server to see the changes.
-

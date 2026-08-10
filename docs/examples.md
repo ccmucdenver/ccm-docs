@@ -1,6 +1,6 @@
 # Examples
 
-##  A simple example batch job with Python on Alderaan 
+## A simple example batch job with Python on Alderaan
 
 Prepare your python code, say `hello.py` with the line
 
@@ -111,7 +111,7 @@ If you run an application that can use more cores, you can requests the number o
 
 If you expect that your application will use more memory than 8GB (our nodes have 512GB memory and 64 cores each), you should request more tasks, about the expected memory usage in GB divided by 8. Otherwise the node memory may get overloaded when the machine gets busy with many jobs, and everyone's jobs may stall or crash. Note: this may change once we start allocating memory use, but at the moment we do not.
 
-##  Multiple single-core jobs using arrays
+## Multiple single-core jobs using arrays
 
      #!/bin/bash
      # Multiple single core jobs using array template
@@ -123,7 +123,7 @@ If you expect that your application will use more memory than 8GB (our nodes hav
      
      examples/hello_world_fortran.exe          # replace by your own executable
 
-SLURM job arrays simplify running multiple instances of the same job script using a single batch script. The above example demonstrates submitting the 'hello_world_fortran.exe' script seven times where array values are 1, 2, 3, 4, 5, 10, and 11.
+Slurm job arrays simplify running multiple instances of the same job script using a single batch script. The above example demonstrates submitting the 'hello_world_fortran.exe' script seven times where array values are 1, 2, 3, 4, 5, 10, and 11.
 
 _Helpful Directives/Variables_:
 
@@ -135,7 +135,7 @@ _Helpful Directives/Variables_:
 
         #SBATCH --array=1-1000%10
 
-    A SLURM array job automatically submits jobs within your allocated resources. If you wish to conserve resources for other tasks, it can be advantageous to control the number of array jobs submitted simultaneously. In the example provided above, a total of 1000 jobs are executed, with 10 jobs running concurrently at any given time. 
+    A Slurm array job automatically submits jobs within your allocated resources. If you wish to conserve resources for other tasks, it can be advantageous to control the number of array jobs submitted simultaneously. In the example provided above, a total of 1000 jobs are executed, with 10 jobs running concurrently at any given time.
 
 * SLURM_ARRAY_TASK_ID: An environment variable that holds the array value. You can use it to pass the array value to the script you intend to execute.
 

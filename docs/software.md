@@ -22,4 +22,4 @@ Here are the best practices when you compile and link your own software:
 
 * Use `math-alderaan` head node to build software for use on the Alderaan cluster. See [Environment Modules](modules.md) for available tools. We can add other tools and package them in modules on request.
 
-* Alderaan nodes run Centos 8.
+* Alderaan nodes run CentOS 8.

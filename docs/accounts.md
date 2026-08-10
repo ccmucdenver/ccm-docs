@@ -32,7 +32,7 @@ To encourage early use, the following is in effect for an initial period - we wa
 **Users are responsible for maintaining copies of all their important files elsewhere. Files can be lost even with backups.**
 
   * **Home directories** – Home directories are `/home/username`. Please keep the home directories small, up to 25GB. Backed up occasionally. **Home directories over 25GB may not be backed up.** 
-  * **Project storage** -  **Not backed up.**  All users have project directory. These are `/data001/projects/username` or `/storage/department/projects/username`. We can make project directories which can be shared between a group of users. Please keep project directories to 25OGB.
+  * **Project storage** -  **Not backed up.**  All users have project directory. These are `/data001/projects/username` or `/storage/department/projects/username`. We can make project directories which can be shared between a group of users. Please keep project directories to 250GB.
   * **Scratch** - no limit, **not backed up, older files may be deleted automatically**. Please make your own subdirectories in `/scratch`. In future, files will be deleted automatically when the filesystem fills up.
 
 Use the command `du -sh` in a directory to see how much storage space you are using, and `df` to monitor the overall storage space. The space used can be different from the size of your files as reported by `ls -l`, particularly for very large files.
@@ -68,4 +68,3 @@ Jobs are charged for the total reserved core time, whether used or not.
  
   * After a period of user inactivity, user files can be deleted after a notification to the user's university email address and a grace period.
   * Older files in scratch space can be deleted also for active users.
-
