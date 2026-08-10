@@ -1,4 +1,4 @@
-.PHONY: help build-web build-file serve sync local mac clean
+.PHONY: help build-web build-file update-env serve sync local mac clean
 
 help:
 	@echo "Usage: make <target>"
@@ -7,6 +7,7 @@ help:
 	@echo "  help       Show this help"
 	@echo "  build-web  Build MkDocs site with directory URLs (RTD style)"
 	@echo "  build-file Build MkDocs site for local file:// browsing"
+	@echo "  update-env Update the mkdocs Conda environment from requirements.txt"
 	@echo "  serve      Run local MkDocs dev server"
 	@echo "  clean      Remove generated site output"
 	@echo "  mac        Build file-site and open site/index.html (macOS)"
@@ -18,6 +19,9 @@ build-web:
 
 build-file:
 	conda run -n mkdocs mkdocs build --clean --no-directory-urls
+
+update-env:
+	conda run -n mkdocs python -m pip install -r docs/requirements.txt
 
 serve:
 	conda run -n mkdocs mkdocs serve
