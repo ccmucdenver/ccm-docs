@@ -70,7 +70,7 @@ Alderaan uses Quality of Service (QoS) classes and scheduling priority to manage
 
 #### Quality of Service (QoS)
 
-By default, all jobs run with QoS `normal`. Current per-user CPU and GPU limits are listed in [Accounts](accounts.md#running-jobs). No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but jobs using these QoS classes have lower maximum time and lower scheduling priority.
+By default, all jobs run with QoS `normal`, which limit the user to 500 concurrent CPUs and 3500GB memory.  No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but jobs using these QoS classes have lower maximum time and lower scheduling priority. Current per-user CPU and GPU limits are listed in [Accounts](accounts.md#running-jobs). 
 
 To submit a job with a QoS other than `normal`, add a QoS directive to the job script and request resources within the limits of that QoS. For example:
 ```
@@ -84,6 +84,8 @@ To see which QoS classes you are authorized to use, run:
 ```
 sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 ```
+On compute nodes, the QoS are set up to limit the total number of CPUs and also the total memory per user at 7GB for 1 CPU. GPU/high memory nodes have separate per-user limits, currently 96 CPUs and 3000GB.
+
 Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will reject the submission with an error such as `Invalid qos specification`.
 
 If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your resource requirements.
