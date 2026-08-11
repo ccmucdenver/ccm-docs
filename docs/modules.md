@@ -1,7 +1,5 @@
 # Environment Modules
 
-**Environment modules are available on Alderaan front end and compute nodes only.**
-
 ## Purpose
 
 Environment variables, such `PATH`, allow to select software to become available.
