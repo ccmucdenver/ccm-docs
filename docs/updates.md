@@ -6,6 +6,10 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/08/11
+
+* The Slurm scheduler now also tracks memory use on compute nodes as approx. 7GB for 1 CPUs. In particular, the default limit of 500 concurrent CPUs becomes also approx. 3500GB total memory limit. This is intended to help prevent any single user from reserving a disproportionate part of cluster and to increase the overall cluster throughput and utilization for all users.
+
 ### 2026/08/10
 
 * [Job priority](slurm.md#job-priority) now accounts for QoS, partition priority, and job size. Short-runtime partitions receive higher priority, larger jobs receive priority so they can acquire sufficient resources, and smaller or shorter jobs can use backfill opportunities when they will not delay higher-priority jobs. The objectives are fair resource sharing, making large jobs possible, and using otherwise idle resources efficiently.
