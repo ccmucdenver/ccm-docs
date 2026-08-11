@@ -43,6 +43,7 @@ nav:
             - Conda and Python: conda.md
             - Singularity Containers: singularity.md
             - Apache Spark: spark.md
-    - External Resources: external.md
-    - Facilities, Equipment, and Other Resources: facilities.md
-    - How to Edit: pull_request.md
+    - Additional Information:
+            - External Resources: external.md
+            - Facilities, Equipment, and Other Resources: facilities.md
+            - How to Edit: pull_request.md
