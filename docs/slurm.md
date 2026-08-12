@@ -8,7 +8,7 @@ Jobs are submitted to compute nodes through the scheduler. To see the queues, wh
 
     sinfo
 
-Partitions with shorter runtime have higher priority.
+Partitions with shorter runtime have a higher priority.
 
 ### Nodes
 
@@ -66,17 +66,22 @@ Compute nodes provide `500000M` of schedulable memory. To use nearly all of it, 
 
 ### Job priority
 
-Alderaan uses Quality of Service (QoS) classes and scheduling priority to manage resource allocation and job scheduling. Job priority depends on the QoS, on the partition, and on the job size (the number of CPUs).
+Alderaan uses Quality of Service (QoS) classes and scheduling priority to manage resource allocation and job scheduling. Job priority depends on the QoS, on prior use (FairShare), on the partition, and on the job size (the number of CPUs). To see the priority components for pending jobs, use
+```
+sprio -l
+```
 
 #### Quality of Service (QoS)
 
-By default, all jobs run with QoS `normal`, which limit the user to 500 concurrent CPUs and 3500GB memory.  No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but jobs using these QoS classes have lower maximum time and lower scheduling priority. Current per-user CPU and GPU limits are listed in [Accounts](accounts.md#running-jobs). 
+By default, all jobs on compute nodes run with QoS `normal`, which limit the user to 500 concurrent CPUs and total 3500GB memory.  No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but *jobs using QoS classes with higher CPU limits have lower maximum time and lower scheduling priority* The QoS classes are set up with total memory per user at 7GB times the CPU limit. 
+
+GPU/high memory nodes have a separate per-user limit, 96 CPUs, 3 GPUs, and 3000GB total. 
 
 To submit a job with a QoS other than `normal`, add a QoS directive to the job script and request resources within the limits of that QoS. For example:
 ```
 #SBATCH --qos=burstcpu
 ```
-To list all available QoS classes on the cluster, run:
+To list all available QoS classes on the cluster and their limits and priority, run:
 ```
 sacctmgr show qos format=Name,MaxWall,MaxTRESPU,Priority -P
 ```
@@ -84,7 +89,6 @@ To see which QoS classes you are authorized to use, run:
 ```
 sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 ```
-On compute nodes, the QoS are set up to limit the total number of CPUs and also the total memory per user at 7GB for 1 CPU. GPU/high memory nodes have separate per-user limits, currently 96 CPUs and 3000GB.
 
 Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will reject the submission with an error such as `Invalid qos specification`.
 
@@ -124,13 +128,14 @@ Use these practical rules to improve queue wait time.
 
 * **Use these full-node rules of thumb.**
     * Compute nodes: requesting 64 cores or memory near 500GB is effectively a full-node job.
-    * High-memory GPU nodes: requesting memory near 2000GB or two GPUs is effectively a full-node job.
-    * If your request is effectively full-node, reducing minor settings usually will not make the job start faster. Focus on accurate runtime, partition choice, and current queue conditions.
+    * High-memory GPU nodes: requesting memory near 2000GB is effectively a full-node job.
+    * If your request is effectively full node, reducing minor settings usually will not make the job start faster. Focus on accurate runtime, partition choice, and current queue conditions.
 
 ## Interactive jobs
 
-Remember you should not directly ssh to a node because it would interfere with jobs scheduled to run on that node. For interactive access to a compute node, do instead:
+[Jupyter](jupyterhub.md) is recommended for fast interactive access. [Remote Desktop](remote_desktop.md) is also available.
 
+Remember you *should not directly ssh to a node* (other than to check on your own jobs, if needed) because it would interfere with jobs scheduled to run on that node. For interactive access to a compute node, do instead:
 ```
 srun -p math-alderaan --time=2:00:0 -n 1 --pty bash -i
 ```
