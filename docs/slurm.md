@@ -8,8 +8,6 @@ Jobs are submitted to compute nodes through the scheduler. To see the queues, wh
 
     sinfo
 
-Partitions with shorter runtime have a higher priority.
-
 ### Nodes
 
 To see a list of all nodes, use:
@@ -66,10 +64,15 @@ Compute nodes provide `500000M` of schedulable memory. To use nearly all of it, 
 
 ### Job priority
 
-Alderaan uses Quality of Service (QoS) classes and scheduling priority to manage resource allocation and job scheduling. Job priority depends on the QoS, on prior use (FairShare), on the partition, and on the job size (the number of CPUs). To see the priority components for pending jobs, use
+Alderaan uses Quality of Service (QoS) classes and scheduling priority to manage resource allocation and job scheduling. Job priority depends on the QoS, on prior use (FairShare), on the partition, and on the job size (the number of CPUs). 
+
+Partitions with a shorter maximum runtime have a higher priority.
+
+To see the priority components for pending jobs, use
 ```
 sprio -l
 ```
+
 
 #### Quality of Service (QoS)
 
