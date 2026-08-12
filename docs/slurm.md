@@ -24,7 +24,9 @@ Nodes `math-alderaan-c01` to `math-alderaan-c32` are compute nodes. Nodes `math-
 
 The command `squeue` shows one line for each job running or pending on the system..
 
-The command `squeue.sh` shows the CPUs, memory, and GPUs requested by each pending job, with expected start times. The command `jobs.sh` shows reserved resources and jobs by node.
+The command `squeue.sh` shows the CPUs, memory, and GPUs requested by each pending job, withe expected start times (jobs often start sooner). 
+
+The command `jobs.sh` shows reserved resources and jobs by node.
 
 ## Submitting Jobs to the Scheduler
 
