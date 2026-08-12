@@ -1,28 +1,30 @@
-# Slurm
+# Using Slurm 
 
-## Viewing Job Queues, Job Status, and System Status
+Jobs are submitted and managed through the Slurm scheduler. 
+
+## Job Queues, Job Status, and System Status
 
 ### Queues and partitions
 
-Jobs are submitted to compute nodes through the scheduler. To see the queues, which Slurm calls partitions, use:
-
+To see the queues, which Slurm calls partitions, use:
+```
     sinfo
+```
 
 ### Nodes
 
 To see a list of all nodes, use:
-
+```
     sinfo -N
+```
 
 Nodes `math-alderaan-c01` to `math-alderaan-c32` are compute nodes. Nodes `math-alderaan-h01` and `math-alderaan-h02` are high memory GPU nodes.
 
 ### Jobs
 
-The command `squeue` shows one line for each job running on the system.
+The command `squeue` shows one line for each job running or pending on the system..
 
 The command `squeue.sh` shows the CPUs, memory, and GPUs requested by each pending job, with expected start times. The command `jobs.sh` shows reserved resources and jobs by node.
-
-Real-time system status including temperature, load, and partitions is available in [News and Status Updates](updates.md).
 
 ## Submitting Jobs to the Scheduler
 
@@ -68,7 +70,7 @@ Alderaan uses Quality of Service (QoS) classes and scheduling priority to manage
 
 Partitions with a shorter maximum runtime have a higher priority.
 
-To see the priority components for pending jobs, use
+To see the priority and its components for all pending jobs, use
 ```
 sprio -l
 ```
