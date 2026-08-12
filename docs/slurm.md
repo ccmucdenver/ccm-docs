@@ -62,7 +62,7 @@ Increase `--mem-per-cpu` if the application needs more memory. Total requested m
 
 Compute nodes provide `500000M` of schedulable memory. To use nearly all of it, request all 64 CPUs with `#SBATCH --mem-per-cpu=7800M`, for `499200M` total. High-memory GPU nodes provide `2000G` each.
 
-### Job priority
+## Job priority
 
 Alderaan uses Quality of Service (QoS) classes and scheduling priority to manage resource allocation and job scheduling. Job priority depends on the QoS, on prior use (FairShare), on the partition, and on the job size (the number of CPUs). 
 
