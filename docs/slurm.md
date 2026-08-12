@@ -78,7 +78,7 @@ To submit a job with a QoS other than `normal`, add a QoS directive to the job s
 ```
 To list all available QoS classes on the cluster, run:
 ```
-sacctmgr show qos format=Name,MaxWall,MaxTRESPU -P
+sacctmgr show qos format=Name,MaxWall,MaxTRESPU,Priority -P
 ```
 To see which QoS classes you are authorized to use, run:
 ```
