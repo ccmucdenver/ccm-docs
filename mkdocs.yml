@@ -35,7 +35,7 @@ nav:
             - File Storage and Transfer: storage.md
             - Globus File Transfer: globus.md
     - Running Jobs:
-            - Using Slurm: slurm.md
+            - Using Slurm Scheduler: slurm.md
             - Examples: examples.md
     - Software:
             - Installing Software: software.md

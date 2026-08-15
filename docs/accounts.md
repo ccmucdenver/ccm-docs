@@ -31,7 +31,7 @@ To encourage early use, the following is in effect for an initial period - we wa
 
 **Users are responsible for maintaining copies of all their important files elsewhere. Files can be lost even with backups.**
 
-  * **Home directories** – Home directories are `/home/username`. Please keep the home directories small, up to 25GB. Backed up occasionally. **Home directories over 25GB may not be backed up.** 
+  * **Home directories** – Home directories are `/home/username`. Please keep the home directories small, up to 25GB. Backed up occasionally from smallest first. **Home directories over 25GB may not be backed up.** 
   * **Project storage** -  **Not backed up.**  All users have project directory. These are `/data001/projects/username` or `/storage/department/projects/username`. We can make project directories which can be shared between a group of users. Please keep project directories to 250GB.
   * **Scratch** - no limit, **not backed up, older files may be deleted automatically**. Please make your own subdirectories in `/scratch`. In future, files will be deleted automatically when the filesystem fills up.
 
@@ -39,9 +39,12 @@ Use the command `du -sh` in a directory to see how much storage space you are us
 
 ### Running Jobs
 
-  * Users are set up with the default 500 concurrent CPU cores and 3 concurrent GPUs limit. Higher CPU cores limit is possible upon request. Your cores limit may be increased quietly temporarily when your jobs are waiting and there are enough cores available for everyone.
-  * Run time of jobs on math-alderaan nodes is maximum 7 days. This is a hard limit.
-  * The total usage of CPU and GPU hours is unlimited.
+  * Users are set up with the default 512 concurrent CPU cores and 3 concurrent GPUs limit. Higher CPU cores limit is possible upon request. 
+  * Maximum run time of jobs on in the default `math-alderaan` partition is 7 days.
+  * The total usage of CPU and GPU hours is unlimited, but larger usage decreases scheduling priority of future jobs.
+  * See [Using Slurm Scheduler](slurm.md) for more details.
+
+
 
 <!-- 
 

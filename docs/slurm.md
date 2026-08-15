@@ -1,4 +1,4 @@
-# Using Slurm 
+# Using Slurm Scheduler
 
 Jobs are submitted and managed through the Slurm scheduler. 
 
@@ -80,7 +80,7 @@ sprio -l
 
 #### Quality of Service (QoS)
 
-By default, all jobs on compute nodes run with QoS `normal`, which limit the user to 500 concurrent CPUs and total 3500GB memory.  No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but *jobs using QoS classes with higher CPU limits have lower maximum time and lower scheduling priority* The QoS classes are set up with total memory per user at 7GB times the CPU limit. 
+By default, all jobs on compute nodes run with QoS `normal`, which limit the user to 512 concurrent CPUs and total 3584 memory.  No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but *jobs using QoS classes with higher CPU limits have lower maximum time and lower scheduling priority* The QoS classes are set up with total memory per user at 7GB times the CPU limit. 
 
 GPU/high memory nodes have a separate per-user limit, 96 CPUs, 3 GPUs, and 3000GB total. 
 

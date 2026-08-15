@@ -98,7 +98,7 @@ If a QoS you need is not listed for your account, please contact me with a brief
 
 * [Terms and Conditions](TermsandConditions.md) were updated to address AI agent use.
 
-* New command guidance for queue and node visibility with resource reservations is available in [Viewing Job Queues, Job Status, and System Status](slurm.md#viewing-job-queues-job-status-and-system-status).
+* New command guidance for queue and node visibility with resource reservations is available in [Viewing Job Queues, Job Status, and System Status](slurm.md).
 
 * New guidance for faster job starts and efficient node use is available in [How to make your job start faster](slurm.md#how-to-make-your-job-start-faster).
 
