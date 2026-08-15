@@ -6,6 +6,14 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/08/15
+
+* Node math-alderaan-c03 CPU repeatedly reaches 94C. Max CPU frequency decreased from 2.50GHz to 2.20GHz. Consequently, some jobs may run on math-alderaan-c03 more slowly.
+  
+### 2026/08/13
+
+* Changed default QoS normal from max 500 cpus to 512, to allow 8 full nodes for a user as the default. Other QoS unchanged.
+
 ### 2026/08/11
 
 * The Slurm scheduler now also tracks memory use on compute nodes as approx. 7GB for 1 CPUs. In particular, the default limit of 500 concurrent CPUs becomes also approx. 3500GB total memory limit. This is intended to help prevent any single user from reserving a disproportionate part of cluster and to increase the overall cluster throughput and utilization for all users.
