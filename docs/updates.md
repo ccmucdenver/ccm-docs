@@ -8,7 +8,7 @@ When CPU temperatures approach defined thresholds, site-specific controls may te
 
 ### 2026/08/15
 
-* Node math-alderaan-c03 CPU repeatedly reaches 94C. Max CPU frequency decreased from 2.50GHz to 2.20GHz. Consequently, some jobs may run on math-alderaan-c03 more slowly.
+* Node math-alderaan-c03 CPU repeatedly reaches 94C. Maximum CPU governor changed from performance 2.50GHz to on demand 2.20GHz. Consequently, some jobs may run on math-alderaan-c03 more slowly.
   
 ### 2026/08/13
 
