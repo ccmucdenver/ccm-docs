@@ -14,7 +14,7 @@ or, if the short name does not work, use the full name
 Click away the warnings, and log in with your University username and password. Select your Jupyter server memory size and click on the blue *New Server* button. After a short
 time, you should see the JupyterLab screen. Your JupyterLab session will run somewhere on Alderaan on a dedicated CPU.
 
-To access files and directories outside of your home directory, you can make soft links to them using a terminal. For example
+To access files and directories outside of your home directory in the JupyterLab file tree, you can make soft links to them using a terminal window. For example
 
   ln -s /data001/projects/myuserid ~/MyProjects
   
