@@ -43,6 +43,7 @@ nav:
             - Conda and Python: conda.md
             - Singularity Containers: singularity.md
             - Apache Spark: spark.md
+            - Gurobi: gurobi.md
     - Additional Information:
             - External Resources: external.md
             - Facilities, Equipment, and Other Resources: facilities.md

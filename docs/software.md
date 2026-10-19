@@ -14,6 +14,8 @@ Install user packages in your own home or project directories, not system locati
 
 For Python environments and package management, use [Conda and Python](conda.md).
 
+For Gurobi installation, licensing, and use in Slurm jobs, see [Gurobi](gurobi.md).
+
 If you use R, configure a personal R library path in your home directory so package installs do not interfere with other tools.
 
 ## Building Your Own Software
