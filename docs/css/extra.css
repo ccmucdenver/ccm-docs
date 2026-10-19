@@ -1,0 +1,5 @@
+/* Use dark gray for inline code, preserving code-block and link colors. */
+.rst-content code:not(pre code):not(a code),
+.rst-content code.literal:not(pre code):not(a code) {
+    color: #404040;
+}

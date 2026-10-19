@@ -6,9 +6,13 @@ edit_uri: edit/main/docs/
 site_description: Documentation for computing resources at the CCM
 theme:
   name: readthedocs
-  highlightjs: true
+  # Display code blocks uniformly without automatic syntax colors.
+  highlightjs: false
   features:
     - navigation.instant
+# Load site color overrides after the theme styles.
+extra_css:
+  - css/extra.css
 plugins:
   - search
   - mkdocstrings:
