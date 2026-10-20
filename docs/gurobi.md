@@ -78,7 +78,7 @@ Run your Python scripts from this terminal. Once Gurobi is installed, only `cond
 
 In JupyterHub, the terminal and its programs run on the server. Closing the browser or terminal tab leaves them running; reconnect to your existing JupyterHub server and use JupyterLab's **Running** panel to reopen the terminal. See [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/stable/user/running.html). Save results to files before the selected runtime expires; running programs also stop if the server is shut down or restarted.
 
-Close Gurobi environments when finished, as in the `with gp.Env()` example above, or exit the Python process. The license token can remain occupied for up to five more minutes with default settings. Closing a JupyterHub terminal tab alone does not close the Gurobi environment.
+Closing a JupyterHub terminal tab or browser window does not stop a running Gurobi process. To release its license session, exit the Python process, or open JupyterLab's **Running** panel and click **Shut Down** beside the terminal. After the process exits, its license token remains counted until it expires. Gurobi's default token lifetime is five minutes, so freeing the license session can take up to five minutes after exit. The supplied example closes its Gurobi environment automatically when it finishes.
 
 ### Optional: use a notebook
 
