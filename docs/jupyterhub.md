@@ -59,6 +59,22 @@ After running these commands, restart your Jupyter Notebook server. When creatin
 
 ---
 
+## Run the supplied Gurobi notebook
+
+First follow the [Gurobi installation and license instructions](gurobi.md) and [register the Python (gurobi) kernel](gurobi.md#optional-use-a-notebook).
+
+Open a **Terminal** from the JupyterLab launcher and copy the notebook into your home directory so you can save its output:
+
+```bash
+cp -i /shared/templates/examples/gurobi/simple.ipynb ~/gurobi-test.ipynb
+```
+
+Open `gurobi-test.ipynb` from the JupyterLab file browser, select **Python (gurobi)** as its kernel, and choose **Run > Run All Cells**.
+
+Expected output: `x=2.0, y=2.0, objective=10.0`.
+
+When finished, save the notebook and shut down its kernel from JupyterLab's **Running** panel.
+
 ## Removing a Conda Environment Kernel
 
 ### Using the Terminal

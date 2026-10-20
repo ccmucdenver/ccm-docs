@@ -61,24 +61,24 @@ PY
 
 Review the license information printed at startup. Successful startup with a restricted license does not establish that your full-size model is licensed. This check starts a [Gurobi environment](https://docs.gurobi.com/projects/optimizer/en/current/reference/python/env.html); it does not solve a model.
 
-## Use a JupyterHub terminal for persistent sessions
+## Run from an SSH or JupyterHub terminal
 
 We recommend a terminal in [JupyterHub](jupyterhub.md) for interactive Gurobi work. The default server runtime is seven days; you can select the runtime when starting the server. Slurm schedules your JupyterHub server on a compute node.
 
-Follow the [JupyterHub access instructions](jupyterhub.md#access), open a **Terminal** from the JupyterLab launcher, and run the shared example:
+Run the shared example from an SSH terminal on Alderaan or a JupyterHub terminal. For JupyterHub, follow the [access instructions](jupyterhub.md#access) and open a **Terminal** from the JupyterLab launcher:
 
 ```bash
 conda activate gurobi
-bash /shared/templates/examples/gurobi/simple.sh
+python /shared/templates/examples/gurobi/simple.py
 ```
 
 Expected result: `x=2, y=2, objective=10`. The shared examples in `/shared/templates/examples/gurobi` need only read access; no cloning or script edits are required.
 
 Run your Python scripts from this terminal. Once Gurobi is installed, only `conda activate gurobi` is needed to select the environment for terminal use.
 
-The terminal and its programs run on the server. Closing the browser or terminal tab leaves them running; reconnect to your existing JupyterHub server and use JupyterLab's **Running** panel to reopen the terminal. See [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/stable/user/running.html). Save results to files before the selected runtime expires; running programs also stop if the server is shut down or restarted.
+In JupyterHub, the terminal and its programs run on the server. Closing the browser or terminal tab leaves them running; reconnect to your existing JupyterHub server and use JupyterLab's **Running** panel to reopen the terminal. See [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/stable/user/running.html). Save results to files before the selected runtime expires; running programs also stop if the server is shut down or restarted.
 
-Close Gurobi environments when finished, as in the `with gp.Env()` example above, or exit the Python process. The license token can remain occupied for up to five more minutes with default settings. Closing a terminal tab alone does not close the Gurobi environment.
+Close Gurobi environments when finished, as in the `with gp.Env()` example above, or exit the Python process. The license token can remain occupied for up to five more minutes with default settings. Closing a JupyterHub terminal tab alone does not close the Gurobi environment.
 
 ### Optional: use a notebook
 
@@ -92,13 +92,13 @@ conda install -c conda-forge ipykernel
 python -m ipykernel install --user --name gurobi --display-name "Python (gurobi)"
 ```
 
-Copy the shared notebook into your home directory so you can save its output:
+Copy the shared example notebook into your home directory so you can save its output:
 
 ```bash
 cp -i /shared/templates/examples/gurobi/simple.ipynb ~/gurobi-test.ipynb
 ```
 
-Open `gurobi-test.ipynb` in JupyterLab, select **Python (gurobi)** as its kernel, and run the code cell. Expected result: `x=2.0, y=2.0, objective=10.0`. See [Adding a Conda Environment as a Jupyter Kernel](jupyterhub.md#adding-a-conda-environment-as-a-jupyter-kernel) for more details.
+Open `gurobi-test.ipynb` in JupyterLab, select **Python (gurobi)** as its kernel, and choose **Run > Run All Cells**. Expected result: `x=2.0, y=2.0, objective=10.0`. See [Adding a Conda Environment as a Jupyter Kernel](jupyterhub.md#adding-a-conda-environment-as-a-jupyter-kernel) for more details.
 
 To shut down an unused notebook kernel:
 
