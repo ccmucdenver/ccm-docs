@@ -63,17 +63,20 @@ Review the license information printed at startup. Successful startup with a res
 
 ## Use a JupyterHub terminal for persistent sessions
 
-We recommend a terminal in [JupyterHub](jupyterhub.md) for interactive Gurobi work. JupyterHub sessions last up to seven days, and JupyterHub distributes sessions across compute nodes to spread the load.
+We recommend a terminal in [JupyterHub](jupyterhub.md) for interactive Gurobi work. The default server runtime is seven days; you can select the runtime when starting the server. Slurm schedules your JupyterHub server on a compute node.
 
-Follow the [JupyterHub access instructions](jupyterhub.md#access), open a **Terminal** from the JupyterLab launcher, and activate your environment:
+Follow the [JupyterHub access instructions](jupyterhub.md#access), open a **Terminal** from the JupyterLab launcher, and run the shared example:
 
 ```bash
 conda activate gurobi
+bash /shared/templates/examples/gurobi/simple.sh
 ```
+
+Expected result: `x=2, y=2, objective=10`. The shared examples in `/shared/templates/examples/gurobi` need only read access; no cloning or script edits are required.
 
 Run your Python scripts from this terminal. Once Gurobi is installed, only `conda activate gurobi` is needed to select the environment for terminal use.
 
-The terminal and its programs run on the server. Closing the browser or terminal tab leaves them running; reconnect to your existing JupyterHub server and use JupyterLab's **Running** panel to reopen the terminal. See [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/stable/user/running.html). Save results to files before the seven-day session ends; running programs also stop if the server is shut down or restarted.
+The terminal and its programs run on the server. Closing the browser or terminal tab leaves them running; reconnect to your existing JupyterHub server and use JupyterLab's **Running** panel to reopen the terminal. See [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/stable/user/running.html). Save results to files before the selected runtime expires; running programs also stop if the server is shut down or restarted.
 
 Close Gurobi environments when finished, as in the `with gp.Env()` example above, or exit the Python process. The license token can remain occupied for up to five more minutes with default settings. Closing a terminal tab alone does not close the Gurobi environment.
 
@@ -89,7 +92,13 @@ conda install -c conda-forge ipykernel
 python -m ipykernel install --user --name gurobi --display-name "Python (gurobi)"
 ```
 
-Select **Python (gurobi)** as the notebook's kernel. See [Adding a Conda Environment as a Jupyter Kernel](jupyterhub.md#adding-a-conda-environment-as-a-jupyter-kernel) for more details.
+Copy the shared notebook into your home directory so you can save its output:
+
+```bash
+cp -i /shared/templates/examples/gurobi/simple.ipynb ~/gurobi-test.ipynb
+```
+
+Open `gurobi-test.ipynb` in JupyterLab, select **Python (gurobi)** as its kernel, and run the code cell. Expected result: `x=2.0, y=2.0, objective=10.0`. See [Adding a Conda Environment as a Jupyter Kernel](jupyterhub.md#adding-a-conda-environment-as-a-jupyter-kernel) for more details.
 
 To shut down an unused notebook kernel:
 
@@ -103,6 +112,16 @@ The WLS token can still count toward the session limit for up to five more minut
 
 ## Use in Slurm jobs
 
-Follow the [Conda Slurm example](conda.md#using-in-slurm-jobs), replacing `conda activate myenv` with `conda activate gurobi` and `myscript.py` with your program. The environment and license file must be accessible from the compute node.
+Submit the shared example from your home directory so the output file is writable:
+
+```bash
+conda activate gurobi
+cd ~
+sbatch /shared/templates/examples/gurobi/simple.slurm
+```
+
+The job uses one CPU, 512 MB of memory, and a two-minute time limit on `math-alderaan-quick`. It inherits your activated environment. Output goes to `~/gurobi-JOBID.out`, where `JOBID` is the submitted job number, and should include `x=2, y=2, objective=10`.
+
+For your own programs, follow the [Conda Slurm example](conda.md#using-in-slurm-jobs), replacing `conda activate myenv` with `conda activate gurobi` and `myscript.py` with your program. The environment and license file must be accessible from the compute node.
 
 Set Gurobi's [Threads parameter](https://docs.gurobi.com/projects/optimizer/en/current/reference/parameters.html#parameterthreads) to the number of CPUs allocated to your task. For example, use `model.Params.Threads = 1` for a one-CPU task. See [Using Slurm Scheduler](slurm.md) for resource requests.
