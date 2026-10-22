@@ -6,6 +6,10 @@ Alderaan is a High Performance Computing (HPC) facility that employs active, sof
 
 When CPU temperatures approach defined thresholds, site-specific controls may temporarily reduce CPU performance to prevent hardware-level throttling. When storage components experience elevated temperatures, jobs may be briefly suspended to allow I/O activity to settle and to protect the storage systems. If datacenter environmental limits are exceeded, Alderaan may be shut down automatically as a protective measure.
 
+### 2026/10/22
+
+* JupyterHub is temporarily unavailable due to the PHP and Node.js security advisories. Access will remain unavailable until the necessary security updates can be completed.
+
 ### 2026/10/19
 
 * Added [Gurobi instructions](gurobi.md) for user-level Conda installation, personal Academic WLS licensing, and use through a JupyterHub terminal, with optional notebook setup.
