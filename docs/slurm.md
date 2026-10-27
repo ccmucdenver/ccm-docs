@@ -101,7 +101,7 @@ Only request QoS classes that are listed for your account. If a job requests a Q
 
 If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your resource requirements.
 
-GPU/high memory nodes have a separate per-user limit, 96 CPUs, 3 GPUs, and 3000GB total. 
+The `math-alderaan-gpu` partition applies per-user limits of 96 concurrent CPUs, 3 concurrent GPUs, and 3000G of allocated memory through its partition QoS, `gpu_mem_3000`. The `gpu_short_4` QoS provides an exception to the CPU and GPU limits, as described under [How to run with a GPU on Alderaan](#how-to-run-with-a-gpu-on-alderaan).
 
 #### Partition priority and maximum run time
 
@@ -165,7 +165,9 @@ have two high memory/GPU nodes`math-alderaan-h[01,02]` with two NVIDIA A-100 40G
  
 **Please do not try to use Alderaan GPUs without allocating them by `--gres` as above first. Please do not request an entire node on Alderaan by `--nodes` or `-N`, unless you really need all of it, request only the CPU cores you need by `--ntasks`. Large memory jobs and GPUs jobs can share the same node.**
 
-If the `gpu_short_4` QoS has been enabled for your account, you can use it with any GPU partition to allow up to 4 concurrent GPUs for jobs up to 24 hours. Add `#SBATCH --qos=gpu_short_4` and `#SBATCH --time=24:00:00` to your script.
+If the `gpu_short_4` QoS has been enabled for your account, it permits up to 128 concurrent CPUs and 4 concurrent GPUs per user across jobs using that QoS. On `math-alderaan-gpu`, it overrides the partition QoS CPU and GPU limits, while the 3000G per-user memory limit still applies.
+
+Add `#SBATCH --qos=gpu_short_4` to your script. Jobs using this QoS can run for up to 24 hours on `math-alderaan-gpu` or `math-alderaan-gpu-short`; use `#SBATCH --time=24:00:00` or a shorter time. On `math-alderaan-gpu-quick`, the partition's 2-hour maximum still applies; use `#SBATCH --time=02:00:00` or a shorter time.
 
 GPU software stack and TensorFlow compatibility-container guidance are maintained in [Singularity Containers](singularity.md).
 
