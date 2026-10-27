@@ -99,5 +99,5 @@ This file defines strict operating constraints for any agent working in this rep
 1. Explicit user instruction
 2. This `AGENTS.md`
 3. Existing repository conventions
-4. User's `~/.codex/AGETS.md`
+4. User's `~/.codex/AGENTS.md`
 4. Agent preference
