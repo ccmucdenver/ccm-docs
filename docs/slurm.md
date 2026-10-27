@@ -80,9 +80,9 @@ sprio -l
 
 #### Quality of Service (QoS)
 
-By default, all jobs on compute nodes run with QoS `normal`, which limits each user to 512 concurrent CPUs and a total of 3584 GB of memory.  No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but *jobs using QoS classes with higher CPU limits have lower maximum time and lower scheduling priority* The QoS classes are set up with total memory per user at 7GB times the CPU limit. 
+By default, all jobs on compute nodes run with QoS `normal`, which limits each user to 512 concurrent CPUs and a total of 3584 GB of memory.  No `--qos` line is needed for such workloads. Other QoS classes allow users to use larger numbers of CPUs or GPUs concurrently, but *jobs using QoS classes with higher CPU limits have lower maximum time and lower scheduling priority* The QoS classes on compute nodes are set up with total memory per user at 7GB times the CPU limit. 
 
-GPU/high memory nodes have a separate per-user limit, 96 CPUs, 3 GPUs, and 3000GB total. 
+QoS limits may be temporarily increased when jobs are waiting and resources are available.
 
 To submit a job with a QoS other than `normal`, add a QoS directive to the job script and request resources within the limits of that QoS. For example:
 ```
@@ -100,6 +100,8 @@ sacctmgr show assoc where user=$USER format=Account,QOS,DefaultQOS -P
 Only request QoS classes that are listed for your account. If a job requests a QoS that is not authorized for your account, `sbatch` will reject the submission with an error such as `Invalid qos specification`.
 
 If a QoS you need is not listed for your account, contact Alderaan Help from your CU Denver email with a brief description of your resource requirements.
+
+GPU/high memory nodes have a separate per-user limit, 96 CPUs, 3 GPUs, and 3000GB total. 
 
 #### Partition priority and maximum run time
 
