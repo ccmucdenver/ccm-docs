@@ -4,24 +4,28 @@ Your account must be set up before using the system. Please go to [accounts](acc
 
 To access the Alderaan cluster, you need to be on the CU Denver or CU Anschutz private network. This can be done in several ways:
 
-* On campus wired network.
-* On campus secure wireless network (not the guest network)
-* Through [CU Denver](https://www.ucdenver.edu/vpn) or [CU Anschutz](https://www.cuanschutz.edu/vpn) by GlobalProtect VPN.   **Windows Subsystem for Linux (WSL) is not recommended with VPN**, as GlobalProtect sometimes does not forward 
+* On the campus wired network.
+* On the campus secure wireless network (not the guest network)
+* Through [CU Denver](https://www.ucdenver.edu/vpn) or [CU Anschutz](https://www.cuanschutz.edu/vpn) VPN.   **Windows Subsystem for Linux (WSL) is not recommended with VPN**, as GlobalProtect sometimes does not forward 
 connections properly from WSL, even though it works for other Windows applications.
-* Through [Remote Desktop](remote_desktop.md).
+* Through the [CU Denver Remote Desktop](https://remote.ucdenver.edu).
 
-To log in, use your university username (not email) and password. If you do not know your username, you can retrieve it at [https://myaccount.ucdenver.edu/forgot-username](https://myaccount.ucdenver.edu/forgot-username).
+Once you are on the private  network, log in to Alderaan using your university username (not email) and password. This can be done in several ways.
 
-We currently offer three ways how to access Alderaan cluster:
+Perhaps the easiest way to access the Alderaan cluster is [JupyterHub](jupyterhub.md): on the private network, simply go to 
+[https://math-alderaan.ucdenver.pvt](https://math-alderaan.ucdenver.pvt))
+(click away the warnings).
 
-* [JupyterHub](jupyterhub.md).
-* [Remote Desktop](remote_desktop.md).
-
-* Secure Shell (SSH) is a classical way to access Alderaan from the command line. Type **ssh username@math-alderaan.ucdenver.pvt** in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`). If you omit the username, your computer may send your local username instead, which may not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections. For more convenience and security, you can
+Secure Shell (SSH) is a classical way to access Alderaan from the command line. Type
+```
+ssh username@math-alderaan.ucdenver.pvt
+```
+in a terminal window on Linux or Mac, or in a Powershell window on [Windows](https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh) 10 or 11 (Press Windows button, search box opens, type `shell`, select `Powershell`). If you omit the username, your computer may send your local username instead, which may not work. You  can [use the .ssh/config file](https://linuxize.com/post/using-the-ssh-config-file) to fill the correct username and to automate connections. For more convenience and security, you can
 set up [passwordless ssh from Linux](https://www.geeksforgeeks.org/how-to-login-to-ssh-without-a-password-using-private-key) as well as 
 from [Windows](https://stackoverflow.com/questions/71422512/passwordless-ssh-connection-from-windows).
+SSH allows you to transfer files via scp, sftp, or rsync commands. 
 
- SSH also allows you to transfer files via scp, sftp, or rsync commands. 
+You can also use the Alderaan [Remote Desktop](remote_desktop.md).
 
 ## Interactive use limitations
 
